@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace CheckIt.UserManagement
+namespace UserManagement
 {
-    public class User
+    class RegisteredUser
     {
         public class QA
         {
@@ -22,30 +24,17 @@ namespace CheckIt.UserManagement
         public int parentID { set; get; }
         public int height { set; get; }
         public String email { set; get; }
+        public String fName { set; get; }
+        public String lName { set; get; }
+        public DateTime DoB { set; get; }
         public String accountType { set; get; }
         public Boolean firstLogin { set; get; }
         public Boolean active { set; get; }
+        public String locCity { set; get; }
+        public String locState { set; get; }
+        public String locCountry { set; get; }
         public List<String> actions;
-
-        public User()
-        {
-
-        }
-
-        public User(String email, String atype)
-        {
-            this.email = email;
-            this.accountType = atype;
-            this.firstLogin = false;
-            this.active = true;
-
-            this.userID=
-            this.clientID = 1;
-            this.parentID = 1;
-            this.height = 1;
-        }
-
-
+        private string password;
+        private List<QA> securityQA;
     }
-    
 }

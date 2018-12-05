@@ -17,7 +17,7 @@ namespace CheckIt.UserManagement
             if (authorized)
             {
                 user2 = getUser(email2);
-                setActivation(user2, action);
+                user2 = SetActivation(user2, action);
                 storeUser();
             }
             else
@@ -32,7 +32,7 @@ namespace CheckIt.UserManagement
             return user;
         }
 
-        public void SetActivation(User user, string action)
+        public User SetActivation(User user, string action)
         {
             if (action == "Activate_User")
             {
@@ -59,6 +59,7 @@ namespace CheckIt.UserManagement
             else{
                 //Error say action was not activate or deactivate
             }
+            return user;
         }
         public void storeUser()
         {

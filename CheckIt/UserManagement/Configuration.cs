@@ -8,9 +8,9 @@ namespace UserManagement
     class Configuration
     {
         private bool authorized;
-        public Dictionary<string, bool> actions;
+        public List<string> actions;
 
-        public Configure(IToken token, string action, string email1, string email2)
+        public void Configure(IToken token, string action, string email1, string email2)
         {
             authorized = AuthorizationManager.AuthorizeUserToUser(token, email1, email2, action); //We may need to change this due to instantiation of AuthorizationManager class
             if (authorized)
@@ -29,13 +29,13 @@ namespace UserManagement
             }
         }
 
-        public Dictionary<string, bool> retrieveActions(string email2){
-
+        public List<string> retrieveActions(string email2){
+            List<string> retrieve = new List<string>();
             //call DAL to query db for email2 dictionary of actions
-            
+            return retrieve;
         }
 
-        public void updateActions(Dictionary<string, bool> actions){
+        public void updateActions(List<string> actions){
 
             //TODO: Store boolean with actions as a Dictionary to toggle each action
             //DAL will have 2 getActions calls. one will return list of just enabled strings, other will return dictionary for this configuration

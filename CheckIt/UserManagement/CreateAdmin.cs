@@ -6,35 +6,39 @@ namespace CheckIt.UserManagement
 {
     class CreateAdmin
     {
-        public bool checkUser(User email)
+        public bool checkEmail(string email)
         {
+            bool result = true;
             //make call to DAL to check if user already exists
-            //LLD note: DAL sends response
             return result;
         }
 
+        public String GeneratePassword(User user){
 
-
-
-        public String interpret(DAL message){
-
+            return "test";
             //interpret DAL response
         }
 
-        public String generatePassword(User user){
+        public class QA
+        {
+            public String question { set; get; }
+            public String answer { set; get; }
+            public QA(String q, String a)
+            {
+                question = q;
+                answer = a;
+            }
+        }
 
+        public List<QA> GenerateQuestions(User user){
+            List<QA> questions = new List<QA>();
+            return questions;
             //interpret DAL response
         }
 
-        public array[] questions (User user){
+        public void setFirstLogin(User user){
 
-            //interpret DAL response
-        }
-
-        public bool firstLogin(User user){
-            
-            CreateUser newUswer = createUser();
-            //if first log in true, call create user
+            user.firstLogin= false;
 
         }
 
