@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activation.cs" />
+    <Compile Include="QA.cs" />
     <Compile Include="IUser.cs" />
     <Compile Include="RegisteredUser.cs" />
     <Compile Include="Configuration.cs" />

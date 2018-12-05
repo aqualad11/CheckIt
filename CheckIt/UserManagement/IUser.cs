@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace UserManagement
 {
-    interface IUser
+    public interface IUser
     {
+        //IDK
     }
 }

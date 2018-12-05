@@ -58,4 +58,5 @@ namespace UserManagement
  * addAction(string action) //check if there
  * updateName(string name) // optional split if there's 2 names (lastname)
  * updateLocation(string city,state,country) //
+ * updatePassword(newpass, a1,a2,a3)
  * */
