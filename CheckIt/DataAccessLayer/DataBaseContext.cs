@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
-
+/*
 namespace Checkit
 {
     public class DataBaseContext : DbContext
@@ -33,3 +33,4 @@ namespace Checkit
 
     }
 }
+*/

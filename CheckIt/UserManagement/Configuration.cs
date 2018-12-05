@@ -10,7 +10,7 @@ namespace UserManagement
         private bool authorized;
         public Dictionary<string, bool> actions;
 
-        public Configure(IToken token, string action, string email1, string email2)
+        public void Configure(IToken token, string action, string email1, string email2)
         {
             authorized = AuthorizationManager.AuthorizeUserToUser(token, email1, email2, action); //We may need to change this due to instantiation of AuthorizationManager class
             if (authorized)
@@ -31,7 +31,8 @@ namespace UserManagement
 
         public Dictionary<string, bool> retrieveActions(string email2){
 
-            //call DAL to query db for email2 dictionary of actions
+			//call DAL to query db for email2 dictionary of actions
+			return null;
             
         }
 

@@ -1,7 +1,9 @@
+using CheckIt.UserManagement;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
+/*
 namespace UserManagement
 {
     class CreateUser
@@ -11,7 +13,7 @@ namespace UserManagement
         public bool checkUser(User email)
         {
             //make call to DAL to check if user already exists
-            return result;
+            return true;
         }
 
         public bool checkAge(User dob){
@@ -20,7 +22,7 @@ namespace UserManagement
             }else{
                 return false;
             }
-            return;
+            return true;
         }
 
         public void callDALtoStore(User user){
@@ -29,11 +31,13 @@ namespace UserManagement
 
         }
 
-        public String interpret(DAL message){
+        public String Interpret(){
 
-            //interpret DAL response
+			//interpret DAL response
+			return y;
         }
 
 
     }
 }
+*/

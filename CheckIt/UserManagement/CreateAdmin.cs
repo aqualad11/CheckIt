@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+/*
 namespace CheckIt.UserManagement
 {
     class CreateAdmin
@@ -40,3 +40,4 @@ namespace CheckIt.UserManagement
 
     }
 }
+*/

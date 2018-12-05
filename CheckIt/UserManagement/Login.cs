@@ -2,15 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+/*
 namespace CheckIt.UserManagement
 {
     class Login
     {
-        string[] randomQuestions = [10];
+        string[] randomQuestions;
         string[] answers;
 
-        public bool authenticateLogIn(User user){
-            //is LLD incomplete? It makes a direct call to Db..
+        public bool AuthenticateLogIn(User user){
+			//is LLD incomplete? It makes a direct call to Db..
+			return true;
         }
         public void firstLogin(User user){
             //set up new password + question and answer x3
@@ -21,3 +23,4 @@ namespace CheckIt.UserManagement
         
     }
 }
+*/
