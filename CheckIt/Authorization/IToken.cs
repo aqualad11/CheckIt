@@ -9,5 +9,7 @@ namespace CheckIt.Authorization
     public interface IToken
     {
         List<string> GetActions();
+        string GetClient();
+        int GetHeight();
     }
 }

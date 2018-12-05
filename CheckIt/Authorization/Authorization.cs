@@ -44,8 +44,23 @@ namespace CheckIt.Authorization
             return false;
         }
 
+        public static bool CheckClientActions(IToken token, string action)
+        {
+            string client = token.GetClient();
+
+            /*
+             * TODO: call DAL to get client actions
+             * once we have actions compare to actions in token
+             */
+            if(client == "null")
+            {
+                return true;
+            }
+            return false;
+        }
+
         //TODO: Once DAL is done we can do this
-        public static bool UserToUserPermission(string user1, string user2)
+        public static bool UserToUserPermission(IToken token, string user2)
         {
 
             return true;
