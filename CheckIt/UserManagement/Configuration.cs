@@ -51,3 +51,11 @@ namespace UserManagement
 
     }
 }
+
+
+/*
+ * removeAction(string action) //check if action even there
+ * addAction(string action) //check if there
+ * updateName(string name) // optional split if there's 2 names (lastname)
+ * updateLocation(string city,state,country) //
+ * */
