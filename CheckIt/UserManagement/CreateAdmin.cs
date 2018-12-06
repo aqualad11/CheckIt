@@ -7,43 +7,55 @@ namespace CheckIt.UserManagement
     class CreateAdmin
     {
 
-        public void adminMadeUser(String email, String first, String last, DateTime dob, String atype, String city, String state, String country, String q1, String q2, String q3)
+        public User adminMadeUser(String email, String first, String last, DateTime dob, String atype, String city, String state, String country)
         {
-            if(CreateUser.checkEmail(email) && CreateUser.checkAge(dob))
+            bool cEmail = CreateUser.checkEmail(email);
+            if(cEmail && CreateUser.checkAge(dob))
             {
-                User user = new User();
-                user.email = email;
-                user.fName = first;
-                user.lName = last;
-                user.DoB = dob;
-                user.accountType = atype;
-                user.locCity = city;
-                user.locState = state;
-                user.locCountry = country;
+                List<String> actions = CreateUser.createUserActions();
+                long userID = CreateUser.generateID();
+                String client = "Basic";
+                int height = 2;
+                long parentID = userID - 1;//TODO: Wtih DAL, get a user where height is 1 less
+                User user = new User(email, first, last, dob, atype, city, state, country, actions, client, height, userID, parentID);
                 user.firstLogin = true;
-                user.active = true;
-                user.height = 2;
-                user.actions = CreateUser.createUserActions();
-                //UserID, ParentID, ClientID
 
+                //DAL request to add to DB
 
+                return user;
+            }
+            else if (cEmail == false)
+            {
+                Console.Write("Email Is already used in the system!");
+                return new User();
+            }
+            else
+            {
+                Console.Write("You are not of age to access this website!");
+                return new User();
+            }
+        }
+
+        public RegisteredUser adminMadeRegisteredUser(String email, String q1, String q2, String q3)
+        {
+            if (CreateUser.checkEmail(email))
+            {
                 RegisteredUser regUser = new RegisteredUser();
                 regUser.email = email;
                 regUser.password = CreateUser.CreatePasswordHash(generateRandomPassword());
                 regUser.securityQA = GenerateQuestions(q1, q2, q3);
-
-                //DAL request to add to DB
+                return regUser;
             }
+            else
+            {
+                Console.Write("Email is already used in the system!");
+                return new RegisteredUser();
+            }
+
         }
 
-        public List<QA> GenerateQuestions(string q1, string q2, string q3){
-            List<QA> qa = new List<QA>();
-            qa[0].question = q1;
-            qa[0].answer = "";
-            qa[1].question = q2;
-            qa[1].answer = "";
-            qa[2].question = q3;
-            qa[2].answer = "";
+        public QA GenerateQuestions(string q1, string q2, string q3){
+            QA qa = new QA(q1, "", q2, "", q3, "");
             return qa;
         }
 

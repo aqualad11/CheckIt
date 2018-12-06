@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using CheckIt.Authorization;
 
-namespace UserManagement
+namespace CheckIt.UserManagement
 {
     class Configuration
     {
@@ -37,7 +37,6 @@ namespace UserManagement
 
         public void updateActions(List<string> actions){
 
-            //TODO: Store boolean with actions as a Dictionary to toggle each action
             //DAL will have 2 getActions calls. one will return list of just enabled strings, other will return dictionary for this configuration
         
         }

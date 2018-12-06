@@ -11,14 +11,14 @@ namespace CheckIt.UserManagement
 
         public String email { set; get; }
         public string password { set; get; }
-        public List<QA> securityQA { set; get; }
+        public QA securityQA { set; get; }
 
         public RegisteredUser()
         {
 
         }
 
-        public RegisteredUser(String email, string password, List<QA> qa)
+        public RegisteredUser(String email, string password, QA qa)
         {
             this.email = email;
             this.password = password;

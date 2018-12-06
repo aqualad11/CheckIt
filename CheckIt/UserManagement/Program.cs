@@ -10,6 +10,9 @@ namespace UserManagement
     {
         static void Main(string[] args)
         {
+            string email = "kunal@google.com";
+            string first = "kunal";
+            string 
         }
     }
 }

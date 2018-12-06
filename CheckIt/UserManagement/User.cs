@@ -7,9 +7,9 @@ namespace CheckIt.UserManagement
     public class User
     {
 
-        public int userID { set; get; }
-        public int clientID { set; get; }
-        public int parentID { set; get; }
+        public long userID { set; get; }
+        public String clientID { set; get; }
+        public long parentID { set; get; }
         public int height { set; get; }
         public String email { set; get; }
         public String fName { set; get; }
@@ -22,13 +22,14 @@ namespace CheckIt.UserManagement
         public String locState { set; get; }
         public String locCountry { set; get; }
         public List<String> actions { set; get; }
+        public virtual List<Item> itemList { set; get; }
 
         public User()
         {
 
         }
 
-        public User(String email, String first, String last, DateTime dob, String atype, String city, String state, String country, List<String> acts)
+        public User(String email, String first, String last, DateTime dob, String atype, String city, String state, String country,List<String> actions, String client, int height, long userID, long parentID )
         {
             this.email = email;
             this.fName = first;
@@ -38,12 +39,17 @@ namespace CheckIt.UserManagement
             this.locCity = city;
             this.locState = state;
             this.locCountry = country;
-            this.actions = acts;
-            this.userID = 1;
-            this.clientID = 10;
             this.height = 2;
             this.active = true;
-       
+            this.firstLogin = false;
+            this. active = true;
+            this.height = height;
+            this.actions = actions;
+            this.itemList = new List<Item>();
+            this.userID = userID;
+            this.clientID = client;
+            this.parentID = parentID;
+
         }
 
 

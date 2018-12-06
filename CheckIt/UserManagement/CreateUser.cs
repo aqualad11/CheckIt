@@ -12,6 +12,14 @@ namespace CheckIt.UserManagement
         private const int saltByteLength = 24;
         private const int derivedKeyLength = 24;
 
+        public bool createAccount(String email, String first, String last, DateTime dob, String atype, String city, String state, String country, String password, String q1, String a1, String q2, String a2, String q3, String a3)
+        {
+            User u1 = createUser(email, first, last, dob, atype, city, state, country);
+            RegisteredUser rU1 = createRegisteredUser(email, password, q1, a1, q2, a2, q3, a3);
+            //DAL to upload both to DB
+            //DAL search user
+        }
+
         public static bool checkEmail(string email)
         {
             bool result = true; 
@@ -31,48 +39,67 @@ namespace CheckIt.UserManagement
             }
         }
 
-        public void createUser(String email, String first, String last, DateTime dob, String atype, String city, String state, String country, String password, String q1, String a1, String q2, String a2, String q3, String a3)
+        public User createUser(String email, String first, String last, DateTime dob, String atype, String city, String state, String country)
         {
-            if(checkEmail(email) && checkAge(dob) && validatePassword(password))
+            bool emailCheck = checkEmail(email);
+            if (emailCheck && checkAge(dob))
             {
-                User user = new User();
-                user.email = email;
-                user.fName = first;
-                user.lName = last;
-                user.DoB = dob;
-                user.accountType = atype;
-                user.locCity = city;
-                user.locState = state;
-                user.locCountry = country;
-                user.firstLogin = false;
-                user.active = true;
-                user.height = 2;
-                user.actions = createUserActions();
-                //UserID, ParentID, ClientID, height
+                List<String> actions = createUserActions();
+                long userID = generateID();
+                String client = "Basic";
+                int height = 2;
+                long parentID = userID-1;//TODO: Wtih DAL, get a user where height is 1 less
 
+                User user = new User(email, first, last, dob, atype, city, state, country, actions, client,height, userID, parentID );
+
+                //DAL request to add to DB
+
+                return user;
+
+                
+            }
+            else if (emailCheck == false)
+            {
+                Console.Write("Email Is already used in the system!");
+                return new User();
+            }
+            else
+            {
+                Console.Write("You are not of age to access this website!");
+                return new User();
+            }
+
+        }
+
+        public RegisteredUser createRegisteredUser(String email, String password, String q1, String a1, String q2, String a2, String q3, String a3)
+        {
+            bool emailCheck = CreateUser.checkEmail(email);
+            if (validatePassword(password) && checkEmail(email)){
                 RegisteredUser regUser = new RegisteredUser();
                 regUser.email = email;
                 regUser.password = CreatePasswordHash(password);
-                regUser.securityQA = createSecurityQuestions(q1, a1, q2, a2, q3, a3);
+                regUser.securityQA = new QA(q1, a1, q2, a2, q3, a3);
 
-
-                //DAL request to add to DB
-                
-                
+                return regUser;
             }
-            else if (checkEmail(email) == false)
+            else if ( emailCheck == false)
             {
                 Console.Write("Email Is already used in the system!");
-            }
-            else if (checkAge(dob)== false)
-            {
-                Console.Write("You are not of age to access this website!");
+                return new RegisteredUser();
             }
             else
             {
                 Console.Write("Password is not valid");
+                return new RegisteredUser();
             }
+          
+           
+        }
 
+        public static long generateID()
+        {
+            byte[] buffer = Guid.NewGuid().ToByteArray();
+            return BitConverter.ToInt64(buffer, 0);
         }
 
         public static List<String> createUserActions()
@@ -86,20 +113,6 @@ namespace CheckIt.UserManagement
             actions.Add("Delete_Self");
 
             return actions;
-        }
-
-        public List<QA> createSecurityQuestions(String q1, String a1, String q2, String a2, String q3, String a3)
-        {
-            List<QA> qa = new List<QA>();
-            QA qa1 = new QA(q1, a1);
-            QA qa2 = new QA(q2, a2);
-            QA qa3 = new QA(q3, a3);
-            qa.Add(qa1);
-            qa.Add(qa2);
-            qa.Add(qa3);
-
-            return qa;
-
         }
 
         public static string CreatePasswordHash(string password)
