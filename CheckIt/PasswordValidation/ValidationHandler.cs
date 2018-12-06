@@ -20,7 +20,8 @@ namespace PasswordValidation
 			//The suffix will be used to test the result of the API call. 
             var suffix = passwordHash.Substring(5);
 			//Create a var to hold the results of the Check method. A String[] will be returned.
-            var resultsArray = await PCheck.Check(prefix);
+            var results = await PCheck.Check(prefix);
+			var resultsArray = results.wrap;
 			//Test each string in the returned array to the suffix made earlier.
             foreach ( var resultPassword in resultsArray)
             {

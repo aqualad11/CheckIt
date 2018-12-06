@@ -19,7 +19,8 @@ namespace PasswordValidation
     {
         static HttpClient client = new HttpClient();
         private static readonly string baseURL = "https://api.pwnedpasswords.com/range/";
-        public static async Task<string[]> Check(string Password)
+		public string[] wrap;
+        public static async Task<PCheck> Check(string Password)
         {
             //Send a query to the API - Sends only the first 5 digits of hashed password.
             Uri siteURi = new Uri(baseURL + Password);
@@ -28,9 +29,11 @@ namespace PasswordValidation
 			// Create results variable and set it to the results of the response from the API.
 			// Note - the Split methods splits the results with "\r\n" - this is used as a new line character in Window.
 			// Note - the next call is part of the method param - it states to not keep empty array elemenets of the substring.
-			var results = searchResultsString.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries); 
+			var results = searchResultsString.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+			PCheck ps = new PCheck();
+			ps.wrap = results;
 			//Return the resulted String[]
-            return results;
+			return ps;
         }
     }
 }
