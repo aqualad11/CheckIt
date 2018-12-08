@@ -5,18 +5,35 @@ using System.Web;
 using System.Data.Entity;
 
 
-namespace Checkit
+
+namespace CheckIt.DataAccessLayer
 {
     public class DataBaseContext : DbContext
     {
         public DbSet<User> Users { get; set; }
+        public DbSet<UserAction> UserActions { get; set; }
 
-        public void addUser(string firstName,string lastName, string email, int height)
+        
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            User usr = new User(firstName, lastName, email, height);
+            Database.SetInitializer<DataBaseContext>(null);
+            base.OnModelCreating(modelBuilder);
+        }
+        
+        /*
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<QA> QAs { get; set; }
+        public DbSet<itemList> ItemLists { get; set; }
+        public DbSet<Item> Items { get; set; }
+        */
+        //public DbSet<RegisteredUser> RegisteredUsers { get; set; }
+        /*
+        public void addUser(RegisteredUser regUser)
+        {
             using( var context = new DataBaseContext())
             {
-                context.Users.Add(usr);
+                context.RegisteredUsers.Add(regUser);
                 context.SaveChanges();
             }
 
@@ -30,6 +47,6 @@ namespace Checkit
             }
 
         }
-
+        */
     }
 }

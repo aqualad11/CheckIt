@@ -1,0 +1,2 @@
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.csprojAssemblyReference.cache

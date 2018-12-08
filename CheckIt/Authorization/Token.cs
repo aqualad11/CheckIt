@@ -7,9 +7,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security;
 using Microsoft.IdentityModel.Tokens;
 
-namespace CheckIt.Authorization
+namespace CheckIt.Authorizations
 {
-    class Token : IToken
+    public class Token : IToken
     {
         //TODO: make own key and possibly store it somewhere else
         private string key = "401b09eab3c013d4ca54922bb802bec8fd5318192b0a75f201d8b372742"+
