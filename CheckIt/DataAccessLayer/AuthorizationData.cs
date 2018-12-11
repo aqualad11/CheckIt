@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CheckIt.DataAccessLayer
 {
-    class AuthorizationData
+    public class AuthorizationData
     {
         private DataBaseContext dbc;
 

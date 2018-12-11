@@ -18,10 +18,9 @@ namespace CheckIt.Authorizations
         /// <param name="token"></param>
         /// <param name="IP"></param>
         /// <returns></returns>
-        private static bool authorizeIP(Token token, string IP)
+        public static bool authorizeIP(Token token, string IP)
         {
-
-            return false;
+            return true;
         }
 
         /// <summary>
@@ -30,9 +29,9 @@ namespace CheckIt.Authorizations
         /// <param name="token"></param>
         /// <param name="birthday"> user's birthdate</param>
         /// <returns></returns>
-        private static bool authorizeAge(DateTime birthday)
+        public static bool authorizeAge(DateTime birthday)
         {
-            DateTime now = new DateTime();
+            DateTime now = DateTime.Now;
             TimeSpan age = now - birthday;
             int ageInDays = age.Days;
             int ageInYears = ageInDays / 365;
@@ -50,18 +49,13 @@ namespace CheckIt.Authorizations
             
             string client = token.GetClient();
 
-            /*
-             * TODO: call DAL to get client actions
-             * once we have actions compare to actions in token
-             * DAL.GetActions(client))
-             */
-            if(client == "null")
+            if(client == null)
             {
                 return true;
             }else
             {
-                DataAccessManager dm = new DataAccessManager();
-                List<string> clientActions = dm.getActions(client);
+                AuthorizationData dm = new AuthorizationData();
+                List<string> clientActions = dm.getClientActions(client);
                 if (clientActions.Contains(action))
                 {
                     return true;
@@ -75,7 +69,7 @@ namespace CheckIt.Authorizations
         //DAL.GetUserHeight(user2)
         public static bool UserToUserPermission(IToken token, string user2)
         {
-            DataAccessManager dm = new DataAccessManager();
+            AuthorizationData dm = new AuthorizationData();
             Console.WriteLine("token height = " + token.GetHeight());
             int user2height = dm.getHeight(user2);
             if(user2height == -1)

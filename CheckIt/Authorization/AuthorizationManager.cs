@@ -43,14 +43,8 @@ namespace CheckIt.Authorizations
             {
                 return false;
             }
+            return AuthorizeAction(token, action);
 
-            //checks if user has action
-            if(!Authorization.AuthorizeAction(token,action))
-            {
-                return false;
-            }
-
-            return true;
         }
     }
 }
