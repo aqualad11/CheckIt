@@ -17,8 +17,16 @@ namespace DataAccessLayer.Migrations
                     })
                 .PrimaryKey(t => new { t.clientActionID, t.clientID })
                 .ForeignKey("dbo.Clients", t => t.clientID, cascadeDelete: true)
-                .ForeignKey("dbo.Users", t => t.clientID, cascadeDelete: true)
                 .Index(t => t.clientID);
+            
+            CreateTable(
+                "dbo.Clients",
+                c => new
+                    {
+                        clientID = c.Guid(nullable: false, identity: true),
+                        name = c.String(),
+                    })
+                .PrimaryKey(t => t.clientID);
             
             CreateTable(
                 "dbo.Users",
@@ -47,15 +55,6 @@ namespace DataAccessLayer.Migrations
                 .Index(t => t.clientID);
             
             CreateTable(
-                "dbo.Clients",
-                c => new
-                    {
-                        clientID = c.Guid(nullable: false, identity: true),
-                        name = c.String(),
-                    })
-                .PrimaryKey(t => t.clientID);
-            
-            CreateTable(
                 "dbo.UserActions",
                 c => new
                     {
@@ -71,18 +70,17 @@ namespace DataAccessLayer.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.ClientActions", "clientID", "dbo.Users");
+            DropForeignKey("dbo.ClientActions", "clientID", "dbo.Clients");
             DropForeignKey("dbo.UserActions", "userID", "dbo.Users");
             DropForeignKey("dbo.Users", "parentID", "dbo.Users");
             DropForeignKey("dbo.Users", "clientID", "dbo.Clients");
-            DropForeignKey("dbo.ClientActions", "clientID", "dbo.Clients");
             DropIndex("dbo.UserActions", new[] { "userID" });
             DropIndex("dbo.Users", new[] { "clientID" });
             DropIndex("dbo.Users", new[] { "parentID" });
             DropIndex("dbo.ClientActions", new[] { "clientID" });
             DropTable("dbo.UserActions");
-            DropTable("dbo.Clients");
             DropTable("dbo.Users");
+            DropTable("dbo.Clients");
             DropTable("dbo.ClientActions");
         }
     }

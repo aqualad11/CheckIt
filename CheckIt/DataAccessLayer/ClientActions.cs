@@ -17,7 +17,7 @@ namespace CheckIt.DataAccessLayer
         [Key, Column(Order = 1)]
         [ForeignKey("Client")]
         public Guid clientID { get; set; }
-        public User Client { get; set; }
+        public Client Client { get; set; }
 
         public ClientAction(Guid clientID, string action)
         {

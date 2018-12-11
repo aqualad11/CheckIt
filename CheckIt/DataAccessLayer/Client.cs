@@ -24,5 +24,10 @@ namespace CheckIt.DataAccessLayer
         {
 
         }
+
+        public Client(string name)
+        {
+            this.name = name;
+        }
     }
 }
