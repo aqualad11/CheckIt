@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\Documents\Github\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.csprojAssemblyReference.cache
 D:\Documents\Github\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.csproj.CoreCompileInputs.cache
 D:\Documents\Github\CheckIt\CheckIt\UserManagement\bin\Debug\UserManagement.exe.config
@@ -23,3 +24,7 @@ D:\Documents\Github\CheckIt\CheckIt\UserManagement\bin\Debug\Microsoft.IdentityM
 D:\Documents\Github\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.csproj.CopyComplete
 D:\Documents\Github\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.exe
 D:\Documents\Github\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.pdb
+=======
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.csprojAssemblyReference.cache
+>>>>>>> Jonathan

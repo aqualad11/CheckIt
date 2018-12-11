@@ -11,9 +11,9 @@ namespace CheckIt.UserManagement
         public User user1;
         public User user2;
 
-        public void Activate(IToken token, string action, string email1, string email2)
+        public void Activate(IToken token, string action, string email2)
         {
-            authorized = AuthorizationManager.AuthorizeUserToUser(token, email1, email2, action); //We may need to change this due to instantiation of AuthorizationManager class
+            authorized = AuthorizationManager.AuthorizeUserToUser(token, email2, action); //We may need to change this due to instantiation of AuthorizationManager class
             if (authorized)
             {
                 user2 = getUser(email2);

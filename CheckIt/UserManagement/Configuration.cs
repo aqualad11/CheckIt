@@ -12,7 +12,7 @@ namespace CheckIt.UserManagement
 
         public void Configure(IToken token, string action, string email1, string email2)
         {
-            authorized = AuthorizationManager.AuthorizeUserToUser(token, email1, email2, action); //We may need to change this due to instantiation of AuthorizationManager class
+            authorized = AuthorizationManager.AuthorizeUserToUser(token, email2, action); //We may need to change this due to instantiation of AuthorizationManager class
             if (authorized)
             {
                 actions = retrieveActions(email2);

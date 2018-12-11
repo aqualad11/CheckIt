@@ -7,9 +7,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security;
 using Microsoft.IdentityModel.Tokens;
 
-namespace CheckIt.Authorization
+namespace CheckIt.Authorizations
 {
-    class Token : IToken
+    public class Token : IToken
     {
         //TODO: make own key and possibly store it somewhere else
         private string key = "401b09eab3c013d4ca54922bb802bec8fd5318192b0a75f201d8b372742"+
@@ -20,12 +20,18 @@ namespace CheckIt.Authorization
         private string jwt { get; set; }
         private List<string> actions { get; set; }
         private string email { get; set; }
+        private string client { get; set; }
+        private int height { get; set; }
         
-
-        public Token(string email, List<string> actions)
+        //makes Token object given parameters below
+        public Token(string email, List<string> actions, int height, string client=null)
         {
             this.actions = actions;
             this.email = email;
+            this.client = client;
+            this.height = height;
+            
+
             handler = new JwtSecurityTokenHandler();
             var securityKey = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
             var credentials = new Microsoft.IdentityModel.Tokens.SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
@@ -34,6 +40,8 @@ namespace CheckIt.Authorization
             
             var payload = new JwtPayload {
                 {"email", email },
+                {"client", client },
+                {"height", height },
                 {"actions", actions}
             };
 
@@ -43,16 +51,19 @@ namespace CheckIt.Authorization
 
         }
 
-
+        //creates Token from jwt string
         public Token(string jwt)
         {
             var token = handler.ReadJwtToken(jwt);
             email = token.Payload["email"].ToString();
+            client = token.Payload["client"].ToString();
+            height = Int32.Parse(token.Payload["height"].ToString());
             actions = ExtractActions(token.Payload);
             this.jwt = jwt;
         }
 
-
+        //extracts actions from payload since payload returns a jarray
+        //so it turns jarray into a char array then turns that into a List<string>
         private List<string> ExtractActions(JwtPayload payload)
         {
             var actionString = payload["actions"].ToString();
@@ -91,14 +102,27 @@ namespace CheckIt.Authorization
             return actionsNeeded;
         }
 
+        //returns actions stored within Token
         public List<string> GetActions()
         {
             return actions;
         }
 
+        //returns email stored in Token
         public string GetEmail()
         {
             return email;
+        }
+        
+        //returns client stored in Token
+        public string GetClient()
+        {
+            return client;
+        }
+
+        public int GetHeight()
+        {
+            return height;
         }
     }
 

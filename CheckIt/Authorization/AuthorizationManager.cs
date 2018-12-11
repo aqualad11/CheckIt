@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheckIt.Authorization
+namespace CheckIt.Authorizations
 {
     public class AuthorizationManager
     {
@@ -15,14 +15,27 @@ namespace CheckIt.Authorization
         /// <param name="actionRole"></param>
         /// <returns></returns>
         public static bool AuthorizeAction(IToken token, string action)
-        {        
-            return Authorization.AuthorizeAction(token, action);
+        {
+            string client = token.GetClient();
+            if (client == null)
+            {
+                return Authorization.AuthorizeAction(token, action);
+            }
+            else
+            {
+                if(Authorization.CheckClientActions(token, action))
+                {
+                    return Authorization.AuthorizeAction(token, action);
+                }
+                return false;
+            }     
+            
         }
 
-        public static bool AuthorizeUserToUser(IToken token, string email1, string email2, string action)
+        public static bool AuthorizeUserToUser(IToken token, string email2, string action)
         {
             //checks if user can edit second user
-            if(!Authorization.UserToUserPermission(email1,email2))
+            if(!Authorization.UserToUserPermission(token,email2))
             {
                 return false;
             }
