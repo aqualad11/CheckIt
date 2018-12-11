@@ -9,10 +9,10 @@ namespace CheckIt.DataAccessLayer
 {
     class Program
     {
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
 
-            /*
+            
             Client c1 = new Client("Finance");
             Client c2 = new Client("IT");
             Client c3 = new Client("Marketing");
@@ -120,8 +120,8 @@ namespace CheckIt.DataAccessLayer
                 Console.ReadLine();
 
 
-            }*/
+            }
 
-        }
+        }*/
     }
 }

@@ -14,7 +14,6 @@ namespace CheckIt.DataAccessLayer
         public Guid userID { get; set; }
 
         public String userEmail { get; set; }
-        public String clientName { get; set; }
         //setting up parent recursion
         public Guid? parentID { get; set; }
         [ForeignKey("parentID")]
@@ -63,7 +62,6 @@ namespace CheckIt.DataAccessLayer
             this.active = true;
             this.height = height;
             //this.userID = userID;
-            this.clientName = client;
             this.parentID = parentID;
             this.userActions = new List<UserAction>();
 
