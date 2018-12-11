@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="AccountRepository.cs" />
     <Compile Include="AddToDB.cs" />
+    <Compile Include="AuthorizationData.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="ClientActions.cs" />
     <Compile Include="DataAccessManager.cs" />

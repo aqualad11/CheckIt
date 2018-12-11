@@ -27,6 +27,7 @@ C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.xml
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.xml
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.exe.config
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.exe
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.pdb
@@ -40,7 +41,6 @@ C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Newton
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\DataAccessLayer.pdb
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\DataAccessLayer.exe.config
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.xml
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml

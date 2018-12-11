@@ -28,3 +28,7 @@ D:\Documents\Github\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.pdb
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.csproj.CoreCompileInputs.cache
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.csprojAssemblyReference.cache
 >>>>>>> Jonathan
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.csprojAssemblyReference.cache
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.csproj.CoreCompileInputs.cache
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.exe
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UserManagement\obj\Debug\UserManagement.pdb

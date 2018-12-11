@@ -8,7 +8,7 @@ namespace CheckIt.DataAccessLayer
 {
     class AddToDB
     {
-         static void Main(string[] args)
+         public AddToDB()
         {
             Client c1 = new Client("Finance");
             Client c2 = new Client("IT");
@@ -87,12 +87,12 @@ namespace CheckIt.DataAccessLayer
 
                 //dc.SaveChanges();
 
-                dc.UserActions.Add(usr1login);
-                dc.UserActions.Add(usr1search);
-                dc.UserActions.Add(usr2login);
-                dc.UserActions.Add(usr2update);
+                //dc.UserActions.Add(usr1login);
+                //dc.UserActions.Add(usr1search);
+                //dc.UserActions.Add(usr2login);
+                //dc.UserActions.Add(usr2update);
 
-                dc.SaveChanges();
+                //dc.SaveChanges();
             }
             Console.ReadKey();
         }

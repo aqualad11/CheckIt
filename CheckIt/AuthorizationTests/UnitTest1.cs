@@ -13,15 +13,15 @@ namespace AuthorizationTests
         public void TestAuthorizeActionPass()
         {
             //Arrange
-            string email = "example@gmail.com";
+            string email = "example1@gmail.com";
             List<string> actions = new List<string>()
             {
-                "login",
-                "adduser",
-                "search"
+                "Login",
+                "Update",
+                "Search"
             };
             int height = 2;
-            string action = "adduser";
+            string action = "Login";
 
             IToken token = new Token(email, actions, height);
             //Act
@@ -44,9 +44,9 @@ namespace AuthorizationTests
                 "Search"
             };
             int height = 2;
-            string action = "adduser";
+            string action = "Login";
             IToken token = new Token(email, actions, height);
-            string user2email = "example@gmail.com";
+            string user2email = "example2@gmail.com";
             //Act
             bool expected = false;
             bool actual = Authorization.UserToUserPermission(token, user2email);
@@ -70,7 +70,7 @@ namespace AuthorizationTests
             int height = 1;
             
             IToken token = new Token(email, actions, height);
-            string user2email = "example@gmail.com";
+            string user2email = "example2@gmail.com";
             //Act
             bool expected = true;
             bool actual = Authorization.UserToUserPermission(token, user2email);
@@ -93,7 +93,6 @@ namespace AuthorizationTests
                 "Search"
             };
             int height = 2;
-            string action = "adduser";
             IToken token = new Token(email, actions, height);
             string user2email = "example1@gmail.com";
             //Act
