@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CheckIt.UserManagement
 {
@@ -21,10 +22,15 @@ namespace CheckIt.UserManagement
             }
         }
 
+		public int userID { get; set; }
+		[ForeignKey("Client")]
+		public int clientID { get; set; }
         public String email { set; get; }
         public String fName { set; get; }
         public String lName { set; get; }
         public DateTime DoB { set; get; }
+		[ForeignKey("User")]
+		public int parentID { get; set; }
         public String accountType { set; get; }
         public Boolean active { set; get; }
         public String locCity { set; get; }

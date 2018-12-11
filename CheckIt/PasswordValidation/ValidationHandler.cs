@@ -13,6 +13,7 @@ namespace PasswordValidation
 
         public static async Task<int> ValidatePassword(string password)
         {
+			if (password.Length < 5) { return 3; }
             //Create a hash of the password. This is the full hash of the password.
             var passwordHash = Hash(password);
 			//Split the hash password into the prefix to be sent. 0 is the starting position, to index 5 of the string.

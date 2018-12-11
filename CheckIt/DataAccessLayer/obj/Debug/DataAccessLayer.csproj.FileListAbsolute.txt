@@ -30,3 +30,35 @@ C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\DataAccessLayer\bin\Debug\Micro
 C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.exe
 C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\UserManagement.exe
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Authorization.exe
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\UserManagement.pdb
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\UserManagement.exe.config
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Authorization.pdb
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Authorization.exe.config
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+C:\Users\Bryan Bare\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
