@@ -9,8 +9,7 @@ namespace DataAccessLayer.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            ContextKey = "CheckIt.DataAccessLayer.DataBaseContext";
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(CheckIt.DataAccessLayer.DataBaseContext context)

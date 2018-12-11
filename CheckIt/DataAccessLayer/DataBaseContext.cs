@@ -12,6 +12,8 @@ namespace CheckIt.DataAccessLayer
     {
         public DbSet<User> Users { get; set; }
         public DbSet<UserAction> UserActions { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<ClientAction> ClientActions { get; set; }
 
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

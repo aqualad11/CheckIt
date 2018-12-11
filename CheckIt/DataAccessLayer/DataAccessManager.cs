@@ -37,11 +37,11 @@ namespace CheckIt.DataAccessLayer
             try
             {
                 List<string> actions = new List<string>();
-                var query = dbc.UserActions.Where(a => a.actionEmail == email).Select(a => a);
-                foreach(var act in query)
-                {
-                    actions.Add(act.action);
-                }
+                //var query = dbc.UserActions.Where(a => a.actionEmail == email).Select(a => a);
+                //foreach(var act in query)
+                //{
+                //    actions.Add(act.action);
+                //}
                 return actions;
             }catch (Exception e)
             {

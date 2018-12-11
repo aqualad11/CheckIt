@@ -8,28 +8,24 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CheckIt.DataAccessLayer
 {
-    public class UserAction
-    {   
-        //[Key,Column(Order =0)]
+    public class ClientAction
+    {
         [Key, Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid actionID { set; get; }
+        public Guid clientActionID { set; get; }
         public String action { set; get; }
-        [Key,Column(Order =1)]
-        [ForeignKey("User")]
-        public Guid userID { get; set; }
-        public User User { get; set; }
+        [Key, Column(Order = 1)]
+        [ForeignKey("Client")]
+        public Guid clientID { get; set; }
+        public User Client { get; set; }
 
-        
-
-        public UserAction(Guid userID, String act)
+        public ClientAction(Guid clientID, string action)
         {
-            this.userID = userID;
-            this.action = act;
-
+            this.clientID = clientID;
+            this.action = action;
         }
 
-        public UserAction()
+        public ClientAction()
         {
 
         }

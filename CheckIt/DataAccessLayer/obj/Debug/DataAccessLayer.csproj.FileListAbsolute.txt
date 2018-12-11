@@ -1,5 +1,3 @@
-C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
-C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.exe
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
@@ -7,8 +5,10 @@ C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLay
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.xml
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.exe
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.InitialCreate.resources
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.init.resources
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache

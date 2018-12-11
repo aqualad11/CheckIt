@@ -10,25 +10,34 @@ namespace CheckIt.DataAccessLayer
     public class User
     {
         [Key]
-        public String userEmail { set; get; }
-        public long userID { set; get; }
-        public String clientName { set; get; }
-        [ForeignKey("parentEmail")]
-        public virtual User Parent { set; get; }
-        public string parentEmail { set; get; }
-        public int height { set; get; }
-        public String fName { set; get; }
-        public String lName { set; get; }
-        public String accountType { set; get; }
-        public Boolean firstLogin { set; get; }
-        public Boolean active { set; get; }
-        public DateTime? DoB { set; get; }
-        public String locCity { set; get; }
-        public String locState { set; get; }
-        public String locCountry { set; get; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid userID { get; set; }
 
-        [ForeignKey("UserActions")]
-        public virtual List<int> ActionIds { get; set; }
+        public String userEmail { get; set; }
+        public String clientName { get; set; }
+        //setting up parent recursion
+        public Guid? parentID { get; set; }
+        [ForeignKey("parentID")]
+        public virtual User Parent { get; set; }
+
+        //setting up client
+        public Guid? clientID { get; set; }
+        [ForeignKey("clientID")]
+        public virtual Client client { get; set; }
+        
+        public int height { get; set; }
+        public String fName { get; set; }
+        public String lName { get; set; }
+        public String accountType { get; set; }
+        public Boolean firstLogin { get; set; }
+        public Boolean active { get; set; }
+        public DateTime? DoB { get; set; }
+        public String locCity { get; set; }
+        public String locState { get; set; }
+        public String locCountry { get; set; }
+
+        //[ForeignKey("UserActions")]
+        public virtual List<UserAction> userActions { get; set; }
         
         
 
@@ -38,7 +47,7 @@ namespace CheckIt.DataAccessLayer
         }
 
         public User(String email, String first, String last, DateTime? dob, String atype, String city, String state, 
-            String country, String client, int height, long userID, string parentEmail)
+            String country, String client, int height, Guid? parentID)
         {
             this.userEmail = email;
             this.fName = first;
@@ -53,9 +62,10 @@ namespace CheckIt.DataAccessLayer
             this.firstLogin = false;
             this.active = true;
             this.height = height;
-            this.userID = userID;
+            //this.userID = userID;
             this.clientName = client;
-            this.parentEmail = parentEmail;
+            this.parentID = parentID;
+            this.userActions = new List<UserAction>();
 
         }
         /*
