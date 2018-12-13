@@ -1,8 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+<<<<<<< HEAD
 /*
 namespace UserManagement
+=======
+using CheckIt.Authorization;
+
+namespace CheckIt.UserManagement
+>>>>>>> master
 {
     class Deletion
     {
@@ -12,28 +18,23 @@ namespace UserManagement
             //LLD note: DAL will respond with pass/fail
         }
 
-        public bool Authorize(string email1, string email2){
-            //Authorization auth = new Authorization();
-            auth.Authr(email1,email2);
-            //IF (fail), message
-            //LLD note: Authorization will respond with (JWT,Action)
+
+        public void DeleteUser(IToken token, string email1, string email2, string action){
+            bool authorized = AuthorizationManager.AuthorizeUserToUser(token, email1, email2, action);
+            if (authorized)
+            {
+                //call DAL to delete query database
+            }
+            else
+            {
+                //Error say authorization not granted
+            } 
         }
 
-        public void DeleteUser(string email2){
-            //call DAL to delete query database
-            //LLD: note DAL will respond will pass/fail
-        }
-
-        public void confirmDelete(string email2){
+        public void confirmDelete(string email2)
+        {
             //Call DAL to Search-query email2
         }
-
-        public String interpret(DAL message){
-
-            //interpret DAL response
-            //send to event handler
-        }
-
 
     }
 }

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CheckIt.DataAccessLayer;
 
-namespace CheckIt.Authorization
+namespace CheckIt.Authorizations
 {
-    class Authorization
+    public class Authorization
     {
        
 
@@ -17,10 +18,9 @@ namespace CheckIt.Authorization
         /// <param name="token"></param>
         /// <param name="IP"></param>
         /// <returns></returns>
-        private static bool authorizeIP(Token token, string IP)
+        public static bool authorizeIP(Token token, string IP)
         {
-
-            return false;
+            return true;
         }
 
         /// <summary>
@@ -29,9 +29,9 @@ namespace CheckIt.Authorization
         /// <param name="token"></param>
         /// <param name="birthday"> user's birthdate</param>
         /// <returns></returns>
-        private static bool authorizeAge(DateTime birthday)
+        public static bool authorizeAge(DateTime birthday)
         {
-            DateTime now = new DateTime();
+            DateTime now = DateTime.Now;
             TimeSpan age = now - birthday;
             int ageInDays = age.Days;
             int ageInYears = ageInDays / 365;
@@ -44,11 +44,46 @@ namespace CheckIt.Authorization
             return false;
         }
 
-        //TODO: Once DAL is done we can do this
-        public static bool UserToUserPermission(string user1, string user2)
+        public static bool CheckClientActions(IToken token, string action)
         {
+            
+            string client = token.GetClient();
 
-            return true;
+            if(client == null)
+            {
+                return true;
+            }else
+            {
+                AuthorizationData dm = new AuthorizationData();
+                List<string> clientActions = dm.getClientActions(client);
+                if (clientActions.Contains(action))
+                {
+                    return true;
+                }
+                
+            }
+            return false;
+        }
+
+        //TODO: Once DAL is done we can do this
+        //DAL.GetUserHeight(user2)
+        public static bool UserToUserPermission(IToken token, string user2)
+        {
+            AuthorizationData dm = new AuthorizationData();
+            Console.WriteLine("token height = " + token.GetHeight());
+            int user2height = dm.getHeight(user2);
+            if(user2height == -1)
+            {
+                return false;
+            }else if(token.GetHeight() < user2height)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
         

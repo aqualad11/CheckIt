@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Authorization.exe.config
 C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Authorization.exe
 C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Authorization.pdb
@@ -20,3 +21,92 @@ C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\obj\Debug\Authori
 C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\obj\Debug\Authorization.csproj.CopyComplete
 C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\obj\Debug\Authorization.exe
 C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\obj\Debug\Authorization.pdb
+=======
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csprojAssemblyReference.cache
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.exe.config
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.exe
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.pdb
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csproj.CopyComplete
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.exe
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.pdb
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\DataAccessLayer.exe
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.dll
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\DataAccessLayer.pdb
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\DataAccessLayer.exe.config
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.xml
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.exe.config
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.exe
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\DataAccessLayer.exe
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Newtonsoft.Json.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\DataAccessLayer.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\DataAccessLayer.exe.config
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\Newtonsoft.Json.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csprojAssemblyReference.cache
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csproj.CoreCompileInputs.cache
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csproj.CopyComplete
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.exe
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.pdb
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.exe.config
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.exe
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.pdb
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\DataAccessLayer.exe
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.dll
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Newtonsoft.Json.dll
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\DataAccessLayer.pdb
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\DataAccessLayer.exe.config
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.xml
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\Newtonsoft.Json.xml
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csprojAssemblyReference.cache
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csproj.CoreCompileInputs.cache
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csproj.CopyComplete
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.exe
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.pdb
+>>>>>>> master
