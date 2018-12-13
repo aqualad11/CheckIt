@@ -123,10 +123,12 @@ namespace AuthorizationTests
             //changed from 2 to 3, probably not necessary b/c AuthorizeAction only tests the actions list, not height
             int height = 3;
             string action = "Add_User";
+
             IToken token = new Token(email, actions, height);
+            bool expected = false;
+
 
             //Act
-            bool expected = false;
             bool actual = Authorization.AuthorizeAction(token, action);
 
             //Assert

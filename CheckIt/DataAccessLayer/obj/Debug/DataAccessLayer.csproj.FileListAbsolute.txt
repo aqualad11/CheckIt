@@ -25,3 +25,17 @@ C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\Data
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.exe
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.init.resources
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
