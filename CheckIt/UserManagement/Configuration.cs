@@ -29,10 +29,18 @@ namespace CheckIt.UserManagement
             }
         }
 
+<<<<<<< HEAD
+        public Dictionary<string, bool> retrieveActions(string email2){
+
+			//call DAL to query db for email2 dictionary of actions
+			return null;
+            
+=======
         public List<string> retrieveActions(string email2){
             List<string> retrieve = new List<string>();
             //call DAL to query db for email2 dictionary of actions
             return retrieve;
+>>>>>>> master
         }
 
         public void updateActions(List<string> actions){

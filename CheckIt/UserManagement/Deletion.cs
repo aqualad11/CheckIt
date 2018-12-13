@@ -1,9 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+<<<<<<< HEAD
+/*
+namespace UserManagement
+=======
 using CheckIt.Authorization;
 
 namespace CheckIt.UserManagement
+>>>>>>> master
 {
     class Deletion
     {
@@ -33,3 +38,4 @@ namespace CheckIt.UserManagement
 
     }
 }
+*/

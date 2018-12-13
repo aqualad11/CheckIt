@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using CheckIt.Authorization;
 
+/*
 namespace CheckIt.UserManagement
 {
     class Activation
@@ -69,3 +70,4 @@ namespace CheckIt.UserManagement
         }
     }
 }
+*/

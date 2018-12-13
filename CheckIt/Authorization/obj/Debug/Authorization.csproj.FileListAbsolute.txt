@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Authorization.exe.config
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Authorization.exe
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Authorization.pdb
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\obj\Debug\Authorization.csprojAssemblyReference.cache
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\obj\Debug\Authorization.csproj.CoreCompileInputs.cache
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\obj\Debug\Authorization.csproj.CopyComplete
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\obj\Debug\Authorization.exe
+C:\Users\Bryan\Documents\Checkit\Checkit\Checkit\Authorization\obj\Debug\Authorization.pdb
+=======
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csprojAssemblyReference.cache
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csproj.CoreCompileInputs.cache
 C:\Users\Jonathan Ascencio\Documents\CheckItMaster\CheckIt\CheckIt\Authorization\bin\Debug\Authorization.exe.config
@@ -85,3 +109,4 @@ C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\obj\De
 C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csproj.CopyComplete
 C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.exe
 C:\Users\candap1\Desktop\Demo\Authorization\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.pdb
+>>>>>>> master

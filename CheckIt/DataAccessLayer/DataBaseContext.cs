@@ -4,9 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
+<<<<<<< HEAD
+/*
+namespace Checkit
+=======
 
 
 namespace CheckIt.DataAccessLayer
+>>>>>>> master
 {
     public class DataBaseContext : DbContext
     {
@@ -52,3 +57,4 @@ namespace CheckIt.DataAccessLayer
         */
     }
 }
+*/
