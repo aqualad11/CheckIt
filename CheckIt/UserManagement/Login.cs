@@ -6,10 +6,10 @@ namespace CheckIt.UserManagement
 {
     class Login
     {
-        string[] randomQuestions = [10];
+        //string[] randomQuestions = [10];
         string[] answers;
 
-        public bool authenticateLogIn(User user){
+        public void authenticateLogIn(User user){
             //is LLD incomplete? It makes a direct call to Db..
         }
         public void firstLogin(User user){

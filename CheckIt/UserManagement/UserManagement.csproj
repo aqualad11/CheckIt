@@ -44,11 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activation.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="QA.cs" />
+    <Compile Include="IUser.cs" />
+    <Compile Include="RegisteredUser.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="CreateAdmin.cs" />
     <Compile Include="CreateUser.cs" />
     <Compile Include="Deletion.cs" />
-    <Compile Include="Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />

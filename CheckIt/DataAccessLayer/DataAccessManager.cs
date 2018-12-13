@@ -2,24 +2,50 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
-namespace Checkit
+namespace CheckIt.DataAccessLayer
 {
     public class DataAccessManager
     {
-        public int getHeight(User usr)
+        private DataBaseContext dbc;
+
+        public DataAccessManager()
         {
-            using (var context = new DataBaseContext())
-            {
-                var height = context.Users.Select(u => u.height).Where(o => o.email.Contains(usr.email));
-                return height;
-            }
+            dbc = new DataBaseContext();
         }
-        public void addToDB(User usr)
+
+        
+        
+        public int getHeight(string email)
         {
-            using(var context = new DataBaseContext())
+            //try
+            //{
+                User user = dbc.Users.Where(u => u.userEmail == email).Select(u => u).Single();
+                Console.Write("DAM getheight = " + user.height);
+                return user.height;
+            //}catch (Exception e)
+            //{
+            //    return -1;
+            //}
+            
+            
+        }
+        
+        public List<string> getActions(string email)
+        {
+            try
             {
-                context.addUser(usr);
+                List<string> actions = new List<string>();
+                //var query = dbc.UserActions.Where(a => a.actionEmail == email).Select(a => a);
+                //foreach(var act in query)
+                //{
+                //    actions.Add(act.action);
+                //}
+                return actions;
+            }catch (Exception e)
+            {
+                return new List<string>();
             }
         }
     }
