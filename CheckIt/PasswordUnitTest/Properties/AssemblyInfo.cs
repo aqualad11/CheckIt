@@ -5,15 +5,15 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("PasswordUnitTest")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("HP Inc.")]
 [assembly: AssemblyProduct("PasswordUnitTest")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Copyright © HP Inc. 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("d8c25e9e-a885-4215-8ace-8cacd06251b9")]
+[assembly: Guid("73eb9b3f-e490-4c07-ad4b-8c602841be21")]
 
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]

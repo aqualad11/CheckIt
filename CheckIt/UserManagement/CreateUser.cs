@@ -1,88 +1,40 @@
-<<<<<<< HEAD
-using CheckIt.UserManagement;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-/*
-namespace UserManagement
-{
-    class CreateUser
-    {
-        
-    
-        public bool checkUser(User email)
-        {
-            //make call to DAL to check if user already exists
-            return true;
-        }
-
-        public bool checkAge(User dob){
-            if(dob.year > 17){
-=======
+﻿using CheckIt.UserManagement;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Security.Cryptography;
+using CheckIt.DataAccessLayer;
 
 
-namespace CheckIt.UserManagement
-{
-    class CreateUser
-    {
+namespace CheckIt.UserManagement{
 
+    class CreateUser { 
         private const int saltByteLength = 24;
         private const int derivedKeyLength = 24;
 
-        public bool createAccount(String email, String first, String last, DateTime dob, String atype, String city, String state, String country, String password, String q1, String a1, String q2, String a2, String q3, String a3)
-        {
-            User u1 = createUser(email, first, last, dob, atype, city, state, country);
-            RegisteredUser rU1 = createRegisteredUser(email, password, q1, a1, q2, a2, q3, a3);
-            //DAL to upload both to DB
-            //DAL search user
-        }
-
         public static bool checkEmail(string email)
         {
-            bool result = true; 
+            bool result = true;
             //make call to DAL to check if user already exists
             return result;
         }
 
-        public static bool checkAge(DateTime dob){
+        public static bool checkAge(DateTime dob)
+        {
             DateTime now = new DateTime();
             TimeSpan age = now - dob;
             int ageInDays = age.Days;
             int ageInYears = ageInDays / 365;
-            if (ageInYears >= 18){
->>>>>>> master
+            if (ageInYears >= 18)
+            {
                 return true;
-            }else{
+            }
+            else
+            {
                 return false;
             }
-<<<<<<< HEAD
-            return true;
         }
-
-        public void callDALtoStore(User user){
-
-                //call DAL to store user
-
-        }
-
-        public String Interpret(){
-
-			//interpret DAL response
-			return y;
-        }
-
-
-    }
-}
-*/
-=======
-        }
-
+        
         public User createUser(String email, String first, String last, DateTime dob, String atype, String city, String state, String country)
         {
             bool emailCheck = checkEmail(email);
@@ -92,15 +44,15 @@ namespace CheckIt.UserManagement
                 long userID = generateID();
                 String client = "Basic";
                 int height = 2;
-                long parentID = userID-1;//TODO: Wtih DAL, get a user where height is 1 less
+                long parentID = userID - 1;//TODO: Wtih DAL, get a user where height is 1 less
 
-                User user = new User(email, first, last, dob, atype, city, state, country, actions, client,height, userID, parentID );
+                User user = new User();//(email, first, last, dob, atype, city, state, country, client, height, parentID);
 
                 //DAL request to add to DB
 
                 return user;
 
-                
+
             }
             else if (emailCheck == false)
             {
@@ -114,32 +66,32 @@ namespace CheckIt.UserManagement
             }
 
         }
-
-        public RegisteredUser createRegisteredUser(String email, String password, String q1, String a1, String q2, String a2, String q3, String a3)
-        {
-            bool emailCheck = CreateUser.checkEmail(email);
-            if (validatePassword(password) && checkEmail(email)){
-                RegisteredUser regUser = new RegisteredUser();
-                regUser.email = email;
-                regUser.password = CreatePasswordHash(password);
-                regUser.securityQA = new QA(q1, a1, q2, a2, q3, a3);
-
-                return regUser;
-            }
-            else if ( emailCheck == false)
+        /*
+            public RegisteredUser createRegisteredUser(String email, String password, String q1, String a1, String q2, String a2, String q3, String a3)
             {
-                Console.Write("Email Is already used in the system!");
-                return new RegisteredUser();
-            }
-            else
-            {
-                Console.Write("Password is not valid");
-                return new RegisteredUser();
-            }
-          
-           
-        }
+                bool emailCheck = CreateUser.checkEmail(email);
+                if (validatePassword(password) && checkEmail(email)){
+                    RegisteredUser regUser = new RegisteredUser();
+                    regUser.email = email;
+                    regUser.password = CreatePasswordHash(password);
+                    regUser.securityQA = new QA(q1, a1, q2, a2, q3, a3);
 
+                    return regUser;
+                }
+                else if ( emailCheck == false)
+                {
+                    Console.Write("Email Is already used in the system!");
+                    return new RegisteredUser();
+                }
+                else
+                {
+                    Console.Write("Password is not valid");
+                    return new RegisteredUser();
+                }
+
+
+            }
+            */
         public static long generateID()
         {
             byte[] buffer = Guid.NewGuid().ToByteArray();
@@ -193,15 +145,20 @@ namespace CheckIt.UserManagement
 
         public Boolean validatePassword(string password)
         {
-            if(password.Length>11 && password.Length < 2001)
+            if (password.Length > 11 && password.Length < 2001)
             {
                 return true;
             }
             return false;
         }
-
     }
+    
 }
+/*
+ * TODO Feb-2019
+ * Match Create user to SSO
+ * Create a Finish User method for First time login
+ */
 
 
 
@@ -215,4 +172,4 @@ namespace CheckIt.UserManagement
  * Deletion: DAL things only
  * done......................go over registered user usage and IUser
  * */
->>>>>>> master
+

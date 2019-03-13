@@ -9,7 +9,7 @@ namespace CheckIt.Authorizations
 {
     public class Authorization
     {
-       
+
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace CheckIt.Authorizations
             int ageInDays = age.Days;
             int ageInYears = ageInDays / 365;
 
-            if(ageInYears >= 18)
+            if (ageInYears >= 18)
             {
                 return true;
             }
@@ -46,13 +46,14 @@ namespace CheckIt.Authorizations
 
         public static bool CheckClientActions(IToken token, string action)
         {
-            
+
             string client = token.GetClient();
 
-            if(client == null)
+            if (client == null)
             {
                 return true;
-            }else
+            }
+            else
             {
                 AuthorizationData dm = new AuthorizationData();
                 List<string> clientActions = dm.getClientActions(client);
@@ -60,7 +61,7 @@ namespace CheckIt.Authorizations
                 {
                     return true;
                 }
-                
+
             }
             return false;
         }
@@ -72,10 +73,11 @@ namespace CheckIt.Authorizations
             AuthorizationData dm = new AuthorizationData();
             Console.WriteLine("token height = " + token.GetHeight());
             int user2height = dm.getHeight(user2);
-            if(user2height == -1)
+            if (user2height == -1)
             {
                 return false;
-            }else if(token.GetHeight() < user2height)
+            }
+            else if (token.GetHeight() < user2height)
             {
                 return true;
             }
@@ -83,10 +85,10 @@ namespace CheckIt.Authorizations
             {
                 return false;
             }
-            
+
         }
 
-        
+
 
         public static bool AuthorizeAction(IToken token, string action)
         {

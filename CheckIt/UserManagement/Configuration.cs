@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using CheckIt.Authorization;
+using CheckIt.Authorizations;
 
 namespace CheckIt.UserManagement
 {
@@ -28,31 +28,25 @@ namespace CheckIt.UserManagement
                 //Error say authorization not granted
             }
         }
-
-<<<<<<< HEAD
-        public Dictionary<string, bool> retrieveActions(string email2){
-
-			//call DAL to query db for email2 dictionary of actions
-			return null;
-            
-=======
         public List<string> retrieveActions(string email2){
             List<string> retrieve = new List<string>();
             //call DAL to query db for email2 dictionary of actions
             return retrieve;
->>>>>>> master
+
         }
 
-        public void updateActions(List<string> actions){
+        public void updateActions(List<string> actions)
+        {
 
             //DAL will have 2 getActions calls. one will return list of just enabled strings, other will return dictionary for this configuration
-        
+
         }
 
-        public void storeActions(){
+        public void storeActions()
+        {
 
             //Send to DAL to update user with updated actions
-        
+
         }
 
 
