@@ -12,7 +12,7 @@ namespace CheckIt.Authorizations
     public class Token : IToken
     {
         //TODO: make own key and possibly store it somewhere else
-        private string key = "401b09eab3c013d4ca54922bb802bec8fd5318192b0a75f201d8b372742"+
+        private string key = "401b09eab3c013d4ca54922bb802bec8fd5318192b0a75f201d8b372742" +
            "9090fb337591abd3e44453b954555b7a0812e1081c39b740293f765eae731f5a65ed1";
 
         private JwtSecurityTokenHandler handler;
@@ -22,22 +22,22 @@ namespace CheckIt.Authorizations
         private string email { get; set; }
         private string client { get; set; }
         private int height { get; set; }
-        
+
         //makes Token object given parameters below
-        public Token(string email, List<string> actions, int height, string client=null)
+        public Token(string email, List<string> actions, int height, string client = null)
         {
             this.actions = actions;
             this.email = email;
             this.client = client;
             this.height = height;
-            
+
 
             handler = new JwtSecurityTokenHandler();
             var securityKey = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
             var credentials = new Microsoft.IdentityModel.Tokens.SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
             var header = new JwtHeader(credentials);
 
-            
+
             var payload = new JwtPayload {
                 {"email", email },
                 {"client", client },
@@ -113,7 +113,7 @@ namespace CheckIt.Authorizations
         {
             return email;
         }
-        
+
         //returns client stored in Token
         public string GetClient()
         {

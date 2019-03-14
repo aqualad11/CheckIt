@@ -25,21 +25,21 @@ namespace CheckIt.Authorizations
             else
             {
                 //check if action is in client's action list
-                if(Authorization.CheckClientActions(token, action))
+                if (Authorization.CheckClientActions(token, action))
                 {
                     //if so check if action is in user's action list
                     return Authorization.AuthorizeAction(token, action);
                 }
                 //client does not have action
                 return false;
-            }     
-            
+            }
+
         }
 
         public static bool AuthorizeUserToUser(IToken token, string email2, string action)
         {
             //checks if user can edit second user
-            if(!Authorization.UserToUserPermission(token,email2))
+            if (!Authorization.UserToUserPermission(token, email2))
             {
                 return false;
             }

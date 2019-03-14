@@ -1,14 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
-<<<<<<< HEAD
-/*
-namespace UserManagement
-=======
-using CheckIt.Authorization;
+using CheckIt.Authorizations;
+using CheckIt.DataAccessLayer;
 
 namespace CheckIt.UserManagement
->>>>>>> master
 {
     class Deletion
     {
@@ -20,7 +16,7 @@ namespace CheckIt.UserManagement
 
 
         public void DeleteUser(IToken token, string email1, string email2, string action){
-            bool authorized = AuthorizationManager.AuthorizeUserToUser(token, email1, email2, action);
+            bool authorized = AuthorizationManager.AuthorizeUserToUser(token, email2, action);
             if (authorized)
             {
                 //call DAL to delete query database
@@ -38,4 +34,3 @@ namespace CheckIt.UserManagement
 
     }
 }
-*/
