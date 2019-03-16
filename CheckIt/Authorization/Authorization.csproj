@@ -136,7 +136,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Checkit\DataAccessLayer.csproj">
+    <ProjectReference Include="..\..\..\..\CheckitProjects\Checkit\Checkit\DataAccessLayer.csproj">
       <Project>{20559c41-cd29-4522-a7bc-d013c4e5f23c}</Project>
       <Name>DataAccessLayer</Name>
     </ProjectReference>
