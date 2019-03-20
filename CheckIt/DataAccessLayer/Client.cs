@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CheckIt.DataAccessLayer
+namespace DataAccessLayer
 {
     public class Client
     {
@@ -22,7 +22,6 @@ namespace CheckIt.DataAccessLayer
 
         public Client()
         {
-
         }
 
         public Client(string name)

@@ -5,15 +5,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 using System.Text;
 
-namespace CheckIt.DataAccessLayer
+namespace DataAccessLayer
 {
     public class User
     {
-        [Key]
+        [Key, Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid userID { get; set; }
 
-        public String userEmail { get; set; }
+        //TODO: make userEmail PK and redo dependencies
+        //[Key, Column(Order = 1)]
+        //[Index(IsUnique = true)]
+        public string userEmail { get; set; }
         //setting up parent recursion
         public Guid? parentID { get; set; }
         [ForeignKey("parentID")]
@@ -25,15 +28,25 @@ namespace CheckIt.DataAccessLayer
         public virtual Client client { get; set; }
 
         public int height { get; set; }
-        public String fName { get; set; }
-        public String lName { get; set; }
-        public String accountType { get; set; }
-        public Boolean firstLogin { get; set; }
-        public Boolean active { get; set; }
+        public string fName { get; set; }
+        public string lName { get; set; }
+        public string accountType { get; set; }
+        public bool firstLogin { get; set; }
+        public bool active { get; set; }
         public DateTime? DoB { get; set; }
-        public String locCity { get; set; }
-        public String locState { get; set; }
-        public String locCountry { get; set; }
+        public string locCity { get; set; }
+        public string locState { get; set; }
+        public string locCountry { get; set; }
+
+        public string pwdHash { get; set; }
+        public string salt { get; set; }
+
+        public string question1 { get; set; }
+        public string answer1 { get; set; }
+        public string question2 { get; set; }
+        public string answer2 { get; set; }
+        public string question3 { get; set; }
+        public string answer3 { get; set; }
 
         //[ForeignKey("UserActions")]
         public virtual List<UserAction> userActions { get; set; }
@@ -45,8 +58,8 @@ namespace CheckIt.DataAccessLayer
 
         }
 
-        public User(String email, String first, String last, DateTime? dob, String atype, String city, String state,
-            String country, String client, int height, Guid? parentID)
+        public User(string email, string first, string last, DateTime? dob, string atype, string city, string state,
+            string country, string client, Guid? parentID)
         {
             this.userEmail = email;
             this.fName = first;
@@ -59,9 +72,6 @@ namespace CheckIt.DataAccessLayer
             this.height = 2;
             this.active = true;
             this.firstLogin = false;
-            this.active = true;
-            this.height = height;
-            //this.userID = userID;
             this.parentID = parentID;
             this.userActions = new List<UserAction>();
 
@@ -90,7 +100,6 @@ namespace CheckIt.DataAccessLayer
                 Console.Write("No action to remove!");
             }
         }
-
         */
 
     }
