@@ -44,9 +44,10 @@ namespace CheckIt.Authorizations
             return false;
         }
 
+        //TODO: Once Repository is done, Re-implement
         public static bool CheckClientActions(IToken token, string action)
         {
-
+            /*
             string client = token.GetClient();
 
             if (client == null)
@@ -64,13 +65,15 @@ namespace CheckIt.Authorizations
 
             }
             return false;
+            */
+            return true;
         }
 
-        //TODO: Once DAL is done we can do this
+        //TODO: Once Repository is complete, RE-Implement
         //DAL.GetUserHeight(user2)
         public static bool UserToUserPermission(IToken token, string user2)
         {
-            AuthorizationData dm = new AuthorizationData();
+            /*AuthorizationData dm = new AuthorizationData();
             Console.WriteLine("token height = " + token.GetHeight());
             int user2height = dm.getHeight(user2);
             if (user2height == -1)
@@ -85,9 +88,10 @@ namespace CheckIt.Authorizations
             {
                 return false;
             }
-
+            */
+            return true;
         }
-
+        
 
 
         public static bool AuthorizeAction(IToken token, string action)

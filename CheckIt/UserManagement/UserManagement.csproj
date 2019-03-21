@@ -87,13 +87,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\CheckitProjects\Checkit\Checkit\DataAccessLayer.csproj">
-      <Project>{20559c41-cd29-4522-a7bc-d013c4e5f23c}</Project>
-      <Name>DataAccessLayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Authorization\Authorization.csproj">
       <Project>{23a51cfb-2c96-40cb-b694-05cebd38c4c6}</Project>
       <Name>Authorization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{ca9e9e01-6ce2-4d5d-93c3-d18768957013}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PasswordValidation\PasswordValidation.csproj">
+      <Project>{f861096b-0b5c-4f77-bc4c-f5c3f8fe24dc}</Project>
+      <Name>PasswordValidation</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
