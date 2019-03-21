@@ -74,6 +74,7 @@ C:\Users\candap1\Documents\CheckitProjects\Checkit\Authorization\obj\Debug\Autho
 C:\Users\candap1\Documents\CheckitProjects\Checkit\Authorization\obj\Debug\Authorization.dll
 C:\Users\candap1\Documents\CheckitProjects\Checkit\Authorization\obj\Debug\Authorization.pdb
 C:\Users\candap1\Documents\CheckitProjects\Checkit\Authorization\obj\Debug\Authorization.csprojAssemblyReference.cache
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csproj.CoreCompileInputs.cache
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Authorization.dll.config
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Authorization.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Authorization.pdb
@@ -123,7 +124,9 @@ C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\roslyn\vbc.e
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\roslyn\vbc.rsp
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\roslyn\VBCSCompiler.exe
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Checkit.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\DataAccessLayer.exe
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\EntityFramework.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\EntityFramework.SqlServer.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Microsoft.IdentityModel.Logging.dll
@@ -131,9 +134,10 @@ C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Microsoft.Id
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Newtonsoft.Json.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\System.Net.Http.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\EntityFramework.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Checkit.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Checkit.dll.config
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\DataAccessLayer.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\DataAccessLayer.exe.config
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\EntityFramework.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\EntityFramework.SqlServer.xml
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Microsoft.IdentityModel.JsonWebTokens.xml
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Microsoft.IdentityModel.Logging.pdb
@@ -144,9 +148,7 @@ C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Newtonsoft.J
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\System.IdentityModel.Tokens.Jwt.pdb
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\bin\EntityFramework.xml
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csprojAssemblyReference.cache
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csproj.CoreCompileInputs.cache
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.csproj.CopyComplete
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Authorization\obj\Debug\Authorization.pdb

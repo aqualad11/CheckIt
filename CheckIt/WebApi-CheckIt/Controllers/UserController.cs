@@ -14,24 +14,45 @@ namespace WebApi_Checkit.Controllers
         // GET api/User
         [HttpGet]
         [Route("api/user")]
-        public IHttpActionResult Get()
+        public String Get()
         { 
-            return Ok("successful get");
+            return"Successful Get Without Parameters. Returned at: " + DateTime.Now;
         }
 
         // GET api/User/5
         [HttpGet]
         [Route("api/user/{id}")] //route specific
-        public IHttpActionResult Get(int id)
+        public String Get(int id)
         {
-            return Ok();
-
-   
+            List<String> list = new List<String>();
+            list.Add("Bryan");
+            list.Add("Kunal");
+            list.Add("Alex");
+            list.Add("Jonathan");
+            if (id <= 3 && id >= 0)
+            {
+                return list[id];
+            }
+            return "Index not found! Try again (0-3)";
         }
 
         // POST api/User
         [HttpPost]
-        [Route("api/user")]
+        [Route("api/user/post/{password}")]
+        public async System.Threading.Tasks.Task<string> PostAsync(string password)
+        {
+            int pwned = await ValidationHandler.ValidatePassword(password);
+            if (pwned == 1)
+            {
+                return "That password has been hacked before. Please choose a more secure password.";
+            }
+            else
+            {
+                return "That password is safe to use.";
+            }
+            //return "To confirm, you sent this password: " + password;
+        }
+        /*
         public async System.Threading.Tasks.Task<IHttpActionResult> PostPasswordAsync([FromBody] string password) //using a POCO to represent request
         {  
             int pwned = await ValidationHandler.ValidatePassword(password);
@@ -41,7 +62,7 @@ namespace WebApi_Checkit.Controllers
             else {
                 return Ok("Password is safe to use.");
             }
-        }
+        }*/
 
         // PUT api/user/5
         public void Put(int id, [FromBody]string value)

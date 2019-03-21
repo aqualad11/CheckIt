@@ -1,75 +1,28 @@
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Checkit.dll.config
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Checkit.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Checkit.pdb
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\csc.exe
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\csc.exe.config
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\csc.rsp
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\csi.exe
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\csi.exe.config
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\csi.rsp
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.AppContext.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Console.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.IO.Compression.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.IO.Pipes.AccessControl.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.IO.Pipes.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Security.AccessControl.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Security.Claims.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Security.Principal.Windows.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.ValueTuple.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Xml.XPath.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\vbc.exe
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\vbc.exe.config
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\vbc.rsp
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\VBCSCompiler.exe
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\EntityFramework.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\EntityFramework.SqlServer.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Microsoft.IdentityModel.Logging.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Microsoft.IdentityModel.Tokens.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Newtonsoft.Json.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\System.Net.Http.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\EntityFramework.xml
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\EntityFramework.SqlServer.xml
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Microsoft.IdentityModel.JsonWebTokens.xml
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Microsoft.IdentityModel.Logging.pdb
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Microsoft.IdentityModel.Logging.xml
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Microsoft.IdentityModel.Tokens.pdb
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Microsoft.IdentityModel.Tokens.xml
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Newtonsoft.Json.xml
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\System.IdentityModel.Tokens.Jwt.pdb
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\System.IdentityModel.Tokens.Jwt.xml
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\obj\Debug\DataAccessLayer.csproj.CopyComplete
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\obj\Debug\Checkit.dll
-C:\Users\candap1\Documents\Checkit\Checkit\Checkit\obj\Debug\Checkit.pdb
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.dbinitrds.resources
+C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.CheckItDBInit.resources
+C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache

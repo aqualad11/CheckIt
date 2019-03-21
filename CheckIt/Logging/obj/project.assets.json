@@ -182,11 +182,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\candap1\\Documents\\GitHub\\CheckIt\\Checkit\\Logging\\Logging.csproj",
+      "projectUniqueName": "C:\\Users\\candap1\\Documents\\GitHub\\CheckIt\\CheckIt\\Logging\\Logging.csproj",
       "projectName": "Logging",
-      "projectPath": "C:\\Users\\candap1\\Documents\\GitHub\\CheckIt\\Checkit\\Logging\\Logging.csproj",
+      "projectPath": "C:\\Users\\candap1\\Documents\\GitHub\\CheckIt\\CheckIt\\Logging\\Logging.csproj",
       "packagesPath": "C:\\Users\\candap1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\candap1\\Documents\\GitHub\\CheckIt\\Checkit\\Logging\\obj\\",
+      "outputPath": "C:\\Users\\candap1\\Documents\\GitHub\\CheckIt\\CheckIt\\Logging\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

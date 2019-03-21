@@ -1,3 +1,5 @@
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\Newtonsoft.Json.xml
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\ApplicationInsights.config
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\WebApi-CheckIt.dll.config
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\WebApi-CheckIt.dll
@@ -56,7 +58,6 @@ C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.A
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.AI.Web.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.AI.WindowsServer.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.ApplicationInsights.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.AspNet.TelemetryCorrelation.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\Newtonsoft.Json.dll
@@ -75,7 +76,6 @@ C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\System.Web.
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\WebGrease.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\PasswordValidation.pdb
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\PasswordValidation.dll.config
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\Newtonsoft.Json.xml
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\System.Net.Http.Formatting.xml
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\System.Web.Helpers.xml
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\System.Web.Http.xml
@@ -98,3 +98,7 @@ C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebAp
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.csproj.CopyComplete
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\EntityFramework.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\EntityFramework.SqlServer.dll
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\EntityFramework.xml
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\bin\EntityFramework.SqlServer.xml

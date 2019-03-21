@@ -1,9 +1,9 @@
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Logging\bin\Debug\netstandard2.0\Logging.deps.json
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Logging\bin\Debug\netstandard2.0\Logging.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Logging\bin\Debug\netstandard2.0\Logging.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Logging\obj\Debug\netstandard2.0\Logging.csprojAssemblyReference.cache
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Logging\obj\Debug\netstandard2.0\Logging.csproj.CoreCompileInputs.cache
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Logging\obj\Debug\netstandard2.0\Logging.AssemblyInfoInputs.cache
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Logging\obj\Debug\netstandard2.0\Logging.AssemblyInfo.cs
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Logging\obj\Debug\netstandard2.0\Logging.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Logging\obj\Debug\netstandard2.0\Logging.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\Logging\obj\Debug\netstandard2.0\Logging.csprojAssemblyReference.cache
