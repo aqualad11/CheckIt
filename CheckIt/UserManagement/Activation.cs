@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using CheckIt.Authorization;
+using CheckIt.Authorizations;
+using CheckIt.DataAccessLayer;
 
-/*
+
 namespace CheckIt.UserManagement
 {
     class Activation
@@ -70,4 +71,3 @@ namespace CheckIt.UserManagement
         }
     }
 }
-*/

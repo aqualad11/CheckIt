@@ -9,7 +9,7 @@ namespace CheckIt.Authorizations
 {
     public class Authorization
     {
-       
+
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace CheckIt.Authorizations
             int ageInDays = age.Days;
             int ageInYears = ageInDays / 365;
 
-            if(ageInYears >= 18)
+            if (ageInYears >= 18)
             {
                 return true;
             }
@@ -44,15 +44,17 @@ namespace CheckIt.Authorizations
             return false;
         }
 
+        //TODO: Once Repository is done, Re-implement
         public static bool CheckClientActions(IToken token, string action)
         {
-            
+            /*
             string client = token.GetClient();
 
-            if(client == null)
+            if (client == null)
             {
                 return true;
-            }else
+            }
+            else
             {
                 AuthorizationData dm = new AuthorizationData();
                 List<string> clientActions = dm.getClientActions(client);
@@ -60,22 +62,25 @@ namespace CheckIt.Authorizations
                 {
                     return true;
                 }
-                
+
             }
             return false;
+            */
+            return true;
         }
 
-        //TODO: Once DAL is done we can do this
+        //TODO: Once Repository is complete, RE-Implement
         //DAL.GetUserHeight(user2)
         public static bool UserToUserPermission(IToken token, string user2)
         {
-            AuthorizationData dm = new AuthorizationData();
+            /*AuthorizationData dm = new AuthorizationData();
             Console.WriteLine("token height = " + token.GetHeight());
             int user2height = dm.getHeight(user2);
-            if(user2height == -1)
+            if (user2height == -1)
             {
                 return false;
-            }else if(token.GetHeight() < user2height)
+            }
+            else if (token.GetHeight() < user2height)
             {
                 return true;
             }
@@ -83,10 +88,11 @@ namespace CheckIt.Authorizations
             {
                 return false;
             }
-            
+            */
+            return true;
         }
-
         
+
 
         public static bool AuthorizeAction(IToken token, string action)
         {

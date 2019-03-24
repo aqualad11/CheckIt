@@ -29,7 +29,7 @@ namespace AuthorizationTests
             bool actual = Authorization.AuthorizeAction(token, action);
             //Assert
             Assert.AreEqual(expected, actual);
-            
+
         }
 
         [TestMethod]
@@ -68,7 +68,7 @@ namespace AuthorizationTests
                 "Search"
             };
             int height = 1;
-            
+
             IToken token = new Token(email, actions, height);
             string user2email = "example2@gmail.com";
             //Act
@@ -103,7 +103,7 @@ namespace AuthorizationTests
 
 
         }
-        
+
 
         [TestMethod]
         /*This test checks to see if a user can perform an admin action  */

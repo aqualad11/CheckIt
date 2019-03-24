@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CheckIt",
+    "\\CheckIt\\DataAccessLayer",
+    "\\CheckIt\\UserManagement"
+  ],
+  "SelectedNode": "\\CheckIt\\UserManagement\\Deletion.cs",
+  "PreviewInSolutionExplorer": false
+}
