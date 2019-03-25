@@ -4,10 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Repositories
+namespace CheckIt.DataAccessLayer.Repositories
 {
     public interface IClientRepository
     {
-        public Client getClientByID(Guid id)
+        Client getClientByID(Guid id);
+        Client getClientByName(string name);
+
+        void addClient(Client client);
+        void updateClient(Client client);
+        void removeClient(Client client);
     }
 }
