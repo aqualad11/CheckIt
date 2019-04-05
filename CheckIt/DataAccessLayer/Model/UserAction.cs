@@ -13,11 +13,16 @@ namespace CheckIt.DataAccessLayer
         [Key, Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid actionID { set; get; }
-        public string action { set; get; }
+
         [Key, Column(Order = 1)]
         [ForeignKey("User")]
         public Guid userID { get; set; }
         public User User { get; set; }
+
+        //TODO: uncomment line below and update db
+        //[Key, Column(Order = 2)]
+        public string action { set; get; }
+
 
 
 

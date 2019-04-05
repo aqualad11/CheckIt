@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace CheckIt.DataAccessLayer.Repositories
 {
-    interface IUserActionRepository
+    public interface IUserActionRepository
     {
-        UserAction getUserActionByID(Guid useractionID);
-        List<UserAction> getUserActionsByUserID(Guid userID);
+        //UserAction getUserActionByID(Guid useractionID);
+        //List<UserAction> getUserActionsByUserID(Guid userID);//look into deleting this
+        UserAction getUserAction(Guid userID, string action);
         List<string> getActionsByUserID(Guid userID);
         List<User> getUsersByAction(string action);
 
         void addUserAction(UserAction useraction);
-        void updateUserAction(UserAction useraction);//may need to remove this
         void removeUserAction(UserAction useraction);
+        void removeUserAction(Guid userID, string action);
     }
 }

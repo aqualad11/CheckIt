@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CheckIt.DataAccessLayer.Repositories
 {
-    interface IClientActionRepository
+    public interface IClientActionRepository
     {
         ClientAction getClientActionbyID(Guid id);
-        List<ClientAction> getClientActionsByClientID(Guid clientID);
+        ClientAction getClientAction(Guid clientID, string action);
         List<string> getActionsByClientID(Guid clientID);
+        List<Client> getClientsByAction(string action);
 
         void addClientAction(ClientAction clientaction);
-        void updateClientAction(ClientAction clientaction);//remove this guy
         void removeClientAction(ClientAction clientaction);
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CheckIt.DataAccessLayer.Repositories
 {
-    class ItemRepository : IItemRepository
+    public class ItemRepository : IItemRepository
     {
         private DataBaseContext db;
 

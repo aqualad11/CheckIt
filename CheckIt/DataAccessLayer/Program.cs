@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CheckIt.DataAccessLayer.Repositories;
 
 namespace CheckIt.DataAccessLayer
 {
@@ -10,8 +11,20 @@ namespace CheckIt.DataAccessLayer
     {
         static void Main(string[] args)
         {
-           
+            //Arrange
+            DataBaseContext db = new DataBaseContext();
+            IItemListRepository itemListRepo = new ItemListRepository(db);
+            Guid userID = new Guid("7DF91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid itemID = new Guid("85F91B37-DC4A-E911-8259-0A64F53465D0");
+            ItemList il = itemListRepo.getItemList(userID, itemID);
 
+            //Act
+            itemListRepo.removeItemList(il);
+            ItemList newIl = itemListRepo.getItemList(userID, itemID);
+            Console.WriteLine("newIl = " + newIl.itemListID);
+            Console.WriteLine(newIl == null);
+
+            /*--------------------------Data Seeding---------------------------------------------
             using (var dc = new DataBaseContext())
             {
                 
@@ -35,7 +48,7 @@ namespace CheckIt.DataAccessLayer
                 Console.WriteLine("User5's ID: " + usr5ID);
                 var usr6ID = dc.Users.Where(u => u.userEmail == "example6@gmail.com").Select(u => u.userID).SingleOrDefault();
                 Console.WriteLine("User6's ID: " + usr6ID);
-                /*
+                
                 //creating ItemLists
                 ItemList usr1List = new ItemList(usr1ID, shadesRayID);
                 ItemList usr2List = new ItemList(usr2ID, shadesRayID);
@@ -50,9 +63,7 @@ namespace CheckIt.DataAccessLayer
                 dc.ItemLists.Add(usr3List2);
 
                 dc.SaveChanges();
-                */
-
-                /*
+                
                 //Initializing Clients
                 Client c1 = new Client("Finance");
                 Client c2 = new Client("IT");
@@ -99,14 +110,14 @@ namespace CheckIt.DataAccessLayer
                 dc.ClientActions.Add(markAction2);
                 dc.ClientActions.Add(markAction3);
                 dc.SaveChanges();
-                */
+                
                 var markID = dc.Clients.Where(c => c.name == "Marketing").Select(c => c.clientID).SingleOrDefault();
                 var markactions = dc.ClientActions.Where(m => m.clientID == markID).Select(m => m);
                 foreach (var ma in markactions)
                 {
                     Console.WriteLine("Marketing ActionL " + ma.action);
                 }
-                /*
+                
                 //create users
                 DateTime DOB = new DateTime(2000, 5, 1);
                 User usr1 = new User()
@@ -250,9 +261,9 @@ namespace CheckIt.DataAccessLayer
 
                 dc.SaveChanges();
                 
-                */
+                
 
-            }
+            }*/
             Console.ReadKey();
         }
     }

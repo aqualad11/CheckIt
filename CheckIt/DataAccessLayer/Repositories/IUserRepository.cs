@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace CheckIt.DataAccessLayer.Repositories
 {
-    interface IUserRepository
+    public interface IUserRepository
     {
         User getUserbyID(Guid userID);
         User getUserbyEmail(string email);
+        Guid getUserIDbyEmail(string email);
 
         void addUser(User user);
         void updateUser(User user);

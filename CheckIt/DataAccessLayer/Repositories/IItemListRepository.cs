@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace CheckIt.DataAccessLayer.Repositories
 {
-    interface IItemListRepository
+    public interface IItemListRepository
     {
-        ItemList getItemListByID(Guid itemlistID);
-        List<ItemList> getItemListsByUserID(Guid userID);
-        List<Item> getListOfItemsByUserID(Guid userID);
+        ItemList getItemList(Guid userID, Guid itemID);
+        List<Item> getItemsByUserID(Guid userID);
 
         void addItemList(ItemList itemlist);
-        void updateItemList(ItemList itemList);
         void removeItemList(ItemList itemlist);
+        void removeItemList(Guid userID, Guid itemID);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CheckIt.DataAccessLayer.Repositories
 {
-    interface IItemRepository
+    public interface IItemRepository
     {
         Item getItemByID(Guid itemID);
         Item getItemByName(string name);

@@ -25,9 +25,10 @@ namespace CheckIt.DataAccessLayer
         {
             //TODO: remove password before submitting to github
             string uName = "SpyderzAdmin";
-            string password = "";
+            string password = "spyderzaws_123";
             string hostname = "checkitdbinstance.chfkr5vmkp6a.us-east-1.rds.amazonaws.com";
-            string port = "1433";
+
+            //string port = "1433";
             string dbname = "checkitdbinstance";
 
             this.Database.Connection.ConnectionString = "Data Source="+hostname+";Initial Catalog=" + dbname+";User ID=" + uName+ ";Password="+password+";";

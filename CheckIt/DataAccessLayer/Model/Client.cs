@@ -13,7 +13,7 @@ namespace CheckIt.DataAccessLayer
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid clientID { get; set; }
-
+        //TODO: make name a key
         public string name { get; set; }
         //List of users associated with client
         public virtual List<User> user { get; set; }

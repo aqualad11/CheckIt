@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CheckIt.DataAccessLayer.Repositories
 {
-    class ItemListRepository : IItemListRepository
+    public class ItemListRepository : IItemListRepository
     {
         private DataBaseContext db;
 
@@ -16,42 +16,45 @@ namespace CheckIt.DataAccessLayer.Repositories
             this.db = db;
         }
         
-        public ItemList getItemListByID(Guid itemlistID)
+        public ItemList getItemList(Guid userID, Guid itemID)
         {
-            ItemList itemlist = db.ItemLists.Find(itemlistID);
-            return itemlist;
+            ItemList itemList = db.ItemLists.Where(i => i.userID == userID && i.itemID == itemID).FirstOrDefault();
+            return itemList;
         }
 
-        public List<ItemList> getItemListsByUserID(Guid userID)
-        {
-            var itemlists = db.ItemLists.Where(i => i.userID == userID).ToList();
-            return itemlists;
-        }
-
-        public List<Item> getListOfItemsByUserID(Guid userID)
+        public List<Item> getItemsByUserID(Guid userID)
         {
             var items = db.ItemLists.Where(i => i.userID == userID).Select(i => i.item).ToList();
             return items;
         }
 
+        /// <summary>
+        /// Adds an Itemlist object to DB
+        /// doesn't check for duplicates, must be handled in service layer
+        /// </summary>
+        /// <param name="itemlist"></param>
         public void addItemList(ItemList itemlist)
         {
             db.ItemLists.Add(itemlist);
             db.SaveChanges();
         }
 
+        /// <summary>
+        /// removes the ItemList object passed in from DB
+        /// throws InvalidOperationException
+        /// </summary>
+        /// <param name="itemlist"></param>
         public void removeItemList(ItemList itemlist)
         {
             db.ItemLists.Remove(itemlist);
             db.SaveChanges();
         }
 
-        public void updateItemList(ItemList itemlist)
+        public void removeItemList(Guid userID, Guid itemID)
         {
-            db.Entry(itemlist).State = EntityState.Modified;
+            ItemList itemList = db.ItemLists.Where(i => i.userID == userID && i.itemID == itemID).FirstOrDefault();
+            db.ItemLists.Remove(itemList);
             db.SaveChanges();
         }
-
-
     }
 }

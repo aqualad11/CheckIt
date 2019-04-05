@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CheckIt.DataAccessLayer.Repositories
 {
-    class ClientActionRepository : IClientActionRepository
+    public class ClientActionRepository : IClientActionRepository
     {
         private DataBaseContext db;
 
@@ -18,7 +18,14 @@ namespace CheckIt.DataAccessLayer.Repositories
 
         public ClientAction getClientActionbyID(Guid id)
         {
-            throw new NotImplementedException();
+            ClientAction ca = db.ClientActions.Where(c => c.clientActionID == id).FirstOrDefault();
+            return ca;
+        }
+
+        public ClientAction getClientAction(Guid clientID, string action)
+        {
+            ClientAction ca = db.ClientActions.Where(c => c.clientID == clientID && c.action == action).FirstOrDefault();
+            return ca;
         }
 
         //returns a list of actions as a list of Clientactions
@@ -34,10 +41,22 @@ namespace CheckIt.DataAccessLayer.Repositories
             List<string> clientactions = db.ClientActions.Where(c => c.clientID == clientID).Select(c => c.action).ToList();
             return clientactions;
         }
+
+        public List<Client> getClientsByAction(string action)
+        {
+            List<Client> clients = db.ClientActions.Where(c => c.action == action).Select(c => c.Client).ToList();
+            return clients;
+        }
         
         public void addClientAction(ClientAction clientaction)
         {
             db.ClientActions.Add(clientaction);
+            db.SaveChanges();
+        }
+
+        public void updateClientAction(ClientAction clientaction)
+        {
+            db.Entry(clientaction).State = EntityState.Modified;
             db.SaveChanges();
         }
 
@@ -47,11 +66,6 @@ namespace CheckIt.DataAccessLayer.Repositories
             db.SaveChanges();
         }
 
-        public void updateClientAction(ClientAction clientaction)
-        {
-            db.Entry(clientaction).State = EntityState.Modified;
-            db.SaveChanges();
-        }
-        
+
     }
 }
