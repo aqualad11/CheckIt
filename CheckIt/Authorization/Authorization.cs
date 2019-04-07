@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CheckIt.DataAccessLayer;
 
-namespace CheckIt.Authorizations
+namespace CheckIt.Authorization
 {
     public class Authorization
     {

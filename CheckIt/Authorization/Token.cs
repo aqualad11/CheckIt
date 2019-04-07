@@ -7,7 +7,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security;
 using Microsoft.IdentityModel.Tokens;
 
-namespace CheckIt.Authorizations
+namespace CheckIt.Authorization
 {
     public class Token : IToken
     {
