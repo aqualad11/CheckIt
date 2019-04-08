@@ -41,7 +41,7 @@ namespace WebApi_Checkit.Controllers
         [Route("api/user/post/{password}")]
         public async System.Threading.Tasks.Task<string> PostAsync(string password)
         {
-            int pwned = await ValidationHandler.ValidatePassword(password);
+            int pwned = await PasswordService.ValidatePassword(password);
             if (pwned == 1)
             {
                 return "That password has been hacked before. Please choose a more secure password.";
@@ -55,7 +55,7 @@ namespace WebApi_Checkit.Controllers
         /*
         public async System.Threading.Tasks.Task<IHttpActionResult> PostPasswordAsync([FromBody] string password) //using a POCO to represent request
         {  
-            int pwned = await ValidationHandler.ValidatePassword(password);
+            int pwned = await PasswordService.ValidatePassword(password);
             if (pwned == 1) {
                 return Content((HttpStatusCode)401, "That password has been hacked before. Please choose a more secure password.");
             }

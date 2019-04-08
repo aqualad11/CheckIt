@@ -11,10 +11,6 @@ D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CoreC
 D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CopyComplete
 D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\PasswordValidation.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.Net.Http.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\PasswordValidation.pdb
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\PasswordValidation.dll.config
 D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csprojAssemblyReference.cache
 D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.exe
 D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.dll
@@ -24,3 +20,9 @@ D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.xml
 D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
 D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.dll
 D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.xml
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.exe.config
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.exe.config

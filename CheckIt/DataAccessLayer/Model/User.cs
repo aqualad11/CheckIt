@@ -38,6 +38,9 @@ namespace CheckIt.DataAccessLayer
         public string locState { get; set; }
         public string locCountry { get; set; }
 
+        //[ForeignKey("UserActions")]
+        public virtual List<UserAction> userActions { get; set; }
+
         public string pwdHash { get; set; }
         public string salt { get; set; }
 
@@ -48,59 +51,40 @@ namespace CheckIt.DataAccessLayer
         public string question3 { get; set; }
         public string answer3 { get; set; }
 
-        //[ForeignKey("UserActions")]
-        public virtual List<UserAction> userActions { get; set; }
-
-
+        
 
         public User()
         {
-
         }
 
+        //creates normal user with height of 2
         public User(string email, string first, string last, DateTime? dob, string atype, string city, string state,
-            string country, string client, Guid? parentID)
+            string country, Guid? clientID, Guid? parentID, string passwordHash, string salt, string q1, string a1,
+            string q2, string a2, string q3, string a3)
         {
-            this.userEmail = email;
-            this.fName = first;
-            this.lName = last;
-            this.DoB = dob;
-            this.accountType = atype;
-            this.locCity = city;
-            this.locState = state;
-            this.locCountry = country;
-            this.height = 2;
-            this.active = true;
-            this.firstLogin = false;
+            userEmail = email;
+            fName = first;
+            lName = last;
+            DoB = dob;
+            accountType = atype;
+            locCity = city;
+            locState = state;
+            locCountry = country;
+            this.clientID = clientID;
+            height = 2;
+            active = true;
+            firstLogin = true;
             this.parentID = parentID;
-            this.userActions = new List<UserAction>();
-
+            userActions = new List<UserAction>();
+            pwdHash = passwordHash;
+            this.salt = salt;
+            question1 = q1;
+            answer1 = a1;
+            question2 = q2;
+            answer2 = a2;
+            question3 = q3;
+            answer3 = a3;
         }
-        /*
-        public void addAction(string action)
-        {
-            UserAction act = new UserAction(userEmail, action);
-            actions.Add(act);
-        }
-        public void addAction(List<UserAction> list)
-        {
-            foreach (UserAction a in list)
-            {
-                actions.Add(a);
-            }
-        }
-        public void removeAction(UserAction action)
-        {
-            if (actions.Contains(action))
-            {
-                actions.Remove(action);
-            }
-            else
-            {
-                Console.Write("No action to remove!");
-            }
-        }
-        */
 
     }
 

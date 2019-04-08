@@ -53,6 +53,7 @@ namespace CheckIt.ServiceLayer
             }
 
             userRepo.addUser(user);
+            //TODO: check User was successfully added
             return true;
         }
 

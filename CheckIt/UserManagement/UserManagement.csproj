@@ -95,10 +95,6 @@
       <Project>{ca9e9e01-6ce2-4d5d-93c3-d18768957013}</Project>
       <Name>DataAccessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PasswordValidation\PasswordValidation.csproj">
-      <Project>{f861096b-0b5c-4f77-bc4c-f5c3f8fe24dc}</Project>
-      <Name>PasswordValidation</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

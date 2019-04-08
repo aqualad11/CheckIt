@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CheckIt.PasswordValidation;
+using CheckIt.ServiceLayer;
+using System;
 
 namespace PasswordUnitTest
 {
@@ -17,7 +18,7 @@ namespace PasswordUnitTest
             password = "Hello123;"; //Assign password a value that is known the fail. 
             expected = 0;
             //Act
-            actual = await ValidationHandler.ValidatePassword(password);
+            actual = await PasswordService.ValidatePassword(password);
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -31,7 +32,7 @@ namespace PasswordUnitTest
             expected = 1;
             password = "password"; //This password is a uncompromised password.
             //Act
-            actual = await ValidationHandler.ValidatePassword(password);
+            actual = await PasswordService.ValidatePassword(password);
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -45,9 +46,31 @@ namespace PasswordUnitTest
             password = ""; //Sending in a password that is not long enough for the specified hash of PCheck
             expected = 3;
             //Act
-            actual = await ValidationHandler.ValidatePassword(password);
+            actual = await PasswordService.ValidatePassword(password);
             //Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// Tests both CreateSalt and GetPasswordHash by first creating a salt, converting it
+        /// to a string as that is how it will be stored, then converting it back to a byteArray,
+        /// create a passwordHash using both the orignal salt and the converted salt
+        /// </summary>
+        [TestMethod]
+        public void saltAndPasswordHashTest()
+        {
+            //Arrange
+            string password = "HelloWorld";
+            byte[] salt = PasswordService.CreateSalt();
+            string salty = Convert.ToBase64String(salt);
+            byte[] salt2 = Convert.FromBase64String(salty);
+
+            //Act
+            string passwordHash1 = PasswordService.GetPasswordHash(password, salt);
+            string passwordHash2 = PasswordService.GetPasswordHash(password, salt2);
+
+            //Assert
+            Assert.AreEqual(passwordHash1, passwordHash2);
         }
     }
 }
