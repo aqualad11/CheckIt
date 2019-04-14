@@ -1,5 +1,4 @@
 import scrapy
-import base64
 
 from CheckItCrawler.items import AmazonItem
 
@@ -24,9 +23,9 @@ class CheckItSpider(scrapy.Spider):
         item['image_urls'] = [response.css('div.imgTagWrapper img::attr(src)').get()]
         yield item
 
-
-
-
+    # shop-product-carousels-58339243 > div > div > div > div > div > div.pager-carousel-content > div > ul > li:nth-child(10) > div > div > div.product-block-mini__image-anchor > a
+    # shop-product-carousels-58339243 > div > div > div > div > div > div.pager-carousel-content > div > ul > li:nth-child(10) > div > div > div.product-block-mini__image-anchor
+##pdp-content > div:nth-child(2) > section > div.pdp-mini-carousel-wrapper > div > div.carousel-container > div > div > div.outterSlideWrapper
     def parse_once(self,response):
         item = AmazonItem()
         item['price'] = response.xpath("string(//*[@id='price_inside_buybox'])").get().strip()

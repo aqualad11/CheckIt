@@ -5,11 +5,9 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymongo
-from scrapy.exceptions import DropItem
 
-class CheckItCrawlerPipeline(object):
-
-    collection_name = 'AmazonItems'
+class BestbuycrawlerPipeline(object):
+    collection_name = 'BestBuyItems'
 
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
@@ -17,10 +15,11 @@ class CheckItCrawlerPipeline(object):
 
     @classmethod
     def from_crawler(cls, crawler):
-       return cls(
-           mongo_uri=crawler.settings.get('MONGO_URI'),
-           mongo_db=crawler.settings.get('MONGO_DATABASE','items')
-       )
+        return cls(
+            mongo_uri=crawler.settings.get('MONGO_URI'),
+            mongo_db=crawler.settings.get('MONGO_DATABASE', 'items')
+        )
+
     def open_spider(self, spider):
         self.client = pymongo.MongoClient(self.mongo_uri)
         self.db = self.client[self.mongo_db]
@@ -30,9 +29,9 @@ class CheckItCrawlerPipeline(object):
 
     def process_item(self, item, spider):
         if item['name'] == '':
-            raise DropItem("Missing Name in %s" % item)
+            pass
         elif item['price'] == '':
-            raise DropItem("Missing Price in %s" % item)
+            pass
         else:
             self.db[self.collection_name].insert(dict(item))
             return item
