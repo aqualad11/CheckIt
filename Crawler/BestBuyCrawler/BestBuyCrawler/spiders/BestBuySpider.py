@@ -36,8 +36,8 @@ class BestBuySpider(scrapy.Spider):
         current = response.meta['count']
         if current < 100:
             item = BestBuyItem()
-            item['price'] = response.xpath("string(//*[@id='priceblock-wrapper-wrapper']/div[1]/div[1]/div[2]/div[1]/div/div/div/div/div[2]/div/div[1]/div/span[1])").get()
             item['name'] = response.css("div.sku-title h1::text").get()
+            item['price'] = response.xpath("string(//*[@id='priceblock-wrapper-wrapper']/div[1]/div[1]/div[2]/div[1]/div/div/div/div/div[2]/div/div[1]/div/span[1])").get()
             item['url'] = response.request.url
             item['description'] = response.xpath("string(//*[@id='long-description'])").get()
             yield item
@@ -52,5 +52,6 @@ class BestBuySpider(scrapy.Spider):
             pass
 
 
-
+#//*[@id="grpDescrip_23-201-108"]
+#//*[@id="grpDescrip_23-201-108"]/text()
 

@@ -10,8 +10,8 @@ import scrapy
 
 class BestBuyItem(scrapy.Item):
     # define the fields for your item here like:
-    price = scrapy.Field()
     name = scrapy.Field()
+    price = scrapy.Field()
     url = scrapy.Field()
     description = scrapy.Field()
     #image_urls = scrapy.Field()
