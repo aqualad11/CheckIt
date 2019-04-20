@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for CheckItCrawler project
+# Scrapy settings for BestBuyCrawler project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,10 +9,10 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'CheckItCrawler'
+BOT_NAME = 'BestBuyCrawler'
 
-SPIDER_MODULES = ['CheckItCrawler.spiders']
-NEWSPIDER_MODULE = 'CheckItCrawler.spiders'
+SPIDER_MODULES = ['BestBuyCrawler.spiders']
+NEWSPIDER_MODULE = 'BestBuyCrawler.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -21,14 +21,15 @@ USER_AGENT = '(Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, lik
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
+CLOSESPIDER_PAGECOUNT = 1000
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = .25
-RANDOMIZE_DOWNLOAD_DELAY = True
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -48,13 +49,18 @@ RANDOMIZE_DOWNLOAD_DELAY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'CheckItCrawler.middlewares.CheckitcrawlerSpiderMiddleware': 543,
+ #   'BestBuyCrawler.middlewares.BestbuycrawlerSpiderMiddleware': 543,
+ #    'scrapy_splash.SplashCookiesMiddleware': 723,
+ #   'scrapy_splash.SplashMiddleware': 725,
+#    'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
 #}
-
+#SPLASH_URL = 'http://localhost:8050'
+#DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
+#HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'CheckItCrawler.middlewares.CheckitcrawlerDownloaderMiddleware': 543,
+#    'BestBuyCrawler.middlewares.BestbuycrawlerDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -66,20 +72,10 @@ RANDOMIZE_DOWNLOAD_DELAY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'CheckItCrawler.pipelines.CheckItCrawlerPipeline': 300,
+    'BestBuyCrawler.pipelines.BestbuycrawlerPipeline': 300,
 }
-#IMAGES_STORE = '/Users/Bryan/Desktop/CheckItImageStore'
-#IMAGES_THUMBS = {
-#    'small': (50, 50),
-#    'big': (300, 300)
-#}
 MONGO_URI = 'mongodb://localhost:27017'
 MONGODB_DATABASE = 'AmazonItems'
-
-#MEDIA_ALLOW_REDIRECTS = True
-
-#AWS_ACCESS_KEY_ID = 'AKIAJQ7SZLMBWH5M7PHQ'
-#AWS_SECRET_ACCESS_KEY = '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'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
