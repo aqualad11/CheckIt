@@ -26,7 +26,7 @@ namespace CheckIt.ServiceLayer
         }
 
         
-        public void GetToken()
+        public void GetToken(string jwt, Guid userID)
         {
 
         }
