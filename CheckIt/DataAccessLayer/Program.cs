@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CheckIt.DataAccessLayer.Repositories;
 
 namespace CheckIt.DataAccessLayer
 {
@@ -10,18 +11,11 @@ namespace CheckIt.DataAccessLayer
     {
         static void Main(string[] args)
         {
-           
-
+            
             using (var dc = new DataBaseContext())
             {
-                
-                //getting Item IDs
-                var shadesRayID = dc.Items.Where(i => i.ItemName == "rayban wayfarer").Select(i => i.itemID).SingleOrDefault();
-                var shadesOakID = dc.Items.Where(i => i.ItemName == "Oakley").Select(i => i.itemID).SingleOrDefault();
-                var monitorID = dc.Items.Where(i => i.ItemName == "LG ultrawide").Select(i => i.itemID).SingleOrDefault();
-
-                Console.WriteLine("Rayban ID = " + shadesRayID + " Oakleys ID = " + shadesOakID + " monitor ID = " + monitorID);
-
+                //add this to data seeding
+                //getting userIDs
                 //getting user IDs
                 var usr1ID = dc.Users.Where(u => u.userEmail == "example1@gmail.com").Select(u => u.userID).SingleOrDefault();
                 Console.WriteLine("User1's ID: " + usr1ID);
@@ -35,25 +29,32 @@ namespace CheckIt.DataAccessLayer
                 Console.WriteLine("User5's ID: " + usr5ID);
                 var usr6ID = dc.Users.Where(u => u.userEmail == "example6@gmail.com").Select(u => u.userID).SingleOrDefault();
                 Console.WriteLine("User6's ID: " + usr6ID);
-                /*
-                //creating ItemLists
-                ItemList usr1List = new ItemList(usr1ID, shadesRayID);
-                ItemList usr2List = new ItemList(usr2ID, shadesRayID);
-                ItemList usr3List = new ItemList(usr3ID, monitorID);
-                ItemList usr3List2 = new ItemList(usr3ID, shadesOakID);
 
-
-                //adding itemLists to DB
-                dc.ItemLists.Add(usr1List);
-                dc.ItemLists.Add(usr2List);
-                dc.ItemLists.Add(usr3List);
-                dc.ItemLists.Add(usr3List2);
-
+                //Creating Tokens
+                Token token1 = new Token("SampleJWT1", usr1ID);
+                Token token2 = new Token("SampleJWT2", usr2ID);
+                Token token3 = new Token("SampleJWT3", usr3ID);
+                Token token4 = new Token("SampleJWT4", usr4ID);
+                Token token5 = new Token("SampleJWT5", usr5ID);
+                Token token6 = new Token("SampleJWT6", usr6ID);
+                
+                //Adding tokens to db
+                dc.Tokens.Add(token1);
+                dc.Tokens.Add(token2);
+                dc.Tokens.Add(token3);
+                dc.Tokens.Add(token4);
+                dc.Tokens.Add(token5);
+                dc.Tokens.Add(token6);
+                   
+                //save db
                 dc.SaveChanges();
-                */
 
-                /*
-                //Initializing Clients
+            }
+            /*--------------------------Data Seeding---------------------------------------------
+            using (var dc = new DataBaseContext())
+            {
+                
+                //Creating Clients
                 Client c1 = new Client("Finance");
                 Client c2 = new Client("IT");
                 Client c3 = new Client("Marketing");
@@ -99,19 +100,12 @@ namespace CheckIt.DataAccessLayer
                 dc.ClientActions.Add(markAction2);
                 dc.ClientActions.Add(markAction3);
                 dc.SaveChanges();
-                */
-                var markID = dc.Clients.Where(c => c.name == "Marketing").Select(c => c.clientID).SingleOrDefault();
-                var markactions = dc.ClientActions.Where(m => m.clientID == markID).Select(m => m);
-                foreach (var ma in markactions)
-                {
-                    Console.WriteLine("Marketing ActionL " + ma.action);
-                }
-                /*
+                
+                
                 //create users
                 DateTime DOB = new DateTime(2000, 5, 1);
                 User usr1 = new User()
                 {
-                    fName = "Admin",
                     userEmail = "example1@gmail.com",
                     clientID = HRID,
                     height = 1,
@@ -121,22 +115,8 @@ namespace CheckIt.DataAccessLayer
                 User usr2 = new User()
                 {
                     userEmail = "example2@gmail.com",
-                    fName = "Jonathan",
-                    lName = "Ascencio",
                     accountType = "user",
-                    firstLogin = true,
                     active = true,
-                    locCity = "Long Beach",
-                    locState = "California",
-                    locCountry = "USA",
-                    pwdHash = "asdfv7984932fvsdf",
-                    salt = "fd839r",
-                    question1 = "dob?",
-                    answer1 = "07221997",
-                    question2 = "asdf",
-                    answer2 = "lkjh",
-                    question3 = "jihu",
-                    answer3 = "edrf",
                     clientID = HRID,
                     height = 2,
                     DoB = DOB
@@ -250,9 +230,9 @@ namespace CheckIt.DataAccessLayer
 
                 dc.SaveChanges();
                 
-                */
+                
 
-            }
+            }*/
             Console.ReadKey();
         }
     }

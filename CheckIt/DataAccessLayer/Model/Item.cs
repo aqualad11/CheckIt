@@ -14,6 +14,7 @@ namespace CheckIt.DataAccessLayer
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid itemID { get; set; }
+        //TODO: add itemName as Key
         public string ItemName { get; set; }
         public double price { get; set; }
         public string url { get; set; }

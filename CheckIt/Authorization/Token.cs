@@ -7,7 +7,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security;
 using Microsoft.IdentityModel.Tokens;
 
-namespace CheckIt.Authorizations
+namespace CheckIt.Authorization
 {
     public class Token : IToken
     {
@@ -33,6 +33,7 @@ namespace CheckIt.Authorizations
 
 
             handler = new JwtSecurityTokenHandler();
+            //using key basically says we are the only ones that can create key
             var securityKey = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
             var credentials = new Microsoft.IdentityModel.Tokens.SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
             var header = new JwtHeader(credentials);

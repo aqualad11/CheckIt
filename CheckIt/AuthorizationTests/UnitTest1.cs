@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CheckIt.Authorizations;
+using CheckIt.Authorization;
 using CheckIt.DataAccessLayer;
 
 namespace AuthorizationTests

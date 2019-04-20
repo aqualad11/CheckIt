@@ -14,7 +14,7 @@ namespace CheckIt.PasswordValidation
     /// Summary description for Class1
     /// </summary>
     /// 
-
+    /*
     public class PCheck
     {
         static HttpClient client = new HttpClient();
@@ -32,5 +32,5 @@ namespace CheckIt.PasswordValidation
             //Return the resulted String[]
             return results;
         }
-    }
+    }*/
 }

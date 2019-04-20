@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheckIt.Authorizations
+namespace CheckIt.Authorization
 {
     public interface IToken
     {

@@ -1,0 +1,16 @@
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.exe.config
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\EntityFramework.dll
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.exe.config
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.exe.config
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\EntityFramework.xml
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csprojAssemblyReference.cache
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CoreCompileInputs.cache
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CopyComplete
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.pdb
