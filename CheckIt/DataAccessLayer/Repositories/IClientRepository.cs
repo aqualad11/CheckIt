@@ -8,11 +8,11 @@ namespace CheckIt.DataAccessLayer.Repositories
 {
     public interface IClientRepository
     {
-        Client getClientByID(Guid id);
-        Client getClientByName(string name);
+        Client GetClientByID(Guid id);
+        Client GetClientByName(string name);
 
-        void addClient(Client client);
-        void updateClient(Client client);
-        void removeClient(Client client);
+        void AddClient(Client client);
+        void UpdateClient(Client client);
+        void RemoveClient(Client client);
     }
 }

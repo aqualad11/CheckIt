@@ -8,12 +8,11 @@ namespace CheckIt.DataAccessLayer.Repositories
 {
     public interface IClientActionRepository
     {
-        ClientAction getClientActionbyID(Guid id);
-        ClientAction getClientAction(Guid clientID, string action);
-        List<string> getActionsByClientID(Guid clientID);
-        List<Client> getClientsByAction(string action);
+        ClientAction GetClientAction(Guid clientID, string action);
+        List<string> GetActionsByClientID(Guid clientID);
+        List<Client> GetClientsByAction(string action);
 
-        void addClientAction(ClientAction clientaction);
-        void removeClientAction(ClientAction clientaction);
+        void AddClientAction(ClientAction clientaction);
+        void RemoveClientAction(ClientAction clientaction);
     }
 }

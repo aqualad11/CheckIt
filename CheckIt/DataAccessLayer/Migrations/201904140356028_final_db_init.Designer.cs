@@ -7,13 +7,13 @@ namespace DataAccessLayer.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class CheckItDBInit : IMigrationMetadata
+    public sealed partial class final_db_init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CheckItDBInit));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(final_db_init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201903210610462_CheckIt-DB-Init"; }
+            get { return "201904140356028_final_db_init"; }
         }
         
         string IMigrationMetadata.Source

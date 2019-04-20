@@ -16,25 +16,25 @@ namespace CheckIt.DataAccessLayer.Repositories
             this.db = db;
         }
 
-        public User getUserbyEmail(string email)
+        public User GetUserbyEmail(string email)
         {
             var user = db.Users.Where(u => u.userEmail == email).FirstOrDefault();
             return user;
         }
 
-        public User getUserbyID(Guid userID)
+        public User GetUserbyID(Guid userID)
         {
             var user = db.Users.Where(u => u.userID == userID).FirstOrDefault();
             return user;
         }
 
-        public Guid getUserIDbyEmail(string email)
+        public Guid GetUserIDbyEmail(string email)
         {
             Guid userID = db.Users.Where(u => u.userEmail == email).Select(u => u.userID).FirstOrDefault();
             return userID;
         }
 
-        public void addUser(User user)
+        public void AddUser(User user)
         {
             db.Users.Add(user);
             db.SaveChanges();
@@ -44,7 +44,7 @@ namespace CheckIt.DataAccessLayer.Repositories
         //if user does not exist in DB
         //throws System.ArgumentNullException
         //if user is null
-        public void updateUser(User user)
+        public void UpdateUser(User user)
         {
             db.Entry(user).State = EntityState.Modified;
             db.SaveChanges();
@@ -53,7 +53,7 @@ namespace CheckIt.DataAccessLayer.Repositories
         //TODO: figure out where to handle an empty user or user that does not exist
         //throws System.InvalidOperationException if user not found
         //throws ArgumentNullException if null user passed in
-        public void removeUser(User user)
+        public void RemoveUser(User user)
         {
             db.Users.Remove(user);
             db.SaveChanges();

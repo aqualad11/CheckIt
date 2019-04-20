@@ -10,7 +10,7 @@ namespace CheckIt.UnitTests
     public class ClientRepoTest 
     {
         /// <summary>
-        /// Tests getClientByID using valid ID
+        /// Tests GetClientByID using valid ID
         /// </summary>
         [TestMethod]
         public void getClientByValidID()
@@ -21,14 +21,14 @@ namespace CheckIt.UnitTests
             Guid clientID = new Guid("6CF91B37-DC4A-E911-8259-0A64F53465D0");
 
             //Act
-            Client client = clientRepo.getClientByID(clientID);
+            Client client = clientRepo.GetClientByID(clientID);
 
             //Assert
             Assert.IsNotNull(client);
         }
 
         /// <summary>
-        /// Tests getClientByID using invalid ID
+        /// Tests GetClientByID using invalid ID
         /// </summary>
         [TestMethod]
         public void getClientByInvalidID()
@@ -39,14 +39,14 @@ namespace CheckIt.UnitTests
             Guid clientID = new Guid();
 
             //Act
-            Client client = clientRepo.getClientByID(clientID);
+            Client client = clientRepo.GetClientByID(clientID);
 
             //Assert
             Assert.IsNull(client);
         }
 
         /// <summary>
-        /// Tests getClientByName using valid client name
+        /// Tests GetClientByName using valid client name
         /// </summary>
         [TestMethod]
         public void getClientByValidName()
@@ -57,14 +57,14 @@ namespace CheckIt.UnitTests
             string clientName = "Finance";
 
             //Act
-            Client client = clientRepo.getClientByName(clientName);
+            Client client = clientRepo.GetClientByName(clientName);
 
             //Assert
             Assert.IsNotNull(client);
         }
 
         /// <summary>
-        /// Tests getClientByName using invalid client name
+        /// Tests GetClientByName using invalid client name
         /// </summary>
         [TestMethod]
         public void getClientByInvalidName()
@@ -75,14 +75,14 @@ namespace CheckIt.UnitTests
             string clientName = "HelloWorld";
 
             //Act
-            Client client = clientRepo.getClientByName(clientName);
+            Client client = clientRepo.GetClientByName(clientName);
 
             //Assert
             Assert.IsNull(client);
         }
 
         /// <summary>
-        /// Tests addClient using valid client
+        /// Tests AddClient using valid client
         /// </summary>
         [TestMethod]
         public void addClient()
@@ -93,15 +93,15 @@ namespace CheckIt.UnitTests
             Client newClient = new Client("Corporate");
 
             //Act
-            clientRepo.addClient(newClient);
-            Client addedClient = clientRepo.getClientByName("Corporate");
+            clientRepo.AddClient(newClient);
+            Client addedClient = clientRepo.GetClientByName("Corporate");
 
             //Assert
             Assert.IsNotNull(addedClient);
         }
 
         /// <summary>
-        /// Tests updateClient using valid client
+        /// Tests UpdateClient using valid client
         /// </summary>
         [TestMethod]
         public void updateValidClient()
@@ -109,20 +109,20 @@ namespace CheckIt.UnitTests
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IClientRepository clientRepo = new ClientRepository(db);
-            Client client = clientRepo.getClientByName("Corporate");
+            Client client = clientRepo.GetClientByName("Corporate");
             string newName = "NotCorporate";
             client.name = newName;
 
             //Act
-            clientRepo.updateClient(client);
-            Client updatedClient = clientRepo.getClientByName(newName);
+            clientRepo.UpdateClient(client);
+            Client updatedClient = clientRepo.GetClientByName(newName);
 
             //Assert
             Assert.AreEqual(updatedClient.name, newName);
         }
 
         /// <summary>
-        /// Tests updateClient using an invalid client
+        /// Tests UpdateClient using an invalid client
         /// </summary>
         [TestMethod]
         public void updateInvalidClient()
@@ -133,11 +133,11 @@ namespace CheckIt.UnitTests
             Client client = new Client("NonexistantClient");
 
             //Act
-            Assert.ThrowsException<DbUpdateConcurrencyException>(() => clientRepo.updateClient(client));
+            Assert.ThrowsException<DbUpdateConcurrencyException>(() => clientRepo.UpdateClient(client));
         }
 
         /// <summary>
-        /// Tests removeClient using existing client
+        /// Tests RemoveClient using existing client
         /// </summary>
         /// <param name="client"></param>
         [TestMethod]
@@ -146,18 +146,18 @@ namespace CheckIt.UnitTests
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IClientRepository clientRepo = new ClientRepository(db);
-            Client client = clientRepo.getClientByName("NotCorporate");
+            Client client = clientRepo.GetClientByName("NotCorporate");
 
             //Act 
-            clientRepo.removeClient(client);
-            Client removedClient = clientRepo.getClientByName("NotCorporate");
+            clientRepo.RemoveClient(client);
+            Client removedClient = clientRepo.GetClientByName("NotCorporate");
 
             //Assert
             Assert.IsNull(removedClient);
         }
 
         /// <summary>
-        /// Tests removeClient using nonexisting client
+        /// Tests RemoveClient using nonexisting client
         /// </summary>
         [TestMethod]
         public void removeInvalidClient()
@@ -168,7 +168,7 @@ namespace CheckIt.UnitTests
             Client client = new Client("Hellooo");
 
             //Act => Assert
-            Assert.ThrowsException<InvalidOperationException>(() => clientRepo.removeClient(client));
+            Assert.ThrowsException<InvalidOperationException>(() => clientRepo.RemoveClient(client));
         }
     }
 }

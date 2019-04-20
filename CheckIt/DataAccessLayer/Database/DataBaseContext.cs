@@ -18,11 +18,13 @@ namespace CheckIt.DataAccessLayer
         public DbSet<ClientAction> ClientActions { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<ItemList> ItemLists { get; set; }
+        public DbSet<Token> Tokens { get; set; }
 
         //
         
         public DataBaseContext()
         {
+            /*
             //TODO: remove password before submitting to github
             string uName = "SpyderzAdmin";
             string password = "";
@@ -32,6 +34,7 @@ namespace CheckIt.DataAccessLayer
             string dbname = "checkitdbinstance";
 
             this.Database.Connection.ConnectionString = "Data Source="+hostname+";Initial Catalog=" + dbname+";User ID=" + uName+ ";Password="+password+";";
+        */    
         }
 
     }

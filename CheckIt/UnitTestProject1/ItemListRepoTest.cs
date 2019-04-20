@@ -11,7 +11,7 @@ namespace CheckIt.UnitTests
     public class ItemListRepoTest
     {
         /// <summary>
-        /// Tests getItemList using valid ItemList in db
+        /// Tests GetItemList using valid ItemList in db
         /// </summary>
         [TestMethod]
         public void getItemListValid()
@@ -23,14 +23,14 @@ namespace CheckIt.UnitTests
             Guid itemID = new Guid("83F91B37-DC4A-E911-8259-0A64F53465D0");
 
             //Act
-            ItemList il = itemListRepo.getItemList(userID, itemID);
+            ItemList il = itemListRepo.GetItemList(userID, itemID);
 
             //Assert 
             Assert.IsNotNull(il);
         }
 
         /// <summary>
-        /// Tests getItemList using invalid userID & itemID
+        /// Tests GetItemList using invalid userID & itemID
         /// </summary>
         [TestMethod]
         public void getItemListInvalid()
@@ -42,14 +42,14 @@ namespace CheckIt.UnitTests
             Guid itemID = new Guid("83F91B37-DC4A-E911-8259-0A64F53465D0");
 
             //Act
-            ItemList il = itemListRepo.getItemList(userID, itemID);
+            ItemList il = itemListRepo.GetItemList(userID, itemID);
 
             //Assert 
             Assert.IsNull(il);
         }
 
         /// <summary>
-        /// Tests getItemsByUserID using valid UserID in itemlist
+        /// Tests GetItemsByUserID using valid UserID in itemlist
         /// </summary>
         [TestMethod]
         public void getItemsByValidUserID()
@@ -60,14 +60,14 @@ namespace CheckIt.UnitTests
             Guid userID = new Guid("7BF91B37-DC4A-E911-8259-0A64F53465D0");
 
             //Act
-            List<Item> items = itemListRepo.getItemsByUserID(userID);
+            List<Item> items = itemListRepo.GetItemsByUserID(userID);
 
             //Assert
             Assert.AreEqual(items.Count, 2);
         }
 
         /// <summary>
-        /// Tests getItemsByUserID using invalid UserID which is not in itemList
+        /// Tests GetItemsByUserID using invalid UserID which is not in itemList
         /// </summary>
         [TestMethod]
         public void getItemsByInvalidUserID()
@@ -78,14 +78,14 @@ namespace CheckIt.UnitTests
             Guid userID = new Guid("7CF91B37-DC4A-E911-8259-0A64F53465D0");
 
             //Act
-            List<Item> items = itemListRepo.getItemsByUserID(userID);
+            List<Item> items = itemListRepo.GetItemsByUserID(userID);
 
             //Assert
             Assert.AreEqual(items.Count, 0);
         }
 
         /// <summary>
-        /// Tests addItemList with new ItemList with existing user and item
+        /// Tests AddItemList with new ItemList with existing user and item
         /// </summary>
         /// <param name="itemlist"></param>
         [TestMethod]
@@ -99,15 +99,15 @@ namespace CheckIt.UnitTests
             ItemList il = new ItemList(userID, itemID);
 
             //Act
-            itemListRepo.addItemList(il);
-            ItemList newIl = itemListRepo.getItemList(userID, itemID);
+            itemListRepo.AddItemList(il);
+            ItemList newIl = itemListRepo.GetItemList(userID, itemID);
 
             //Assert
             Assert.IsNotNull(newIl);
         }
 
         /// <summary>
-        /// Tests addItemList with new ItemList with an Nonexisting user and valid item
+        /// Tests AddItemList with new ItemList with an Nonexisting user and valid item
         /// </summary>
         [TestMethod]
         public void addItemListInvalidUser()
@@ -120,11 +120,11 @@ namespace CheckIt.UnitTests
             ItemList il = new ItemList(userID, itemID);
 
             //Act => Assert
-            Assert.ThrowsException<DbUpdateException>(() => itemListRepo.addItemList(il));
+            Assert.ThrowsException<DbUpdateException>(() => itemListRepo.AddItemList(il));
         }
 
         /// <summary>
-        /// Tests addItemList with new ItemList with an valid user and Nonexisting item
+        /// Tests AddItemList with new ItemList with an valid user and Nonexisting item
         /// </summary>
         [TestMethod]
         public void addItemListInvalidItem()
@@ -137,11 +137,11 @@ namespace CheckIt.UnitTests
             ItemList il = new ItemList(userID, itemID);
 
             //Act => Assert
-            Assert.ThrowsException<DbUpdateException>(() => itemListRepo.addItemList(il));
+            Assert.ThrowsException<DbUpdateException>(() => itemListRepo.AddItemList(il));
         }
 
         /// <summary>
-        /// Tests removeItemList(ItemList) with valid Itemlist
+        /// Tests RemoveItemList(ItemList) with valid Itemlist
         /// </summary>
         [TestMethod]
         public void removeItemListValid()
@@ -151,11 +151,11 @@ namespace CheckIt.UnitTests
             IItemListRepository itemListRepo = new ItemListRepository(db);
             Guid userID = new Guid("7DF91B37-DC4A-E911-8259-0A64F53465D0");
             Guid itemID = new Guid("85F91B37-DC4A-E911-8259-0A64F53465D0");
-            ItemList itemList = itemListRepo.getItemList(userID, itemID);
+            ItemList itemList = itemListRepo.GetItemList(userID, itemID);
 
             //Act
-            itemListRepo.removeItemList(itemList);
-            ItemList newIl = itemListRepo.getItemList(userID, itemID);
+            itemListRepo.RemoveItemList(itemList);
+            ItemList newIl = itemListRepo.GetItemList(userID, itemID);
 
             //Assert
             Assert.IsNull(newIl);
@@ -163,7 +163,7 @@ namespace CheckIt.UnitTests
         }
 
         /// <summary>
-        /// Tests removeItemList(ItemList) with invalid Itemlist
+        /// Tests RemoveItemList(ItemList) with invalid Itemlist
         /// </summary>
         [TestMethod]
         public void removeItemListInvalid()
@@ -176,12 +176,12 @@ namespace CheckIt.UnitTests
             ItemList itemList = new ItemList(userID, itemID);
 
             //Act
-            Assert.ThrowsException<InvalidOperationException>(() => itemListRepo.removeItemList(itemList));
+            Assert.ThrowsException<InvalidOperationException>(() => itemListRepo.RemoveItemList(itemList));
             
         }
 
         /// <summary>
-        /// Tests removeItemList(userID, itemID) with valid Itemlist
+        /// Tests RemoveItemList(userID, itemID) with valid Itemlist
         /// </summary>
         [TestMethod]
         public void removeItemListValidUserItem()
@@ -194,15 +194,15 @@ namespace CheckIt.UnitTests
             Guid itemID = new Guid("85F91B37-DC4A-E911-8259-0A64F53465D0");
 
             //Act
-            itemListRepo.removeItemList(userID, itemID);
-            ItemList newIl = itemListRepo.getItemList(userID, itemID);
+            itemListRepo.RemoveItemList(userID, itemID);
+            ItemList newIl = itemListRepo.GetItemList(userID, itemID);
 
             //Assert
             Assert.IsNull(newIl);
         }
 
         /// <summary>
-        /// Tests removeItemList(userID, itemID) with invalid userID
+        /// Tests RemoveItemList(userID, itemID) with invalid userID
         /// same outcome should happen with invaliditemID
         /// </summary>
         [TestMethod]
@@ -216,7 +216,7 @@ namespace CheckIt.UnitTests
             ItemList itemList = new ItemList(userID, itemID);
 
             //Act => Assert
-            Assert.ThrowsException<InvalidOperationException>(() => itemListRepo.removeItemList(itemList));
+            Assert.ThrowsException<InvalidOperationException>(() => itemListRepo.RemoveItemList(itemList));
         }
     }
 }

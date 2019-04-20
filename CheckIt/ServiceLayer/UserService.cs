@@ -20,24 +20,24 @@ namespace CheckIt.ServiceLayer
 
         public bool userExists(Guid id)
         {
-            User user = userRepo.getUserbyID(id);
+            User user = userRepo.GetUserbyID(id);
             return user == null ? false : true;
         }
 
         public bool userExists(string email)
         {
-            User user = userRepo.getUserbyEmail(email);
+            User user = userRepo.GetUserbyEmail(email);
             return user == null ? false : true;
         }
 
         public User getUser(Guid id)
         {
-            return userRepo.getUserbyID(id);
+            return userRepo.GetUserbyID(id);
         }
 
         public User getUser(string email)
         {
-            return userRepo.getUserbyEmail(email);
+            return userRepo.GetUserbyEmail(email);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace CheckIt.ServiceLayer
                 return false;
             }
 
-            userRepo.addUser(user);
+            userRepo.AddUser(user);
             //TODO: check User was successfully added
             return true;
         }
@@ -65,13 +65,13 @@ namespace CheckIt.ServiceLayer
         public bool updateUser(User user)
         {
             //simultaniously checks that user is not null and that user exists in db
-            User temp = userRepo.getUserbyEmail(user.userEmail);
+            User temp = userRepo.GetUserbyEmail(user.userEmail);
             if(temp == null)
             {
                 return false;
             }
 
-            userRepo.updateUser(user);
+            userRepo.UpdateUser(user);
             return true;
         }
 
@@ -82,13 +82,13 @@ namespace CheckIt.ServiceLayer
         public bool removeUser(User user)
         {
             //simultaniously checks that user is not null and that user exists in db
-            User temp = userRepo.getUserbyEmail(user.userEmail);
+            User temp = userRepo.GetUserbyEmail(user.userEmail);
             if(temp == null)
             {
                 return false;
             }
 
-            userRepo.removeUser(user);
+            userRepo.RemoveUser(user);
             return true;
         }
 

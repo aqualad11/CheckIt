@@ -11,7 +11,7 @@ namespace CheckIt.UnitTests
     public class ClientActionRepoTest 
     {
         /// <summary>
-        /// Tests getActionsByClientID using valid clientID
+        /// Tests GetActionsByClientID using valid clientID
         /// </summary>
         [TestMethod]
         public void getActionsByValidClientID()
@@ -22,7 +22,7 @@ namespace CheckIt.UnitTests
             Guid clientID = new Guid("6EF91B37-DC4A-E911-8259-0A64F53465D0");
 
             //Act
-            List<string> actions = clientActionRepo.getActionsByClientID(clientID);
+            List<string> actions = clientActionRepo.GetActionsByClientID(clientID);
 
             //Assert
             Assert.AreEqual(actions.Count, 3);
@@ -30,7 +30,7 @@ namespace CheckIt.UnitTests
         }
 
         /// <summary>
-        /// Tests getActionsByClientID using invalid clientID
+        /// Tests GetActionsByClientID using invalid clientID
         /// </summary>
         [TestMethod]
         public void getActionsByInvalidClientID()
@@ -41,7 +41,7 @@ namespace CheckIt.UnitTests
             Guid clientID = new Guid();
 
             //Act
-            List<string> actions = clientActionRepo.getActionsByClientID(clientID);
+            List<string> actions = clientActionRepo.GetActionsByClientID(clientID);
 
             //Assert
             Assert.AreEqual(actions.Count, 0);
@@ -49,7 +49,7 @@ namespace CheckIt.UnitTests
         }
 
         /// <summary>
-        /// Tests getClientActionbyID using a valid clientAction ID
+        /// Tests GetClientActionbyID using a valid clientAction ID
         /// </summary>
         [TestMethod]
         public void getClientActionbyValidID()
@@ -60,7 +60,7 @@ namespace CheckIt.UnitTests
             Guid clientAction = new Guid("70F91B37-DC4A-E911-8259-0A64F53465D0");
 
             //Act
-            ClientAction ca = clientActionRepo.getClientActionbyID(clientAction);
+            ClientAction ca = clientActionRepo.GetClientActionbyID(clientAction);
 
             //Assert
             Assert.IsNotNull(ca);
@@ -68,7 +68,7 @@ namespace CheckIt.UnitTests
         }
 
         /// <summary>
-        /// Tests getClientActionbyID using a invalid clientAction ID
+        /// Tests GetClientActionbyID using a invalid clientAction ID
         /// </summary>
         [TestMethod]
         public void getClientActionbyInvalidID()
@@ -79,14 +79,14 @@ namespace CheckIt.UnitTests
             Guid clientAction = new Guid();
 
             //Act
-            ClientAction ca = clientActionRepo.getClientActionbyID(clientAction);
+            ClientAction ca = clientActionRepo.GetClientActionbyID(clientAction);
 
             //Assert
             Assert.IsNull(ca);
         }
 
         /// <summary>
-        /// Tests getClientAction(clientID, action) using a valid clientID and action
+        /// Tests GetClientAction(clientID, action) using a valid clientID and action
         /// </summary>
         [TestMethod]
         public void getClientAction()
@@ -98,14 +98,14 @@ namespace CheckIt.UnitTests
             string action = "Login";
 
             //Act
-            ClientAction ca = clientActionRepo.getClientAction(clientID, action);
+            ClientAction ca = clientActionRepo.GetClientAction(clientID, action);
 
             //Assert
             Assert.IsNotNull(ca);
         }
 
         /// <summary>
-        /// Tests getClientAction(clientID, action) using a valid clientID and invalid action
+        /// Tests GetClientAction(clientID, action) using a valid clientID and invalid action
         /// </summary>
         [TestMethod]
         public void getClientActionValid()
@@ -117,14 +117,14 @@ namespace CheckIt.UnitTests
             string action = "NotARealAction";
 
             //Act
-            ClientAction ca = clientActionRepo.getClientAction(clientID, action);
+            ClientAction ca = clientActionRepo.GetClientAction(clientID, action);
 
             //Assert
             Assert.IsNull(ca);
         }
 
         /// <summary>
-        /// Tests getClientsByAction using a valid Action
+        /// Tests GetClientsByAction using a valid Action
         /// </summary>
         /// <param name="action"></param>
         [TestMethod]
@@ -136,14 +136,14 @@ namespace CheckIt.UnitTests
             string action = "Update";
 
             //Act
-            List<Client> clients = clientActionRepo.getClientsByAction(action);
+            List<Client> clients = clientActionRepo.GetClientsByAction(action);
 
             //Assert
             Assert.AreEqual(clients.Count, 3);
         }
 
         /// <summary>
-        /// Tests getClientsByAction using a invalid Action
+        /// Tests GetClientsByAction using a invalid Action
         /// </summary>
         [TestMethod]
         public void getClientsByInvalidAction()
@@ -154,14 +154,14 @@ namespace CheckIt.UnitTests
             string action = "NotAnAction";
 
             //Act
-            List<Client> clients = clientActionRepo.getClientsByAction(action);
+            List<Client> clients = clientActionRepo.GetClientsByAction(action);
 
             //Assert
             Assert.AreEqual(clients.Count, 0);
         }
 
         /// <summary>
-        /// Tests addClientAction using valid Client
+        /// Tests AddClientAction using valid Client
         /// </summary>
         [TestMethod]
         public void addValidClientAction()
@@ -174,15 +174,15 @@ namespace CheckIt.UnitTests
             ClientAction ca = new ClientAction(clientID, action);
 
             //Act
-            clientActionRepo.addClientAction(ca);
-            ClientAction addedCA = clientActionRepo.getClientAction(clientID, action);
+            clientActionRepo.AddClientAction(ca);
+            ClientAction addedCA = clientActionRepo.GetClientAction(clientID, action);
 
             //Assert
             Assert.IsNotNull(addedCA);
         }
 
         /// <summary>
-        /// Tests addClientAction using an invalid Client
+        /// Tests AddClientAction using an invalid Client
         /// </summary>
         [TestMethod]
         public void addInvalidClientAction()
@@ -195,12 +195,12 @@ namespace CheckIt.UnitTests
             ClientAction ca = new ClientAction(clientID, action);
 
             //Act => Assert
-            Assert.ThrowsException<DbUpdateException>(() => clientActionRepo.addClientAction(ca));
+            Assert.ThrowsException<DbUpdateException>(() => clientActionRepo.AddClientAction(ca));
             
         }
 
         /// <summary>
-        /// Tests removeClientAction using valid clientaction
+        /// Tests RemoveClientAction using valid clientaction
         /// </summary>
         [TestMethod]
         public void removeValidClientAction()
@@ -210,18 +210,18 @@ namespace CheckIt.UnitTests
             IClientActionRepository clientActionRepo = new ClientActionRepository(db);
             Guid clientID = new Guid("6DF91B37-DC4A-E911-8259-0A64F53465D0");
             string action = "Search";
-            ClientAction ca = clientActionRepo.getClientAction(clientID, action);
+            ClientAction ca = clientActionRepo.GetClientAction(clientID, action);
 
             //Act
-            clientActionRepo.removeClientAction(ca);
-            ClientAction removedCA = clientActionRepo.getClientAction(clientID, action);
+            clientActionRepo.RemoveClientAction(ca);
+            ClientAction removedCA = clientActionRepo.GetClientAction(clientID, action);
 
             //Assert
             Assert.IsNull(removedCA);
         }
 
         /// <summary>
-        /// Tests removeClientAction using invalid clientaction
+        /// Tests RemoveClientAction using invalid clientaction
         /// </summary>
         [TestMethod]
         public void removeInvalidClientAction()
@@ -234,7 +234,7 @@ namespace CheckIt.UnitTests
             ClientAction ca = new ClientAction(clientID, action);
 
             //Act => Assert
-            Assert.ThrowsException<InvalidOperationException>(() => clientActionRepo.removeClientAction(ca));
+            Assert.ThrowsException<InvalidOperationException>(() => clientActionRepo.RemoveClientAction(ca));
         }
         
     }

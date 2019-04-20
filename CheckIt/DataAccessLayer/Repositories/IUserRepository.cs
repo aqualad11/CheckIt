@@ -8,12 +8,12 @@ namespace CheckIt.DataAccessLayer.Repositories
 {
     public interface IUserRepository
     {
-        User getUserbyID(Guid userID);
-        User getUserbyEmail(string email);
-        Guid getUserIDbyEmail(string email);
+        User GetUserbyID(Guid userID);
+        User GetUserbyEmail(string email);
+        Guid GetUserIDbyEmail(string email);
 
-        void addUser(User user);
-        void updateUser(User user);
-        void removeUser(User user);
+        void AddUser(User user);
+        void UpdateUser(User user);
+        void RemoveUser(User user);
     }
 }

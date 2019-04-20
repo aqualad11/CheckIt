@@ -42,7 +42,7 @@ namespace CheckIt.UnitTests
 
             //Act
             IUserRepository userRepo = new UserRepository(db);
-            User user = userRepo.getUserbyEmail(email);
+            User user = userRepo.GetUserbyEmail(email);
             Assert.IsNotNull(user);
         }
     }

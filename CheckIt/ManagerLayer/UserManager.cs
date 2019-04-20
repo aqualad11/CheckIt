@@ -53,9 +53,8 @@ namespace CheckIt.ManagerLayer
 
             //check client and parentID
 
-            //create user
-            User user = new User(email, first, last, dob, atype, city, state, country, clientID, parentID,
-                passwordHash, salt, q1, a1, q2, a2, q3, a3);
+            //TODO: create user
+            User user = new User();
 
             //add User to db
             userService.addUser(user);

@@ -22,7 +22,7 @@ namespace CheckIt.UnitTests
             User user;
 
             //Act
-            user = userRepo.getUserbyEmail("example2@gmail.com");
+            user = userRepo.GetUserbyEmail("example2@gmail.com");
 
             //Assert
             Assert.IsNotNull(user);
@@ -42,14 +42,14 @@ namespace CheckIt.UnitTests
             User user;
 
             //Act
-            user = userRepo.getUserbyEmail("nonexistent@gmail.com");
+            user = userRepo.GetUserbyEmail("nonexistent@gmail.com");
 
             //Assert
             Assert.IsNull(user);
         }
 
         /// <summary>
-        /// test getUserbyID
+        /// test GetUserbyID
         /// expected to return user
         /// </summary>
         [TestMethod]
@@ -62,14 +62,14 @@ namespace CheckIt.UnitTests
             User user;
 
             //Act
-            user = userRepo.getUserbyID(id);
+            user = userRepo.GetUserbyID(id);
 
             //Assert
             Assert.IsNotNull(user);
         }
 
         /// <summary>
-        /// test getUserbyID
+        /// test GetUserbyID
         /// expected to return null
         /// </summary>
         [TestMethod]
@@ -82,14 +82,14 @@ namespace CheckIt.UnitTests
             User user;
 
             //Act
-            user = userRepo.getUserbyID(id);
+            user = userRepo.GetUserbyID(id);
 
             //Assert
             Assert.IsNull(user);
         }
 
         /// <summary>
-        /// test getUserIDbyEmail using existing email
+        /// test GetUserIDbyEmail using existing email
         /// 
         /// </summary>
         [TestMethod]
@@ -101,7 +101,7 @@ namespace CheckIt.UnitTests
             string email = "example2@gmail.com";
             Guid userID = new Guid("7AF91B37-DC4A-E911-8259-0A64F53465D0");
             //Act
-            Guid id = userRepo.getUserIDbyEmail(email);
+            Guid id = userRepo.GetUserIDbyEmail(email);
 
             //Assert
             Assert.AreEqual(userID, id);
@@ -109,7 +109,7 @@ namespace CheckIt.UnitTests
         }
 
         /// <summary>
-        /// test getUserIDbyEmail using empty string
+        /// test GetUserIDbyEmail using empty string
         /// same result as if null was passed in
         /// </summary>
         [TestMethod]
@@ -121,7 +121,7 @@ namespace CheckIt.UnitTests
             string email = "";
             Guid userID = new Guid();
             //Act
-            Guid id = userRepo.getUserIDbyEmail(email);
+            Guid id = userRepo.GetUserIDbyEmail(email);
 
             //Assert
             Assert.AreEqual(id,userID);
@@ -146,15 +146,15 @@ namespace CheckIt.UnitTests
             IUserRepository userRepo = new UserRepository(db);
 
             //Act
-            userRepo.addUser(user);
-            User user2 = userRepo.getUserbyEmail("testUser@gmail.com");
+            userRepo.AddUser(user);
+            User user2 = userRepo.GetUserbyEmail("testUser@gmail.com");
 
             //Assert
             Assert.AreEqual(user.fName, user2.fName);
         }
 
         /// <summary>
-        /// test updateUser
+        /// test UpdateUser
         /// must call addUser() test first
         /// </summary>
         [TestMethod]
@@ -165,12 +165,12 @@ namespace CheckIt.UnitTests
             DataBaseContext db = new DataBaseContext();
             IUserRepository userRepo = new UserRepository(db);
 
-            User user = userRepo.getUserbyEmail("testUser@gmail.com");
+            User user = userRepo.GetUserbyEmail("testUser@gmail.com");
             user.lName = newLastName;
 
             //Act
-            userRepo.updateUser(user);
-            User updatedUser = userRepo.getUserbyEmail("testUser@gmail.com");
+            userRepo.UpdateUser(user);
+            User updatedUser = userRepo.GetUserbyEmail("testUser@gmail.com");
 
             //Assert
             Assert.AreEqual(newLastName, updatedUser.lName);
@@ -190,11 +190,11 @@ namespace CheckIt.UnitTests
             DataBaseContext db = new DataBaseContext();
             IUserRepository userRepo = new UserRepository(db);
 
-            User user = userRepo.getUserbyEmail("testUser@gmail.com");
+            User user = userRepo.GetUserbyEmail("testUser@gmail.com");
 
             //Act
-            userRepo.removeUser(user);
-            User expected = userRepo.getUserbyEmail("testUser@gmail.com");
+            userRepo.RemoveUser(user);
+            User expected = userRepo.GetUserbyEmail("testUser@gmail.com");
 
             //Assert
             Assert.IsNull(expected);
@@ -214,7 +214,7 @@ namespace CheckIt.UnitTests
             };
 
             //Act => Assert
-            Assert.ThrowsException<InvalidOperationException>(() => userRepo.removeUser(user));
+            Assert.ThrowsException<InvalidOperationException>(() => userRepo.RemoveUser(user));
         }
     }
 }

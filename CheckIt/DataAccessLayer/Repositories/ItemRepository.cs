@@ -16,31 +16,31 @@ namespace CheckIt.DataAccessLayer.Repositories
             this.db = db;
         }
         
-        public Item getItemByID(Guid itemID)
+        public Item GetItemByID(Guid itemID)
         {
             Item item = db.Items.Find(itemID);
             return item;
         }
 
-        public Item getItemByName(string name)
+        public Item GetItemByName(string name)
         {
             Item item = db.Items.Where(i => i.ItemName == name).FirstOrDefault();
             return item;
         }
 
-        public void addItem(Item item)
+        public void AddItem(Item item)
         {
             db.Items.Add(item);
             db.SaveChanges();
         }
 
-        public void removeItem(Item item)
+        public void RemoveItem(Item item)
         {
             db.Items.Remove(item);
             db.SaveChanges();
         }
 
-        public void updateItem(Item item)
+        public void UpdateItem(Item item)
         {
             db.Entry(item).State = EntityState.Modified;
             db.SaveChanges();

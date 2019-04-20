@@ -8,11 +8,11 @@ namespace CheckIt.DataAccessLayer.Repositories
 {
     public interface IItemListRepository
     {
-        ItemList getItemList(Guid userID, Guid itemID);
-        List<Item> getItemsByUserID(Guid userID);
+        ItemList GetItemList(Guid userID, Guid itemID);
+        List<Item> GetItemsByUserID(Guid userID);
 
-        void addItemList(ItemList itemlist);
-        void removeItemList(ItemList itemlist);
-        void removeItemList(Guid userID, Guid itemID);
+        void AddItemList(ItemList itemlist);
+        void RemoveItemList(ItemList itemlist);
+        void RemoveItemList(Guid userID, Guid itemID);
     }
 }

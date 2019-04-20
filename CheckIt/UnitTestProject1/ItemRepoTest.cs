@@ -10,7 +10,7 @@ namespace CheckIt.UnitTests
     public class ItemRepoTest
     {
         /// <summary>
-        /// Tests getItemByID with valid itemID
+        /// Tests GetItemByID with valid itemID
         /// </summary>
         [TestMethod]
         public void getItemByValidID()
@@ -21,14 +21,14 @@ namespace CheckIt.UnitTests
             Guid itemID = new Guid("83F91B37-DC4A-E911-8259-0A64F53465D0");
 
             //Act
-            Item item = itemRepo.getItemByID(itemID);
+            Item item = itemRepo.GetItemByID(itemID);
 
             //Assert
             Assert.IsNotNull(item);
         }
 
         /// <summary>
-        /// Tests getItemByID with invalid itemID
+        /// Tests GetItemByID with invalid itemID
         /// </summary>
         [TestMethod]
         public void getItemByInvalidID()
@@ -39,14 +39,14 @@ namespace CheckIt.UnitTests
             Guid itemID = new Guid();
 
             //Act
-            Item item = itemRepo.getItemByID(itemID);
+            Item item = itemRepo.GetItemByID(itemID);
 
             //Assert
             Assert.IsNull(item);
         }
 
         /// <summary>
-        /// Tests getItemByName using valid name
+        /// Tests GetItemByName using valid name
         /// </summary>
         [TestMethod]
         public void getItemByValidName()
@@ -57,14 +57,14 @@ namespace CheckIt.UnitTests
             string name = "Oakley";
 
             //Act
-            Item item = itemRepo.getItemByName(name);
+            Item item = itemRepo.GetItemByName(name);
 
             //Assert
             Assert.IsNotNull(item);
         }
 
         /// <summary>
-        /// Tests getItemByName using invalid name(empty string)
+        /// Tests GetItemByName using invalid name(empty string)
         /// </summary>
         [TestMethod]
         public void getItemByInvalidName()
@@ -75,14 +75,14 @@ namespace CheckIt.UnitTests
             string name = "";
 
             //Act
-            Item item = itemRepo.getItemByName(name);
+            Item item = itemRepo.GetItemByName(name);
 
             //Assert
             Assert.IsNull(item);
         }
 
         /// <summary>
-        /// Tests addItem
+        /// Tests AddItem
         /// </summary>
         [TestMethod]
         public void addItem()
@@ -99,8 +99,8 @@ namespace CheckIt.UnitTests
             };
 
             //Act 
-            itemRepo.addItem(item);
-            Item newItem = itemRepo.getItemByName("Polaroid Camera");
+            itemRepo.AddItem(item);
+            Item newItem = itemRepo.GetItemByName("Polaroid Camera");
 
             //Assert 
             Assert.IsNotNull(newItem);
@@ -108,7 +108,7 @@ namespace CheckIt.UnitTests
         }
 
         /// <summary>
-        /// Tests updateItem with Existing Item
+        /// Tests UpdateItem with Existing Item
         /// </summary>
         [TestMethod]
         public void updateValidItem()
@@ -116,20 +116,20 @@ namespace CheckIt.UnitTests
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IItemRepository itemRepo = new ItemRepository(db);
-            Item item = itemRepo.getItemByName("Polaroid Camera");
+            Item item = itemRepo.GetItemByName("Polaroid Camera");
             string newUrl = "www.newUrl.com/PolaroidCamera";
 
             //Act
             item.url = newUrl;
-            itemRepo.updateItem(item);
-            Item updatedItem = itemRepo.getItemByName("Polaroid Camera");
+            itemRepo.UpdateItem(item);
+            Item updatedItem = itemRepo.GetItemByName("Polaroid Camera");
 
             //Assert
             Assert.IsNotNull(updatedItem);
         }
 
         /// <summary>
-        /// Tests updateItem using an invalid Item(not existant in db)
+        /// Tests UpdateItem using an invalid Item(not existant in db)
         /// </summary>
         [TestMethod]
         public void updateInvalidItem()
@@ -146,12 +146,12 @@ namespace CheckIt.UnitTests
             };
 
             //Act => Assert
-            Assert.ThrowsException<DbUpdateConcurrencyException>(() => itemRepo.updateItem(item));
+            Assert.ThrowsException<DbUpdateConcurrencyException>(() => itemRepo.UpdateItem(item));
             
         }
 
         /// <summary>
-        /// Tests removeItem using a valid Item
+        /// Tests RemoveItem using a valid Item
         /// </summary>
         [TestMethod]
         public void removeValidItem()
@@ -159,18 +159,18 @@ namespace CheckIt.UnitTests
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IItemRepository itemRepo = new ItemRepository(db);
-            Item item = itemRepo.getItemByName("Polaroid Camera");
+            Item item = itemRepo.GetItemByName("Polaroid Camera");
 
             //Act
-            itemRepo.removeItem(item);
-            Item removedItem = itemRepo.getItemByName("Polaroid Camera");
+            itemRepo.RemoveItem(item);
+            Item removedItem = itemRepo.GetItemByName("Polaroid Camera");
 
             //Assert
             Assert.IsNull(removedItem);
         }
 
         /// <summary>
-        /// Tests removeItem using an invalid Item
+        /// Tests RemoveItem using an invalid Item
         /// </summary>
         [TestMethod]
         public void removeInvalidItem()
@@ -184,7 +184,7 @@ namespace CheckIt.UnitTests
             };
 
             //Act => Assert
-            Assert.ThrowsException<InvalidOperationException>(() => itemRepo.removeItem(item));
+            Assert.ThrowsException<InvalidOperationException>(() => itemRepo.RemoveItem(item));
         }
 
     }

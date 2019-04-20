@@ -16,13 +16,13 @@ namespace CheckIt.DataAccessLayer.Repositories
             this.db = db;
         }
         
-        public ItemList getItemList(Guid userID, Guid itemID)
+        public ItemList GetItemList(Guid userID, Guid itemID)
         {
             ItemList itemList = db.ItemLists.Where(i => i.userID == userID && i.itemID == itemID).FirstOrDefault();
             return itemList;
         }
 
-        public List<Item> getItemsByUserID(Guid userID)
+        public List<Item> GetItemsByUserID(Guid userID)
         {
             var items = db.ItemLists.Where(i => i.userID == userID).Select(i => i.item).ToList();
             return items;
@@ -33,7 +33,7 @@ namespace CheckIt.DataAccessLayer.Repositories
         /// doesn't check for duplicates, must be handled in service layer
         /// </summary>
         /// <param name="itemlist"></param>
-        public void addItemList(ItemList itemlist)
+        public void AddItemList(ItemList itemlist)
         {
             db.ItemLists.Add(itemlist);
             db.SaveChanges();
@@ -44,13 +44,13 @@ namespace CheckIt.DataAccessLayer.Repositories
         /// throws InvalidOperationException
         /// </summary>
         /// <param name="itemlist"></param>
-        public void removeItemList(ItemList itemlist)
+        public void RemoveItemList(ItemList itemlist)
         {
             db.ItemLists.Remove(itemlist);
             db.SaveChanges();
         }
 
-        public void removeItemList(Guid userID, Guid itemID)
+        public void RemoveItemList(Guid userID, Guid itemID)
         {
             ItemList itemList = db.ItemLists.Where(i => i.userID == userID && i.itemID == itemID).FirstOrDefault();
             db.ItemLists.Remove(itemList);

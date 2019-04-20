@@ -33,6 +33,7 @@ namespace CheckIt.Authorization
 
 
             handler = new JwtSecurityTokenHandler();
+            //using key basically says we are the only ones that can create key
             var securityKey = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
             var credentials = new Microsoft.IdentityModel.Tokens.SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
             var header = new JwtHeader(credentials);

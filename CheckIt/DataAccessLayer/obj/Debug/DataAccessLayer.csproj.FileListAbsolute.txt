@@ -34,9 +34,11 @@ D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.SqlServ
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.xml
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
-D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.CheckItDBInit.resources
-D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.exe
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_init.resources
+D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit1.resources
+D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_vs2019_init.resources

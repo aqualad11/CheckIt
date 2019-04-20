@@ -3,7 +3,7 @@ namespace DataAccessLayer.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CheckItDBInit : DbMigration
+    public partial class final_db_init : DbMigration
     {
         public override void Up()
         {
@@ -11,11 +11,10 @@ namespace DataAccessLayer.Migrations
                 "dbo.ClientActions",
                 c => new
                     {
-                        clientActionID = c.Guid(nullable: false, identity: true),
                         clientID = c.Guid(nullable: false),
-                        action = c.String(),
+                        action = c.String(nullable: false, maxLength: 128),
                     })
-                .PrimaryKey(t => new { t.clientActionID, t.clientID })
+                .PrimaryKey(t => new { t.clientID, t.action })
                 .ForeignKey("dbo.Clients", t => t.clientID, cascadeDelete: true)
                 .Index(t => t.clientID);
             
@@ -36,24 +35,11 @@ namespace DataAccessLayer.Migrations
                         userEmail = c.String(),
                         parentID = c.Guid(),
                         clientID = c.Guid(),
+                        ssoID = c.Guid(nullable: false),
                         height = c.Int(nullable: false),
-                        fName = c.String(),
-                        lName = c.String(),
                         accountType = c.String(),
-                        firstLogin = c.Boolean(nullable: false),
                         active = c.Boolean(nullable: false),
                         DoB = c.DateTime(),
-                        locCity = c.String(),
-                        locState = c.String(),
-                        locCountry = c.String(),
-                        pwdHash = c.String(),
-                        salt = c.String(),
-                        question1 = c.String(),
-                        answer1 = c.String(),
-                        question2 = c.String(),
-                        answer2 = c.String(),
-                        question3 = c.String(),
-                        answer3 = c.String(),
                     })
                 .PrimaryKey(t => t.userID)
                 .ForeignKey("dbo.Clients", t => t.clientID)
@@ -65,11 +51,10 @@ namespace DataAccessLayer.Migrations
                 "dbo.UserActions",
                 c => new
                     {
-                        actionID = c.Guid(nullable: false, identity: true),
                         userID = c.Guid(nullable: false),
-                        action = c.String(),
+                        action = c.String(nullable: false, maxLength: 128),
                     })
-                .PrimaryKey(t => new { t.actionID, t.userID })
+                .PrimaryKey(t => new { t.userID, t.action })
                 .ForeignKey("dbo.Users", t => t.userID, cascadeDelete: true)
                 .Index(t => t.userID);
             
@@ -77,11 +62,10 @@ namespace DataAccessLayer.Migrations
                 "dbo.ItemLists",
                 c => new
                     {
-                        itemListID = c.Guid(nullable: false, identity: true),
                         userID = c.Guid(nullable: false),
                         itemID = c.Guid(nullable: false),
                     })
-                .PrimaryKey(t => new { t.itemListID, t.userID, t.itemID })
+                .PrimaryKey(t => new { t.userID, t.itemID })
                 .ForeignKey("dbo.Items", t => t.itemID, cascadeDelete: true)
                 .ForeignKey("dbo.Users", t => t.userID, cascadeDelete: true)
                 .Index(t => t.userID)
@@ -99,22 +83,37 @@ namespace DataAccessLayer.Migrations
                     })
                 .PrimaryKey(t => t.itemID);
             
+            CreateTable(
+                "dbo.Tokens",
+                c => new
+                    {
+                        jwt = c.String(nullable: false, maxLength: 128),
+                        userID = c.Guid(nullable: false),
+                        valid = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.jwt)
+                .ForeignKey("dbo.Users", t => t.userID, cascadeDelete: true)
+                .Index(t => t.userID);
+            
         }
         
         public override void Down()
         {
+            DropForeignKey("dbo.Tokens", "userID", "dbo.Users");
             DropForeignKey("dbo.ItemLists", "userID", "dbo.Users");
             DropForeignKey("dbo.ItemLists", "itemID", "dbo.Items");
             DropForeignKey("dbo.ClientActions", "clientID", "dbo.Clients");
             DropForeignKey("dbo.UserActions", "userID", "dbo.Users");
             DropForeignKey("dbo.Users", "parentID", "dbo.Users");
             DropForeignKey("dbo.Users", "clientID", "dbo.Clients");
+            DropIndex("dbo.Tokens", new[] { "userID" });
             DropIndex("dbo.ItemLists", new[] { "itemID" });
             DropIndex("dbo.ItemLists", new[] { "userID" });
             DropIndex("dbo.UserActions", new[] { "userID" });
             DropIndex("dbo.Users", new[] { "clientID" });
             DropIndex("dbo.Users", new[] { "parentID" });
             DropIndex("dbo.ClientActions", new[] { "clientID" });
+            DropTable("dbo.Tokens");
             DropTable("dbo.Items");
             DropTable("dbo.ItemLists");
             DropTable("dbo.UserActions");

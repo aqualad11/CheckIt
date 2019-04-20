@@ -11,13 +11,12 @@ namespace CheckIt.DataAccessLayer
     public class ClientAction
     {
         [Key, Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid clientActionID { set; get; }
-        public string action { set; get; }
-        [Key, Column(Order = 1)]
         [ForeignKey("Client")]
         public Guid clientID { get; set; }
         public Client Client { get; set; }
+
+        [Key,Column(Order = 1)]
+        public string action { set; get; }
 
         public ClientAction(Guid clientID, string action)
         {
@@ -27,7 +26,6 @@ namespace CheckIt.DataAccessLayer
 
         public ClientAction()
         {
-
         }
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
 using System.Text;
 
 namespace CheckIt.DataAccessLayer
@@ -27,30 +26,17 @@ namespace CheckIt.DataAccessLayer
         [ForeignKey("clientID")]
         public virtual Client client { get; set; }
 
+        public Guid ssoID { get; set; }
+
         public int height { get; set; }
-        public string fName { get; set; }
-        public string lName { get; set; }
+
         public string accountType { get; set; }
-        public bool firstLogin { get; set; }
         public bool active { get; set; }
         public DateTime? DoB { get; set; }
-        public string locCity { get; set; }
-        public string locState { get; set; }
-        public string locCountry { get; set; }
+
 
         //[ForeignKey("UserActions")]
         public virtual List<UserAction> userActions { get; set; }
-
-        public string pwdHash { get; set; }
-        public string salt { get; set; }
-
-        public string question1 { get; set; }
-        public string answer1 { get; set; }
-        public string question2 { get; set; }
-        public string answer2 { get; set; }
-        public string question3 { get; set; }
-        public string answer3 { get; set; }
-
         
 
         public User()
@@ -58,32 +44,17 @@ namespace CheckIt.DataAccessLayer
         }
 
         //creates normal user with height of 2
-        public User(string email, string first, string last, DateTime? dob, string atype, string city, string state,
-            string country, Guid? clientID, Guid? parentID, string passwordHash, string salt, string q1, string a1,
-            string q2, string a2, string q3, string a3)
+        public User(string email, DateTime? dob, string atype, Guid? clientID, Guid? parentID)
         {
             userEmail = email;
-            fName = first;
-            lName = last;
             DoB = dob;
             accountType = atype;
-            locCity = city;
-            locState = state;
-            locCountry = country;
             this.clientID = clientID;
             height = 2;
             active = true;
-            firstLogin = true;
             this.parentID = parentID;
             userActions = new List<UserAction>();
-            pwdHash = passwordHash;
-            this.salt = salt;
-            question1 = q1;
-            answer1 = a1;
-            question2 = q2;
-            answer2 = a2;
-            question3 = q3;
-            answer3 = a3;
+            
         }
 
     }

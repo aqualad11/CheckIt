@@ -16,31 +16,31 @@ namespace CheckIt.DataAccessLayer.Repositories
             this.db = db;
         }
         
-        public Client getClientByID(Guid id)
+        public Client GetClientByID(Guid id)
         {
             Client client = db.Clients.Find(id);
             return client;
         }
 
-        public Client getClientByName(string name)
+        public Client GetClientByName(string name)
         {
             Client client = db.Clients.Where(c => c.name == name).FirstOrDefault();
             return client;
         }
 
-        public void addClient(Client client)
+        public void AddClient(Client client)
         {
             db.Clients.Add(client);
             db.SaveChanges();
         }
 
-        public void removeClient(Client client)
+        public void RemoveClient(Client client)
         {
             db.Clients.Remove(client);
             db.SaveChanges();
         }
 
-        public void updateClient(Client client)
+        public void UpdateClient(Client client)
         {
             db.Entry(client).State = EntityState.Modified;
             db.SaveChanges();
