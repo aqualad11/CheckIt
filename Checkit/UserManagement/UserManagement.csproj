@@ -87,10 +87,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Authorization\Authorization.csproj">
-      <Project>{23a51cfb-2c96-40cb-b694-05cebd38c4c6}</Project>
-      <Name>Authorization</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
       <Project>{ca9e9e01-6ce2-4d5d-93c3-d18768957013}</Project>
       <Name>DataAccessLayer</Name>

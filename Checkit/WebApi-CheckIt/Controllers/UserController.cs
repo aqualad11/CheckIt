@@ -4,9 +4,9 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using CheckIt.PasswordValidation;
 
-namespace WebApi_Checkit.Controllers
+
+namespace Checkit.Controllers
 {
     public class UserController : ApiController
     {
@@ -35,7 +35,8 @@ namespace WebApi_Checkit.Controllers
             }
             return "Index not found! Try again (0-3)";
         }
-
+        
+        /*
         // POST api/User
         [HttpPost]
         [Route("api/user/post/{password}")]

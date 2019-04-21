@@ -137,9 +137,7 @@ namespace CheckIt.UnitTests
             //Arrange
             User user = new User()
             {
-                userEmail = "testUser@gmail.com",
-                fName = "test",
-                lName = "er"
+                userEmail = "testUser@gmail.com"
             };
 
             DataBaseContext db = new DataBaseContext();
@@ -150,7 +148,7 @@ namespace CheckIt.UnitTests
             User user2 = userRepo.GetUserbyEmail("testUser@gmail.com");
 
             //Assert
-            Assert.AreEqual(user.fName, user2.fName);
+            Assert.IsNotNull(user2);
         }
 
         /// <summary>
@@ -161,19 +159,19 @@ namespace CheckIt.UnitTests
         public void updateExistingUser()
         {
             //Arrange 
-            string newLastName = "HelloWorld";
+            string newEmail = "newtestEmail@gmail.com";
             DataBaseContext db = new DataBaseContext();
             IUserRepository userRepo = new UserRepository(db);
 
             User user = userRepo.GetUserbyEmail("testUser@gmail.com");
-            user.lName = newLastName;
+            user.userEmail = newEmail;
 
             //Act
             userRepo.UpdateUser(user);
-            User updatedUser = userRepo.GetUserbyEmail("testUser@gmail.com");
+            User updatedUser = userRepo.GetUserbyEmail("newtestEmail@gmail.com");
 
             //Assert
-            Assert.AreEqual(newLastName, updatedUser.lName);
+            Assert.AreEqual(newEmail, updatedUser.userEmail);
         }
 
 
@@ -183,18 +181,18 @@ namespace CheckIt.UnitTests
         /// if user doesn't exist then null is passed in and exception is caught
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        //[ExpectedException(typeof(ArgumentNullException))]
         public void removeExistingUser()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IUserRepository userRepo = new UserRepository(db);
 
-            User user = userRepo.GetUserbyEmail("testUser@gmail.com");
+            User user = userRepo.GetUserbyEmail("newtestEmail@gmail.com");
 
             //Act
             userRepo.RemoveUser(user);
-            User expected = userRepo.GetUserbyEmail("testUser@gmail.com");
+            User expected = userRepo.GetUserbyEmail("newtestEmail@gmail.com");
 
             //Assert
             Assert.IsNull(expected);

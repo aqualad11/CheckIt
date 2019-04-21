@@ -48,42 +48,6 @@ namespace CheckIt.UnitTests
 
         }
 
-        /// <summary>
-        /// Tests GetClientActionbyID using a valid clientAction ID
-        /// </summary>
-        [TestMethod]
-        public void getClientActionbyValidID()
-        {
-            //Arrange
-            DataBaseContext db = new DataBaseContext();
-            IClientActionRepository clientActionRepo = new ClientActionRepository(db);
-            Guid clientAction = new Guid("70F91B37-DC4A-E911-8259-0A64F53465D0");
-
-            //Act
-            ClientAction ca = clientActionRepo.GetClientActionbyID(clientAction);
-
-            //Assert
-            Assert.IsNotNull(ca);
-
-        }
-
-        /// <summary>
-        /// Tests GetClientActionbyID using a invalid clientAction ID
-        /// </summary>
-        [TestMethod]
-        public void getClientActionbyInvalidID()
-        {
-            //Arrange
-            DataBaseContext db = new DataBaseContext();
-            IClientActionRepository clientActionRepo = new ClientActionRepository(db);
-            Guid clientAction = new Guid();
-
-            //Act
-            ClientAction ca = clientActionRepo.GetClientActionbyID(clientAction);
-
-            //Assert
-            Assert.IsNull(ca);
-        }
 
         /// <summary>
         /// Tests GetClientAction(clientID, action) using a valid clientID and action

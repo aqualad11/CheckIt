@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+
 
 namespace CheckIt.DataAccessLayer.Repositories
 {
@@ -20,16 +22,45 @@ namespace CheckIt.DataAccessLayer.Repositories
             return token;
         }
 
-        public void AddToken(Token token)
+
+        public bool AddToken(Token token)
         {
-            db.Tokens.Add(token);
-            db.SaveChanges();
+            try
+            {
+                db.Tokens.Add(token);
+                db.SaveChanges();
+                return true;
+            }catch(Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateToken(Token token)
+        {
+            try
+            {
+                db.Entry(token).State = EntityState.Modified;
+                db.SaveChanges();
+                return true;
+            }catch(Exception e)//
+            {
+                return false;
+            }
         }
         
-        public void RemoveToken(Token token)
+        public bool RemoveToken(Token token)
         {
-            db.Tokens.Remove(token);
-            db.SaveChanges();
+            try
+            {
+                db.Tokens.Remove(token);
+                db.SaveChanges();
+                return true;
+            }catch(Exception e)
+            {
+                return false;
+            }
+            
         }
     }
 }

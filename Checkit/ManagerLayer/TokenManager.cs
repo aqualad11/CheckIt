@@ -67,7 +67,7 @@ namespace CheckIt.ManagerLayer
             return token;
         }
 
-        public string ValidateToken(string token)
+        public string ValidateToken(string jwt)
         {
             var handler = new JwtSecurityTokenHandler();
 
@@ -85,12 +85,19 @@ namespace CheckIt.ManagerLayer
 
             try
             {
-                var principal = new JwtSecurityTokenHandler().ValidateToken(token, validationParameters, out var rawValidatedToken);
-                JwtSecurityToken jwt = new JwtSecurityToken(token);
+                //if exception caused by line below
+                var principal = new JwtSecurityTokenHandler().ValidateToken(jwt, validationParameters, out var rawValidatedToken);
+                
+                if(UnderFiveMin(jwt))
+                {
+                    return RefreshToken(jwt);
+                }
+
+                JwtSecurityToken token = new JwtSecurityToken(jwt);
 
 
-                JwtSecurityToken securityToken = (JwtSecurityToken)rawValidatedToken;
-                return handler.WriteToken(securityToken);//converts JwtSecurityToken to a string
+                //JwtSecurityToken securityToken = (JwtSecurityToken)rawValidatedToken;
+                return "";//handler.WriteToken(jwt);//converts JwtSecurityToken to a string
             }
             catch (SecurityTokenValidationException e)
             {
@@ -99,13 +106,34 @@ namespace CheckIt.ManagerLayer
                 Console.WriteLine(e.StackTrace);
                 return null;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("Exception caught. Message = " + e.Message);
-                Console.WriteLine(e.StackTrace);
-                return null;
-            }
+            
 
+        }
+
+        /// <summary>
+        /// Checks whether the token's expiration time is under five minutes from now
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        private bool UnderFiveMin(string jwt)
+        {
+            DateTime beginning = new DateTime(1970, 1, 1);
+
+            //time five minutes from now in UTC
+            var plusFive = DateTime.UtcNow.AddMinutes(-5);
+            //time five minutes from now in seconds
+            var nowPlus5 = (Int32)(plusFive.Subtract(beginning)).TotalSeconds;
+
+            JwtSecurityToken token = new JwtSecurityToken(jwt);
+
+            var expTime = (Int32)token.Payload.Exp;
+
+            return expTime < nowPlus5 ? true : false;
+        }
+
+        private string RefreshToken(string token)
+        {
+            return ""; 
         }
     }
 }

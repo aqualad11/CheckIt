@@ -26,11 +26,25 @@ namespace CheckIt.ServiceLayer
         }
 
         
-        public void GetToken(string jwt, Guid userID)
+        public bool IsValid(string jwt, Guid userID)
         {
+            Token token = tokenRepo.GetToken(jwt, userID);
+            if(token.valid)
+            {
+                return true;
+            }
 
+            return false;
         }
 
-        
+        public void Invalidate(string jwt, Guid userID)
+        {
+            Token token = tokenRepo.GetToken(jwt, userID);
+            token.valid = false;
+            tokenRepo.UpdateToken(token);
+        }
+
+
+
     }
 }
