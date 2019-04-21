@@ -26,13 +26,13 @@ namespace CheckIt.DataAccessLayer
         [ForeignKey("clientID")]
         public virtual Client client { get; set; }
 
-        public Guid ssoID { get; set; }
+        public Guid? ssoID { get; set; }
 
         public int height { get; set; }
 
         public string accountType { get; set; }
         public bool active { get; set; }
-        public DateTime? DoB { get; set; }
+       
 
 
         //[ForeignKey("UserActions")]
@@ -44,15 +44,15 @@ namespace CheckIt.DataAccessLayer
         }
 
         //creates normal user with height of 2
-        public User(string email, DateTime? dob, string atype, Guid? clientID, Guid? parentID)
+        public User(string email, string atype, Guid? clientID, Guid? parentID, Guid? ssoID)
         {
             userEmail = email;
-            DoB = dob;
             accountType = atype;
             this.clientID = clientID;
             height = 2;
             active = true;
             this.parentID = parentID;
+            this.ssoID = ssoID;
             userActions = new List<UserAction>();
             
         }

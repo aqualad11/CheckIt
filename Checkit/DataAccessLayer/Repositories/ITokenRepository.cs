@@ -11,7 +11,8 @@ namespace CheckIt.DataAccessLayer.Repositories
     {
         Token GetToken(string jwt, Guid userID);
 
-        void AddToken(Token token);
-        void RemoveToken(Token token);
+        bool AddToken(Token token);
+        bool UpdateToken(Token token);
+        bool RemoveToken(Token token);
     }
 }

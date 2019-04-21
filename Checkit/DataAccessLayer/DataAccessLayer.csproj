@@ -62,6 +62,10 @@
     <Compile Include="Migrations\201904170436445_final_db_vs2019_init.Designer.cs">
       <DependentUpon>201904170436445_final_db_vs2019_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904210148588_final_db_edit2.cs" />
+    <Compile Include="Migrations\201904210148588_final_db_edit2.Designer.cs">
+      <DependentUpon>201904210148588_final_db_edit2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\ClientAction.cs" />
@@ -101,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904170436445_final_db_vs2019_init.resx">
       <DependentUpon>201904170436445_final_db_vs2019_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904210148588_final_db_edit2.resx">
+      <DependentUpon>201904210148588_final_db_edit2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

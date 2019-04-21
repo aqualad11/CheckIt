@@ -164,7 +164,6 @@ D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.AspNet.TelemetryCorr
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.Web.Infrastructure.dll
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\Newtonsoft.Json.dll
-D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\PasswordValidation.dll
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\System.Diagnostics.DiagnosticSource.dll
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\System.Net.Http.Formatting.dll
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\System.Web.Helpers.dll
@@ -177,8 +176,6 @@ D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\System.Web.WebPages.Deployment
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\System.Web.WebPages.dll
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\System.Web.WebPages.Razor.dll
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\WebGrease.dll
-D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\PasswordValidation.pdb
-D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\PasswordValidation.dll.config
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\Newtonsoft.Json.xml
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\System.Net.Http.Formatting.xml
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\System.Web.Helpers.xml
