@@ -33,6 +33,7 @@ D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.dll
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.xml
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_init.resources
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit1.resources
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_vs2019_init.resources

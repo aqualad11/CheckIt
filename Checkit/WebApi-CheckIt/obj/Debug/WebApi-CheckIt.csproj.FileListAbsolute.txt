@@ -194,6 +194,7 @@ D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.AI.DependencyCollect
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.AI.WindowsServer.xml
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.AI.Web.xml
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.csprojAssemblyReference.cache
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.csproj.CoreCompileInputs.cache
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.csproj.CopyComplete
 D:\Checkit_src\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.dll
