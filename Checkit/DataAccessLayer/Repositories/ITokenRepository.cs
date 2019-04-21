@@ -14,5 +14,6 @@ namespace CheckIt.DataAccessLayer.Repositories
         bool AddToken(Token token);
         bool UpdateToken(Token token);
         bool RemoveToken(Token token);
+
     }
 }

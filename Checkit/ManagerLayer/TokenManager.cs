@@ -28,6 +28,11 @@ namespace CheckIt.ManagerLayer
             userService = new UserService(db);
         }
 
+        /// <summary>
+        /// Creates a JWT and adds it to the database
+        /// </summary>
+        /// <param name="user">UserObject</param>
+        /// <returns>The JWT created as a string</returns>
         public string CreateToken(User user)
         {
             //var hmac = new HMACSHA256();
@@ -62,19 +67,23 @@ namespace CheckIt.ManagerLayer
 
             var securityToken = new JwtSecurityToken(header, payload);
 
-            string token = handler.WriteToken(securityToken);
+            string jwt = handler.WriteToken(securityToken);
 
             //add to db
+            tokenService.AddToken(jwt, user.userID);
 
-
-            return token;
+            return jwt;
         }
 
 
+        /// <summary>
+        /// Validates token by checking if expired and if still valid in the Database
+        /// </summary>
+        /// <param name="jwt"></param>
+        /// <returns>Same Token if it is still valid, if it is about to expire then it creates another Token. If it is invalid
+        /// it return null</returns>
         public string ValidateToken(string jwt)
         {
-            var handler = new JwtSecurityTokenHandler();
-            
             //Paramets which the token will be tested against
             var validationParameters = new TokenValidationParameters()
             {
@@ -85,15 +94,22 @@ namespace CheckIt.ManagerLayer
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(Encoding.UTF8.GetBytes(key)),
                 ValidateLifetime = true,
-                ClockSkew = TimeSpan.Zero//.FromMinutes(Convert.ToInt32(2))
+                ClockSkew = TimeSpan.Zero
             };
 
             try
             {
-                //if exception caused by line below
+                //Exception caused by line below
                 var principal = new JwtSecurityTokenHandler().ValidateToken(jwt, validationParameters, out var rawValidatedToken);
-                //TODO: check DB is token is valid
-                if(UnderFiveMin(jwt))//checks if expiration is in the next five minutes if so refresh token
+
+                //Get extract userID from jwt
+                Guid userID = ExtractUserID(jwt);
+
+                //checks if token in DB is valid
+                if(!tokenService.IsValid(jwt, userID))
+                {
+                    return null;
+                }else if(UnderFiveMin(jwt))//checks if expiration is in the next five minutes if so refresh token
                 {
                     return RefreshToken(jwt);
                 }
@@ -132,6 +148,11 @@ namespace CheckIt.ManagerLayer
             return expTime < nowPlus5 ? true : false;
         }
 
+        /// <summary>
+        /// Gets user from database and gives it a new token
+        /// </summary>
+        /// <param name="jwt"></param>
+        /// <returns></returns>
         private string RefreshToken(string jwt)
         {
             User user = ExtractUser(jwt);
@@ -141,6 +162,9 @@ namespace CheckIt.ManagerLayer
                 return null;
             }
 
+            //makes current token invalid in the database
+            tokenService.Invalidate(jwt, user.userID);
+            //return new Token
             return CreateToken(user); 
         }
 

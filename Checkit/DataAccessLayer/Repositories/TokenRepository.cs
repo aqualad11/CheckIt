@@ -16,13 +16,23 @@ namespace CheckIt.DataAccessLayer.Repositories
             this.db = db;
         }
 
+        /// <summary>
+        /// Gets token from the Database
+        /// </summary>
+        /// <param name="jwt"></param>
+        /// <param name="userID"></param>
+        /// <returns>Token object or null if Token does not exist</returns>
         public Token GetToken(string jwt, Guid userID)
         {
-            Token token = db.Tokens.Where(t => t.jwt == jwt && t.userID == userID).First();
+            Token token = db.Tokens.Where(t => t.jwt == jwt && t.userID == userID).FirstOrDefault();
             return token;
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
         public bool AddToken(Token token)
         {
             try
@@ -43,7 +53,7 @@ namespace CheckIt.DataAccessLayer.Repositories
                 db.Entry(token).State = EntityState.Modified;
                 db.SaveChanges();
                 return true;
-            }catch(Exception e)//
+            }catch(Exception)
             {
                 return false;
             }

@@ -62,6 +62,7 @@
     <Compile Include="ItemListRepoTest.cs" />
     <Compile Include="ItemRepoTest.cs" />
     <Compile Include="PasswordUnitTest1.cs" />
+    <Compile Include="TokenRepoTest.cs" />
     <Compile Include="UserManagerTest.cs" />
     <Compile Include="UserRepoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
