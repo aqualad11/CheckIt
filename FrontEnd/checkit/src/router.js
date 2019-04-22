@@ -6,6 +6,7 @@ import NotFound from "./views/NotFound.vue"
 import HotDeals from "./views/HotDeals.vue"
 import Login from "./views/Login.vue"
 import Register from "./views/Register.vue"
+import AdminDashboard from "./views/AdminDashboard.vue"
 
 Vue.use(Router);
 
@@ -49,6 +50,12 @@ export default new Router({
       path: "/playground",
       name: "playground",
       component: Playground
+    },
+    {
+      path: "/admin",
+      name: "admin",
+      component: AdminDashboard
     }
+
   ]
 });
