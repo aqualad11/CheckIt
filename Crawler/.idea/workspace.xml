@@ -120,7 +120,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/DataTransfer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -206,15 +206,16 @@
       <workItem from="1556136497370" duration="2658000" />
       <workItem from="1556244302329" duration="1200000" />
       <workItem from="1556296466572" duration="3211000" />
-      <workItem from="1556328532501" duration="24000" />
+      <workItem from="1556337616270" duration="31000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142629000" />
+    <option name="totallyTimeSpent" value="142636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989011" visible="true" weight="0.10074627" />
       <window_info id="Structure" order="1" sideWeight="0.50109893" side_tool="true" weight="0.18656716" />
