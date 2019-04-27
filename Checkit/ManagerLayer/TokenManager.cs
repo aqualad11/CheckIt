@@ -189,7 +189,7 @@ namespace CheckIt.ManagerLayer
                 }
             }
 
-            return userService.getUser(new Guid(userID));
+            return userService.GetUser(new Guid(userID));
         }
 
 

@@ -28,6 +28,12 @@ namespace CheckIt.DataAccessLayer.Repositories
             return user;
         }
 
+        public User  GetUserbySSOID(Guid ssoID)
+        {
+            var user = db.Users.Where(u => u.ssoID == ssoID).FirstOrDefault();
+            return user;
+        }
+
         public Guid GetUserIDbyEmail(string email)
         {
             Guid userID = db.Users.Where(u => u.userEmail == email).Select(u => u.userID).FirstOrDefault();

@@ -153,7 +153,7 @@ namespace CheckIt.UnitTests
 
         /// <summary>
         /// test UpdateUser
-        /// must call addUser() test first
+        /// must call AddUser() test first
         /// </summary>
         [TestMethod]
         public void updateExistingUser()
@@ -176,7 +176,7 @@ namespace CheckIt.UnitTests
 
 
         /// <summary>
-        /// test removeUser
+        /// test RemoveUser
         /// expected null
         /// AddUser test must be run first
         /// </summary>

@@ -43,3 +43,4 @@ D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.exe
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit3.resources

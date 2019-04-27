@@ -40,7 +40,7 @@ namespace CheckIt.DataAccessLayer.Repositories
                 db.Tokens.Add(token);
                 db.SaveChanges();
                 return true;
-            }catch(Exception e)
+            }catch(Exception)
             {
                 return false;
             }

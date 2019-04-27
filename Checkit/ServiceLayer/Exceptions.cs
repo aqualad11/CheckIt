@@ -13,6 +13,13 @@ namespace CheckIt.ServiceLayer
         public UserExistsException(string message) : base(message) { }
     }
 
+    public class UserDoesNotExistException : Exception
+    {
+        public UserDoesNotExistException() { }
+
+        public UserDoesNotExistException(string message) : base(message) { }
+    }
+
     public class TooYoungException : Exception
     {
         public TooYoungException() { }
@@ -25,5 +32,12 @@ namespace CheckIt.ServiceLayer
         public PasswordHackedException() { }
 
         public PasswordHackedException(string message) : base(message) { }
+    }
+
+    public class ClientDoesNotExistException : Exception
+    {
+        public ClientDoesNotExistException() { }
+
+        public ClientDoesNotExistException(string message) : base(message) { }
     }
 }
