@@ -18,26 +18,42 @@ namespace CheckIt.ServiceLayer
             userRepo = new UserRepository(db);
         }
 
-        public bool userExists(Guid id)
+        public bool UserExists(Guid id)
         {
             User user = userRepo.GetUserbyID(id);
             return user == null ? false : true;
         }
 
-        public bool userExists(string email)
+        public bool UserExists(string email)
         {
             User user = userRepo.GetUserbyEmail(email);
             return user == null ? false : true;
         }
 
-        public User getUser(Guid id)
+        public bool SSOUserExists(Guid ssoID)
+        {
+            User user = userRepo.GetUserbySSOID(ssoID);
+            return user == null ? false : true;
+        }
+
+        public User GetUser(Guid id)
         {
             return userRepo.GetUserbyID(id);
         }
 
-        public User getUser(string email)
+        public User GetUser(string email)
         {
             return userRepo.GetUserbyEmail(email);
+        }
+
+        public List<string> ExtractActions(User user)
+        {
+            List<string> actions = new List<string>();
+            foreach(UserAction ua in user.userActions)
+            {
+                actions.Add(ua.action);
+            }
+            return actions;
         }
 
         /// <summary>
@@ -45,7 +61,7 @@ namespace CheckIt.ServiceLayer
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public bool addUser(User user)
+        public bool AddUser(User user)
         {
             if(user == null)
             {
@@ -62,7 +78,7 @@ namespace CheckIt.ServiceLayer
         /// </summary>
         /// <param name="user">pass in updated user</param>
         /// <returns></returns>
-        public bool updateUser(User user)
+        public bool UpdateUser(User user)
         {
             //simultaniously checks that user is not null and that user exists in db
             User temp = userRepo.GetUserbyEmail(user.userEmail);
@@ -79,7 +95,7 @@ namespace CheckIt.ServiceLayer
         /// removes user from db
         /// </summary>
         /// <param name="user"></param>
-        public bool removeUser(User user)
+        public bool RemoveUser(User user)
         {
             //simultaniously checks that user is not null and that user exists in db
             User temp = userRepo.GetUserbyEmail(user.userEmail);
