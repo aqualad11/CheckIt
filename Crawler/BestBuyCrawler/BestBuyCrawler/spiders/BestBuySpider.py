@@ -33,23 +33,19 @@ class BestBuySpider(scrapy.Spider):
                 yield scrapy.Request(nextLink, callback=self.parse_item)
 
     def parse_item(self,response):
-        current = response.meta['count']
-        if current < 100:
-            item = BestBuyItem()
-            item['name'] = response.css("div.sku-title h1::text").get()
-            item['price'] = response.xpath("string(//*[@id='priceblock-wrapper-wrapper']/div[1]/div[1]/div[2]/div[1]/div/div/div/div/div[2]/div/div[1]/div/span[1])").get()
-            item['url'] = response.request.url
-            item['description'] = response.xpath("string(//*[@id='long-description'])").get()
-            yield item
-            for href in response.css("div.cyp-item-group a::attr(href)").getall():
-                if href == "":
-                    pass
-                else:
-                    nextLink = "https://www.bestbuy.com" + href
-                    current = current + 1
-                    yield scrapy.Request(nextLink, callback=self.parse_item, meta = {'count': current})
-        else:
-            pass
+        item = BestBuyItem()
+        item['name'] = response.css("div.sku-title h1::text").get()
+        item['price'] = response.xpath("string(//*[@id='priceblock-wrapper-wrapper']/div[1]/div[1]/div[2]/div[1]/div/div/div/div/div[2]/div/div[1]/div/span[1])").get()
+        item['url'] = response.request.url
+        item['description'] = response.xpath("string(//*[@id='long-description'])").get()
+        item['keywords'] = ""
+        yield item
+        for href in response.css("div.cyp-item-group a::attr(href)").getall():
+            if href == "":
+                pass
+            else:
+                nextLink = "https://www.bestbuy.com" + href
+                yield scrapy.Request(nextLink, callback=self.parse_item)
 
 
 #//*[@id="grpDescrip_23-201-108"]

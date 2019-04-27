@@ -13,3 +13,4 @@ class TargetItem(scrapy.Item):
         price = scrapy.Field()
         url = scrapy.Field()
         description = scrapy.Field()
+        keywords = scrapy.Field()
