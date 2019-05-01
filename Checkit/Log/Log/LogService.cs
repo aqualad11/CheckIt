@@ -10,35 +10,40 @@ namespace Log
 {
     class LogService
     {
-        private LogRepository logRepo;
-        private Config config = new Config();
+        private Config config;
+        private LogRepository logRepo;       
 
         public LogService()
         {
+            config = new Config();
+            logRepo = new LogRepository();
         }
-        public LogService(string filename)
+        /// <summary>
+        /// Method which calls the log repo to log telemetry data
+        /// </summary>
+        /// <param name="description">message to be logged</param>
+        public void LogTelemetry(string description)
         {
-            logRepo = new LogRepository(filename);
+            logRepo.LogTelemetry(description);
+        }
+        /// <summary>
+        /// Method which calls the log repo to log error data
+        /// </summary>
+        /// <param name="description">error information to be logged</param>
+        public void LogError(string description)
+        {
+            logRepo.LogError(description);
         }
 
-        public void Log(string description)
+        /// <summary>
+        /// Method which calls the repository to retrieve logs given a file name
+        /// </summary>
+        /// <param name="file">format: mm-dd-yyyy_type.json //type is either "Error" or "Telemetry"</param>
+        /// <returns></returns>
+        public List<string> GetLog(string file)
         {
-            logRepo.Log(description);
+            return logRepo.GetLog(file);
         }
-        public void CreateTelemetryLog()
-        {
-            logRepo = new LogRepository(DateTime.UtcNow.ToString(config.GetDateTimeFormat()) + config.GetTelemetryLogExtension());
-        }
-
-        public void CreateErrorLog()
-        {
-            logRepo = new LogRepository(DateTime.UtcNow.ToString(config.GetDateTimeFormat()) + config.GetErrorLogExtension());
-        }
-        /*
-        public string ReadTelemetryLog(string fileName)
-        {
-            return logRepo.ReadTelemetryLog(fileName);
-        }
-        */
+        
     }
 }

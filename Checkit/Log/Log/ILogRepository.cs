@@ -8,13 +8,9 @@ namespace Log
 {
     interface ILogRepository
     {
-        void Log(string description);
-        //List<Telemetry> ReadTelemetryLog();
+        void LogTelemetry(string description);
+        void LogError(string description);
+        List<string> GetLog(string file);
 
-        /*
-        void Read(string fileName);
-        
-        void Delete(string fileName);
-        */
     }
 }

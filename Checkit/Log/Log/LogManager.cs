@@ -14,18 +14,13 @@ namespace Log
         private static int errorCount = 0;
         private static int telemetryCount = 0;
         private LogService logService;
-        private Config config = new Config();
+        private Config config;
 
+        public LogManager() {
 
-        public LogManager() { }
-
-        /// <summary>
-        /// This constructor creates a new logservice which creates a file name.
-        /// </summary>
-        /// <param name="fileName"></param>
-        public LogManager(string fileName)
-        {
-            logService = new LogService(fileName);
+            config = new Config();
+            logService = new LogService();
+ 
         }
 
         /// <summary>
@@ -34,149 +29,108 @@ namespace Log
         /// <param name="ex">Exception that is used to create an error object</param>
         public bool LogError(string id, Exception exception)
         {
-
+            if (CheckCount(errorCount) == false)
+            {
+                //init error object
                 var error = new Error
                 {
                     userID = id,
-                    timeOfError = string.Format(DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt ")),
+                    timeOfError = string.Format(DateTime.UtcNow.ToString(config.GetDateTimeFormat())),
                     errorMsg = string.Format(exception.Message),
                     stackTrace = string.Format(exception.StackTrace),
                     targetSite = exception.TargetSite.ToString()
-  
+
                 };
-            
+
                 //convert error object into json format
                 string errorlog = JsonConvert.SerializeObject(error, Formatting.Indented);
 
-            
-                logService.Log(errorlog);
-                return true;
- 
+                logService.LogError(errorlog);
+                errorCount++;
 
+                return true;
+            }
+            else {
+
+                Console.WriteLine("100 error logs have been recorded. Please Contact System Administrator");
+                return false;
+            }
         }
+
         /// <summary>
         /// This method creates a telemetry object, converts it to json, and prepares for it to be logged.
         /// </summary>
         /// <param name="obj">Telemetry object that is used to fill Telemetry properties to be logged.</param>
         public bool LogTelemetry(Telemetry obj)
         {
-            //if(validateTelemetry(User user) == true)
-
-     
-            /*
-                var info = new Telemetry
+            if (isOpted() == true)
+            {
+                if (CheckCount(telemetryCount) == false)
                 {
-                    userID = id,
-                    dateTime = dateTime,
-                    description = description
+                    //convert telemetry object into json format
+                    string telemetry = JsonConvert.SerializeObject(obj, Formatting.Indented);
 
-                };
-                */
-                //convert telemetry object into json format
-                string telemetry = JsonConvert.SerializeObject(obj, Formatting.Indented);
+                    logService.LogTelemetry(telemetry);
+                    telemetryCount++;
 
-                logService.Log(telemetry);
-                return true;
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("100 telemetry logs have been recorded. Please Contact System Administrator");
+                    return false;
+                }
 
+            }else
 
-        }
-
-        public bool CheckIfTelemetryLogExists()
-        {
-            string directory = config.GetLogDirectory();
-            string fileName = DateTime.Now.ToString(config.GetDateTimeFormat()) + config.GetTelemetryLogExtention();
-            string path = Path.Combine(directory, fileName);
-
-            if (File.Exists(path))
-            {
-                return true;
-            }
-            
+            Console.WriteLine("User " + obj.userID + " has opted out of telemetry collection.");
             return false;
         }
 
-
-        public void CreateTelemetryFile()
+        /// <summary>
+        /// This method checks the count of how many logs have been recorded.
+        /// </summary>
+        /// <param name="count">paramter that represents the count of how many logs have been logged.</param>
+        public bool CheckCount(int count)
         {
-            if (CheckIfTelemetryLogExists() == false)
+            if (count <= 100)
             {
-                logService.CreateTelemetryLog();
-
+                return false;
             }
-
-        }
-        /*
-         
-        public bool CheckIfErrorLogExists()
-        {
-            string directory = config.GetLogDirectory();
-            string fileName = date + config.GetErrorLogExtension();
-            string path = Path.Combine(directory, fileName);
-
-            if (File.Exists(path))
+            else
             {
                 return true;
             }
-
-            return false;
         }
-      public void CreateErrorFile()
-      {
-          if (CheckIfErrorLogExists() == false)
-          {
-              logService.CreateErrorLog();
-          }
-      }
 
- 
-      public string GetTelemetryLogs(string fileName)
-      {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="file">Should be in MM-dd-yyy_type.json //type is either "Error" or "Telemetry"</param>
+        /// <returns></returns>
+        public List<string> GetLog(string file)
+        {
+            return logService.GetLog(file);
+        }
+        /// <summary>
+        /// This method checks to see if user has opted in or out of telemetry collection.
+        /// </summary>
+        /// <param name="user">user object which contains boolean that represents choice of telemetry collection.</param>
+        /// <returns></returns>
+        public bool isOpted()
+        {
+            return true;
 
-          string info = logService.ReadTelemetryLog(fileName);
-
-          return info;
-      }
-
-      /*
-
-      /// <summary>
-      /// This method checks to see if user has opted in or out of telemetry collection.
-      /// </summary>
-      /// <param name="user">user object which contains boolean that represents choice of telemetry collection.</param>
-      /// <returns></returns>
-      public bool ValidateTelemetry(User user)
-      {
-
-          if (user.OptedIn == true)
-          {
-              return true;
-          }
-          else
-          {
-              return false;
-          }
-      }
-      /// <summary>
-      /// This method checks the count of how many logs have been recorded.
-      /// </summary>
-      /// <param name="count">static variable that keeps track of how many logs have been logged.</param>
-      /// <returns></returns>
-      public bool checkCount(int count)
-      {
-          if(count == 100)
-          {
-              return false;
-          }else
-          {
-              Console.WriteLine("100 Logs have been recorded. Contact System Administrator.");
-          }
-
-
-      }
-
-
-       */
-
+            /*
+            if (user.OptedIn == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            */
+        }
     }
-
 }

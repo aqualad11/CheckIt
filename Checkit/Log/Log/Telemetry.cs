@@ -12,8 +12,5 @@ namespace Log
         public string dateTime { get; set; }
         public string description { get; set; }
 
-        //at login specify ip address and location of user
-        // e.g. stringFormat("user id: " + user id + "user logged in" + ipAddress + location )
-        // location and ip address will come from get request to URL passed by a post to backend.
     }
 }
