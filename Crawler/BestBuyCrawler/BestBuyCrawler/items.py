@@ -14,5 +14,6 @@ class BestBuyItem(scrapy.Item):
     price = scrapy.Field()
     url = scrapy.Field()
     description = scrapy.Field()
+    keywords = scrapy.Field()
     #image_urls = scrapy.Field()
     #images = scrapy.Field()

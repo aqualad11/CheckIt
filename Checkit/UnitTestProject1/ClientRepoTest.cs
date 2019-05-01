@@ -13,12 +13,12 @@ namespace CheckIt.UnitTests
         /// Tests GetClientByID using valid ID
         /// </summary>
         [TestMethod]
-        public void getClientByValidID()
+        public void GetClientByValidID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IClientRepository clientRepo = new ClientRepository(db);
-            Guid clientID = new Guid("6CF91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid clientID = new Guid("40361F37-036B-E911-AA03-021598E9EC9E");
 
             //Act
             Client client = clientRepo.GetClientByID(clientID);
@@ -31,7 +31,7 @@ namespace CheckIt.UnitTests
         /// Tests GetClientByID using invalid ID
         /// </summary>
         [TestMethod]
-        public void getClientByInvalidID()
+        public void GetClientByInvalidID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -49,7 +49,7 @@ namespace CheckIt.UnitTests
         /// Tests GetClientByName using valid client name
         /// </summary>
         [TestMethod]
-        public void getClientByValidName()
+        public void GetClientByValidName()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -67,7 +67,7 @@ namespace CheckIt.UnitTests
         /// Tests GetClientByName using invalid client name
         /// </summary>
         [TestMethod]
-        public void getClientByInvalidName()
+        public void GetClientByInvalidName()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -85,7 +85,7 @@ namespace CheckIt.UnitTests
         /// Tests AddClient using valid client
         /// </summary>
         [TestMethod]
-        public void addClient()
+        public void AddClient()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -104,7 +104,7 @@ namespace CheckIt.UnitTests
         /// Tests UpdateClient using valid client
         /// </summary>
         [TestMethod]
-        public void updateValidClient()
+        public void UpdateValidClient()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -125,7 +125,7 @@ namespace CheckIt.UnitTests
         /// Tests UpdateClient using an invalid client
         /// </summary>
         [TestMethod]
-        public void updateInvalidClient()
+        public void UpdateInvalidClient()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -141,7 +141,7 @@ namespace CheckIt.UnitTests
         /// </summary>
         /// <param name="client"></param>
         [TestMethod]
-        public void removeClient()
+        public void RemoveClient()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -160,7 +160,7 @@ namespace CheckIt.UnitTests
         /// Tests RemoveClient using nonexisting client
         /// </summary>
         [TestMethod]
-        public void removeInvalidClient()
+        public void RemoveInvalidClient()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();

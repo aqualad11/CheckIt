@@ -13,12 +13,12 @@ namespace CheckIt.UnitTests
         /// Tests GetItemByID with valid itemID
         /// </summary>
         [TestMethod]
-        public void getItemByValidID()
+        public void GetItemByValidID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IItemRepository itemRepo = new ItemRepository(db);
-            Guid itemID = new Guid("83F91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid itemID = new Guid("4A361F37-036B-E911-AA03-021598E9EC9E");
 
             //Act
             Item item = itemRepo.GetItemByID(itemID);
@@ -31,7 +31,7 @@ namespace CheckIt.UnitTests
         /// Tests GetItemByID with invalid itemID
         /// </summary>
         [TestMethod]
-        public void getItemByInvalidID()
+        public void GetItemByInvalidID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -49,7 +49,7 @@ namespace CheckIt.UnitTests
         /// Tests GetItemByName using valid name
         /// </summary>
         [TestMethod]
-        public void getItemByValidName()
+        public void GetItemByValidName()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -67,7 +67,7 @@ namespace CheckIt.UnitTests
         /// Tests GetItemByName using invalid name(empty string)
         /// </summary>
         [TestMethod]
-        public void getItemByInvalidName()
+        public void GetItemByInvalidName()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -85,7 +85,7 @@ namespace CheckIt.UnitTests
         /// Tests AddItem
         /// </summary>
         [TestMethod]
-        public void addItem()
+        public void AddItem()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -111,7 +111,7 @@ namespace CheckIt.UnitTests
         /// Tests UpdateItem with Existing Item
         /// </summary>
         [TestMethod]
-        public void updateValidItem()
+        public void UpdateValidItem()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -132,7 +132,7 @@ namespace CheckIt.UnitTests
         /// Tests UpdateItem using an invalid Item(not existant in db)
         /// </summary>
         [TestMethod]
-        public void updateInvalidItem()
+        public void UpdateInvalidItem()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -154,7 +154,7 @@ namespace CheckIt.UnitTests
         /// Tests RemoveItem using a valid Item
         /// </summary>
         [TestMethod]
-        public void removeValidItem()
+        public void RemoveValidItem()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -173,7 +173,7 @@ namespace CheckIt.UnitTests
         /// Tests RemoveItem using an invalid Item
         /// </summary>
         [TestMethod]
-        public void removeInvalidItem()
+        public void RemoveInvalidItem()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();

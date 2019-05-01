@@ -10,7 +10,9 @@ namespace CheckIt.DataAccessLayer.Repositories
     {
         User GetUserbyID(Guid userID);
         User GetUserbyEmail(string email);
+        User GetUserbySSOID(Guid ssoID);
         Guid GetUserIDbyEmail(string email);
+        
 
         void AddUser(User user);
         void UpdateUser(User user);

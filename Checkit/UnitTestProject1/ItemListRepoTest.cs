@@ -14,13 +14,13 @@ namespace CheckIt.UnitTests
         /// Tests GetItemList using valid ItemList in db
         /// </summary>
         [TestMethod]
-        public void getItemListValid()
+        public void GetItemListValid()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IItemListRepository itemListRepo = new ItemListRepository(db);
-            Guid userID = new Guid("7AF91B37-DC4A-E911-8259-0A64F53465D0");
-            Guid itemID = new Guid("83F91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid userID = new Guid("44361F37-036B-E911-AA03-021598E9EC9E");
+            Guid itemID = new Guid("4A361F37-036B-E911-AA03-021598E9EC9E");
 
             //Act
             ItemList il = itemListRepo.GetItemList(userID, itemID);
@@ -33,7 +33,7 @@ namespace CheckIt.UnitTests
         /// Tests GetItemList using invalid userID & itemID
         /// </summary>
         [TestMethod]
-        public void getItemListInvalid()
+        public void GetItemListInvalid()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -52,12 +52,12 @@ namespace CheckIt.UnitTests
         /// Tests GetItemsByUserID using valid UserID in itemlist
         /// </summary>
         [TestMethod]
-        public void getItemsByValidUserID()
+        public void GetItemsByValidUserID()
         {
             //Arrange 
             DataBaseContext db = new DataBaseContext();
             IItemListRepository itemListRepo = new ItemListRepository(db);
-            Guid userID = new Guid("7BF91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid userID = new Guid("46361F37-036B-E911-AA03-021598E9EC9E");
 
             //Act
             List<Item> items = itemListRepo.GetItemsByUserID(userID);
@@ -70,7 +70,7 @@ namespace CheckIt.UnitTests
         /// Tests GetItemsByUserID using invalid UserID which is not in itemList
         /// </summary>
         [TestMethod]
-        public void getItemsByInvalidUserID()
+        public void GetItemsByInvalidUserID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -85,17 +85,53 @@ namespace CheckIt.UnitTests
         }
 
         /// <summary>
-        /// Tests AddItemList with new ItemList with existing user and item
+        /// Tests GetUserByItemID using a valid itemID
         /// </summary>
-        /// <param name="itemlist"></param>
         [TestMethod]
-        public void addItemListValidUserItem()
+        public void GetUsersByValidItemID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IItemListRepository itemListRepo = new ItemListRepository(db);
-            Guid userID = new Guid("7DF91B37-DC4A-E911-8259-0A64F53465D0");
-            Guid itemID = new Guid("85F91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid itemID = new Guid("4A361F37-036B-E911-AA03-021598E9EC9E");
+
+            //Act
+            List<User> users = itemListRepo.GetUsersByItemID(itemID);
+
+            //Assert
+            Assert.AreEqual(users.Count, 2);
+        }
+
+        /// <summary>
+        /// Tests GetUserByItemID using an invalid itemID
+        /// </summary>
+        [TestMethod]
+        public void GetUserByInvalidItemID()
+        {
+            //Arrange
+            DataBaseContext db = new DataBaseContext();
+            IItemListRepository itemListRepo = new ItemListRepository(db);
+            Guid itemID = new Guid();
+
+            //Act
+            List<User> users = itemListRepo.GetUsersByItemID(itemID);
+
+            //Assert
+            Assert.AreEqual(users.Count, 0);
+        }
+
+        /// <summary>
+        /// Tests AddItemList with new ItemList with existing user and item
+        /// </summary>
+        /// <param name="itemlist"></param>
+        [TestMethod]
+        public void AddItemListValidUserItem()
+        {
+            //Arrange
+            DataBaseContext db = new DataBaseContext();
+            IItemListRepository itemListRepo = new ItemListRepository(db);
+            Guid userID = new Guid("FB8A70A1-056B-E911-AA03-021598E9EC9E");
+            Guid itemID = new Guid("4B361F37-036B-E911-AA03-021598E9EC9E");
             ItemList il = new ItemList(userID, itemID);
 
             //Act
@@ -110,13 +146,13 @@ namespace CheckIt.UnitTests
         /// Tests AddItemList with new ItemList with an Nonexisting user and valid item
         /// </summary>
         [TestMethod]
-        public void addItemListInvalidUser()
+        public void AddItemListInvalidUser()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IItemListRepository itemListRepo = new ItemListRepository(db);
             Guid userID = new Guid();
-            Guid itemID = new Guid("85F91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid itemID = new Guid("4B361F37-036B-E911-AA03-021598E9EC9E");
             ItemList il = new ItemList(userID, itemID);
 
             //Act => Assert
@@ -127,12 +163,12 @@ namespace CheckIt.UnitTests
         /// Tests AddItemList with new ItemList with an valid user and Nonexisting item
         /// </summary>
         [TestMethod]
-        public void addItemListInvalidItem()
+        public void AddItemListInvalidItem()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IItemListRepository itemListRepo = new ItemListRepository(db);
-            Guid userID = new Guid("7DF91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid userID = new Guid("FB8A70A1-056B-E911-AA03-021598E9EC9E");
             Guid itemID = new Guid();
             ItemList il = new ItemList(userID, itemID);
 
@@ -144,13 +180,13 @@ namespace CheckIt.UnitTests
         /// Tests RemoveItemList(ItemList) with valid Itemlist
         /// </summary>
         [TestMethod]
-        public void removeItemListValid()
+        public void RemoveItemListValid()
         {
             //Assert
             DataBaseContext db = new DataBaseContext();
             IItemListRepository itemListRepo = new ItemListRepository(db);
-            Guid userID = new Guid("7DF91B37-DC4A-E911-8259-0A64F53465D0");
-            Guid itemID = new Guid("85F91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid userID = new Guid("FB8A70A1-056B-E911-AA03-021598E9EC9E");
+            Guid itemID = new Guid("4B361F37-036B-E911-AA03-021598E9EC9E");
             ItemList itemList = itemListRepo.GetItemList(userID, itemID);
 
             //Act
@@ -166,7 +202,7 @@ namespace CheckIt.UnitTests
         /// Tests RemoveItemList(ItemList) with invalid Itemlist
         /// </summary>
         [TestMethod]
-        public void removeItemListInvalid()
+        public void RemoveItemListInvalid()
         {
             //Assert
             DataBaseContext db = new DataBaseContext();
@@ -180,43 +216,5 @@ namespace CheckIt.UnitTests
             
         }
 
-        /// <summary>
-        /// Tests RemoveItemList(userID, itemID) with valid Itemlist
-        /// </summary>
-        [TestMethod]
-        public void removeItemListValidUserItem()
-        {
-            //Assert 
-            //Assert
-            DataBaseContext db = new DataBaseContext();
-            IItemListRepository itemListRepo = new ItemListRepository(db);
-            Guid userID = new Guid("7DF91B37-DC4A-E911-8259-0A64F53465D0");
-            Guid itemID = new Guid("85F91B37-DC4A-E911-8259-0A64F53465D0");
-
-            //Act
-            itemListRepo.RemoveItemList(userID, itemID);
-            ItemList newIl = itemListRepo.GetItemList(userID, itemID);
-
-            //Assert
-            Assert.IsNull(newIl);
-        }
-
-        /// <summary>
-        /// Tests RemoveItemList(userID, itemID) with invalid userID
-        /// same outcome should happen with invaliditemID
-        /// </summary>
-        [TestMethod]
-        public void removeItemInvalidUserItem()
-        {
-            //Assert
-            DataBaseContext db = new DataBaseContext();
-            IItemListRepository itemListRepo = new ItemListRepository(db);
-            Guid userID = new Guid("7DF91B37-DC4A-E911-8259-0A64F53465D0");
-            Guid itemID = new Guid("85F91B37-DC4A-E911-8259-0A64F53465D0");
-            ItemList itemList = new ItemList(userID, itemID);
-
-            //Act => Assert
-            Assert.ThrowsException<InvalidOperationException>(() => itemListRepo.RemoveItemList(itemList));
-        }
     }
 }

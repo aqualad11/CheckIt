@@ -10,9 +10,9 @@ namespace CheckIt.DataAccessLayer.Repositories
     {
         ItemList GetItemList(Guid userID, Guid itemID);
         List<Item> GetItemsByUserID(Guid userID);
+        List<User> GetUsersByItemID(Guid item);
 
         void AddItemList(ItemList itemlist);
         void RemoveItemList(ItemList itemlist);
-        void RemoveItemList(Guid userID, Guid itemID);
     }
 }

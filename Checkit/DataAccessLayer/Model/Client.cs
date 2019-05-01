@@ -10,7 +10,7 @@ namespace CheckIt.DataAccessLayer
 {
     public class Client
     {
-        [Key]
+        [Key, Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid clientID { get; set; }
         //TODO: make name a key

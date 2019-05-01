@@ -11,45 +11,42 @@ namespace CheckIt.DataAccessLayer
     {
         static void Main(string[] args)
         {
-            
-            using (var dc = new DataBaseContext())
+            //add users with SSO IDs
+            using(var dc = new DataBaseContext())
             {
-                //add this to data seeding
-                //getting userIDs
-                //getting user IDs
-                var usr1ID = dc.Users.Where(u => u.userEmail == "example1@gmail.com").Select(u => u.userID).SingleOrDefault();
-                Console.WriteLine("User1's ID: " + usr1ID);
-                var usr2ID = dc.Users.Where(u => u.userEmail == "example2@gmail.com").Select(u => u.userID).SingleOrDefault();
-                Console.WriteLine("User2's ID: " + usr2ID);
-                var usr3ID = dc.Users.Where(u => u.userEmail == "example3@gmail.com").Select(u => u.userID).SingleOrDefault();
-                Console.WriteLine("User3's ID: " + usr3ID);
-                var usr4ID = dc.Users.Where(u => u.userEmail == "example4@gmail.com").Select(u => u.userID).SingleOrDefault();
-                Console.WriteLine("User4's ID: " + usr4ID);
-                var usr5ID = dc.Users.Where(u => u.userEmail == "example5@gmail.com").Select(u => u.userID).SingleOrDefault();
-                Console.WriteLine("User5's ID: " + usr5ID);
-                var usr6ID = dc.Users.Where(u => u.userEmail == "example6@gmail.com").Select(u => u.userID).SingleOrDefault();
-                Console.WriteLine("User6's ID: " + usr6ID);
+                User usr7 = new User()
+                {
+                    userEmail = "example7@gmail.com",
+                    height = 2,
+                    ssoID = Guid.NewGuid(),
+                    trackTelData = true
+                };
 
-                //Creating Tokens
-                Token token1 = new Token("SampleJWT1", usr1ID);
-                Token token2 = new Token("SampleJWT2", usr2ID);
-                Token token3 = new Token("SampleJWT3", usr3ID);
-                Token token4 = new Token("SampleJWT4", usr4ID);
-                Token token5 = new Token("SampleJWT5", usr5ID);
-                Token token6 = new Token("SampleJWT6", usr6ID);
-                
-                //Adding tokens to db
-                dc.Tokens.Add(token1);
-                dc.Tokens.Add(token2);
-                dc.Tokens.Add(token3);
-                dc.Tokens.Add(token4);
-                dc.Tokens.Add(token5);
-                dc.Tokens.Add(token6);
-                   
-                //save db
+                User usr8 = new User()
+                {
+                    userEmail = "example8@gmail.com",
+                    height = 2,
+                    ssoID = Guid.NewGuid(),
+                    trackTelData = true
+                };
+
+                User usr9 = new User()
+                {
+                    userEmail = "example9@gmail.com", 
+                    height = 2,
+                    ssoID = Guid.NewGuid(),
+                    trackTelData = true
+                };
+
+
+                //adding users to db
+                dc.Users.Add(usr7);
+                dc.Users.Add(usr8);
+                dc.Users.Add(usr9);
+
                 dc.SaveChanges();
-
             }
+            
             /*--------------------------Data Seeding---------------------------------------------
             using (var dc = new DataBaseContext())
             {
@@ -109,7 +106,7 @@ namespace CheckIt.DataAccessLayer
                     userEmail = "example1@gmail.com",
                     clientID = HRID,
                     height = 1,
-                    DoB = DOB
+                    trackTelData = true
                 };
 
                 User usr2 = new User()
@@ -119,7 +116,7 @@ namespace CheckIt.DataAccessLayer
                     active = true,
                     clientID = HRID,
                     height = 2,
-                    DoB = DOB
+                    trackTelData = true
                 };
 
                 User usr3 = new User()
@@ -127,7 +124,7 @@ namespace CheckIt.DataAccessLayer
                     userEmail = "example3@gmail.com",
                     clientID = financeID,
                     height = 2,
-                    DoB = DOB
+                    trackTelData = true
                 };
 
                 User usr4 = new User()
@@ -135,7 +132,7 @@ namespace CheckIt.DataAccessLayer
                     userEmail = "example4@gmail.com",
                     clientID = ITID,
                     height = 2,
-                    DoB = DOB
+                    trackTelData = true
                 };
 
                 User usr5 = new User()
@@ -143,7 +140,7 @@ namespace CheckIt.DataAccessLayer
                     userEmail = "example5@gmail.com",
                     clientID = financeID,
                     height = 2,
-                    DoB = DOB
+                    trackTelData = true
                 };
 
                 User usr6 = new User()
@@ -151,7 +148,7 @@ namespace CheckIt.DataAccessLayer
                     userEmail = "example6@gmail.com",
                     clientID = ITID,
                     height = 2,
-                    DoB = DOB
+                    trackTelData = true
                 };
                 
                 
@@ -180,6 +177,24 @@ namespace CheckIt.DataAccessLayer
                 Console.WriteLine("User6's ID: " + usr6ID);
 
 
+                //Creating Tokens
+                Token token1 = new Token("SampleJWT1", usr1ID);
+                Token token2 = new Token("SampleJWT2", usr2ID);
+                Token token3 = new Token("SampleJWT3", usr3ID);
+                Token token4 = new Token("SampleJWT4", usr4ID);
+                Token token5 = new Token("SampleJWT5", usr5ID);
+                Token token6 = new Token("SampleJWT6", usr6ID);
+                
+                //Adding tokens to db
+                dc.Tokens.Add(token1);
+                dc.Tokens.Add(token2);
+                dc.Tokens.Add(token3);
+                dc.Tokens.Add(token4);
+                dc.Tokens.Add(token5);
+                dc.Tokens.Add(token6);
+                   
+                //save db
+                dc.SaveChanges();
 
                 
                 //creating userActions
