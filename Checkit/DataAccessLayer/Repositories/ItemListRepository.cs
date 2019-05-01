@@ -16,16 +16,33 @@ namespace CheckIt.DataAccessLayer.Repositories
             this.db = db;
         }
         
+        /// <summary>
+        /// Gets specific ItemList
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <param name="itemID"></param>
+        /// <returns></returns>
         public ItemList GetItemList(Guid userID, Guid itemID)
         {
             ItemList itemList = db.ItemLists.Where(i => i.userID == userID && i.itemID == itemID).FirstOrDefault();
             return itemList;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <returns></returns>
         public List<Item> GetItemsByUserID(Guid userID)
         {
             var items = db.ItemLists.Where(i => i.userID == userID).Select(i => i.item).ToList();
             return items;
+        }
+
+        public List<User> GetUsersByItemID(Guid itemID)
+        {
+            var users = db.ItemLists.Where(i => i.itemID == itemID).Select(i => i.user).ToList();
+            return users;
         }
 
         /// <summary>
@@ -33,6 +50,7 @@ namespace CheckIt.DataAccessLayer.Repositories
         /// doesn't check for duplicates, must be handled in service layer
         /// </summary>
         /// <param name="itemlist"></param>
+        /// <exception cref="System.Data.Entity.Infrastructure.DbUpdateException">Thrown when userID is invalid</exception>
         public void AddItemList(ItemList itemlist)
         {
             db.ItemLists.Add(itemlist);
@@ -44,17 +62,12 @@ namespace CheckIt.DataAccessLayer.Repositories
         /// throws InvalidOperationException
         /// </summary>
         /// <param name="itemlist"></param>
+        /// <exception cref="System.InvalidOperationException">Thrown when userID or itemID are invalid</exception>
         public void RemoveItemList(ItemList itemlist)
         {
             db.ItemLists.Remove(itemlist);
             db.SaveChanges();
         }
 
-        public void RemoveItemList(Guid userID, Guid itemID)
-        {
-            ItemList itemList = db.ItemLists.Where(i => i.userID == userID && i.itemID == itemID).FirstOrDefault();
-            db.ItemLists.Remove(itemList);
-            db.SaveChanges();
-        }
     }
 }

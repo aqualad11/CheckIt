@@ -20,6 +20,8 @@ namespace CheckIt.DataAccessLayer
 
         public bool valid { get; set; }
 
+        public Token() { }
+
         public Token(string jwt, Guid userID)
         {
             this.jwt = jwt;

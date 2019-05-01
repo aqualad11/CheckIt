@@ -32,6 +32,7 @@ namespace CheckIt.DataAccessLayer
 
         public string accountType { get; set; }
         public bool active { get; set; }
+        public bool trackTelData { get; set; }
        
 
 
@@ -43,18 +44,45 @@ namespace CheckIt.DataAccessLayer
         {
         }
 
-        //creates normal user with height of 2
-        public User(string email, string atype, Guid? clientID, Guid? parentID, Guid? ssoID)
+        /// <summary>
+        /// Create a normal user - mainly made for admin user creation
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="atype"></param>
+        /// <param name="clientID"></param>
+        /// <param name="parentID"></param>
+        /// <param name="ssoID"></param>
+        public User(string email, string atype,int height, Guid? clientID, Guid? parentID)
         {
             userEmail = email;
             accountType = atype;
             this.clientID = clientID;
-            height = 2;
+            this.height = height;
             active = true;
+            trackTelData = true;
             this.parentID = parentID;
-            this.ssoID = ssoID;
+            ssoID = null;
             userActions = new List<UserAction>();
             
+        }
+
+        /// <summary>
+        /// Creates basic user - used for user registration
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="atype"></param>
+        public User(string email, string atype, Guid? ssoID=null)
+        {
+            userEmail = email;
+            accountType = atype;
+            clientID = null;
+            height = 2;
+            active = true;
+            trackTelData = true;
+            parentID = null;
+            this.ssoID = ssoID;
+            userActions = new List<UserAction>();
+
         }
 
     }

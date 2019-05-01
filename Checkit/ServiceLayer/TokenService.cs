@@ -37,11 +37,45 @@ namespace CheckIt.ServiceLayer
             return false;
         }
 
-        public void Invalidate(string jwt, Guid userID)
+
+        public bool Invalidate(string jwt, Guid userID)
         {
-            Token token = tokenRepo.GetToken(jwt, userID);
-            token.valid = false;
-            tokenRepo.UpdateToken(token);
+            try
+            {
+                Token token = tokenRepo.GetToken(jwt, userID);
+                token.valid = false;
+                tokenRepo.UpdateToken(token);
+                return true;
+            }catch(Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool AddToken(string jwt, Guid userID)
+        {
+            try
+            {
+                Token token = new Token(jwt, userID);
+                tokenRepo.AddToken(token);
+                return true;
+            }catch(Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool RemoveToken(string jwt, Guid userID)
+        {
+            try
+            {
+                Token token = new Token(jwt, userID);
+                tokenRepo.RemoveToken(token);
+                return true;
+            }catch(Exception)
+            {
+                return false;
+            }
         }
 
 
