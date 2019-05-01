@@ -56,3 +56,32 @@ D:\School\Senior Project\SPY-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer
 D:\School\Senior Project\SPY-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.csproj.CopyComplete
 D:\School\Senior Project\SPY-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.exe
 D:\School\Senior Project\SPY-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.pdb
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.exe.config
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.exe
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.pdb
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.exe
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.exe
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IO.Compression.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.pdb
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.exe.config
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.pdb
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.exe.config
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csprojAssemblyReference.cache
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CoreCompileInputs.cache
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CopyComplete
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.exe
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.pdb
