@@ -29,47 +29,39 @@ namespace CheckIt.DataAccessLayer.Repositories
         }
 
         /// <summary>
-        /// 
+        /// Addes Token to the database
         /// </summary>
         /// <param name="token"></param>
-        /// <returns></returns>
-        public bool AddToken(Token token)
+        /// <exception cref="System.Data.Entity.Infrastructure.DbUpdateException">
+        /// Thrown if User does not exist in database.
+        /// Thrown if Token is a duplicate
+        /// </exception>
+        public void AddToken(Token token)
         {
-            try
-            {
-                db.Tokens.Add(token);
-                db.SaveChanges();
-                return true;
-            }catch(Exception)
-            {
-                return false;
-            }
+            db.Tokens.Add(token);
+            db.SaveChanges();
         }
 
-        public bool UpdateToken(Token token)
+        /// <summary>
+        /// Updates the Token in the Database. Used mainly to make a token invalid.
+        /// </summary>
+        /// <param name="token"></param>
+        /// <exception cref="System.Data.Entity.Infrastructure.DbUpdateConcurrencyException">Thrown if Token does not exist in database</exception>
+        public void UpdateToken(Token token)
         {
-            try
-            {
-                db.Entry(token).State = EntityState.Modified;
-                db.SaveChanges();
-                return true;
-            }catch(Exception)
-            {
-                return false;
-            }
+            db.Entry(token).State = EntityState.Modified;
+            db.SaveChanges();
         }
-        
-        public bool RemoveToken(Token token)
+
+        /// <summary>
+        /// Removes Token from the database
+        /// </summary>
+        /// <param name="token"></param>
+        /// <exception cref="System.InvalidOperationException">Thrown if Token does not exist in database.</exception>
+        public void RemoveToken(Token token)
         {
-            try
-            {
-                db.Tokens.Remove(token);
-                db.SaveChanges();
-                return true;
-            }catch(Exception e)
-            {
-                return false;
-            }
+            db.Tokens.Remove(token);
+            db.SaveChanges();
             
         }
     }

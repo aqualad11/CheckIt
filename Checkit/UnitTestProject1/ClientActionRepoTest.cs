@@ -14,12 +14,12 @@ namespace CheckIt.UnitTests
         /// Tests GetActionsByClientID using valid clientID
         /// </summary>
         [TestMethod]
-        public void getActionsByValidClientID()
+        public void GetActionsByValidClientID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IClientActionRepository clientActionRepo = new ClientActionRepository(db);
-            Guid clientID = new Guid("6EF91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid clientID = new Guid("42361F37-036B-E911-AA03-021598E9EC9E");
 
             //Act
             List<string> actions = clientActionRepo.GetActionsByClientID(clientID);
@@ -33,7 +33,7 @@ namespace CheckIt.UnitTests
         /// Tests GetActionsByClientID using invalid clientID
         /// </summary>
         [TestMethod]
-        public void getActionsByInvalidClientID()
+        public void GetActionsByInvalidClientID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -53,12 +53,12 @@ namespace CheckIt.UnitTests
         /// Tests GetClientAction(clientID, action) using a valid clientID and action
         /// </summary>
         [TestMethod]
-        public void getClientAction()
+        public void GetClientAction()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IClientActionRepository clientActionRepo = new ClientActionRepository(db);
-            Guid clientID = new Guid("6CF91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid clientID = new Guid("40361F37-036B-E911-AA03-021598E9EC9E");
             string action = "Login";
 
             //Act
@@ -72,7 +72,7 @@ namespace CheckIt.UnitTests
         /// Tests GetClientAction(clientID, action) using a valid clientID and invalid action
         /// </summary>
         [TestMethod]
-        public void getClientActionValid()
+        public void GetClientActionValid()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -92,7 +92,7 @@ namespace CheckIt.UnitTests
         /// </summary>
         /// <param name="action"></param>
         [TestMethod]
-        public void getClientsByValidAction()
+        public void GetClientsByValidAction()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -110,7 +110,7 @@ namespace CheckIt.UnitTests
         /// Tests GetClientsByAction using a invalid Action
         /// </summary>
         [TestMethod]
-        public void getClientsByInvalidAction()
+        public void GetClientsByInvalidAction()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -128,12 +128,12 @@ namespace CheckIt.UnitTests
         /// Tests AddClientAction using valid Client
         /// </summary>
         [TestMethod]
-        public void addValidClientAction()
+        public void AddValidClientAction()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IClientActionRepository clientActionRepo = new ClientActionRepository(db);
-            Guid clientID = new Guid("6DF91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid clientID = new Guid("41361F37-036B-E911-AA03-021598E9EC9E");
             string action = "Search";
             ClientAction ca = new ClientAction(clientID, action);
 
@@ -149,7 +149,7 @@ namespace CheckIt.UnitTests
         /// Tests AddClientAction using an invalid Client
         /// </summary>
         [TestMethod]
-        public void addInvalidClientAction()
+        public void AddInvalidClientAction()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -167,12 +167,12 @@ namespace CheckIt.UnitTests
         /// Tests RemoveClientAction using valid clientaction
         /// </summary>
         [TestMethod]
-        public void removeValidClientAction()
+        public void RemoveValidClientAction()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IClientActionRepository clientActionRepo = new ClientActionRepository(db);
-            Guid clientID = new Guid("6DF91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid clientID = new Guid("41361F37-036B-E911-AA03-021598E9EC9E");
             string action = "Search";
             ClientAction ca = clientActionRepo.GetClientAction(clientID, action);
 
@@ -188,7 +188,7 @@ namespace CheckIt.UnitTests
         /// Tests RemoveClientAction using invalid clientaction
         /// </summary>
         [TestMethod]
-        public void removeInvalidClientAction()
+        public void RemoveInvalidClientAction()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -200,6 +200,6 @@ namespace CheckIt.UnitTests
             //Act => Assert
             Assert.ThrowsException<InvalidOperationException>(() => clientActionRepo.RemoveClientAction(ca));
         }
-        
+
     }
 }

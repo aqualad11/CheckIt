@@ -9,7 +9,7 @@ import Register from "./views/Register.vue"
 import AdminDashboard from "./views/AdminDashboard.vue"
 
 Vue.use(Router);
-
+//TODO
 export default new Router({
   routes: [
     {

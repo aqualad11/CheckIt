@@ -63,7 +63,7 @@ namespace CheckIt.ManagerLayer
             }
 
             //check if client exists
-            if(clientService.ClientExists(clientID))
+            if(!clientService.ClientExists(clientID))
             {
                 throw new ClientDoesNotExistException("Client does not exist in our database");
             }
@@ -113,9 +113,9 @@ namespace CheckIt.ManagerLayer
 
             //if user exists and already has it's own ssoID or user does not exist we
             //create a new user
-            User newUser = new User(email, atype,ssoID);
-            userService.UpdateUser(newUser);
-            return new User();
+            User newUser = new User(email, atype, ssoID);
+            userService.AddUser(newUser);
+            return userService.GetUser(email);
         }
 
         public bool SSOUserExists(Guid ssoID)
@@ -128,6 +128,10 @@ namespace CheckIt.ManagerLayer
             return userService.UserExists(email);
         }
 
+        public User GetSSOUser(Guid ssoID)
+        {
+            return userService.GetSSOUser(ssoID);
+        }
         
     }
 }

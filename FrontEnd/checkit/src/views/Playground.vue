@@ -24,7 +24,7 @@
             outline
           ></v-text-field>
           
-          <v-btn color="success" v-on:click="CreatePost">Post</v-btn>
+          <v-btn color="success" v-on:click="TestGet">Post</v-btn>
         </v-flex>
 
       </v-layout>
@@ -83,8 +83,18 @@ export default {
          
       })
     },
+    TestGet () {
+      axios.get(API_URL + "/api/user/test")
+      .then( response => {
+        console.log('Successful test! User ID = ')
+        console.log(response.data)
+      }).catch(err => {
+        console.log("Unsuccessful test :(")
+      })
+    }
+    /*
     CreatePost () {
-      axios.post(API_URL + '/api/user/post/' + this.postpw, {
+      axios.post(API_URL + '/api/user/test/' {
         postedData:{
          pw: this.postpw,
         }
@@ -109,7 +119,7 @@ export default {
               alert("Bad Request or Conflict")
           }
       })
-  }
+  }*/
 }
 };
 

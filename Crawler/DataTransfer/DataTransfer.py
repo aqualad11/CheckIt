@@ -23,5 +23,3 @@ class DataTransfer:
             #Write the new Document to Atlas.
             document['keywords'] = KeyWords
             AtlasCollection.insert(dict(document))
-
-
