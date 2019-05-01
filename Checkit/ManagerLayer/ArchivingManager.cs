@@ -9,12 +9,15 @@ namespace CheckIt.ManagerLayer
     {
         //New archivingService interface
         private IArchivingService archivingService;
+        //New config instance
+        private Config config;
         /// <summary>
-        /// Instantiates the archiving service
+        /// Instantiates the archiving service and the config file
         /// </summary>
         public ArchivingManager()
         {
             archivingService = new ArchivingService();
+            config = new Config();
         }
 
         /// <summary>
@@ -25,9 +28,9 @@ namespace CheckIt.ManagerLayer
         {
             try
             {
-                string sourcePath = archivingService.GetProjectPath() + "\\Logs";
+                string sourcePath = config.GetLogDirectory();
                 Directory.CreateDirectory(sourcePath);
-                string targetPath = archivingService.GetProjectPath() + "\\LogsBackup";
+                string targetPath = config.GetBackupsDirectory();
                 Directory.CreateDirectory(targetPath);
                 archivingService.CopyLogs(sourcePath, targetPath, 1);
 
@@ -48,15 +51,15 @@ namespace CheckIt.ManagerLayer
             {
                 //archive information
                 string archiveDate = archivingService.GetCurrentDate();
-                var archivePath = archivingService.GetProjectPath() + "\\LogArchives" + "\\Archive_" + archiveDate + ".zip";
-                Directory.CreateDirectory(archivingService.GetProjectPath() + "\\LogArchives");
+                var archivePath = config.GetArchiveDirectory() + "\\Archive_" + archiveDate + ".zip";
+                Directory.CreateDirectory(config.GetArchiveDirectory());
 
                 //other relevant folder paths
-                string tempFolder = archivingService.GetProjectPath() + "\\EmptyFolderOnPurpose";
+                string tempFolder = config.GetEmptyDirectory();
                 Directory.CreateDirectory(tempFolder);
-                string allLogsPath = archivingService.GetProjectPath() + "\\Logs";
+                string allLogsPath = config.GetLogDirectory();
                 Directory.CreateDirectory(allLogsPath);
-                string backupPath = archivingService.GetProjectPath() + "\\LogsBackup";
+                string backupPath = config.GetBackupsDirectory();
                 Directory.CreateDirectory(backupPath);
 
                 //moves all logs to the tempFolder, creates a zip from that folder to archive folder, then deletes contents of tempFolder

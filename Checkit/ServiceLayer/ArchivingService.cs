@@ -81,23 +81,14 @@ namespace CheckIt.ServiceLayer
         }
 
         /// <summary>
-        /// This method gets the current Solution Directory
-        /// </summary>
-        /// <returns>Returns a string of the solution path</returns>
-        public string GetProjectPath()
-        {
-            string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
-            return path;
-        }
-
-        /// <summary>
         /// This method gets the current date in a special format
         /// </summary>
         /// <returns>Returns a string date formatted as "MM-dd-yyyy"</returns>
         public string GetCurrentDate()
         {
+            Config config = new Config();
             var dateTime = DateTime.Now;
-            var date = dateTime.ToString("MM-dd-yyyy");
+            var date = dateTime.ToString(config.GetDateFormat());
             return date;
         }
     }

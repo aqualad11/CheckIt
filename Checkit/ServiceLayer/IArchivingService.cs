@@ -8,7 +8,6 @@ namespace CheckIt.ServiceLayer
         DateTime LogFileDate(string logFile);
         void MoveLogs(string sourcePath, string targetPath, int months);
         void CopyLogs(string sourcePath, string targetPath, int months);
-        string GetProjectPath();
         string GetCurrentDate();
 
     }
