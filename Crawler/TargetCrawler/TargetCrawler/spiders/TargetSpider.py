@@ -56,6 +56,7 @@ class TargetSpider(scrapy.Spider):
         item['price'] = price
         item['url'] = response.request.url
         item['description'] = descp
+        item['keywords'] = ""
         yield item
         # Get all related items on the product page.
         for href in soup.find_all('a', href=True):

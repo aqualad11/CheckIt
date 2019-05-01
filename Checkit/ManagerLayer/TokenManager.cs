@@ -161,7 +161,8 @@ namespace CheckIt.ManagerLayer
             {
                 return null;
             }
-
+            
+            //TODO: TokenService.Invalidate now returns bool, do something with it.
             //makes current token invalid in the database
             tokenService.Invalidate(jwt, user.userID);
             //return new Token
@@ -192,7 +193,11 @@ namespace CheckIt.ManagerLayer
             return userService.GetUser(new Guid(userID));
         }
 
-
+        /// <summary>
+        /// Extract user's ID from jwt.
+        /// </summary>
+        /// <param name="jwt"></param>
+        /// <returns></returns>
         private Guid ExtractUserID(string jwt)
         {
             JwtSecurityToken token = new JwtSecurityToken(jwt);

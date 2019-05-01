@@ -15,12 +15,12 @@ namespace CheckIt.UnitTests
         /// tests getUserActionsByUserID by passing a valid userID
         /// </summary>
         [TestMethod]
-        public void getUserActionsByUserIDNotNull()
+        public void GetUserActionsByUserIDNotNull()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IUserActionRepository uaRepo = new UserActionRepository(db);
-            Guid id = new Guid("7AF91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid id = new Guid("44361F37-036B-E911-AA03-021598E9EC9E");
 
 
             //Act
@@ -34,7 +34,7 @@ namespace CheckIt.UnitTests
         /// tests getUserActionsByUserID, passing in an empty guid
         /// </summary>
         [TestMethod]
-        public void getUserActionsByUserIDNull()
+        public void GetUserActionsByUserIDNull()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -57,12 +57,12 @@ namespace CheckIt.UnitTests
         /// Tests GetUsersByAction by passing in a valid action
         /// </summary>
         [TestMethod]
-        public void getUsersByActionNotNull()
+        public void GetUsersByActionNotNull()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IUserActionRepository uaRepo = new UserActionRepository(db);
-            string action = "Login";
+            string action = "Search";
 
             //Act
             List<User> ul = uaRepo.GetUsersByAction(action);
@@ -77,7 +77,7 @@ namespace CheckIt.UnitTests
         /// same result as passing an invalid action or null
         /// </summary>
         [TestMethod]
-        public void getUsersByActionNull()
+        public void GetUsersByActionNull()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -90,56 +90,17 @@ namespace CheckIt.UnitTests
             //Assert
             Assert.AreEqual(ul.Count, 0);
         }
-
+        
         /// <summary>
-        /// tests AddUserAction with valid userID
-        /// </summary>
-        [TestMethod]
-        public void addUserActionValidUser()
-        {
-            //Arrange
-            DataBaseContext db = new DataBaseContext();
-            IUserActionRepository uaRepo = new UserActionRepository(db);
-            Guid userID = new Guid("7BF91B37-DC4A-E911-8259-0A64F53465D0");
-            string action = "View_Watchlist";
-            UserAction ua = new UserAction(userID, action);
-
-            //Act
-            uaRepo.AddUserAction(ua);
-            UserAction newUA = uaRepo.GetUserAction(userID, action);
-
-            //Assert
-            Assert.IsNotNull(newUA);
-        }
-
-        /// <summary>
-        /// tests AddUserAction with invalid userID
-        /// </summary>
-        [TestMethod]
-        public void addUserActionInvalidUser()
-        {
-            //Arrange
-            DataBaseContext db = new DataBaseContext();
-            IUserActionRepository uaRepo = new UserActionRepository(db);
-            Guid userID = new Guid();
-            string action = "View_Watchlist";
-            UserAction ua = new UserAction(userID, action);
-
-            //Act => Assert
-            Assert.ThrowsException<DbUpdateException>(() => uaRepo.AddUserAction(ua));
-        }
-
-
-         /// <summary>
         /// Tests GetUserAction using valid userID and action
         /// </summary>
         [TestMethod]
-        public void getUserActionValidUA()
+        public void GetUserActionValidUA()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IUserActionRepository uaRepo = new UserActionRepository(db);
-            Guid userID = new Guid("7AF91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid userID = new Guid("44361F37-036B-E911-AA03-021598E9EC9E");
             string action = "Login";
 
             //Act
@@ -154,7 +115,7 @@ namespace CheckIt.UnitTests
         /// using a new Guid
         /// </summary>
         [TestMethod]
-        public void getUserActionInvalidUA()
+        public void GetUserActionInvalidUA()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -170,17 +131,56 @@ namespace CheckIt.UnitTests
         }
 
         /// <summary>
-        /// Tests RemoveUserAction(UserAction) using valid user
+        /// tests AddUserAction with valid userID
         /// </summary>
         [TestMethod]
-        public void removeUserActionValidUA()
+        public void AddUserActionValidUser()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
             IUserActionRepository uaRepo = new UserActionRepository(db);
-            Guid userID = new Guid("7BF91B37-DC4A-E911-8259-0A64F53465D0");
+            Guid userID = new Guid("F98A70A1-056B-E911-AA03-021598E9EC9E");
             string action = "View_Watchlist";
-            UserAction ua = uaRepo.GetUserAction(userID, action);
+            UserAction ua = new UserAction(userID, action);
+
+            //Act
+            uaRepo.AddUserAction(ua);
+            UserAction newUA = uaRepo.GetUserAction(userID, action);
+
+            //Assert
+            Assert.IsNotNull(newUA);
+        }
+
+        /// <summary>
+        /// tests AddUserAction with invalid userID
+        /// </summary>
+        [TestMethod]
+        public void AddUserActionInvalidUser()
+        {
+            //Arrange
+            DataBaseContext db = new DataBaseContext();
+            IUserActionRepository uaRepo = new UserActionRepository(db);
+            Guid userID = new Guid();
+            string action = "View_Watchlist";
+            UserAction ua = new UserAction(userID, action);
+
+            //Act => Assert
+            Assert.ThrowsException<DbUpdateException>(() => uaRepo.AddUserAction(ua));
+        }
+
+        /// <summary>
+        /// Tests RemoveUserAction(UserAction) using valid user
+        /// </summary>
+        [TestMethod]
+        public void RemoveUserActionValidUA()
+        {
+            //Arrange
+            DataBaseContext db = new DataBaseContext();
+            IUserActionRepository uaRepo = new UserActionRepository(db);
+            Guid userID = new Guid("F98A70A1-056B-E911-AA03-021598E9EC9E");
+            string action = "View_Watchlist";
+            UserAction ua = new UserAction(userID, action);
+                //uaRepo.GetUserAction(userID, action);
 
             //Act
             uaRepo.RemoveUserAction(ua);
@@ -188,13 +188,14 @@ namespace CheckIt.UnitTests
 
             //Assert
             Assert.IsNull(newUA);
+            
         }
         
         /// <summary>
         /// Tests RemoveUserAction(UserAction) using invalid user
         /// </summary>
         [TestMethod]
-        public void removeUserActionInvalidUA()
+        public void RemoveUserActionInvalidUA()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -208,6 +209,7 @@ namespace CheckIt.UnitTests
             
         }
 
+        /*
         /// <summary>
         /// Tests RemoveUserAction(userID, action) using valid user
         /// </summary>
@@ -242,6 +244,6 @@ namespace CheckIt.UnitTests
 
             //Act => Assert
             Assert.ThrowsException<ArgumentNullException>(() => uaRepo.RemoveUserAction(userID, action));
-        }
+        }*/
     }
 }

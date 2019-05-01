@@ -46,6 +46,11 @@ namespace CheckIt.ServiceLayer
             return userRepo.GetUserbyEmail(email);
         }
 
+        public User GetSSOUser(Guid ssoID)
+        {
+            return userRepo.GetUserbySSOID(ssoID);
+        }
+
         public List<string> ExtractActions(User user)
         {
             List<string> actions = new List<string>();
@@ -55,7 +60,7 @@ namespace CheckIt.ServiceLayer
             }
             return actions;
         }
-
+        //TODO: implement new UserRepo
         /// <summary>
         /// adds a new user to the DB
         /// </summary>
@@ -73,6 +78,7 @@ namespace CheckIt.ServiceLayer
             return true;
         }
 
+        //TODO: implement new UserRepo
         /// <summary>
         /// updates user in db
         /// </summary>
@@ -91,6 +97,7 @@ namespace CheckIt.ServiceLayer
             return true;
         }
 
+        //TODO: implement new UserRepo
         /// <summary>
         /// removes user from db
         /// </summary>

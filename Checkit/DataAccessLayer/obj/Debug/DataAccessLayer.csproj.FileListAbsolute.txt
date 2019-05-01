@@ -44,3 +44,16 @@ D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.exe
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit3.resources
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_init.resources
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit1.resources
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_vs2019_init.resources
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit2.resources
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit3.resources
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

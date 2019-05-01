@@ -40,4 +40,11 @@ namespace CheckIt.ServiceLayer
 
         public ClientDoesNotExistException(string message) : base(message) { }
     }
+
+    public class InvalidRequestSignature : Exception
+    {
+        public InvalidRequestSignature() { }
+
+        public InvalidRequestSignature(string message) : base(message) { }
+    }
 }

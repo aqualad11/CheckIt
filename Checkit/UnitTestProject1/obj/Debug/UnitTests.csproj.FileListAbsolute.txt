@@ -40,3 +40,43 @@ D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CoreC
 D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CopyComplete
 D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\DataAccessLayer.exe
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\EntityFramework.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\ManagerLayer.exe
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\ServiceLayer.exe
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\DataAccessLayer.pdb
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\DataAccessLayer.exe.config
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\ManagerLayer.pdb
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\ManagerLayer.exe.config
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\ServiceLayer.pdb
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\ServiceLayer.exe.config
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\EntityFramework.xml
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.xml
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTests.csprojAssemblyReference.cache
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTests.csproj.CopyComplete
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

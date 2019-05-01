@@ -38,23 +38,44 @@ namespace CheckIt.ServiceLayer
         }
 
 
-        public void Invalidate(string jwt, Guid userID)
+        public bool Invalidate(string jwt, Guid userID)
         {
-            Token token = tokenRepo.GetToken(jwt, userID);
-            token.valid = false;
-            tokenRepo.UpdateToken(token);
+            try
+            {
+                Token token = tokenRepo.GetToken(jwt, userID);
+                token.valid = false;
+                tokenRepo.UpdateToken(token);
+                return true;
+            }catch(Exception)
+            {
+                return false;
+            }
         }
 
         public bool AddToken(string jwt, Guid userID)
         {
-            Token token = new Token(jwt, userID);
-            return tokenRepo.AddToken(token);
+            try
+            {
+                Token token = new Token(jwt, userID);
+                tokenRepo.AddToken(token);
+                return true;
+            }catch(Exception)
+            {
+                return false;
+            }
         }
 
         public bool RemoveToken(string jwt, Guid userID)
         {
-            Token token = new Token(jwt, userID);
-            return tokenRepo.RemoveToken(token);
+            try
+            {
+                Token token = new Token(jwt, userID);
+                tokenRepo.RemoveToken(token);
+                return true;
+            }catch(Exception)
+            {
+                return false;
+            }
         }
 
 
