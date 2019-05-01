@@ -1,5 +1,3 @@
-
-
 keywords = {
     'pc' : 'computer',
     'ps4' : 'play station 4',

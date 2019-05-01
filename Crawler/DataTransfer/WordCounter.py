@@ -34,4 +34,3 @@ class WordCounter:
 
     if __name__ == '__main__':
         CountWordOccurance()
-
