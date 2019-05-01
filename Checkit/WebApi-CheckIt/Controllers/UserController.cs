@@ -61,14 +61,14 @@ namespace CheckIt.WebApi_CheckIt.Controllers
         [Route("api/user/login")]
         public IHttpActionResult CheckItLogin()
         {
-            return Redirect("https://kfc-sso.com/#/login"); 
+            return Content(HttpStatusCode.Redirect, "https://kfc-sso.com/#/login");
         }
 
         [HttpGet]
         [Route("api/user/register")]
         public IHttpActionResult CheckItRegister()
         {
-            return Redirect("https://kfc-sso.com/#/register");
+            return Content(HttpStatusCode.Redirect, "https://kfc-sso.com/#/register");
         }
         
         /*

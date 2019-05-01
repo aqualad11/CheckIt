@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="CheckIt.DataAccessLayer.DataBaseContext-Web.config Connection String" description="CheckIt.DataAccessLayer.DataBaseContext Connection String used in web.config by the application to access the database." defaultValue="CheckIt.DataAccessLayer.DataBaseContext_ConnectionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\School\\Senior\ Project\\SPY-CheckIt\\Checkit\\WebApi-CheckIt\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CheckIt.DataAccessLayer.DataBaseContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="D:\\Checkit_src\\CheckIt\\CheckIt\\WebApi-CheckIt\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CheckIt.DataAccessLayer.DataBaseContext']/@connectionString" />
   </parameter>
 </parameters>

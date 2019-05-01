@@ -50,3 +50,4 @@ class BestBuySpider(scrapy.Spider):
 
 #//*[@id="grpDescrip_23-201-108"]
 #//*[@id="grpDescrip_23-201-108"]/text()
+
