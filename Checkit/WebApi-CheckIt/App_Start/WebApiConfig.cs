@@ -14,7 +14,7 @@ namespace WebApi_CheckIt
             // Web API configuration and services
 
             // Enabling CORS for the whole API
-            var corsAttr = new EnableCorsAttribute("Frontend", "*", "*");
+            var corsAttr = new EnableCorsAttribute(origins: "*", headers: "*", methods: "*");
             config.EnableCors(corsAttr);
 
             // Web API routes

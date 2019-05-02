@@ -58,3 +58,35 @@ D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CoreCo
 D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CopyComplete
 D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.exe
 D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\ManagerLayer.exe.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\ManagerLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\ManagerLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\DataAccessLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\EntityFramework.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Newtonsoft.Json.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\ServiceLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\DataAccessLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\DataAccessLayer.exe.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\ServiceLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\ServiceLayer.exe.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\EntityFramework.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Newtonsoft.Json.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.csprojAssemblyReference.cache
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.csproj.CoreCompileInputs.cache
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.csproj.CopyComplete
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.pdb

@@ -56,3 +56,22 @@ D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.exe
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_init.resources
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit1.resources
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_vs2019_init.resources
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit2.resources
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit3.resources
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.deployed_db_edit1_user.resources

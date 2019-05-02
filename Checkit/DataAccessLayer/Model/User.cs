@@ -38,6 +38,7 @@ namespace CheckIt.DataAccessLayer
 
         //[ForeignKey("UserActions")]
         public virtual List<UserAction> userActions { get; set; }
+        public virtual List<ItemList> itemsList { get; set; }
         
 
         public User()

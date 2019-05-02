@@ -59,16 +59,20 @@ namespace CheckIt.WebApi_CheckIt.Controllers
 
         [HttpGet]
         [Route("api/user/login")]
-        public IHttpActionResult CheckItLogin()
+        public HttpResponseMessage CheckItLogin()
         {
-            return Content(HttpStatusCode.Redirect, "https://kfc-sso.com/#/login");
+            var response = Request.CreateResponse(HttpStatusCode.OK);
+            response.Content = new StringContent("https://kfc-sso.com/#/login");
+            return response;
         }
 
         [HttpGet]
         [Route("api/user/register")]
-        public IHttpActionResult CheckItRegister()
+        public HttpResponseMessage CheckItRegister()
         {
-            return Content(HttpStatusCode.Redirect, "https://kfc-sso.com/#/register");
+            var response = Request.CreateResponse(HttpStatusCode.OK);
+            response.Content = new StringContent("https://kfc-sso.com/#/register");
+            return response;
         }
         
         /*
