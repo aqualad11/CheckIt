@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Net.Mail;
+using MailKit.Net.Smtp;
+using MimeKit;
 
 namespace CheckIt.ServiceLayer
 {
@@ -11,23 +12,34 @@ namespace CheckIt.ServiceLayer
     {
         public static void SendMail(string recipient, string messageBody)
         {
-            //Attempted implementation of smtp email send. Doesn't work for authentication reasons.... :(
-            SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress("CheckIt", "spyderzdevs@gmail.com"));
+            message.To.Add(new MailboxAddress(recipient.Split('@')[0], recipient));
+            message.Subject = "Notification from CheckIt";
 
-            smtpClient.Credentials = new System.Net.NetworkCredential("spyderzdevs@gmail.com", "AlexIsAlwaysLate_69");
-            smtpClient.UseDefaultCredentials = false;
-            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtpClient.EnableSsl = true;
-            MailMessage mail = new MailMessage();
+            var builder = new BodyBuilder();
 
-            //Setting From , To and CC
-            mail.From = new MailAddress("SpyderzDevs@gmail.com", "CheckIt");
-            mail.To.Add(new MailAddress(recipient));
-            mail.Subject = "Notification from CheckIt";
-            mail.IsBodyHtml = true;
-            mail.Body = messageBody;
+            builder.TextBody = messageBody;
 
-            smtpClient.Send(mail);
+            message.Body = builder.ToMessageBody();
+
+            try
+            {
+                var client = new SmtpClient();
+
+                client.Connect("smtp.gmail.com", 465, true);
+                client.Authenticate("spyderzdevs@gmail.com", "AlexIsAlwaysLate_69");
+                client.Send(message);
+                client.Disconnect(true);
+
+                Console.WriteLine("Send Mail Success.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Send Mail Failed : " + e.Message);
+            }
+
+            Console.ReadLine();
         }
     }
 }

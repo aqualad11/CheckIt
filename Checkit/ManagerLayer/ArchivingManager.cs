@@ -96,5 +96,22 @@ namespace CheckIt.ManagerLayer
                 dir.Delete(true);
             }
         }
+
+        public bool ReverseArchive(string date)
+        {
+            string archiveDate = date;
+            var archivePath = config.GetArchiveDirectory() + "\\Archive_" + archiveDate + ".zip";
+            string target = config.GetLogDirectory();
+            try
+            {
+                ZipFile.ExtractToDirectory(archivePath, target);
+                DeleteArchivedLogs(config.GetArchiveDirectory());
+                return true;
+            }catch(Exception e)
+            {
+                Console.WriteLine("There is no Archive with date: " + archiveDate);
+                return false;
+            }
+        }
     }
 }

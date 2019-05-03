@@ -18,17 +18,20 @@ namespace CheckIt.Archiving
         {
             //TimeSpan of 2 hours for the archive retry
             TimeSpan ts = new TimeSpan(2, 0, 0);
-
             //New instance of ArchiveManager
             ArchivingManager archivingManager = new ArchivingManager();
+
             //Backup the logs
             archivingManager.BackupLogs();
 
             //Archive logs older than 2 years
             bool archived = false;
             archived = archivingManager.ArchiveLogs();
+            //Extract the log specified 
+          //  //bool unarchived = archivingManager.ReverseArchive("05-01-2019");
+            
             //If logs fail to archive 1-3 times wait 2 hours then try again
-            if(!archived && tries < 3)
+           if(!archived && tries < 3)
             {
                 try
                 {
@@ -43,14 +46,16 @@ namespace CheckIt.Archiving
             //Otherwise, stop archiving and email a system administrator
             else if (!archived && tries >= 3)
             {
-                using (TaskService task = new TaskService())
+                /*using (TaskService task = new TaskService())
                 {
+                    
                     Microsoft.Win32.TaskScheduler.Task td = task.FindTask("LogArchiver");
                     td.Definition.Settings.Enabled = false;
                     Console.WriteLine("Email a System Administrator");
-                    //ServiceLayer.EmailService.SendMail("kunal1005@yahoo.com", "Archiving is screwed up.");
                     tries = 0;
-                }
+                }*/
+                ServiceLayer.EmailService.SendMail("kunal1005@yahoo.com", "Archiving is screwed up.");
+                tries = 0;
             }
         }
     }
