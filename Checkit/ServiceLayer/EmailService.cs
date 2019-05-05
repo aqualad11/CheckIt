@@ -10,12 +10,12 @@ namespace CheckIt.ServiceLayer
 {
     public class EmailService
     {
-        public static void SendMail(string recipient, string messageBody)
+        public static void SendMail(string recipient, string subject, string messageBody)
         {
             var message = new MimeMessage();
             message.From.Add(new MailboxAddress("CheckIt", "spyderzdevs@gmail.com"));
             message.To.Add(new MailboxAddress(recipient.Split('@')[0], recipient));
-            message.Subject = "Notification from CheckIt";
+            message.Subject = subject;
 
             var builder = new BodyBuilder();
 

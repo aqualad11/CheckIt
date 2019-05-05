@@ -9,6 +9,7 @@ namespace CheckIt.ServiceLayer
         void MoveLogs(string sourcePath, string targetPath, int months);
         void CopyLogs(string sourcePath, string targetPath, int months);
         string GetCurrentDate();
+        bool IsDirectoryEmpty(string path);
 
     }
 }

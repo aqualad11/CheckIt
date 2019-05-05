@@ -34,9 +34,10 @@ namespace CheckIt.ServiceLayer
         /// <returns>Returns a DateTime of when a log file was created</returns>
         public DateTime LogFileDate(string logFile)
         {
+            Config config = new Config();
             string logName = Path.GetFileName(logFile);
             string logDate = logName.Split('_')[0];
-            DateTime.TryParseExact(logDate, "MM-dd-yyyy", new CultureInfo("en-US"), DateTimeStyles.None, out DateTime parsedDate);
+            DateTime.TryParseExact(logDate, config.DATE_FORMAT , new CultureInfo("en-US"), DateTimeStyles.None, out DateTime parsedDate);
             return parsedDate;
         }
 
@@ -55,7 +56,14 @@ namespace CheckIt.ServiceLayer
                 {
                     string sourceFile = sourcePath + "\\" + Path.GetFileName(log);
                     string destFile = targetPath + "\\" + Path.GetFileName(log);
-                    File.Move(sourceFile, destFile);
+                    try
+                    {
+                        File.Move(sourceFile, destFile);
+                    }
+                    catch (UnauthorizedAccessException unauth)
+                    {
+                        Console.WriteLine("Unauthorized access to file or directory!");
+                    }
                 }
             }
         }
@@ -75,7 +83,14 @@ namespace CheckIt.ServiceLayer
                 {
                     string sourceFile = sourcePath + "\\" + Path.GetFileName(log);
                     string destFile = targetPath + "\\" + Path.GetFileName(log);
-                    File.Copy(sourceFile, destFile);
+                    try
+                    {
+                        File.Copy(sourceFile, destFile);
+                    }
+                    catch (UnauthorizedAccessException unauth)
+                    {
+                        Console.WriteLine("Unauthorized access to file or directory!");
+                    }
                 }
             }
         }
@@ -88,8 +103,18 @@ namespace CheckIt.ServiceLayer
         {
             Config config = new Config();
             var dateTime = DateTime.Now;
-            var date = dateTime.ToString(config.GetDateFormat());
+            var date = dateTime.ToString(config.DATE_FORMAT);
             return date;
+        }
+
+        /// <summary>
+        /// Checks if a directory is empty
+        /// </summary>
+        /// <param name="path">The directory to check</param>
+        /// <returns>true if directory is empty, false otherwise</returns>
+        public bool IsDirectoryEmpty(string path)
+        {
+            return System.IO.Directory.GetFiles(path).Length == 0;
         }
     }
 }

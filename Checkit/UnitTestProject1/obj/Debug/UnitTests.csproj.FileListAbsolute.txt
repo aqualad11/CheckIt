@@ -165,3 +165,8 @@ C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\obj\Debug\Uni
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CopyComplete
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\MimeKit.dll
+D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\MailKit.dll
+D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\BouncyCastle.Crypto.dll
+D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\MimeKit.xml
+D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\MailKit.xml

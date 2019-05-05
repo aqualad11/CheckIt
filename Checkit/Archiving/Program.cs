@@ -35,7 +35,7 @@ namespace CheckIt.Archiving
             {
                 try
                 {
-                    System.Threading.Tasks.Task task = System.Threading.Tasks.Task.Delay(ts).ContinueWith(b => archivingManager.ArchiveLogs());
+                    System.Threading.Tasks.Task task = System.Threading.Tasks.Task.Delay(ts).ContinueWith(t => archivingManager.ArchiveLogs());
                     task.Wait();
                 }
                 catch(Exception e)
@@ -54,7 +54,7 @@ namespace CheckIt.Archiving
                     Console.WriteLine("Email a System Administrator");
                     tries = 0;
                 }*/
-                ServiceLayer.EmailService.SendMail("kunal1005@yahoo.com", "Archiving is screwed up.");
+                ServiceLayer.EmailService.SendMail("kunal1005@yahoo.com","Notification from CheckIt", "Archiving is screwed up.");
                 tries = 0;
             }
         }

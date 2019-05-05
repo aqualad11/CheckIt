@@ -28,15 +28,21 @@ namespace CheckIt.ManagerLayer
         {
             try
             {
-                string sourcePath = config.GetLogDirectory();
+                string sourcePath = config.LOG_DIRECTORY;
                 Directory.CreateDirectory(sourcePath);
-                string targetPath = config.GetBackupsDirectory();
+                string targetPath = config.LOG_BACKUP_DIRECTORY;
                 Directory.CreateDirectory(targetPath);
                 archivingService.CopyLogs(sourcePath, targetPath, 1);
+                if (archivingService.IsDirectoryEmpty(targetPath))
+                {
+                    Console.WriteLine("No Logs were backed up.");
+                    return false;
+                }
 
                 return true;
-            }catch(Exception e)
+            }catch(IOException e)
             {
+                Console.WriteLine("Path or file does not exist.");
                 return false;
             }
         }
@@ -51,15 +57,20 @@ namespace CheckIt.ManagerLayer
             {
                 //archive information
                 string archiveDate = archivingService.GetCurrentDate();
-                var archivePath = config.GetArchiveDirectory() + "\\Archive_" + archiveDate + ".zip";
-                Directory.CreateDirectory(config.GetArchiveDirectory());
+                var archivePath = config.LOG_ARCHIVE_DIRECTORY + "\\Archive_" + archiveDate + ".zip";
+                if (File.Exists(archivePath))
+                {
+                    Console.WriteLine("Archive already exists");
+                    return false;
+                }
+                Directory.CreateDirectory(config.LOG_ARCHIVE_DIRECTORY);
 
                 //other relevant folder paths
-                string tempFolder = config.GetEmptyDirectory();
+                string tempFolder = config.EMPTY_DIRECTORY;
                 Directory.CreateDirectory(tempFolder);
-                string allLogsPath = config.GetLogDirectory();
+                string allLogsPath = config.LOG_DIRECTORY;
                 Directory.CreateDirectory(allLogsPath);
-                string backupPath = config.GetBackupsDirectory();
+                string backupPath = config.LOG_BACKUP_DIRECTORY;
                 Directory.CreateDirectory(backupPath);
 
                 //moves all logs to the tempFolder, creates a zip from that folder to archive folder, then deletes contents of tempFolder
@@ -97,17 +108,23 @@ namespace CheckIt.ManagerLayer
             }
         }
 
+        /// <summary>
+        /// Utility method to reverse a log archive for a specific date.
+        /// Extracts the logs in the archive back to the logs folder
+        /// </summary>
+        /// <param name="date">Date of the archive to extract</param>
+        /// <returns></returns>
         public bool ReverseArchive(string date)
         {
             string archiveDate = date;
-            var archivePath = config.GetArchiveDirectory() + "\\Archive_" + archiveDate + ".zip";
-            string target = config.GetLogDirectory();
+            var archivePath = config.LOG_ARCHIVE_DIRECTORY + "\\Archive_" + archiveDate + ".zip";
+            string target = config.LOG_DIRECTORY;
             try
             {
                 ZipFile.ExtractToDirectory(archivePath, target);
-                DeleteArchivedLogs(config.GetArchiveDirectory());
+                File.Delete(archivePath);
                 return true;
-            }catch(Exception e)
+            }catch(FileNotFoundException e)
             {
                 Console.WriteLine("There is no Archive with date: " + archiveDate);
                 return false;
