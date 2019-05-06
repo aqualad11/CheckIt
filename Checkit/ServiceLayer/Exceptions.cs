@@ -20,6 +20,13 @@ namespace CheckIt.ServiceLayer
         public UserDoesNotExistException(string message) : base(message) { }
     }
 
+    public class UserRemovalUnsuccessful : Exception
+    {
+        public UserRemovalUnsuccessful() { }
+
+        public UserRemovalUnsuccessful(string message) : base(message) { }
+    }
+
     public class TooYoungException : Exception
     {
         public TooYoungException() { }
@@ -47,4 +54,5 @@ namespace CheckIt.ServiceLayer
 
         public InvalidRequestSignature(string message) : base(message) { }
     }
+
 }

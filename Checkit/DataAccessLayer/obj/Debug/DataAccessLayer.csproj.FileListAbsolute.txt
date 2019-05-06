@@ -75,3 +75,4 @@ D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\Dat
 D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.exe
 D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.deployed_db_edit1_user.resources
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.deployed_db_edit2_tokenlength.resources

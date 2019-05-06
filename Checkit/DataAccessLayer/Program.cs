@@ -11,6 +11,7 @@ namespace CheckIt.DataAccessLayer
     {
         static void Main(string[] args)
         {
+            /*
             //add users with SSO IDs
             using(var dc = new DataBaseContext())
             {

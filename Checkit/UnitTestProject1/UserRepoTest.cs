@@ -249,11 +249,12 @@ namespace CheckIt.UnitTests
             DataBaseContext db = new DataBaseContext();
             IUserRepository userRepo = new UserRepository(db);
 
-            User user = userRepo.GetUserbyEmail("newTestEmail@gmail.com");
+            User user = userRepo.GetUserbyEmail("testuser@parkingmaster.me");
 
             //Act
             userRepo.RemoveUser(user);
-            User expected = userRepo.GetUserbyEmail("newTestEmail@gmail.com");
+            //User expected = userRepo.GetUserbyEmail("newTestEmail@gmail.com");
+            User expected = userRepo.GetUserbyEmail("testuser@parkingmaster.me");
 
             //Assert
             Assert.IsNull(expected);

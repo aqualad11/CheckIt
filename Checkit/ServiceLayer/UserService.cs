@@ -62,7 +62,7 @@ namespace CheckIt.ServiceLayer
         }
         //TODO: implement new UserRepo
         /// <summary>
-        /// adds a new user to the DB
+        /// Adds a new user to the database.
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
@@ -74,45 +74,45 @@ namespace CheckIt.ServiceLayer
             }
 
             userRepo.AddUser(user);
-            //TODO: check User was successfully added
+            //TODO: do try catch for adduser
             return true;
         }
 
         //TODO: implement new UserRepo
         /// <summary>
-        /// updates user in db
+        /// Updates user in the Database
         /// </summary>
         /// <param name="user">pass in updated user</param>
         /// <returns></returns>
         public bool UpdateUser(User user)
         {
-            //simultaniously checks that user is not null and that user exists in db
-            User temp = userRepo.GetUserbyEmail(user.userEmail);
-            if(temp == null)
+            try
+            {
+                userRepo.UpdateUser(user);
+                return true;
+            }
+            catch(Exception)
             {
                 return false;
             }
-
-            userRepo.UpdateUser(user);
-            return true;
         }
 
         //TODO: implement new UserRepo
         /// <summary>
-        /// removes user from db
+        /// Removes user from the database
         /// </summary>
         /// <param name="user"></param>
         public bool RemoveUser(User user)
         {
-            //simultaniously checks that user is not null and that user exists in db
-            User temp = userRepo.GetUserbyEmail(user.userEmail);
-            if(temp == null)
+            try
+            {
+                userRepo.RemoveUser(user);
+                return true;
+            }
+            catch (Exception)
             {
                 return false;
             }
-
-            userRepo.RemoveUser(user);
-            return true;
         }
 
         

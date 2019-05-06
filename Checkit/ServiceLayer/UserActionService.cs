@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CheckIt.DataAccessLayer;
 using CheckIt.DataAccessLayer.Repositories;
 
-namespace ServiceLayer
+namespace CheckIt.ServiceLayer
 {
     public class UserActionService
     {

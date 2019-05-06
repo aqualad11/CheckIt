@@ -10,10 +10,13 @@ namespace CheckIt.ManagerLayer
 {
     public class LoginManager
     {
-        private DataBaseContext db;
+        private UserManager userManager;
+        private TokenManager tokenManager;
+
         public LoginManager(DataBaseContext db)
         {
-            this.db = db;
+            userManager = new UserManager(db);
+            tokenManager = new TokenManager(db);
         }
 
         /// <summary>
@@ -35,22 +38,18 @@ namespace CheckIt.ManagerLayer
                 throw new InvalidRequestSignature("Request Signature is not valid.");
             }
 
-            //Create Manager
-            UserManager um = new UserManager(db);
-            TokenManager tm = new TokenManager(db);
-
             string token;
             //Checks if SSOUser exists, if so create a token for user, else create the user and give them a token
-            if(um.SSOUserExists(ssoID))
+            if(userManager.SSOUserExists(ssoID))
             {
-                User user = um.GetSSOUser(ssoID);
-                token = tm.CreateToken(user);
+                User user = userManager.GetSSOUser(ssoID);
+                token = tokenManager.CreateToken(user);
 
             }
             else
             {
-                User user = um.CreateSSOUser(ssoID, email);
-                token = tm.CreateToken(user);
+                User user = userManager.CreateSSOUser(ssoID, email);
+                token = tokenManager.CreateToken(user);
             }
 
             return token;

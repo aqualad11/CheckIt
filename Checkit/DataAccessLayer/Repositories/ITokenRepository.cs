@@ -10,6 +10,7 @@ namespace CheckIt.DataAccessLayer.Repositories
     public interface ITokenRepository
     {
         Token GetToken(string jwt, Guid userID);
+        List<Token> GetAllTokens(Guid userID);
 
         void AddToken(Token token);
         void UpdateToken(Token token);

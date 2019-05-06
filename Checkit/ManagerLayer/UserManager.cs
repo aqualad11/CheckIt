@@ -13,11 +13,28 @@ namespace CheckIt.ManagerLayer
     {
         private UserService userService;
         private ClientService clientService;
+        private UserActionService uaService; 
     
         public UserManager(DataBaseContext db)
         {
             userService = new UserService(db);
             clientService = new ClientService(db);
+            uaService = new UserActionService(db);
+        }
+
+        public bool SSOUserExists(Guid ssoID)
+        {
+            return userService.SSOUserExists(ssoID);
+        }
+
+        public bool UserExists(string email)
+        {
+            return userService.UserExists(email);
+        }
+
+        public User GetSSOUser(Guid ssoID)
+        {
+            return userService.GetSSOUser(ssoID);
         }
 
         /// <summary>
@@ -40,6 +57,10 @@ namespace CheckIt.ManagerLayer
 
             //add User to db
             userService.AddUser(user);
+
+            //get user from the database to add UserActions
+            user = userService.GetUser(email);
+            uaService.AddDefaultUserActions(user.userID);
 
             //get and return user
             return userService.GetUser(email);
@@ -73,14 +94,22 @@ namespace CheckIt.ManagerLayer
             {
                 throw new UserDoesNotExistException("Parent User does not exist in our database");
             }
+            
+            //set default height
             int height = 2;
+            
+            //create user
             User user = new User(email, atype, height, clientID, parentID);
 
             //add User to db
             userService.AddUser(user);
 
-            //get and return user
-            return userService.GetUser(email);
+            //get user from database to add useractions
+            user = userService.GetUser(email);
+            uaService.AddDefaultUserActions(user.userID);
+
+            //return user
+            return user;
 
         }
 
@@ -112,26 +141,45 @@ namespace CheckIt.ManagerLayer
             }
 
             //if user exists and already has it's own ssoID or user does not exist we
-            //create a new user
+            //create a new user and add them to the database
             User newUser = new User(email, atype, ssoID);
             userService.AddUser(newUser);
-            return userService.GetUser(email);
+
+            //retrieve user from database to both confirm existence and to add useractions
+            newUser = userService.GetUser(email);
+            uaService.AddDefaultUserActions(newUser.userID);
+
+            return newUser;
         }
 
-        public bool SSOUserExists(Guid ssoID)
+        /// <summary>
+        /// Deletes User from database via SSO.
+        /// </summary>
+        /// <param name="ssoID"></param>
+        /// <param name="email"></param>
+        /// <param name="timestamp"></param>
+        /// <param name="signature"></param>
+        public void DeleteUserFromSSO(Guid ssoID, string email, long timestamp, string signature)
         {
-            return userService.SSOUserExists(ssoID);
+            //Validate Request
+            var signatureService = new SignatureService();
+            bool validRequest = signatureService.IsValid(ssoID, email, timestamp, signature);
+            if (!validRequest)
+            {
+                throw new InvalidRequestSignature("Request Signature is not valid.");
+            }
+
+            //Check user's existence
+            User user = userService.GetSSOUser(ssoID);
+
+            if (user == null)
+            {
+                throw new UserDoesNotExistException("User does not exist");
+            }
+
+            //Remove user
+            userService.RemoveUser(user);
         }
 
-        public bool UserExists(string email)
-        {
-            return userService.UserExists(email);
-        }
-
-        public User GetSSOUser(Guid ssoID)
-        {
-            return userService.GetSSOUser(ssoID);
-        }
-        
     }
 }

@@ -216,5 +216,21 @@ namespace CheckIt.ManagerLayer
 
             return new Guid(userID);
         }
+
+        public void InvalideAllTokens(Guid userID)
+        {
+            //grab all tokens for user
+            List<Token> tokens = tokenService.GetAllValidTokens(userID);
+
+            //make sure they have tokens in the database
+            if (tokens.Count > 0)
+            {
+                //Invalidate all the tokens
+                foreach (Token token in tokens)
+                {
+                    tokenService.Invalidate(token.jwt, token.userID);
+                }
+            }
+        }
     }
 }

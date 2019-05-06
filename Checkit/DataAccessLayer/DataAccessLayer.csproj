@@ -74,6 +74,10 @@
     <Compile Include="Migrations\201905012326062_deployed_db_edit1_user.Designer.cs">
       <DependentUpon>201905012326062_deployed_db_edit1_user.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905031103533_deployed_db_edit2_tokenlength.cs" />
+    <Compile Include="Migrations\201905031103533_deployed_db_edit2_tokenlength.Designer.cs">
+      <DependentUpon>201905031103533_deployed_db_edit2_tokenlength.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\ClientAction.cs" />
@@ -122,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905012326062_deployed_db_edit1_user.resx">
       <DependentUpon>201905012326062_deployed_db_edit1_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905031103533_deployed_db_edit2_tokenlength.resx">
+      <DependentUpon>201905031103533_deployed_db_edit2_tokenlength.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
