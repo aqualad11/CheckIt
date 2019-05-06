@@ -105,7 +105,7 @@ namespace CheckIt.UnitTests
             archivingManager.BackupLogs();
             int actual = System.IO.Directory.GetFiles(config.LOG_BACKUP_DIRECTORY).Length;
             //clear backup logs after actual is set
-            //archivingManager.DeleteArchivedLogs(config.LOG_BACKUP_DIRECTORY);
+            archivingManager.DeleteArchivedLogs(config.LOG_BACKUP_DIRECTORY);
 
             //Assert
             Assert.AreEqual(expected, actual);
