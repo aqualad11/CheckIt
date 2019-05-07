@@ -14,7 +14,7 @@ namespace CheckIt.UnitTests
         /// expected to return user
         /// </summary>
         [TestMethod]
-        public void GetUserByEmailValid()
+        public void UserRepository_GetUserByEmail_Successful()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -34,7 +34,7 @@ namespace CheckIt.UnitTests
         /// expected to return null
         /// </summary>
         [TestMethod]
-        public void GetUserByEmailInvalid()
+        public void UserRepository_GetUserByEmail_Invalid()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -53,7 +53,7 @@ namespace CheckIt.UnitTests
         /// expected to return user
         /// </summary>
         [TestMethod]
-        public void GetUserbyIDValid()
+        public void UserRepository_GetUserbyID_ValidID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -69,10 +69,31 @@ namespace CheckIt.UnitTests
         }
 
         /// <summary>
+        /// test GetUserbyID
+        /// expected to return null
+        /// </summary>
+        [TestMethod]
+        public void UserRepository_GetUserbyID_InvalidID()
+        {
+            //Arrange
+            DataBaseContext db = new DataBaseContext();
+            IUserRepository userRepo = new UserRepository(db);
+            Guid id = new Guid();
+            User user;
+
+            //Act
+            user = userRepo.GetUserbyID(id);
+
+            //Assert
+            Assert.IsNull(user);
+        }
+
+
+        /// <summary>
         /// Tests GetUserBySSOID using a valid ssoID
         /// </summary>
         [TestMethod]
-        public void GetUserbySSOIDValid()
+        public void UserRepository_GetUserbySSOID_ValidSSOID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -91,7 +112,7 @@ namespace CheckIt.UnitTests
         /// Tests GetUserBySSOID using an invalid ssoID
         /// </summary>
         [TestMethod]
-        public void GetUserbySSOIDInvalid()
+        public void UserRepository_GetUserbySSOID_InvalidSSOID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -99,37 +120,18 @@ namespace CheckIt.UnitTests
             Guid ssoID = new Guid();
 
             //Act
-            User user = userRepo.GetUserbyID(ssoID);
+            User user = userRepo.GetUserbySSOID(ssoID);
 
             //Assert
             Assert.IsNull(user);
         }
 
-        /// <summary>
-        /// test GetUserbyID
-        /// expected to return null
-        /// </summary>
-        [TestMethod]
-        public void GetUserbyIDInvalid()
-        {
-            //Arrange
-            DataBaseContext db = new DataBaseContext();
-            IUserRepository userRepo = new UserRepository(db);
-            Guid id = new Guid();
-            User user;
-
-            //Act
-            user = userRepo.GetUserbyID(id);
-
-            //Assert
-            Assert.IsNull(user);
-        }
 
         /// <summary>
         /// test GetUserIDbyEmail using existing email
         /// </summary>
         [TestMethod]
-        public void GetUserIDValid()
+        public void UserRepository_GetUserIDbyEmail_ValidEmail()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -150,7 +152,7 @@ namespace CheckIt.UnitTests
         /// same result as if null was passed in
         /// </summary>
         [TestMethod]
-        public void GetUserIDInvalid()
+        public void UserRepository_GetUserIDbyEmail_InvalidEmail()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -167,10 +169,9 @@ namespace CheckIt.UnitTests
 
         /// <summary>
         /// adds user then calls it by email to confirm it was added
-        /// 
         /// </summary>
         [TestMethod]
-        public void AddUser()
+        public void UserRepository_AddUser_Successful()
         {
             //Arrange
             User user = new User()
@@ -194,7 +195,7 @@ namespace CheckIt.UnitTests
         /// must call AddUser() test first
         /// </summary>
         [TestMethod]
-        public void UpdateExistingUser()
+        public void UserRepository_UpdateUser_ValidUser()
         {
             //Arrange 
             string newEmail = "newTestEmail@gmail.com";
@@ -213,8 +214,11 @@ namespace CheckIt.UnitTests
         }
 
         //TODO:
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
-        public void UpdateNonExistingUser()
+        public void UserRepository_UpdateUser_InvalidUser()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -226,8 +230,11 @@ namespace CheckIt.UnitTests
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
-        public void UpdateUserNull()
+        public void UserRepository_UpdateUser_NullUser()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -243,7 +250,7 @@ namespace CheckIt.UnitTests
         /// AddUser test must be run first
         /// </summary>
         [TestMethod]
-        public void RemoveExistingUser()
+        public void UserRepository_RemoveUser_ValidUser()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -260,9 +267,11 @@ namespace CheckIt.UnitTests
             Assert.IsNull(expected);
         }
 
-
+        /// <summary>
+        /// Test RemoveUser using a nonexisting user
+        /// </summary>
         [TestMethod]
-        public void RemoveNonExistingUser()
+        public void UserRepository_RemoveUser_InvalidUser()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();

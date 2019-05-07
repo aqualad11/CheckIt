@@ -20,7 +20,7 @@ namespace CheckIt.DataAccessLayer.Repositories
         /// Retrieves User from Database using their email
         /// </summary>
         /// <param name="email"></param>
-        /// <returns></returns>
+        /// <returns>User, or null if user is null</returns>
         public User GetUserbyEmail(string email)
         {
             var user = db.Users.Where(u => u.userEmail == email).FirstOrDefault();
@@ -31,7 +31,7 @@ namespace CheckIt.DataAccessLayer.Repositories
         /// Retrieves User from Database using their ID
         /// </summary>
         /// <param name="userID"></param>
-        /// <returns></returns>
+        /// <returns>User, or null if user is null</returns>
         public User GetUserbyID(Guid userID)
         {
             var user = db.Users.Where(u => u.userID == userID).FirstOrDefault();
@@ -42,7 +42,7 @@ namespace CheckIt.DataAccessLayer.Repositories
         /// Retrieves User from Database using their ssoID
         /// </summary>
         /// <param name="ssoID"></param>
-        /// <returns></returns>
+        /// <returns>User, or null if user is null</returns>
         public User  GetUserbySSOID(Guid ssoID)
         {
             var user = db.Users.Where(u => u.ssoID == ssoID).FirstOrDefault();
