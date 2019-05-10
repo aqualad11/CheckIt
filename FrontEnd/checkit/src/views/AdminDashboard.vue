@@ -4,7 +4,9 @@
     dark
     permanent
     stateless
-    value="true"
+    value="false"
+    absolute="true"
+    fixed="true"
   >
     <v-list>
       <v-list-tile>
@@ -35,10 +37,11 @@
               <v-list-tile-title>CRUD Actions</v-list-tile-title>
             </v-list-tile>
           </template>
+
           <v-list-tile
             v-for="(crud, i) in cruds"
             :key="i"
-            @click=""
+            router :to="crud[2]"
           >
             <v-list-tile-title v-text="crud[0]"></v-list-tile-title>
             <v-list-tile-action>
@@ -63,7 +66,7 @@
           <v-list-tile
             v-for="(uac, i) in uacs"
             :key="i"
-            @click=""
+            router :to="uac[2]"
           >
             <v-list-tile-title v-text="uac[0]"></v-list-tile-title>
             <v-list-tile-action>
@@ -101,7 +104,7 @@
           <v-list-tile
             v-for="(log, i) in logs"
             :key="i"
-            @click=""
+            router :to="log[2]"
           >
             <v-list-tile-title v-text="log[0]"></v-list-tile-title>
             <v-list-tile-action>
@@ -122,7 +125,7 @@
           <v-list-tile
             v-for="(log, i) in logs"
             :key="i"
-            @click=""
+            router :to="log[2]"
           >
             <v-list-tile-title v-text="log[0]"></v-list-tile-title>
             <v-list-tile-action>
@@ -145,18 +148,18 @@
   export default {
     data: () => ({
       uacs: [
-        ['Admins', 'account_circle'],
-        ['Users', 'account_circle']
+        ['Admins', 'account_circle','/admin/uac/admin'],
+        ['Users', 'account_circle','/admin/uac/users']
       ],
       cruds: [
-        ['Create', 'add'],
-        ['Read', 'insert_drive_file'],
-        ['Update', 'update'],
-        ['Delete', 'delete']
+        ['Create', 'add', '/admin/adduser'],
+        ['Read', 'insert_drive_file', '/admin/users'],
+        ['Update', 'update', '/admin/updateuser'],
+        ['Delete', 'delete', '/admin/deleteuser']
       ],
       logs: [
-        ['Read', 'insert_drive_file'],
-        ['Delete', 'delete']
+        ['Read', 'insert_drive_file','/admin/log/read'],
+        ['Delete', 'delete','/admin/log/delete']
       ]
     })
   }
