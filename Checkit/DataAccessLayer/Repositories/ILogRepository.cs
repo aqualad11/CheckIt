@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Log
-{
+{/// <summary>
+/// interface which declares methods for a log repository
+/// </summary>
     interface ILogRepository
     {
-        void LogTelemetry(string description);
-        void LogError(string description);
+        bool LogTelemetry(string description);
+        bool LogError(string description);
         List<string> GetLog(string file);
-
+        bool DeleteLog(string file);
     }
 }

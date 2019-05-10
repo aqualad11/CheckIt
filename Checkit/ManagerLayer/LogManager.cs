@@ -8,16 +8,20 @@ using System.Threading.Tasks;
 using System.IO;
 
 namespace Log
-{
+{   
+/// <summary>
+/// This class is responsible to handle the business rules of logging feature.
+/// </summary>
     public class LogManager
     {
-        private static int errorCount = 0;
-        private static int telemetryCount = 0;
+        private static int _errorCount = 0; 
+        private static int _telemetryCount = 0; //store these static values in db or file, Rigiht now, may not be thread safe, will clash with instances
         private LogService logService;
         private Config config;
+        //private EmailService eService;
 
         public LogManager() {
-
+            //eService = new EmailService();
             config = new Config();
             logService = new LogService();
  
@@ -27,9 +31,9 @@ namespace Log
         /// This method creates an error object from an exception, converts it to json, and prepares for it to be logged.
         /// </summary>
         /// <param name="ex">Exception that is used to create an error object</param>
-        public bool LogError(string id, Exception exception)
+        public bool LogError(string id, Exception exception) //id should be userid
         {
-            if (CheckCount(errorCount) == false)
+            if (isValidCount(_errorCount)) 
             {
                 //init error object
                 var error = new Error
@@ -41,20 +45,20 @@ namespace Log
                     targetSite = exception.TargetSite.ToString()
 
                 };
-
+                //indented-->costly in cpu cycle, better to minimize the format in production
                 //convert error object into json format
                 string errorlog = JsonConvert.SerializeObject(error, Formatting.Indented);
 
-                logService.LogError(errorlog);
-                errorCount++;
-
-                return true;
+                _errorCount++;
+                return logService.LogError(errorlog);
             }
-            else {
-
-                Console.WriteLine("100 error logs have been recorded. Please Contact System Administrator");
+                //After 100 failed error logs the system administrator should be notified
+#if DEBUG
+                Console.WriteLine("100 failed error logs have been recorded. Please Contact System Administrator");
+#else
+                eService.SendMail("spyderzdevs@gmail.com", "100 failed error logs");
+#endif
                 return false;
-            }
         }
 
         /// <summary>
@@ -63,27 +67,25 @@ namespace Log
         /// <param name="obj">Telemetry object that is used to fill Telemetry properties to be logged.</param>
         public bool LogTelemetry(Telemetry obj)
         {
-            if (isOpted() == true)
+            if (isOptIn() == true)
             {
-                if (CheckCount(telemetryCount) == false)
+                if (isValidCount(_telemetryCount))
                 {
                     //convert telemetry object into json format
                     string telemetry = JsonConvert.SerializeObject(obj, Formatting.Indented);
 
-                    logService.LogTelemetry(telemetry);
-                    telemetryCount++;
+                    _telemetryCount++;
 
-                    return true;
+                    return logService.LogTelemetry(telemetry);
                 }
-                else
-                {
-                    Console.WriteLine("100 telemetry logs have been recorded. Please Contact System Administrator");
-                    return false;
-                }
-
-            }else
-
-            Console.WriteLine("User " + obj.userID + " has opted out of telemetry collection.");
+                //TODO: Finish requirement. After 100 failed telemetry logs the system administrator should be notified
+#if DEBUG
+                Console.WriteLine("100 failed telemetry logs have been recorded. Please Contact System Administrator");
+#else
+                    eService.SendMail("spyderzdevs@gmail.com", "100 failed error logs");
+#endif
+            }
+           
             return false;
         }
 
@@ -91,16 +93,9 @@ namespace Log
         /// This method checks the count of how many logs have been recorded.
         /// </summary>
         /// <param name="count">paramter that represents the count of how many logs have been logged.</param>
-        public bool CheckCount(int count)
+        public bool isValidCount(int count)
         {
-            if (count <= 100)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return (count <= 100);
         }
 
         /// <summary>
@@ -112,25 +107,37 @@ namespace Log
         {
             return logService.GetLog(file);
         }
+
+        /// <summary>
+        /// Method which deletes a file
+        /// </summary>
+        /// <param name="file">name of file</param>
+        /// <returns></returns>
+        public bool DeleteLog(string file)
+        {  
+            return logService.DeleteLog(file);
+        }
+
         /// <summary>
         /// This method checks to see if user has opted in or out of telemetry collection.
         /// </summary>
         /// <param name="user">user object which contains boolean that represents choice of telemetry collection.</param>
         /// <returns></returns>
-        public bool isOpted()
+        public bool isOptIn()
         {
-            return true;
+            //TODO: FINISH GRABBING FROM USER OBJ PROPERTERY  
+            //NOTE: TODO ITEMS ARE VIEWABLE IN VIEW-TASKLIST
+            bool userChoice = true;
 
-            /*
-            if (user.OptedIn == true)
+            if (userChoice == true)
             {
                 return true;
             }
-            else
-            {
-                return false;
-            }
-            */
+
+            Console.WriteLine("User has opted out of telemetry collection.");
+
+            return false;
         }
     }
+    
 }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Log
 {
+/// <summary>
+/// Poco class which represents an error object
+/// </summary>
     public class Error
     {
         public string userID { get; set; } //current logged in user

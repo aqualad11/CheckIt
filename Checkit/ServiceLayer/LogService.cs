@@ -8,9 +8,13 @@ using System.IO;
 
 namespace Log
 {
+    /// <summary>
+    /// This class will be doing the file checking and configurations
+    /// Vongs tips: check if file has enough space-set max capacity, if max make new file. 5MB, make new file
+    /// </summary>
     class LogService
     {
-        private Config config;
+        private Config config; 
         private LogRepository logRepo;       
 
         public LogService()
@@ -18,21 +22,23 @@ namespace Log
             config = new Config();
             logRepo = new LogRepository();
         }
+
         /// <summary>
         /// Method which calls the log repo to log telemetry data
         /// </summary>
         /// <param name="description">message to be logged</param>
-        public void LogTelemetry(string description)
+        public bool LogTelemetry(string description)
         {
-            logRepo.LogTelemetry(description);
+            return logRepo.LogTelemetry(description);
         }
+
         /// <summary>
         /// Method which calls the log repo to log error data
         /// </summary>
         /// <param name="description">error information to be logged</param>
-        public void LogError(string description)
+        public bool LogError(string description)
         {
-            logRepo.LogError(description);
+            return logRepo.LogError(description);
         }
 
         /// <summary>
@@ -43,6 +49,14 @@ namespace Log
         public List<string> GetLog(string file)
         {
             return logRepo.GetLog(file);
+        }
+        /// <summary>
+        /// Method which calls the repository to delete a specified file
+        /// </summary>
+        /// <param name="file">name of file</param>
+        public bool DeleteLog(string file)
+        {
+            return logRepo.DeleteLog(file);
         }
         
     }

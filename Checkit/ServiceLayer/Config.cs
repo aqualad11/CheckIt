@@ -8,14 +8,17 @@ using System.IO;
 
 namespace Log
 {
+    /// <summary>
+    /// This class contains all configurations for logging feature.
+    /// </summary>
     public class Config
     {
-        private const string ERROR_LOG_EXT = "_Error.json";
+        private const string ERROR_LOG_EXT = "_Error.json"; 
         private const string TEL_LOG_EXT = "_Telemetry.json";
-        private const string DATE_FORMAT = "MM-dd-yyyy";
+        private const string DATE_FORMAT = "yyyy-MM-dd";
         private const string DATE_TIME_FORMAT = "MM/dd/yyyy hh:mm:ss tt ";
-        private const string LOG_DIRECTORY = @"C:\Users\Alex Philayvanh\source\repos\Log\Log\Logs\"; 
-        //Directory.GetParent(Environment.CurrentDirectory).Parent.FullName
+        private const string LOG_DIRECTORY = @"C:\Users\Alex Philayvanh\source\repos\Log\Log\Logs\";
+        //Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName+"\\Logs";
 
         public string GetErrorLogExtension()
         {
