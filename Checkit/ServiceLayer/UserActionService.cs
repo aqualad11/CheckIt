@@ -8,6 +8,7 @@ using CheckIt.DataAccessLayer.Repositories;
 
 namespace CheckIt.ServiceLayer
 {
+
     public class UserActionService
     {
         private UserActionRepository uaRepo;

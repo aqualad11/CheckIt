@@ -37,6 +37,11 @@ namespace CheckIt.ManagerLayer
             return userService.GetSSOUser(ssoID);
         }
 
+        public User GetUser(Guid userID)
+        {
+            return userService.GetUser(userID);
+        }
+
         /// <summary>
         /// Creates a default user with just an email. ClientID, parentID, and ssoID are all set to null.
         /// Height is set to 2.

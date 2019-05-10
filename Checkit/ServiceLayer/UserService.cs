@@ -60,6 +60,7 @@ namespace CheckIt.ServiceLayer
             }
             return actions;
         }
+
         //TODO: implement new UserRepo
         /// <summary>
         /// Adds a new user to the database.

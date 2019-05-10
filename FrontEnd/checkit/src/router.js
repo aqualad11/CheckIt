@@ -18,6 +18,12 @@ export default new Router({
       component: Home,
     },
     {
+      path: "/home",
+      name: "homewtoken",
+      component: Home,
+      props: (route) => ({token: route.query.token})
+    },
+    {
       path: "/about",
       name: "about",
       // route level code-splitting

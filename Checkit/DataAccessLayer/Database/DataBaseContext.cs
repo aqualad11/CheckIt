@@ -20,14 +20,13 @@ namespace CheckIt.DataAccessLayer
         public DbSet<ItemList> ItemLists { get; set; }
         public DbSet<Token> Tokens { get; set; }
 
-        //
         
         public DataBaseContext()
         {
             
             //TODO: remove password before submitting to github
             string uName = "SpyderzAdmin";
-            string password = "spyderzaws_123";
+            string password = "";
             string hostname = "checkitdbinstance.ck6ojdbpsmcj.us-west-1.rds.amazonaws.com";
 
             //string port = "1433";

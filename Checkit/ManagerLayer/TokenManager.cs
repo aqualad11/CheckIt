@@ -165,6 +165,7 @@ namespace CheckIt.ManagerLayer
             //TODO: TokenService.Invalidate now returns bool, do something with it.
             //makes current token invalid in the database
             tokenService.Invalidate(jwt, user.userID);
+
             //return new Token
             return CreateToken(user); 
         }
