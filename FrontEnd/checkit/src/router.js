@@ -7,6 +7,7 @@ import HotDeals from "./views/HotDeals.vue"
 import Login from "./views/Login.vue"
 import Register from "./views/Register.vue"
 import AdminDashboard from "./views/AdminDashboard.vue"
+import UAD from "./views/UAD.vue"
 
 Vue.use(Router);
 //TODO
@@ -61,6 +62,11 @@ export default new Router({
       path: "/admin",
       name: "admin",
       component: AdminDashboard
+    },
+    {
+      path: "/uad",
+      name: "uad",
+      component: UAD
     }
 
   ]

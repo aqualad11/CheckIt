@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28803.202
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi-CheckIt", "WebApi-CheckIt\WebApi-CheckIt.csproj", "{EBE28C49-B049-4946-AF2C-265170FDF9FE}"
 EndProject
@@ -12,6 +12,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{1468BB52-2704-445F-BE14-30E06B30D153}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagerLayer", "ManagerLayer\ManagerLayer.csproj", "{DEBBD51C-2AF9-40BA-8DC1-859D54FAC0CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archiving", "Archiving\Archiving.csproj", "{4800DF12-FC81-434C-8FC9-7ABDF2DD1A18}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DEBBD51C-2AF9-40BA-8DC1-859D54FAC0CE} = {DEBBD51C-2AF9-40BA-8DC1-859D54FAC0CE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +44,10 @@ Global
 		{DEBBD51C-2AF9-40BA-8DC1-859D54FAC0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEBBD51C-2AF9-40BA-8DC1-859D54FAC0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEBBD51C-2AF9-40BA-8DC1-859D54FAC0CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4800DF12-FC81-434C-8FC9-7ABDF2DD1A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4800DF12-FC81-434C-8FC9-7ABDF2DD1A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4800DF12-FC81-434C-8FC9-7ABDF2DD1A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4800DF12-FC81-434C-8FC9-7ABDF2DD1A18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

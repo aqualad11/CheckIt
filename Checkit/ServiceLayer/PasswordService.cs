@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Net.Http;
 
 namespace CheckIt.ServiceLayer
