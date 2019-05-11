@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Log
+namespace CheckIt.DataAccessLayer
 {
+/// <summary>
+/// Poco class which represents an error object
+/// </summary>
     public class Error
     {
         public string userID { get; set; } //current logged in user
