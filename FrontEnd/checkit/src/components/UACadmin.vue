@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>Hot Deals</h1>
+    <h1>UAC for admin</h1>
   </div>
 </template>
