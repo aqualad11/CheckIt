@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using CheckIt.ServiceLayer;
 using CheckIt.DataAccessLayer;
 using CheckIt.DataAccessLayer.Repositories;
 
@@ -74,7 +75,18 @@ namespace CheckIt.WebApi_CheckIt.Controllers
             response.Content = new StringContent("https://kfc-sso.com/#/register");
             return response;
         }
+
+        /*
+        [HttpPost]
+        [Route("api/user/additemtolist")]
+        public HttpResponseMessage AddItemToList(ItemDTO)
         
+
+
+
+
+
+
         /*
         // POST api/User
         [HttpPost]

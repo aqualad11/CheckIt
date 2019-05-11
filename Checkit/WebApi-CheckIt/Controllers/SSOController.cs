@@ -10,7 +10,7 @@ using CheckIt.ServiceLayer;
 using CheckIt.DataAccessLayer;
 using CheckIt.WebApi_CheckIt.Models;
 
-namespace WebApi_CheckIt.Controllers
+namespace CheckIt.WebApi_CheckIt.Controllers
 {
     public class SSOController : ApiController
     {

@@ -55,4 +55,15 @@ namespace CheckIt.ServiceLayer
         public InvalidRequestSignature(string message) : base(message) { }
     }
 
+    public class ItemDoesNotExistException : Exception
+    {
+        public ItemDoesNotExistException() { }
+        public ItemDoesNotExistException(string message) : base(message) { }
+    }
+
+    public class UpdateFailed : Exception
+    {
+        public UpdateFailed() { }
+        public UpdateFailed(string message) : base(message) { }
+    }
 }

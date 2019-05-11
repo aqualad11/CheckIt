@@ -18,6 +18,13 @@ namespace CheckIt.ManagerLayer
             userManager = new UserManager(db);
         }
 
+        /// <summary>
+        /// Authorize's action using a JWT string, which is used to extract user to see the user's
+        /// actions and client's actions
+        /// </summary>
+        /// <param name="jwt"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
         public bool AuthorizeAction(string jwt, string action)
         {
             //get user from token

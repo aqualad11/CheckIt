@@ -69,14 +69,15 @@ namespace CheckIt.ServiceLayer
         /// <returns></returns>
         public bool AddUser(User user)
         {
-            if(user == null)
+            try
+            {
+                userRepo.AddUser(user);
+                return true;
+            }
+            catch(Exception)
             {
                 return false;
             }
-
-            userRepo.AddUser(user);
-            //TODO: do try catch for adduser
-            return true;
         }
 
         //TODO: implement new UserRepo
