@@ -1,10 +1,12 @@
 <template>
   <v-navigation-drawer
-    class="indigo darken-1"
+    class="blue lighten-3"
     dark
     permanent
     stateless
-    value="true"
+    value="false"
+    absolute="true"
+    fixed="true"
   >
     <v-list>
       <v-list-tile>
@@ -14,37 +16,7 @@
         <v-list-tile-title>Dashboard</v-list-tile-title>
       </v-list-tile>
 
-    <v-list-group
-        prepend-icon="trending_up"
-        value="true"
-      >
-        <template v-slot:activator>
-          <v-list-tile>
-            <v-list-tile-title>UAD</v-list-tile-title>
-          </v-list-tile>
-        </template>
 
-        <v-list-group
-              sub-group
-              no-action
-            >
-              <template v-slot:activator>
-                <v-list-tile>
-                  <v-list-tile-title>Charts</v-list-tile-title>
-                </v-list-tile>
-              </template>
-              <v-list-tile
-                v-for="(charts, i) in charts"
-                :key="i"
-                @click="getBars"
-              >
-                <v-list-tile-title v-text="charts[0]"></v-list-tile-title>
-                <v-list-tile-action>
-                  <v-icon v-text="charts[1]"></v-icon>
-                </v-list-tile-action>
-              </v-list-tile>
-            </v-list-group>
-            </v-list-group>
 
       <v-list-group
         prepend-icon="account_circle"
@@ -56,26 +28,27 @@
           </v-list-tile>
         </template>
 
-        <v-list-group
-              sub-group
-              no-action
-            >
-              <template v-slot:activator>
-                <v-list-tile>
-                  <v-list-tile-title>CRUD Actions</v-list-tile-title>
-                </v-list-tile>
-              </template>
-              <v-list-tile
-                v-for="(crud, i) in cruds"
-                :key="i"
-                @click=""
-              >
-                <v-list-tile-title v-text="crud[0]"></v-list-tile-title>
-                <v-list-tile-action>
-                  <v-icon v-text="crud[1]"></v-icon>
-                </v-list-tile-action>
-              </v-list-tile>
-            </v-list-group>
+    <v-list-group
+          sub-group
+          no-action
+        >
+          <template v-slot:activator>
+            <v-list-tile>
+              <v-list-tile-title>CRUD Actions</v-list-tile-title>
+            </v-list-tile>
+          </template>
+
+          <v-list-tile
+            v-for="(crud, i) in cruds"
+            :key="i"
+            router :to="crud[2]"
+          >
+            <v-list-tile-title v-text="crud[0]"></v-list-tile-title>
+            <v-list-tile-action>
+              <v-icon v-text="crud[1]"></v-icon>
+            </v-list-tile-action>
+          </v-list-tile>
+        </v-list-group>
       
 
 
@@ -93,7 +66,7 @@
           <v-list-tile
             v-for="(uac, i) in uacs"
             :key="i"
-            @click=""
+            router :to="uac[2]"
           >
             <v-list-tile-title v-text="uac[0]"></v-list-tile-title>
             <v-list-tile-action>
@@ -102,8 +75,11 @@
           </v-list-tile>
         </v-list-group>
 
-      </v-list-group>
+        </v-list-group>
     
+
+    
+
 
       <v-list-group
         prepend-icon="folder_open"
@@ -114,7 +90,6 @@
             <v-list-tile-title>Logs</v-list-tile-title>
           </v-list-tile>
         </template>
-
         <v-list-group
           no-action
           sub-group
@@ -129,7 +104,7 @@
           <v-list-tile
             v-for="(log, i) in logs"
             :key="i"
-            @click=""
+            router :to="log[2]"
           >
             <v-list-tile-title v-text="log[0]"></v-list-tile-title>
             <v-list-tile-action>
@@ -150,7 +125,7 @@
           <v-list-tile
             v-for="(log, i) in logs"
             :key="i"
-            @click=""
+            router :to="log[2]"
           >
             <v-list-tile-title v-text="log[0]"></v-list-tile-title>
             <v-list-tile-action>
@@ -160,40 +135,32 @@
         </v-list-group>
       </v-list-group>
     </v-list>
+</v-list>
+
+
+
   </v-navigation-drawer>
 </template>
 
 
 
 <script>
-import axios from "axios";
-const API_URL = 'Backend';
-
   export default {
     data: () => ({
       uacs: [
-        ['Admins', 'account_circle'],
-        ['Users', 'account_circle']
+        ['Admins', 'account_circle','/admin/uac/admin'],
+        ['Users', 'account_circle','/admin/uac/users']
       ],
       cruds: [
-        ['Create', 'add'],
-        ['Read', 'insert_drive_file'],
-        ['Update', 'update'],
-        ['Delete', 'delete']
+        ['Create', 'add', '/admin/adduser'],
+        ['Read', 'insert_drive_file', '/admin/users'],
+        ['Update', 'update', '/admin/updateuser'],
+        ['Delete', 'delete', '/admin/deleteuser']
       ],
       logs: [
-        ['Read', 'insert_drive_file'],
-        ['Delete', 'delete']
-      ],
-      charts: [
-        ['Bar Charts', 'bar_chart'],
-        ['Line Charts', 'show_chart']
+        ['Read', 'insert_drive_file','/admin/log/read'],
+        ['Delete', 'delete','/admin/log/delete']
       ]
-    }),
-    methods:{
-      getBars(){
-        axios.get(API_URL + "/api/uad")
-      }
-    }
+    })
   }
 </script>

@@ -1,0 +1,10 @@
+C:\Users\Alex Philayvanh\source\repos\Log\Log\bin\Debug\Log.exe.config
+C:\Users\Alex Philayvanh\source\repos\Log\Log\bin\Debug\Log.exe
+C:\Users\Alex Philayvanh\source\repos\Log\Log\bin\Debug\Log.pdb
+C:\Users\Alex Philayvanh\source\repos\Log\Log\obj\Debug\Log.csprojAssemblyReference.cache
+C:\Users\Alex Philayvanh\source\repos\Log\Log\obj\Debug\Log.csproj.CoreCompileInputs.cache
+C:\Users\Alex Philayvanh\source\repos\Log\Log\obj\Debug\Log.exe
+C:\Users\Alex Philayvanh\source\repos\Log\Log\obj\Debug\Log.pdb
+C:\Users\Alex Philayvanh\source\repos\Log\Log\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alex Philayvanh\source\repos\Log\Log\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Alex Philayvanh\source\repos\Log\Log\obj\Debug\Log.csproj.CopyComplete
