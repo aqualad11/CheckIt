@@ -12,20 +12,6 @@ C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\obj\Debug\DataAccessLaye
 C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.dbinitrds.resources
 C:\Users\Jonathan Ascencio\source\repos\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\DataAccessLayer.exe
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\EntityFramework.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\EntityFramework.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.exe
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.CheckItDBInit.resources
-C:\Users\candap1\Documents\GitHub\CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.exe
 D:\Checkit_src\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
@@ -57,3 +43,31 @@ D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAcces
 D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.exe
 D:\School\Senior Project\SPY-CheckIt\Checkit\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_init.resources
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit1.resources
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_vs2019_init.resources
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit2.resources
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit3.resources
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_init.resources
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit1.resources
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_vs2019_init.resources
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit2.resources
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit3.resources
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
