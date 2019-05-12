@@ -12,7 +12,7 @@ namespace CheckIt.WebApi_CheckIt.Models
         public string itemName { get; set; }
         [Required]
         public double price { get; set; }
-        [Required]
+        
         public string url { get; set; }
         public string picKey { get; set; }
 

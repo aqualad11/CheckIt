@@ -167,6 +167,38 @@ namespace CheckIt.UnitTests
             Assert.AreEqual(id,userID);
         }
 
+        [TestMethod]
+        public void UserRepository_GetCountOfAllUsers_Successful()
+        {
+            //Arrange
+            DataBaseContext db = new DataBaseContext();
+            IUserRepository userRepo = new UserRepository(db);
+            int expected = 23;
+
+            //Act
+            int actual = userRepo.GetCountOfAllUsers();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void UserRepository_GetCount_Successful()
+        {
+            //Arrange
+            DataBaseContext db = new DataBaseContext();
+            IUserRepository userRepo = new UserRepository(db);
+            int expected = 24;
+            int month = 5;
+            int year = 2019;
+
+            //Act
+            int actual = userRepo.GetCount(month, year);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
         /// <summary>
         /// adds user then calls it by email to confirm it was added
         /// </summary>

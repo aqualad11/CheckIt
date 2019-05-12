@@ -78,6 +78,14 @@
     <Compile Include="Migrations\201905031103533_deployed_db_edit2_tokenlength.Designer.cs">
       <DependentUpon>201905031103533_deployed_db_edit2_tokenlength.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905120352064_deployed_db_edit3_user_createdAt.cs" />
+    <Compile Include="Migrations\201905120352064_deployed_db_edit3_user_createdAt.Designer.cs">
+      <DependentUpon>201905120352064_deployed_db_edit3_user_createdAt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905120407579_deployed_db_edit4_user_createdAt.cs" />
+    <Compile Include="Migrations\201905120407579_deployed_db_edit4_user_createdAt.Designer.cs">
+      <DependentUpon>201905120407579_deployed_db_edit4_user_createdAt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\ClientAction.cs" />
@@ -129,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905031103533_deployed_db_edit2_tokenlength.resx">
       <DependentUpon>201905031103533_deployed_db_edit2_tokenlength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905120352064_deployed_db_edit3_user_createdAt.resx">
+      <DependentUpon>201905120352064_deployed_db_edit3_user_createdAt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905120407579_deployed_db_edit4_user_createdAt.resx">
+      <DependentUpon>201905120407579_deployed_db_edit4_user_createdAt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

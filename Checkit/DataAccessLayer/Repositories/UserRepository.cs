@@ -60,6 +60,26 @@ namespace CheckIt.DataAccessLayer.Repositories
             return userID;
         }
 
+        public int GetCountOfAllUsers()
+        {
+            int count = db.Users.Count();
+            return count;
+        }
+
+        public List<User> GetAllUsers()
+        {
+            var users = db.Users.ToList();
+            return users;
+        }
+
+        
+        public int GetCount(int month, int year)
+        {
+            int count = db.Users.Where(u => u.createdAt.Month == month && u.createdAt.Year == year).Count();
+            return count;
+        }
+        
+
         /// <summary>
         /// Adds the User passed in to the Database
         /// </summary>

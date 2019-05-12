@@ -53,7 +53,10 @@ namespace CheckIt.ManagerLayer
                 throw new ItemDoesNotExistException("Item does not exist in our database.");
             }
 
-
+            //updateItem
+            item.price = price;
+            item.url = url == null ? item.url : url;
+            item.picKey = picKey == null ? item.picKey : picKey;
 
             //update item on database
             bool update = itemService.UpdateItem(item);

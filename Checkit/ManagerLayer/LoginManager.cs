@@ -50,6 +50,7 @@ namespace CheckIt.ManagerLayer
             {
                 User user = userManager.CreateSSOUser(ssoID, email);
                 token = tokenManager.CreateToken(user);
+                //TelLog with description: "FirstLogin"
             }
 
             return token;

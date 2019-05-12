@@ -16,7 +16,7 @@ namespace CheckIt.WebApi_CheckIt.Controllers
 
         [HttpPost]
         [Route("api/item/update")]
-        public HttpResponseMessage UpdateItem(ItemDTO item)
+        public HttpResponseMessage UpdateItem([FromBody] ItemDTO item)
         {
             using (var db = new DataBaseContext())
             {
@@ -35,7 +35,7 @@ namespace CheckIt.WebApi_CheckIt.Controllers
 
         [HttpPost]
         [Route("api/item/updateandalert")]
-        public HttpResponseMessage UpdateItemAndAlert(ItemDTO item)
+        public HttpResponseMessage UpdateItemAndAlert([FromBody] ItemDTO item)
         {
             using (var db = new DataBaseContext())
             {
