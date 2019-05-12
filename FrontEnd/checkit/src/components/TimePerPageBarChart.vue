@@ -11,7 +11,7 @@
           labels: ['Home', 'Search', 'About', 'Profile', 'Dashboard'],
           datasets: [
             {
-              label: 'Minutes on Page',
+              label: 'Times page visited',
               backgroundColor: '#00897B',
               pointBackgroundColor: 'white',
               borderWidth: 1,

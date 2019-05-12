@@ -7,20 +7,13 @@
     data () {
       return {
         bardata: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            labels: ['Failed', 'Successful', 'Total'],
             datasets: [
             {
-              label: 'Logins',
-              backgroundColor: '#66BB6A',
+              label: 'Attempts',
+              backgroundColor: '#455A64',
               //Data to be represented on y-axis
-              data: [40, 20, 30, 50, 90, 10, 20, 40, 50, 70, 90, 100],
-              borderWidth: 1
-            },
-            {
-              label: 'Failed Logins',
-              backgroundColor: '#EF5350',
-              //Data to be represented on y-axis
-              data: [20, 30, 20, 40, 80, 20, 10, 30, 40, 70, 80, 90],
+              data: [40,240,280],
               borderWidth: 1
             }
             ]

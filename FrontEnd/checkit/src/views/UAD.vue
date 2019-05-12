@@ -8,7 +8,7 @@
       </div>
       <div class="column">
         <h3>Logins vs Failures</h3>
-        <failed-and-successful-login-bar-chart></failed-and-successful-login-bar-chart>
+        <logins-bar-chart></logins-bar-chart>
       </div>
       <div class="column">
         <h3>Logins vs Total Users</h3>
@@ -35,7 +35,7 @@
 </template>
 <script>
   import TimePerPageBarChart from '@/components/TimePerPageBarChart.vue'
-  import FailedAndSuccessfulLoginBarChart from '@/components/FailedAndSuccessfulLoginBarChart.vue'
+  import LoginsBarChart from '@/components/LoginsBarChart.vue'
   import LoginsAndUsersBarChart from '@/components/LoginsAndUsersBarChart.vue'
   import TopFiveFeaturesBarChart from '@/components/TopFiveFeaturesBarChart.vue'
   import AverageSessionBarChart from '@/components/AverageSessionBarChart.vue'
@@ -47,7 +47,7 @@
     components: {
       // Bar Chart 
         TimePerPageBarChart,
-        FailedAndSuccessfulLoginBarChart,
+        LoginsBarChart,
         LoginsAndUsersBarChart,
         TopFiveFeaturesBarChart,
         AverageSessionBarChart,

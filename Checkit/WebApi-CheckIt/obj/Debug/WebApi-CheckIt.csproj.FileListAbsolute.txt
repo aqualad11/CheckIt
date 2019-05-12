@@ -356,6 +356,8 @@ C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebAp
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.csproj.CopyComplete
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.dll
 C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.pdb
+D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.csprojAssemblyReference.cache
+D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.csproj.CoreCompileInputs.cache
 D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\bin\ApplicationInsights.config
 D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\bin\WebApi-CheckIt.dll.config
 D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\bin\WebApi-CheckIt.dll
@@ -484,8 +486,6 @@ D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.IdentityModel.L
 D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.IdentityModel.Logging.xml
 D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
 D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\bin\Microsoft.IdentityModel.JsonWebTokens.xml
-D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.csprojAssemblyReference.cache
-D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.csproj.CoreCompileInputs.cache
 D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.csproj.CopyComplete
 D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.dll
 D:\Documents\Github\CheckIt\CheckIt\WebApi-CheckIt\obj\Debug\WebApi-CheckIt.pdb
