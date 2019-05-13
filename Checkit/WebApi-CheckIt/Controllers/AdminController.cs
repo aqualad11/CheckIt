@@ -15,14 +15,16 @@ namespace WebApi_CheckIt.Controllers
         // GET api/User
         [HttpGet]
         [Route("api/admin/getChart")]
-        public List<int> getChart([FromBody] UADDTO request)
+        public IHttpActionResult GetChart(string chartName)
         {
+            //var jwt = Request.Headers.GetValues("token").FirstOrDefault();
             //var list = new List<int> { 5, 6, 3, 4, 5, 6 };
             var list = new List<int>();
             UADManager uADManager = new UADManager();
-            uADManager.GetChartStats(request.chartName);
+            list = uADManager.GetChartStats(chartName);
 
-            return list;
+            return Content((HttpStatusCode)200, list);
+
         }
     }
 }

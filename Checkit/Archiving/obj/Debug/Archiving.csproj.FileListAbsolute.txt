@@ -53,10 +53,10 @@ D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\ServiceLayer.exe
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\DataAccessLayer.exe
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\Newtonsoft.Json.dll
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\MimeKit.dll
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\MailKit.dll
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\EntityFramework.dll
-D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\Newtonsoft.Json.dll
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\Microsoft.IdentityModel.Logging.dll
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\BouncyCastle.Crypto.dll
@@ -71,9 +71,9 @@ D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\System.IdentityModel.Tok
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\Newtonsoft.Json.xml
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\MimeKit.xml
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\MailKit.xml
-D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\Newtonsoft.Json.xml
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\Microsoft.IdentityModel.Logging.pdb
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\Microsoft.IdentityModel.Logging.xml
 D:\Documents\Github\CheckIt\CheckIt\Archiving\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb

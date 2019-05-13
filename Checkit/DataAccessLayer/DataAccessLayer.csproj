@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
     <Compile Include="Migrations\201904140356028_final_db_init.cs" />
     <Compile Include="Migrations\201904140356028_final_db_init.Designer.cs">
       <DependentUpon>201904140356028_final_db_init.cs</DependentUpon>
@@ -74,8 +75,10 @@
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\ClientAction.cs" />
     <Compile Include="Database\DataBaseContext.cs" />
+    <Compile Include="Model\Error.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Model\ItemList.cs" />
+    <Compile Include="Model\Telemetry.cs" />
     <Compile Include="Model\Token.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,11 +90,13 @@
     <Compile Include="Repositories\IClientRepository.cs" />
     <Compile Include="Repositories\IItemListRepository.cs" />
     <Compile Include="Repositories\IItemRepository.cs" />
+    <Compile Include="Repositories\ILogRepository.cs" />
     <Compile Include="Repositories\ItemListRepository.cs" />
     <Compile Include="Repositories\ItemRepository.cs" />
     <Compile Include="Repositories\ITokenRepository.cs" />
     <Compile Include="Repositories\IUserActionRepository.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Repositories\LogRepository.cs" />
     <Compile Include="Repositories\TokenRepository.cs" />
     <Compile Include="Repositories\UserActionRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />

@@ -41,7 +41,7 @@ namespace CheckIt.ManagerLayer
                     list = uADService.GetAverageLoggedInUsersLineChart();
                     break;
                 default:
-                    Console.WriteLine("Other");
+                    list = new List<int> { 0, 0, 0, 0, 0, 0 };
                     break;
             }
 

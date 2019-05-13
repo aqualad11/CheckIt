@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="ArchivingManager.cs" />
     <Compile Include="LoginManager.cs" />
+    <Compile Include="LogManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TokenManager.cs" />

@@ -10,7 +10,6 @@ namespace CheckIt.WebApi_CheckIt.Models
     {
         [Required]
         public string chartName { get; set; }
-        [Required]
         public string jwt { get; set; }
 
         public UADDTO() { }
