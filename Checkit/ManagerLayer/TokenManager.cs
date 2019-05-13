@@ -119,8 +119,7 @@ namespace CheckIt.ManagerLayer
             catch (SecurityTokenValidationException e)
             {
                 //invalid token 
-                Console.WriteLine("Security Exception caught. Message = " + e.Message);
-                Console.WriteLine(e.StackTrace);
+                tokenService.Invalidate(jwt, ExtractUserID(jwt));
                 return null;
             }
             
@@ -199,7 +198,7 @@ namespace CheckIt.ManagerLayer
         /// </summary>
         /// <param name="jwt"></param>
         /// <returns></returns>
-        private Guid ExtractUserID(string jwt)
+        public Guid ExtractUserID(string jwt)
         {
             JwtSecurityToken token = new JwtSecurityToken(jwt);
             var claims = token.Payload.Claims as List<Claim>;
@@ -232,6 +231,11 @@ namespace CheckIt.ManagerLayer
                     tokenService.Invalidate(token.jwt, token.userID);
                 }
             }
+        }
+
+        public void InvalidateToken(string jwt, Guid userID)
+        {
+            tokenService.Invalidate(jwt, userID);
         }
     }
 }

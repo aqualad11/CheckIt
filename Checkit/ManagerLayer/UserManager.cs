@@ -42,6 +42,36 @@ namespace CheckIt.ManagerLayer
             return userService.GetUser(userID);
         }
 
+        public void AddUser(User user)
+        {
+            if(userService.UserExists(user.userEmail))
+            {
+                throw new UserExistsException("Email is already registered in our system");
+            }
+
+            //add User to db
+            userService.AddUser(user);
+
+            user = userService.GetUser(user.userEmail);
+            uaService.AddDefaultUserActions(user.userID);
+        }
+
+        public void UpdateUser(User user)
+        {
+            if (userService.UserExists(user.userEmail))
+            {
+                throw new UserExistsException("Email is already registered in our system");
+            }
+
+            if(!userService.UpdateUser(user))
+            {
+                throw new UpdateFailed("Update user failed");
+            }
+
+        }
+
+
+
         /// <summary>
         /// Creates a default user with just an email. ClientID, parentID, and ssoID are all set to null.
         /// Height is set to 2.
@@ -68,12 +98,12 @@ namespace CheckIt.ManagerLayer
             uaService.AddDefaultUserActions(user.userID);
 
             //get and return user
-            return userService.GetUser(email);
+            return user;
 
         }
 
         /// <summary>
-        /// Creates a user with all the parameters passed in ecxcept for ssoID.
+        /// Creates a user with all the parameters passed in except for ssoID.
         /// </summary>
         /// <param name="email"></param>
         /// <param name="atype"></param>
@@ -186,5 +216,19 @@ namespace CheckIt.ManagerLayer
             userService.RemoveUser(user);
         }
 
+        public void DeleteUser(Guid userID)
+        {
+            //Check user's existence
+            User user = userService.GetUser(userID);
+
+            if (user == null)
+            {
+                throw new UserDoesNotExistException("User does not exist");
+            }
+
+            userService.RemoveUser(user);
+        }
     }
+
+    
 }

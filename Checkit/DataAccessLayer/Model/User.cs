@@ -44,6 +44,9 @@ namespace CheckIt.DataAccessLayer
 
         public User()
         {
+            active = true;
+            userActions = new List<UserAction>();
+            itemsList = new List<ItemList>();
             createdAt = DateTime.UtcNow;
         }
 

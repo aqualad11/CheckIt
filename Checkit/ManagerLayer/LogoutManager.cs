@@ -40,5 +40,11 @@ namespace CheckIt.ManagerLayer
             tokenManager.InvalideAllTokens(user.userID);
 
         }
+
+        public void CheckItLogout(string jwt)
+        {
+            Guid userID = tokenManager.ExtractUserID(jwt);
+            tokenManager.InvalidateToken(jwt, userID);
+        }
     }
 }

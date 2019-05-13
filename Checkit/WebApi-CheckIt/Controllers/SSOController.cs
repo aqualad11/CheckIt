@@ -219,7 +219,7 @@ namespace CheckIt.WebApi_CheckIt.Controllers
                 {
                     //TODO: log
                     response.Content = new StringContent(e.Message);
-                    response.StatusCode = HttpStatusCode.Conflict;
+                    response.StatusCode = HttpStatusCode.OK;
                     return response;
                 }
             }

@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions.cs" />
     <Compile Include="ArchivingService.cs" />
     <Compile Include="ClientService.cs" />
     <Compile Include="Config.cs" />

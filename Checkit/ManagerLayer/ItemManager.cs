@@ -66,5 +66,27 @@ namespace CheckIt.ManagerLayer
             }
 
         }
+
+        public void AddItemToList(string itemName, double price, string url, string picKey, Guid userID)
+        {
+            var item = itemService.GetItem(itemName);
+            if(item == null)
+            {
+                Item newItem = new Item(itemName, price, url, picKey);
+                itemService.AddItem(newItem);
+                item = itemService.GetItem(itemName);
+            }
+
+            ItemList itemlist = new ItemList(userID, item.itemID);
+            if(!itemlistService.AddItemList(itemlist))
+            {
+                throw new AddFailedException("Failed to add item to list.");
+            }
+        }
+
+        public List<Item> GetItemsFromWatchList(Guid userID)
+        {
+            return itemlistService.GetItemsByUserID(userID);
+        }
     }
 }

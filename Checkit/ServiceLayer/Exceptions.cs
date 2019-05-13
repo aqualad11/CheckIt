@@ -66,4 +66,10 @@ namespace CheckIt.ServiceLayer
         public UpdateFailed() { }
         public UpdateFailed(string message) : base(message) { }
     }
+
+    public class AddFailedException : Exception
+    {
+        public AddFailedException() { }
+        public AddFailedException(string message) : base(message) { }
+    }
 }
