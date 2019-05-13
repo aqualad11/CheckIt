@@ -1,18 +1,25 @@
 <template>
-  <v-app>
-    <nav-bar />
-    <v-content>
-      <router-view />
-    </v-content>
+  <v-app id="app">
+    <div class="site">
+      <NavBar />
+
+      <div class="site-content">
+        <router-view />
+      </div>
+      
+      <Footer />
+    </div>
   </v-app>
 </template>
 
 <script>
-import NavBar from './components/NavBar'
+import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
 export default {
   name: 'App',
   components: {
-      NavBar
+      NavBar,
+      Footer
   },
   data () {
     return {
@@ -20,3 +27,16 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+#app
+  font-family: Roboto;
+  
+.site
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+.site-content
+  flex: 1;
+</style>
