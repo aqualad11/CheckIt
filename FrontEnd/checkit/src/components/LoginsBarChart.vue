@@ -32,7 +32,7 @@
             }]
           }
         }
-      }
+      };
     },
     created() {
         axios.get(API_URL + "/api/admin/GetChart" ,{

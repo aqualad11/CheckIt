@@ -37,7 +37,7 @@
           </v-list-tile>
         </template>
 
-        <v-list-tile v-for="(analyticItem, i) in analytics" :key="i" @click="$emit(analyticItem[2])">
+        <v-list-tile v-for="(analyticItem, i) in analytics" :key="i" :to="analyticItem[2]">
           <v-list-tile-title v-text="analyticItem[0]"></v-list-tile-title>
             <v-list-tile-action>
               <v-icon v-text="analyticItem[1]"></v-icon>
@@ -62,7 +62,7 @@ export default {
         ['Delete', 'delete', 'deleteuser']
     ],
     analytics: [
-        ['UAD', 'info', 'analytics'],
+        ['UAD', 'info', '/uad'],
     ],
 
     mini: false,
