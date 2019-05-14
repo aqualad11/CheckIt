@@ -23,7 +23,7 @@ namespace WebApi_CheckIt.Controllers
             UADManager uADManager = new UADManager();
             list = uADManager.GetChartStats(chartName);
 
-            return Content((HttpStatusCode)200, list);
+            return Ok(list);
 
         }
     }

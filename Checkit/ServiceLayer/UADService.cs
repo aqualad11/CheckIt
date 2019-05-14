@@ -54,12 +54,19 @@ namespace CheckIt.ServiceLayer
 
         public List<int> GetAverageSessionBarChart()
         {
-            return new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            var list = new List<int>(new int[36]);
+            for(int i = 0; i<36; i++)
+            {
+                if (i < 12) list[i] = 20;
+                else if (i < 24) list[i] = 40;
+                else list[i] = 60;
+            }
+            return list;
         }
 
         public List<int> GetAverageSessionLineChart()
         {
-            return new List<int> { 0, 0, 0, 0, 0, 0 };
+            return new List<int> { 20, 45, 40, 15, 55, 70 };
         }
 
         public List<int> GetAverageLoggedInUsersLineChart()
@@ -74,15 +81,15 @@ namespace CheckIt.ServiceLayer
         public List<int> GetPageStats()
         {
             DirectoryInfo path = new DirectoryInfo(config.LOG_DIRECTORY);
-            List<int> chartList = new List<int> { 0, 0, 0, 0, 0 };
+            List<int> chartList = new List<int>(new int[5]);
             //BEST: USE MEMORY STREAM, LOAD INTO MEM STREAM 
             //BETTER: INSTEAD OF LIST USE STRING BUILDER: MEM EFFICIENT WAY TO STORE STRINGS
 
             try
             {
-                foreach (var log in path.GetFiles("*.json"))
+                foreach (var log in path.GetFiles("*Telemetry.json"))
                 {
-                    var currentLog = Path.Combine(path.Name, log.Name);
+                    var currentLog = Path.Combine(path.FullName, log.Name);
                     using (StreamReader logReader = new StreamReader(currentLog))
                     {
                         string data = "";
@@ -90,8 +97,8 @@ namespace CheckIt.ServiceLayer
                         {
                             chartList[0] += ContainsSearch(data, "home");
                             chartList[1] += ContainsSearch(data, "search");
-                            chartList[2] += ContainsSearch(data, "about");
-                            chartList[3] += ContainsSearch(data, "profile");
+                            chartList[2] += ContainsSearch(data, "profile");
+                            chartList[3] += ContainsSearch(data, "watchlist");
                             chartList[4] += ContainsSearch(data, "dashboard");
                         }
                     }
@@ -109,13 +116,13 @@ namespace CheckIt.ServiceLayer
         public List<int> GetLoginStats()
         {
             DirectoryInfo path = new DirectoryInfo(config.LOG_DIRECTORY);
-            List<int> chartList = new List<int> { 0, 0, 0 };
+            List<int> chartList = new List<int>(new int[3]);
             //BEST: USE MEMORY STREAM, LOAD INTO MEM STREAM 
             //BETTER: INSTEAD OF LIST USE STRING BUILDER: MEM EFFICIENT WAY TO STORE STRINGS
 
             try
             {
-                foreach (var log in path.GetFiles("*.json"))
+                foreach (var log in path.GetFiles("*Telemetry.json"))
                 {
                     var currentLog = Path.Combine(path.FullName, log.Name);
                     using (StreamReader logReader = new StreamReader(currentLog))
@@ -141,7 +148,7 @@ namespace CheckIt.ServiceLayer
 
         public List<int> GetUsersPerMonthStats()
         {
-            List<int> chartList = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            List<int> chartList = new List<int>(new int[24]);
             //BEST: USE MEMORY STREAM, LOAD INTO MEM STREAM 
             //BETTER: INSTEAD OF LIST USE STRING BUILDER: MEM EFFICIENT WAY TO STORE STRINGS
             using (var _db = new DataBaseContext())
@@ -162,15 +169,15 @@ namespace CheckIt.ServiceLayer
         public List<int> GetFeatureStats()
         {
             DirectoryInfo path = new DirectoryInfo(config.LOG_DIRECTORY);
-            List<int> chartList = new List<int> { 0, 0, 0, 0, 0 };
+            List<int> chartList = new List<int>(new int[5]);
             //BEST: USE MEMORY STREAM, LOAD INTO MEM STREAM 
             //BETTER: INSTEAD OF LIST USE STRING BUILDER: MEM EFFICIENT WAY TO STORE STRINGS
 
             try
             {
-                foreach (var log in path.GetFiles("*.json"))
+                foreach (var log in path.GetFiles("*Telemetry.json"))
                 {
-                    var currentLog = Path.Combine(path.Name, log.Name);
+                    var currentLog = Path.Combine(path.FullName, log.Name);
                     using (StreamReader logReader = new StreamReader(currentLog))
                     {
                         string data = "";
@@ -197,17 +204,18 @@ namespace CheckIt.ServiceLayer
         public List<int> GetLoggedInPerMonthStats(int months)
         {
             DirectoryInfo path = new DirectoryInfo(config.LOG_DIRECTORY);
-            List<int> chartList = new List<int>();
+            List<int> chartList = new List<int>(new int[months]);
             //BEST: USE MEMORY STREAM, LOAD INTO MEM STREAM 
             //BETTER: INSTEAD OF LIST USE STRING BUILDER: MEM EFFICIENT WAY TO STORE STRINGS
 
             try
             {
                 int i = 1;
-                foreach (var log in path.GetFiles("*.json"))
+                foreach (var log in path.GetFiles("*Telemetry.json"))
                 {
                     int logMonth = LogFileDate(log.FullName).Month;
-                    var currentLog = Path.Combine(path.Name, log.Name);
+                    if (i != logMonth) { i=logMonth; }
+                    var currentLog = Path.Combine(path.FullName, log.Name);
                     if (logMonth == i && i <= months)  
                     {
                         using (StreamReader logReader = new StreamReader(currentLog))
@@ -219,7 +227,7 @@ namespace CheckIt.ServiceLayer
                             }
                         }
                     }
-                    i++;
+                    
                 }
                 return chartList;
             }
