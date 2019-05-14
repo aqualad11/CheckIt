@@ -39,7 +39,13 @@ namespace CheckIt.ServiceLayer
             //From Logs, Get all "user logged in" with X months (jan-dec), add these 12 to the list. Then from DAL/UserRepository, GetCount(jan,2019) -> (dec-2019) then add these 12 to the list
             //List = 24
             //GetUsersPerMonthStats
-            throw new NotImplementedException();
+            var list = new List<int>(new int[24]);
+            var allLogins = GetLoggedInPerMonthStats(12);
+            var allUsers = GetUsersPerMonthStats();
+            list.AddRange(allLogins);
+            list.AddRange(allUsers);
+
+            return list;
         }
 
         public List<int> GetTopFiveFeaturesBarChart()
