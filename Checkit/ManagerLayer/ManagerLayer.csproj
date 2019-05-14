@@ -77,9 +77,11 @@
     <Compile Include="ItemManager.cs" />
     <Compile Include="LoginManager.cs" />
     <Compile Include="LogoutManager.cs" />
+    <Compile Include="LogManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TokenManager.cs" />
+    <Compile Include="UADManager.cs" />
     <Compile Include="UserManager.cs" />
   </ItemGroup>
   <ItemGroup>

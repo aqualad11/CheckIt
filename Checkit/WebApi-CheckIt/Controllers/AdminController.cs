@@ -209,5 +209,17 @@ namespace CheckIt.WebApi_CheckIt.Controllers
                 }
             }
         }
+
+        [HttpGet]
+        [Route("api/admin/getChart")]
+        public IHttpActionResult GetChart(string chartName)
+        {
+            var list = new List<int>();
+            UADManager uADManager = new UADManager();
+            list = uADManager.GetChartStats(chartName);
+            //var jwt = Request.Headers.GetValues("token").FirstOrDefault();
+
+            return Ok(list);
+        }
     }
 }

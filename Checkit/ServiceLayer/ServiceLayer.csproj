@@ -83,6 +83,7 @@
     <Compile Include="EmailService.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="IArchivingService.cs" />
+    <Compile Include="LogService.cs" />
     <Compile Include="ItemListService.cs" />
     <Compile Include="ItemService.cs" />
     <Compile Include="PasswordService.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignatureService.cs" />
     <Compile Include="TokenService.cs" />
+    <Compile Include="UADService.cs" />
     <Compile Include="UserActionService.cs" />
     <Compile Include="UserService.cs" />
   </ItemGroup>
