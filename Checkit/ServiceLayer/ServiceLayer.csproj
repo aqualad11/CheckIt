@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions.cs" />
     <Compile Include="ArchivingService.cs" />
     <Compile Include="ClientService.cs" />
     <Compile Include="Config.cs" />
@@ -83,6 +84,8 @@
     <Compile Include="Exceptions.cs" />
     <Compile Include="IArchivingService.cs" />
     <Compile Include="LogService.cs" />
+    <Compile Include="ItemListService.cs" />
+    <Compile Include="ItemService.cs" />
     <Compile Include="PasswordService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

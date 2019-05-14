@@ -47,3 +47,4 @@ class CheckItSpider(scrapy.Spider):
         item['description'] = response.xpath("string(//*[@id='productDescription']/p/text())").get().strip()
         item['keywords'] = ""
         yield item
+

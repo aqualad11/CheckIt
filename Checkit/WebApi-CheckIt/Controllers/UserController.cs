@@ -5,8 +5,12 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using CheckIt.ManagerLayer;
+using CheckIt.ServiceLayer;
 using CheckIt.DataAccessLayer;
 using CheckIt.DataAccessLayer.Repositories;
+using CheckIt.WebApi_CheckIt.Models;
+using Newtonsoft.Json;
 
 
 namespace CheckIt.WebApi_CheckIt.Controllers
@@ -57,20 +61,179 @@ namespace CheckIt.WebApi_CheckIt.Controllers
             }
         }
 
+
+        [HttpPost]
+        [Route("api/user/additemtolist")]
+        public HttpResponseMessage AddItemToList([FromBody] ItemDTO item)
+        {
+            var response = new HttpResponseMessage();
+            if(item.jwt == null)
+            {
+                response.Content = new StringContent("JWT is null.");
+                response.StatusCode = HttpStatusCode.Conflict;
+                return response;
+            }
+
+            using (var db = new DataBaseContext())
+            {
+                try
+                {
+                    TokenManager tokenManager = new TokenManager(db);
+
+                    //Validate Token
+                    string newJWT = tokenManager.ValidateToken(item.jwt);
+                    //if jwt not valid redirect to SSO login
+                    if(newJWT == null)
+                    {
+                        response = Request.CreateResponse(HttpStatusCode.Moved);
+                        response.Content = new StringContent("https://kfc-sso.com/#/login");
+                        return response;
+                    }
+
+                    //Athorize
+                    AuthorizationManager authManager = new AuthorizationManager(db);
+                    if(!authManager.AuthorizeAction(newJWT, Actions.WISHLIST))
+                    {
+                        response.Content = new StringContent("User in unauthorized to access watchlist.");
+                        response.StatusCode = HttpStatusCode.Unauthorized;
+                    }
+
+                    Guid userID = tokenManager.ExtractUserID(newJWT);
+
+                    //Add item to list
+                    ItemManager itemManager = new ItemManager(db);
+                    itemManager.AddItemToList(item.itemName, item.price, item.url, item.picKey, userID);
+
+                    //create and return response
+                    response.Content = new StringContent(newJWT);
+                    response.StatusCode = HttpStatusCode.OK;
+                    return response;
+                }
+                catch(AddFailedException e)
+                {
+                    response.Content = new StringContent(e.Message);
+                    response.StatusCode = HttpStatusCode.Conflict;
+                    return response;
+                }
+            }
+        }
+        
+        //TODO: Test
+        [HttpGet]
+        [Route("api/user/getwatchlist")]
+        public HttpResponseMessage GetWatchList()
+        {
+            var jwt = Request.Headers.GetValues("token").FirstOrDefault();
+
+            var response = new HttpResponseMessage();
+            if(jwt == null)
+            {
+                response.Content = new StringContent("JWT is null.");
+                response.StatusCode = HttpStatusCode.Conflict;
+                return response;
+            }
+
+            using (var db = new DataBaseContext())
+            {
+                try
+                {
+                    TokenManager tokenManager = new TokenManager(db);
+
+                    //Validate Token
+                    string newJWT = tokenManager.ValidateToken(jwt);
+                    //if jwt not valid redirect to SSO login
+                    if (newJWT == null)
+                    {
+                        response = Request.CreateResponse(HttpStatusCode.Moved);
+                        response.Content = new StringContent("https://kfc-sso.com/#/login");
+                        return response;
+                    }
+
+                    //Athorize
+                    AuthorizationManager authManager = new AuthorizationManager(db);
+                    if (!authManager.AuthorizeAction(newJWT, Actions.WISHLIST))
+                    {
+                        response.Content = new StringContent("User in unauthorized to access watchlist.");
+                        response.StatusCode = HttpStatusCode.Unauthorized;
+                    }
+
+                    Guid userID = tokenManager.ExtractUserID(newJWT);
+
+                    //Get items and make DTO
+                    ItemManager itemManager = new ItemManager(db);
+                    var items = itemManager.GetItemsFromWatchList(userID);
+                    var itemsDTO = new ItemsDTO()
+                    {
+                        jwt = newJWT,
+                        items = items
+                    };
+
+                    //make response
+                    response.Content = new StringContent(JsonConvert.SerializeObject(itemsDTO),
+                                                                System.Text.Encoding.UTF8, "application/json");
+                    response.StatusCode = HttpStatusCode.OK;
+                    return response;
+                }catch(Exception e)
+                {
+                    response.Content = new StringContent(e.Message);
+                    response.StatusCode = HttpStatusCode.Conflict;
+                    return response;
+                }
+            }
+        }
+
+
         [HttpGet]
         [Route("api/user/login")]
-        public IHttpActionResult CheckItLogin()
+        public HttpResponseMessage CheckItLogin()
         {
-            return Redirect("https://kfc-sso.com/#/login"); 
+            var response = Request.CreateResponse(HttpStatusCode.OK);
+            response.Content = new StringContent("https://kfc-sso.com/#/login");
+            return response;
         }
 
         [HttpGet]
         [Route("api/user/register")]
-        public IHttpActionResult CheckItRegister()
+        public HttpResponseMessage CheckItRegister()
         {
-            return Redirect("https://kfc-sso.com/#/register");
+            var response = Request.CreateResponse(HttpStatusCode.OK);
+            response.Content = new StringContent("https://kfc-sso.com/#/register");
+            return response;
         }
+
         
+        [HttpPost]
+        [Route("api/user/logout")]
+        public HttpResponseMessage CheckItLogout([FromBody] string jwt)
+        {
+            var response = new HttpResponseMessage();
+
+            if (jwt == null)
+            {
+                response.Content = new StringContent("JWT is null.");
+                response.StatusCode = HttpStatusCode.Conflict;
+                return response;
+            }
+            using (var db = new DataBaseContext())
+            {
+                try
+                {
+                    LogoutManager logoutManager = new LogoutManager(db);
+                    logoutManager.CheckItLogout(jwt);
+                    response.StatusCode = HttpStatusCode.OK;
+                    return response;
+                }catch(Exception e)
+                {
+                    response.Content = new StringContent(e.Message);
+                    response.StatusCode = HttpStatusCode.Conflict;
+                    return response;
+                }
+            }
+        }
+
+
+
+
         /*
         // POST api/User
         [HttpPost]

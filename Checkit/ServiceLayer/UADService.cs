@@ -158,7 +158,7 @@ namespace CheckIt.ServiceLayer
                 var totalUsers = new List<int>();
                 for (int i = 1; i <= 12; i++)
                 {
-                    //totalUsers.Add(userRepository.GetCount(i, 2019));
+                    totalUsers.Add(userRepository.GetCount(i, 2019));
                 }
             }
 

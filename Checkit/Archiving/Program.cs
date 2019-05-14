@@ -54,7 +54,7 @@ namespace CheckIt.Archiving
                     Console.WriteLine("Email a System Administrator");
                     tries = 0;
                 }*/
-                ServiceLayer.EmailService.SendMail("kunal1005@yahoo.com","Notification from CheckIt", "Archiving is screwed up.");
+                new ServiceLayer.EmailService().SendMail("kunal1005@yahoo.com","Notification from CheckIt", "Archiving is screwed up.");
                 tries = 0;
             }
         }

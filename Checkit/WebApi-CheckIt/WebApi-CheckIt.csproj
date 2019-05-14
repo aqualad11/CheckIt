@@ -194,6 +194,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\SSOController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -201,7 +202,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\UADDTO.cs" />
-    <Compile Include="Models\LoginDTO.cs" />
+    <Compile Include="Models\AdminUserDTO.cs" />
+    <Compile Include="Models\ItemDTO.cs" />
+    <Compile Include="Models\ItemsDTO.cs" />
+    <Compile Include="Models\SSORequestDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

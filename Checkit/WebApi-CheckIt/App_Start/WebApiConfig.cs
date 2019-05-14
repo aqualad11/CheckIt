@@ -13,6 +13,10 @@ namespace WebApi_CheckIt
         {
             // Web API configuration and services
 
+            // Enabling CORS for the whole API
+            var corsAttr = new EnableCorsAttribute(origins: "*", headers: "*", methods: "*");
+            config.EnableCors(corsAttr);
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 
@@ -24,10 +28,6 @@ namespace WebApi_CheckIt
 
             //return JSON instead of XML
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html") );
-
-            //CORS
-            var corsAttr = new EnableCorsAttribute(origins: "*", headers: "*", methods: "*");
-            config.EnableCors(corsAttr);
         }
     }
 }

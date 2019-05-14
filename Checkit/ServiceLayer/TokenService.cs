@@ -52,6 +52,56 @@ namespace CheckIt.ServiceLayer
             }
         }
 
+        /// <summary>
+        /// Gets all tokens associates with the userID.
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <returns>List of Tokens.</returns>
+        public List<Token> GetAllTokens(Guid userID)
+        {
+            return tokenRepo.GetAllTokens(userID);
+        }
+
+        /// <summary>
+        /// Gets all tokens associated with the userID that are valid.
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <returns>List of Tokens.</returns>
+        public List<Token> GetAllValidTokens(Guid userID)
+        {
+            List<Token> tokens = new List<Token>();
+            //Get all tokens and add only those which are valid
+            foreach(Token token in tokenRepo.GetAllTokens(userID).TakeWhile(t => t.valid == true))
+            {
+                tokens.Add(token);
+            }
+
+            return tokens;
+        }
+
+        /// <summary>
+        /// Gets all tokens associated with the userID that are invalid.
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <returns>List of Tokens.</returns>
+        public List<Token> GetAllInvalidTokens(Guid userID)
+        {
+            List<Token> tokens = new List<Token>();
+            //Get all tokens and add only those which are valid
+            foreach (Token token in tokenRepo.GetAllTokens(userID).SkipWhile(t => t.valid == true))
+            {
+                tokens.Add(token);
+            }
+
+            return tokens;
+        }
+
+        /// <summary>
+        /// Adds token to the database.
+        /// </summary>
+        /// <param name="jwt"></param>
+        /// <param name="userID"></param>
+        /// <returns></returns>
         public bool AddToken(string jwt, Guid userID)
         {
             try

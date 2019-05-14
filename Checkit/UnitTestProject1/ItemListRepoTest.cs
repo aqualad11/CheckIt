@@ -14,7 +14,7 @@ namespace CheckIt.UnitTests
         /// Tests GetItemList using valid ItemList in db
         /// </summary>
         [TestMethod]
-        public void GetItemListValid()
+        public void ItemListRepository_GetItemList_ValidItemList()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -33,7 +33,7 @@ namespace CheckIt.UnitTests
         /// Tests GetItemList using invalid userID & itemID
         /// </summary>
         [TestMethod]
-        public void GetItemListInvalid()
+        public void ItemRepository_GetItemList_InvalidItemList()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -52,7 +52,7 @@ namespace CheckIt.UnitTests
         /// Tests GetItemsByUserID using valid UserID in itemlist
         /// </summary>
         [TestMethod]
-        public void GetItemsByValidUserID()
+        public void ItemRepository_GetItemsByUserID_ValidUserID()
         {
             //Arrange 
             DataBaseContext db = new DataBaseContext();
@@ -70,7 +70,7 @@ namespace CheckIt.UnitTests
         /// Tests GetItemsByUserID using invalid UserID which is not in itemList
         /// </summary>
         [TestMethod]
-        public void GetItemsByInvalidUserID()
+        public void ItemRepository_GetItemsByUserID_InvalidUserID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -88,7 +88,7 @@ namespace CheckIt.UnitTests
         /// Tests GetUserByItemID using a valid itemID
         /// </summary>
         [TestMethod]
-        public void GetUsersByValidItemID()
+        public void ItemRepository_GetUsersByItemID_ValidItemID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -106,7 +106,7 @@ namespace CheckIt.UnitTests
         /// Tests GetUserByItemID using an invalid itemID
         /// </summary>
         [TestMethod]
-        public void GetUserByInvalidItemID()
+        public void ItemRepository_GetUserByItemID_InvalidItemID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -125,7 +125,7 @@ namespace CheckIt.UnitTests
         /// </summary>
         /// <param name="itemlist"></param>
         [TestMethod]
-        public void AddItemListValidUserItem()
+        public void ItemRepository_AddItemList_ValidUserItem()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -146,7 +146,7 @@ namespace CheckIt.UnitTests
         /// Tests AddItemList with new ItemList with an Nonexisting user and valid item
         /// </summary>
         [TestMethod]
-        public void AddItemListInvalidUser()
+        public void ItemRepository_AddItemList_InvalidUser()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -163,7 +163,7 @@ namespace CheckIt.UnitTests
         /// Tests AddItemList with new ItemList with an valid user and Nonexisting item
         /// </summary>
         [TestMethod]
-        public void AddItemListInvalidItem()
+        public void ItemRepository_AddItemList_InvalidItem()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -180,7 +180,7 @@ namespace CheckIt.UnitTests
         /// Tests RemoveItemList(ItemList) with valid Itemlist
         /// </summary>
         [TestMethod]
-        public void RemoveItemListValid()
+        public void ItemRepository_RemoveItemList_Valid()
         {
             //Assert
             DataBaseContext db = new DataBaseContext();
@@ -202,7 +202,7 @@ namespace CheckIt.UnitTests
         /// Tests RemoveItemList(ItemList) with invalid Itemlist
         /// </summary>
         [TestMethod]
-        public void RemoveItemListInvalid()
+        public void ItemRepository_RemoveItemList_InvalidItemList()
         {
             //Assert
             DataBaseContext db = new DataBaseContext();
