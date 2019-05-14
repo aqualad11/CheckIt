@@ -211,7 +211,6 @@ D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\bin\Debug\MongoDB.Bson.xml
 D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\bin\Debug\MongoDB.Driver.xml
 D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\bin\Debug\MongoDB.Driver.Core.xml
 D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\bin\Debug\System.Buffers.xml
-D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
 D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.exe.config
 D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_init.resources
 D:\Documents\Github\CheckIt\CheckIt\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.final_db_edit1.resources
