@@ -1,73 +1,64 @@
 <template>
-  <v-toolbar app>
-    <img src="@/assets/SpyderzLogo.png" alt="" width = 75 height = 65>
-    <v-toolbar-title class="headline text-uppercase">
-      <v-btn to="/" flat>CHECKIT</v-btn>
-      <!--span>CHECKIT</span-->
-    </v-toolbar-title>
-    <v-spacer></v-spacer>
-    <v-btn to="/" flat>Home</v-btn>
-    <v-btn to="about" flat>About</v-btn>
-    <v-btn v-on:click="login">Login</v-btn>
-    <v-btn v-on:click="register">Register</v-btn>
-    <v-btn to="playground" flat>Playground</v-btn>
-
-          <!-- dropdown menu (user is signed in)-->
-      <v-menu offset-y>
-        <v-btn flat slot="activator" color="grey">
-          <v-icon left>person</v-icon>
-          <span>My Account</span>
-          <v-icon>expand_more</v-icon>
+  <div>
+    <!-- The entire navbar options and dropdown menu (navigation hamburger) -->
+    <v-toolbar class="hidden-sm-and-down" style="padding: 0 2em; color: white; background: linear-gradient(to right, #9D8C0E, #000);">
+      <v-toolbar-title>CheckIt</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <!-- Displays the links that route to other pages -->
+      <v-toolbar-items v-for="(route, index) in pageRoutes" :key="index">
+        <v-btn :to="route.link" flat>
+          <span class="color-white">
+            {{ route.title }}
+          </span>
         </v-btn>
-        <v-list>
-          <v-list-tile v-for="link in links" :key="link.text" router :to="link.route">
-            <v-list-tile-title>{{ link.text }}</v-list-tile-title>
+      </v-toolbar-items>
+    </v-toolbar>
+
+    <v-toolbar class="hidden-md-and-up" style="padding: 0 0em; color: white; background: linear-gradient(to right, #609D8C0E148D, #000);">
+      <v-toolbar-title>CheckIt</v-toolbar-title>
+      <v-spacer></v-spacer>
+
+      <!-- When on a smaller screen, a navigation hamburger will show up -->
+      <v-menu class="hidden-md-and-up" transition="slide-y-transition" bottom left>
+        <!-- Shows the hamburger icon when on a small screen -->
+        <template v-slot:activator="{ on }">
+          <v-toolbar-side-icon v-on="on" right style="color: white;"></v-toolbar-side-icon>
+        </template>
+        <!-- Using the list of destinations, display and route to the page link -->
+        <v-list v-for="(route, index) in pageRoutes" :key="index">
+          <v-list-tile>
+            <v-btn :to="route.link" flat block>
+              <span class="color-black">
+                {{ route.title }}
+              </span>
+            </v-btn>
           </v-list-tile>
         </v-list>
       </v-menu>
-
-
-
-  </v-toolbar>
+    </v-toolbar>
+  </div>
 </template>
-<script>
-import axios from "axios";
-const API_URL = 'https://checkitspyderz.net/Backend';
 
+<script>
 export default {
-  data() {
+  data: function() {
     return {
-      drawer: false,
-      links: [
-        { text: 'Watchlist', route: '/watchlist' },
-        {  text: 'Settings', route: '/settings' },
-        {  text: 'Sign Out', route: '/signout' },
+      pageRoutes: [
+        { title: "Home", link: "/" },
+        { title: "Account", link: "/admin" },
+        { title: "About Us", link: "/about" }
       ]
-    }
-  },
-  name: 'NavBar',
-  methods: {
-    login(){
-      axios.get(API_URL + "/api/user/login")
-      .then(response => {
-        alert("You will be redirected to kft-sso.com to login.")
-        window.location.assign(response.data)
-      })
-      .catch(err =>{
-        console.log(err.data)
-      })
-    },
-    register(){
-      axios.get(API_URL + "/api/user/register")
-      .then(response => {
-        console.log("in then")
-        alert("You will be redirected to kft-sso.com to register.")
-        window.location.assign(response.data)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-    }
+    };
   }
-}
+};
 </script>
+
+<style scoped>
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+.color-white {
+  color: white;
+}
+.color-black {
+  color: black;
+}
+</style>
