@@ -11,6 +11,7 @@ namespace CheckIt.DataAccessLayer
     public class Token
     {
         [Key, Column(Order = 0)]
+        [StringLength(450)]
         public string jwt { get; set; }
 
         [Key, Column(Order = 1)]

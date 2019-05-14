@@ -20,7 +20,6 @@ namespace CheckIt.DataAccessLayer
         public DbSet<ItemList> ItemLists { get; set; }
         public DbSet<Token> Tokens { get; set; }
 
-        //
         
         public DataBaseContext()
         {

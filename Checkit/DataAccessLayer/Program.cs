@@ -11,6 +11,24 @@ namespace CheckIt.DataAccessLayer
     {
         static void Main(string[] args)
         {
+            /*
+            using(var db = new DataBaseContext())
+            {
+                UserRepository userRepo = new UserRepository(db);
+                var users = userRepo.GetAllUsers();
+                foreach(User user in users)
+                {
+                    user.createdAt = DateTime.UtcNow;
+                    userRepo.UpdateUser(user);
+                }
+
+                Console.WriteLine("All Done");
+            }
+            */
+            //var now = DateTime.UtcNow;
+            //Console.WriteLine("Month = " + now.Month);
+            //Console.WriteLine("Year = " + now.Year);
+            /*
             //add users with SSO IDs
             using(var dc = new DataBaseContext())
             {

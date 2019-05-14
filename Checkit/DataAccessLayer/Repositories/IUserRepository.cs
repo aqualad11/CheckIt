@@ -12,6 +12,8 @@ namespace CheckIt.DataAccessLayer.Repositories
         User GetUserbyEmail(string email);
         User GetUserbySSOID(Guid ssoID);
         Guid GetUserIDbyEmail(string email);
+        int GetCountOfAllUsers();
+        int GetCount(int month, int year);
         
 
         void AddUser(User user);

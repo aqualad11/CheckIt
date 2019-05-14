@@ -10,7 +10,7 @@ namespace CheckIt.ServiceLayer
     public class SignatureService
     {
 
-        private readonly string APIKey = "E3F13B1D7EBF1430109A30EDAF96A7B6662A7A00F56D333CDCBCC6A84CD95400";
+        private readonly string APIKey = "AB5A7ED2DC3DB99B148FB38AB5CB437AE22E5D261B1160BAD836D9ACB934D272";
 
         public bool IsValid(Guid ssoID, string email, long timestamp, string signature)
         {

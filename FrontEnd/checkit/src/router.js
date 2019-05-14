@@ -5,22 +5,21 @@ import Home from "./views/Home.vue"
 import NotFound from "./views/NotFound.vue"
 import Login from "./views/Login.vue"
 import Register from "./views/Register.vue"
-import AdminDashboard from "./views/AdminDashboard.vue"
+import AdminDashboard from "./components/AdminDashboard.vue"
 import AccountSettings from "./views/AccountSettings.vue"
-import Watchlist from "./views/Watchlist.vue"
+import Watchlist from "./components/Watchlist.vue"
 import SignOut from "./views/SignOut.vue"
 import UserManual from "./views/UserManual.vue"
 import FAQ from "./views/FAQ.vue"
-import AddUser from "./components/AddUser.vue"
+import UserManager from "./components/UserManager.vue"
 import Users from "./components/Users.vue"
 import UpdateUser from "./components/UpdateUser.vue"
 import DeleteUser from "./components/DeleteUser.vue"
-import UACadmin from "./components/UACadmin.vue"
-import UACusers from "./components/UACusers.vue"
-import LogRead from "./components/LogRead.vue"
-import LogDelete from "./components/LogDelete.vue"
 import ItemList from "./views/ItemList.vue"
 import UAD from "./views/UAD.vue"
+import Terms from "./views/Terms.vue"
+import ContactUs from "./views/ContactUs.vue"
+
 
 Vue.use(Router);
 
@@ -91,44 +90,24 @@ export default new Router({
       component: SignOut
     },
     {
-      path: "/admin/adduser",
-      name: "adduser",
-      component: AddUser,
+      path: "/usermanager",
+      name: "usermanager",
+      component: UserManager,
     },
     {
-      path: "/admin/users",
+      path: "/users",
       name: "users",
       component: Users
     },
     {
-      path: "/admin/updateuser",
+      path: "/updateuser",
       name: "updateuser",
       component: UpdateUser
     },
     {
-      path: "/admin/deleteuser",
+      path: "/deleteuser",
       name: "deleteuser",
       component: DeleteUser
-    },
-    {
-      path: "/admin/uac/admin",
-      name: "uacadmin",
-      component: UACadmin
-    },
-    {
-      path: "/admin/uac/users",
-      name: "uacusers",
-      component: UACusers
-    },
-    {
-      path: "/admin/log/read",
-      name: "readlog",
-      component: LogRead
-    },
-    {
-      path: "/admin/log/delete'",
-      name: "deletelog",
-      component: LogDelete
     },
     {
       path: "/items",
@@ -139,6 +118,16 @@ export default new Router({
       path: "/uad",
       name: "uad",
       component: UAD
+    },
+    {
+      path: "/terms",
+      name: "terms",
+      component: Terms
+    },
+    {
+      path: "/contactus",
+      name: "contactus",
+      component: ContactUs
     }
 
   ]

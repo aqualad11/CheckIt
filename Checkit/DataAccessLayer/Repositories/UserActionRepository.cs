@@ -71,21 +71,5 @@ namespace CheckIt.DataAccessLayer.Repositories
             db.Entry(useraction).State = EntityState.Deleted;
             db.SaveChanges();
         }
-
-        /*
-        public void RemoveUserAction(Guid userID, string action)
-        {
-            try
-            {
-                UserAction ua = db.UserActions.Where(u => u.userID == userID && u.action == action).FirstOrDefault();
-                db.UserActions.Remove(ua);
-                db.SaveChanges();
-
-            }catch(Exception)
-            {
-
-            }
-        }
-        */
     }
 }

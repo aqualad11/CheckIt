@@ -14,7 +14,7 @@ namespace CheckIt.UnitTests
         /// Tests GetActionsByClientID using valid clientID
         /// </summary>
         [TestMethod]
-        public void GetActionsByValidClientID()
+        public void ClientRepository_GetActionsByClientID_ValidClient()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -33,7 +33,7 @@ namespace CheckIt.UnitTests
         /// Tests GetActionsByClientID using invalid clientID
         /// </summary>
         [TestMethod]
-        public void GetActionsByInvalidClientID()
+        public void ClientRepository_GetActionsByClientID_InvalidClientID()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -53,7 +53,7 @@ namespace CheckIt.UnitTests
         /// Tests GetClientAction(clientID, action) using a valid clientID and action
         /// </summary>
         [TestMethod]
-        public void GetClientAction()
+        public void ClientRepository_GetClientAction_ValidClientAction()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -72,7 +72,7 @@ namespace CheckIt.UnitTests
         /// Tests GetClientAction(clientID, action) using a valid clientID and invalid action
         /// </summary>
         [TestMethod]
-        public void GetClientActionValid()
+        public void ClientRepository_GetClientAction_Invalid()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -92,7 +92,7 @@ namespace CheckIt.UnitTests
         /// </summary>
         /// <param name="action"></param>
         [TestMethod]
-        public void GetClientsByValidAction()
+        public void ClientRepository_GetClientsByAction_Valid()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -110,7 +110,7 @@ namespace CheckIt.UnitTests
         /// Tests GetClientsByAction using a invalid Action
         /// </summary>
         [TestMethod]
-        public void GetClientsByInvalidAction()
+        public void ClientRepository_GetClientsByAction_InvalidAction()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -128,7 +128,7 @@ namespace CheckIt.UnitTests
         /// Tests AddClientAction using valid Client
         /// </summary>
         [TestMethod]
-        public void AddValidClientAction()
+        public void ClientRepository_AddClientAction_ValidClientAction()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -149,7 +149,7 @@ namespace CheckIt.UnitTests
         /// Tests AddClientAction using an invalid Client
         /// </summary>
         [TestMethod]
-        public void AddInvalidClientAction()
+        public void ClientRepository_AddClientAction_InvalidClient()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -167,7 +167,7 @@ namespace CheckIt.UnitTests
         /// Tests RemoveClientAction using valid clientaction
         /// </summary>
         [TestMethod]
-        public void RemoveValidClientAction()
+        public void ClientRepository_RemoveClientAction_ValidClientAction()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();
@@ -188,7 +188,7 @@ namespace CheckIt.UnitTests
         /// Tests RemoveClientAction using invalid clientaction
         /// </summary>
         [TestMethod]
-        public void RemoveInvalidClientAction()
+        public void ClientRepository_RemoveClientAction_InvalidClientAction()
         {
             //Arrange
             DataBaseContext db = new DataBaseContext();

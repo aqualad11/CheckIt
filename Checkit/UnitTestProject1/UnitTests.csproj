@@ -63,7 +63,11 @@
     <Compile Include="ItemListRepoTest.cs" />
     <Compile Include="ItemRepoTest.cs" />
     <Compile Include="PasswordUnitTest1.cs" />
+    <Compile Include="SignatureServiceTest.cs" />
+    <Compile Include="SSOControllerTest.cs" />
+    <Compile Include="TokenManagerTest.cs" />
     <Compile Include="TokenRepoTest.cs" />
+    <Compile Include="TokenServiceTest.cs" />
     <Compile Include="UserManagerTest.cs" />
     <Compile Include="UserRepoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +89,10 @@
     <ProjectReference Include="..\ServiceLayer\ServiceLayer.csproj">
       <Project>{1468bb52-2704-445f-be14-30e06b30d153}</Project>
       <Name>ServiceLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi-CheckIt\WebApi-CheckIt.csproj">
+      <Project>{ebe28c49-b049-4946-af2c-265170fdf9fe}</Project>
+      <Name>WebApi-CheckIt</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

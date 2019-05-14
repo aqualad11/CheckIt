@@ -1,1 +1,80 @@
-test test test
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:43:28 PM ",
+  "description": "User has logged in"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:43:28 PM ",
+  "description": "went to their watchlist"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:43:28 PM ",
+  "description": "searched for"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:43:28 PM ",
+  "description": "went to their watchlist"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:43:28 PM ",
+  "description": "went to their profile"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:43:28 PM ",
+  "description": "User has logged in"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:43:28 PM ",
+  "description": "went to their profile"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:49:58 PM ",
+  "description": "User has logged in"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:49:58 PM ",
+  "description": "went to the admin dashboard"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:49:58 PM ",
+  "description": "went to the admin dashboard"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:49:58 PM ",
+  "description": "routed to"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:49:58 PM ",
+  "description": "went to the admin dashboard"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:49:58 PM ",
+  "description": "User has logged out"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:49:58 PM ",
+  "description": "routed to"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:49:58 PM ",
+  "description": "routed to home"
+}
+{
+  "userID": "35262",
+  "timeStamp": "05/04/2019 12:49:58 PM ",
+  "description": "routed to home"
+}

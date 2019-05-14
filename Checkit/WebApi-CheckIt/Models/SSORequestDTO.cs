@@ -6,10 +6,10 @@ using System.Web;
 
 namespace CheckIt.WebApi_CheckIt.Models
 {
-    public class LoginDTO
+    public class SSORequestDTO
     {
         [Required]
-        public string ssoID { get; set; }
+        public string ssoUserId { get; set; }
         [Required]
         public string email { get; set; }
         [Required]
@@ -17,13 +17,13 @@ namespace CheckIt.WebApi_CheckIt.Models
         [Required]
         public string signature { get; set; }
 
-        public LoginDTO() { }
+        public SSORequestDTO() { }
 
         public string PreSignatureString()
         {
             string acc = "";
             acc += "email=" + email + ";";
-            acc += "ssoUserId=" + ssoID + ";";
+            acc += "ssoUserId=" + ssoUserId + ";";
             acc += "timestamp=" + timeStamp + ";";
             return acc;
         }

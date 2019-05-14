@@ -1,45 +1,3 @@
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.exe
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.exe
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.exe
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Newtonsoft.Json.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.pdb
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.exe.config
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.pdb
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.exe.config
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.pdb
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.exe.config
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.xml
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.xml
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.xml
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Newtonsoft.Json.xml
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.pdb
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.xml
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csprojAssemblyReference.cache
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CopyComplete
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.dll
-D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
 D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -80,93 +38,189 @@ D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTest
 D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTests.csproj.CopyComplete
 D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 D:\School\Senior Project\SPY-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.exe
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.exe
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.exe
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.pdb
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.exe.config
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.pdb
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.exe.config
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.pdb
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.exe.config
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.xml
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.xml
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.xml
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.pdb
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.xml
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csprojAssemblyReference.cache
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CopyComplete
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.exe
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.exe
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.exe
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\MimeKit.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\MailKit.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.exe.config
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.exe.config
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.exe.config
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\MimeKit.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\MailKit.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csprojAssemblyReference.cache
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CopyComplete
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\MimeKit.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\MailKit.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\BouncyCastle.Crypto.dll
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\MimeKit.xml
-D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\MailKit.xml
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\DataAccessLayer.exe.config
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ManagerLayer.exe.config
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\ServiceLayer.exe.config
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.xml
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.xml
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csprojAssemblyReference.cache
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CopyComplete
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\Checkit_src\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\ApplicationInsights.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\DataAccessLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\EntityFramework.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\ManagerLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\ServiceLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\WebApi-CheckIt.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\MimeKit.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\MailKit.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Http.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Optimization.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Mvc.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Http.Cors.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Net.Http.Formatting.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Newtonsoft.Json.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Http.WebHost.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\BouncyCastle.Crypto.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.WebPages.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.WebPages.Razor.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Razor.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Cors.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\DataAccessLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\DataAccessLayer.exe.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\ManagerLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\ManagerLayer.exe.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\ServiceLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\ServiceLayer.exe.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\WebApi-CheckIt.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\WebApi-CheckIt.dll.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\EntityFramework.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\MimeKit.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\MailKit.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Http.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Optimization.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Mvc.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Http.Cors.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Net.Http.Formatting.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Newtonsoft.Json.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Http.WebHost.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.WebPages.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.WebPages.Razor.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Razor.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTests.csprojAssemblyReference.cache
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTests.csproj.CopyComplete
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\ApplicationInsights.config
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\DataAccessLayer.exe
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\EntityFramework.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\ManagerLayer.exe
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\ServiceLayer.exe
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\WebApi-CheckIt.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Newtonsoft.Json.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\MimeKit.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\MailKit.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Http.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Optimization.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Mvc.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Http.Cors.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Net.Http.Formatting.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Http.WebHost.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\BouncyCastle.Crypto.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.WebPages.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.WebPages.Razor.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Razor.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Cors.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\DataAccessLayer.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\DataAccessLayer.exe.config
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\ManagerLayer.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\ManagerLayer.exe.config
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\ServiceLayer.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\ServiceLayer.exe.config
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\WebApi-CheckIt.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\WebApi-CheckIt.dll.config
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\EntityFramework.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Newtonsoft.Json.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\MimeKit.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\MailKit.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Http.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Optimization.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Mvc.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Http.Cors.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Net.Http.Formatting.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Http.WebHost.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.WebPages.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.WebPages.Razor.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.Razor.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTests.csprojAssemblyReference.cache
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTests.csproj.CopyComplete
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
