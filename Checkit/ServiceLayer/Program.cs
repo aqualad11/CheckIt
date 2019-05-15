@@ -15,6 +15,9 @@ namespace CheckIt.ServiceLayer
     {
         static void Main(string[] args)
         {
+
+
+
            /*
             DataBaseContext db = new DataBaseContext();
             TokenService ts = new TokenService(db);

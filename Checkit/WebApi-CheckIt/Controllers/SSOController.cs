@@ -67,7 +67,7 @@ namespace CheckIt.WebApi_CheckIt.Controllers
                     
                     //Create Redirect response
                     //TODO: make sure our redirect is to our site
-                    string redirectUrl = "https://checkitspyderz.net";//https://checkitspyderz.net/home?token=1297yrh4fuhshf
+                    string redirectUrl = "https://checkitspyderz.net/#/ssologin?token="+token;
                     response = Request.CreateResponse(HttpStatusCode.Moved);
                     response.Headers.Location = new Uri(redirectUrl);
                     return response;

@@ -14,5 +14,6 @@ namespace CheckIt.ServiceLayer
         public static readonly string ADDUSER = "AddUser";
         public static readonly string UPDATEUSER = "UpdateUser";
         public static readonly string DELETEUSER = "DeleteUser";
+        public static readonly string GETUSER = "GetUser";
     }
 }

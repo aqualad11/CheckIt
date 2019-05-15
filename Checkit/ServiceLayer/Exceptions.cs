@@ -72,4 +72,10 @@ namespace CheckIt.ServiceLayer
         public AddFailedException() { }
         public AddFailedException(string message) : base(message) { }
     }
+
+    public class DeleteFailedException : Exception
+    {
+        public DeleteFailedException() { }
+        public DeleteFailedException(string message) : base(message) { }
+    }
 }

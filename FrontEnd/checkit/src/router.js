@@ -38,6 +38,12 @@ export default new Router({
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
+      path: "/ssologin",
+      name: "home",
+      component: Home,
+      props: (route) => ({token: route.query.token})
+    },
+    {
       path: "/login",
       name: "login",
       component: Login

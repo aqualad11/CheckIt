@@ -65,6 +65,7 @@ namespace CheckIt.ServiceLayer
         {
             try
             {
+                itemlist = itemListRepo.GetItemList(itemlist.userID, itemlist.itemID);
                 itemListRepo.RemoveItemList(itemlist);
                 return true;
             }

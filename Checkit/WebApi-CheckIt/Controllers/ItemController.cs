@@ -24,7 +24,10 @@ namespace CheckIt.WebApi_CheckIt.Controllers
                 var itemManager = new ItemManager(db);
                 try
                 {
-                    itemManager.UpdateItem(item.itemName, item.price, item.url, item.picKey);
+                    //Fix double format
+                    item.price = item.price.Replace(@"$", "");
+
+                    itemManager.UpdateItem(item.itemName, Convert.ToDouble(item.price), item.url, item.picKey);
                 }catch(Exception)
                 {
 
@@ -43,7 +46,10 @@ namespace CheckIt.WebApi_CheckIt.Controllers
                 var itemManager = new ItemManager(db);
                 try
                 {
-                    itemManager.UpdateItemAndAlert(item.itemName, item.price);
+                    //Fix double format
+                    item.price = item.price.Replace(@"$", "");
+
+                    itemManager.UpdateItemAndAlert(item.itemName, Convert.ToDouble(item.price));
                     response.StatusCode = HttpStatusCode.OK;
                     return response;
                 }catch(ItemDoesNotExistException e)
