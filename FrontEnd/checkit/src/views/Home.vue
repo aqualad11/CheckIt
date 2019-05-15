@@ -12,19 +12,23 @@
             <SearchBar />
 
 
-            <!--Eventually use this div, this removes the buttons if user is logged in
-            <div v-if="!User.token" style="margin: 4em 1em"> -->
-            <div style="margin: 4em 1em">
-              <br>
-              <v-btn href="https://kfc-sso.com/#/register" depressed>Register</v-btn>
-              or
-              <v-btn href="https://kfc-sso.com/#/login" depressed>Sign In</v-btn>
-                          
-            <v-divider></v-divider>
+            <!--Eventually use this div, this removes the buttons if user is logged in-->
+            <div v-if="token === undefined" style="margin: 4em 1em"> 
+              <div style="margin: 4em 1em">
+                <br>
+                <v-btn @click="register" depressed>Register</v-btn>
+                or
+                <v-btn @click="login" depressed>Sign In</v-btn>
+                            
+              <v-divider></v-divider>
+              </div>
             </div>
+            <div v-else>
 
-            <!--TODO: SHOW THIS BUTTON AFTER LOG IN-->
-            <v-btn router to="/watchlist">View My Watchlist</v-btn>
+              <!--TODO: SHOW THIS BUTTON AFTER LOG IN-->
+              <v-btn @click="getWatchlist">View My Watchlist</v-btn>
+              
+            </div>
 
 
           </v-layout>
@@ -37,10 +41,64 @@
 <script>
 
 import SearchBar from "@/components/SearchBar.vue";
+import axios from "axios";
+const API_URL = 'http://localhost:58881';
+
 export default {
   name: "home",
+  props:['token'],
+  data() {
+    return {
+      //token: "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJhNGQ1ODVkMC05NTc0LWU5MTEtYWEwMy0wMjE1OThlOWVjOWUiLCJlbWFpbCI6ImpvbmF0aGFuYXNjZW5jaW8uamFAZ21haWwuY29tIiwiY2xpZW50IjoiIiwiaGVpZ2h0IjoiMiIsImV4cCI6MTU1NzkwMTkxMiwiaXNzIjoiQ2hlY2tJdC5ncSJ9.yqAfEwpjdXoec5E3n1X9vShmVp2ZgfQBQX7nkFxSD-Y",
+      watchlist: []
+    }
+  },
   components: {
     SearchBar
+  },
+  methods: {
+    login(){
+      axios.get(API_URL + "/api/user/login")
+      .then(response => {
+        alert("You will be redirected to kft-sso.com to login.")
+        window.location.assign(response.data)
+      })
+      .catch(err =>{
+        console.log(err.data)
+      })
+    },
+    register(){
+      axios.get(API_URL + "/api/user/register")
+      .then(response => {
+        console.log("in then")
+        alert("You will be redirected to kft-sso.com to register.")
+        window.location.assign(response.data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    },
+    getWatchlist()
+    {
+      this.$router.push({
+        name: "watchlist",
+        params: {
+          token: this.token
+        }
+      })
+    }
+  },
+  beforeMount(){
+    console.log("before if. token = " + this.token);
+    if(this.token !== undefined)
+    {
+      var str = this.token.split('.');
+      console.log("in before mount. str = " + str);
+      if(str.length !== 3)
+      {
+        this.token = undefined;
+      }
+    }
   }
 };
 </script>

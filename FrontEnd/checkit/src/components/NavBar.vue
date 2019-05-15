@@ -2,8 +2,11 @@
   <div>
     <!-- The entire navbar options and dropdown menu (navigation hamburger) -->
     <v-toolbar class="hidden-sm-and-down" style="padding: 0 2em; color: white; background: linear-gradient(to right, #9D8C0E, #000);">
-      <v-toolbar-title>CheckIt</v-toolbar-title>
+      
+      <!--Logo click-->
+      <v-btn title size="14" color="white" flat big round to="/">Check It</v-btn>
       <v-spacer></v-spacer>
+
       <!-- Displays the links that route to other pages -->
       <v-toolbar-items v-for="(route, index) in pageRoutes" :key="index">
         <v-btn :to="route.link" flat>
@@ -46,7 +49,6 @@ export default {
       pageRoutes: [
         { title: "Home", link: "/" },
         { title: "Account", link: "/admin" },
-        { title: "About Us", link: "/about" }
       ]
     };
   }

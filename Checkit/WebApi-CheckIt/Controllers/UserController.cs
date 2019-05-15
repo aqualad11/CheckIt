@@ -117,6 +117,65 @@ namespace CheckIt.WebApi_CheckIt.Controllers
                 }
             }
         }
+
+        [HttpPost]
+        [Route("api/user/deleteitemfromlist")]
+        public HttpResponseMessage DeleteItemFromList([FromBody] ItemDTO item)
+        {
+            var response = new HttpResponseMessage();
+            if (item.jwt == null)
+            {
+                response.Content = new StringContent("JWT is null.");
+                response.StatusCode = HttpStatusCode.Conflict;
+                return response;
+            }
+
+            using (var db = new DataBaseContext())
+            {
+                try
+                {
+                    TokenManager tokenManager = new TokenManager(db);
+
+                    //Validate Token
+                    string newJWT = tokenManager.ValidateToken(item.jwt);
+                    //if jwt not valid redirect to SSO login
+                    if (newJWT == null)
+                    {
+                        response = Request.CreateResponse(HttpStatusCode.Moved);
+                        response.Content = new StringContent("https://kfc-sso.com/#/login");
+                        return response;
+                    }
+
+                    //Athorize
+                    AuthorizationManager authManager = new AuthorizationManager(db);
+                    if (!authManager.AuthorizeAction(newJWT, Actions.WISHLIST))
+                    {
+                        response.Content = new StringContent("User in unauthorized to access watchlist.");
+                        response.StatusCode = HttpStatusCode.Unauthorized;
+                    }
+
+                    Guid userID = tokenManager.ExtractUserID(newJWT);
+
+                    //Remove item to list
+                    ItemManager itemManager = new ItemManager(db);
+                    itemManager.RemoveItemFromList(item.itemName, item.price, item.url, item.picKey, userID);
+
+                    //create and return response
+                    response.Content = new StringContent(newJWT);
+                    response.StatusCode = HttpStatusCode.OK;
+                    return response;
+
+                }
+                catch(Exception e)
+                {
+                    response.Content = new StringContent(e.Message);
+                    response.StatusCode = HttpStatusCode.Conflict;
+                    return response;
+                }
+
+            }
+
+        }
         
         //TODO: Test
         [HttpGet]

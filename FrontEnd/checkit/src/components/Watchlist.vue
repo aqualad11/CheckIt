@@ -1,105 +1,101 @@
 <template>
-  <v-layout row>
-    <v-flex xs12 sm6 offset-sm3>
-      <v-card>
-        <v-toolbar color="black" dark>
-          <v-toolbar-side-icon></v-toolbar-side-icon>
+  <div class="watchlist">
 
-          <v-toolbar-title>My Watchlist</v-toolbar-title>
+    <v-container class="my-4">
 
-          <v-spacer></v-spacer>
+  
 
 
-        </v-toolbar>
 
-        <v-list>
-          <v-list-group
-            v-for="item in items"
-            :key="item.title"
-            v-model="item.active"
-            :prepend-icon="item.action"
-            no-action
-          >
+      <v-toolbar-title>My Watchlist</v-toolbar-title>
 
-          
-            <template v-slot:activator>
-              
-              <v-list-tile>
-                
-                <v-list-tile-content>
-                  <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
-            </template>
+    <v-flex xs2 sm4 md8>
 
-            <v-list-tile
-              v-for="subItem in item.items"
-              :key="subItem.title"
-              
-            >
-              <v-list-tile-content>
-                <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
-              </v-list-tile-content>
+      <v-card flat v-for="item in watchlist" :key="item.name">
+        
+        <v-layout row wrap :class="`pa-3 user ${item.status}`">
 
-              <!--Trigger price input box-->
-          <v-flex xs5 sm4 md3>
-            <v-text-field
-               label="price"
-                outline
-                value="$"
-            ></v-text-field>
-           </v-flex>
+          <v-flex xs2 sm2 md6>
+            <div class="caption grey--text">Item</div>
+            <div>{{ item.ItemName }}</div>
+          </v-flex>
 
-        <!--Set button-->
-           <v-btn small round color="primary" dark>Set</v-btn>
+          <v-flex xs4 sm4 md2>
+            <div class="caption grey--text">Price</div>
+            <div>{{ item.price }}</div>
+          </v-flex>
 
-              <v-list-tile-action>
-                <v-icon>{{ subItem.action }}</v-icon>
-              </v-list-tile-action>
-            </v-list-tile>
-          </v-list-group>
-        </v-list>
+         
+          <v-flex xs2 sm2 md1>
+            <!--Make Delete method-->
+            <v-btn small round color="red" @click="deleteItem(item)">delete</v-btn>
+          </v-flex>
+
+        </v-layout>
+        <v-divider></v-divider>
       </v-card>
     </v-flex>
-  </v-layout>
+
+    </v-container>
+   
+  </div>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        items: [
-          {
-            action: 'remove',
-            title: 'Item 1',
-            items: [
-              { title: 'Trigger Price' }
-            ]
-          },
-          {
-            action: 'local_activity',
-            title: 'Item 2',
-            items: [
-              { title: 'Trigger Price' }
-            ]
-          },
-          {
-            action: 'local_activity',
-            title: 'Item 3',
-            items: [
-              { title: 'Trigger Price' }
-            ]
-          },
-          {
-            action: 'local_activity',
-            title: 'Item 4',
-            items: [
-              { title: 'Trigger Price' }
-            ]
-          }
+import axios from "axios";
+const API_URL = 'http://localhost:58881';
 
-        ]
-      }
+export default {
+  name: "watchlist",
+  data() {
+    return {
+      watchlist: [],
+      token: this.$route.params.token
     }
+  },
+  methods: {
+    deleteItem(item) {
+      axios.post(API_URL + "/api/user/deleteitemfromlist", {
+          "itemName": item.ItemName,
+          "price": item.price,
+          "url": item.url,
+          "picKey": item.picKey,
+          "jwt": this.token
+      })
+      .then(response => {
+        this.token = response.data,
+        console.log("Statuscode = " + response.status)
+      })
+      .catch(err => {
+        console.log("error = " + err)
+        console.log("error content = " + err.response.data)
+      })
+    }
+  },
+  beforeMount() {
+    if(this.token === undefined){
+      this.token = localStorage.getItem("token")
+    }
+    axios.get(API_URL + "/api/user/getwatchlist", {
+      headers: {
+        token: this.token
+      }
+    })
+    .then(response => {
+      this.watchlist = response.data.items,
+      this.token = response.data.jwt,
+      localStorage.setItem("token", this.token)
+    })
+    .catch(err => {
+      if(err.response.status == 301)
+      {
+        alert("Your session has expired you will be send to kft-sso.com to sign back in.")
+        window.location.assign(err.response.data)
+      }
+      console.log("error = " + err),
+      console.log("error content = " + err.response.data)
+    })
   }
+}
 </script>
+

@@ -84,6 +84,21 @@ namespace CheckIt.ManagerLayer
             }
         }
 
+        public void RemoveItemFromList(string itemName, double price, string url, string picKey, Guid userID)
+        {
+            var item = itemService.GetItem(itemName);
+            if (item == null)
+            {
+                throw new ItemDoesNotExistException("Item " + itemName + " does not exist.");
+            }
+
+            ItemList itemlist = new ItemList(userID, item.itemID);
+            if (!itemlistService.RemoveItemList(itemlist))
+            {
+                throw new DeleteFailedException("Could not remove item from list.");
+            }
+        }
+
         public List<Item> GetItemsFromWatchList(Guid userID)
         {
             return itemlistService.GetItemsByUserID(userID);

@@ -20,7 +20,7 @@
           </v-list-tile>
         </template>
 
-        <v-list-tile v-for="(crudItem, i) in cruds" :key="i" @click="$emit('usermanager')">
+        <v-list-tile v-for="(crudItem, i) in cruds" :key="i" to="/usermanager">
           <v-list-tile-title v-text="crudItem[0]"></v-list-tile-title>
             <v-list-tile-action>
               <v-icon v-text="crudItem[1]"></v-icon>
@@ -56,10 +56,7 @@
 export default {
   data: () => ({
     cruds: [
-        ['Create', 'add', 'usermanager'],
-        ['Read', 'insert_drive_file', 'readuser'],
-        ['Update', 'update', 'updateuser'],
-        ['Delete', 'delete', 'deleteuser']
+        ['CRUDS', 'add', '/usermanager'],
     ],
     analytics: [
         ['UAD', 'info', 'analytics'],

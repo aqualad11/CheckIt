@@ -31,10 +31,9 @@ namespace CheckIt.ServiceLayer
             //add any new actions for users here
             List<UserAction> actions = new List<UserAction>()
             {
-                new UserAction(userID, "Search"),
-                new UserAction(userID, "Watchlist"),
-                new UserAction(userID, "SeeData"),
-                new UserAction(userID, "DeleteSelf")
+                new UserAction(userID, Actions.SEARCH),
+                new UserAction(userID, Actions.WISHLIST),
+                new UserAction(userID, Actions.DELETESELF)
             };
 
             foreach(UserAction ua in actions)
@@ -49,10 +48,13 @@ namespace CheckIt.ServiceLayer
             //TODO: Add admin actions
             List<UserAction> actions = new List<UserAction>()
             {
-                new UserAction(adminID, "Search"),
-                new UserAction(adminID, "Watchlist"),
-                new UserAction(adminID, "SeeData"),
-                new UserAction(adminID, "DeleteSelf")
+                //new UserAction(adminID, Actions.SEARCH),
+                new UserAction(adminID, Actions.WISHLIST),
+                //new UserAction(adminID, Actions.DELETESELF),
+                new UserAction(adminID, Actions.ADDUSER),
+                new UserAction(adminID, Actions.UPDATEUSER),
+                new UserAction(adminID, Actions.DELETEUSER),
+                new UserAction(adminID, Actions.GETUSER)
             };
 
             foreach (UserAction ua in actions)
