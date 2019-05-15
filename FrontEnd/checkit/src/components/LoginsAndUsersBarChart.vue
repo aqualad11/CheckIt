@@ -1,4 +1,6 @@
 <script>
+  //AXIOS WILL SPLIT 24 List into 2-12 Lists
+
   //Importing Bar class from the vue-chartjs wrapper
   import { Bar } from 'vue-chartjs'
   //Exporting this so it can be used in other components

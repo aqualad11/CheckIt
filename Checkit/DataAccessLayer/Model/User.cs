@@ -34,14 +34,20 @@ namespace CheckIt.DataAccessLayer
         public bool active { get; set; }
         public bool trackTelData { get; set; }
        
+        public DateTime createdAt { get; set; }
 
 
-        //[ForeignKey("UserActions")]
+        
         public virtual List<UserAction> userActions { get; set; }
+        public virtual List<ItemList> itemsList { get; set; }
         
 
         public User()
         {
+            active = true;
+            userActions = new List<UserAction>();
+            itemsList = new List<ItemList>();
+            createdAt = DateTime.UtcNow;
         }
 
         /// <summary>
@@ -63,7 +69,10 @@ namespace CheckIt.DataAccessLayer
             this.parentID = parentID;
             ssoID = null;
             userActions = new List<UserAction>();
-            
+            itemsList = new List<ItemList>();
+            createdAt = DateTime.UtcNow;
+
+
         }
 
         /// <summary>
@@ -82,6 +91,7 @@ namespace CheckIt.DataAccessLayer
             parentID = null;
             this.ssoID = ssoID;
             userActions = new List<UserAction>();
+            createdAt = DateTime.UtcNow;
 
         }
 

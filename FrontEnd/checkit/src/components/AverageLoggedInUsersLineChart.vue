@@ -1,26 +1,16 @@
 <script>
   //Importing Line class from the vue-chartjs wrapper
-  import { Line } from 'vue-chartjs'
+  import { Line, mixins } from 'vue-chartjs'
+  import axios from 'axios';
+  const API_URL = 'http://localhost:58881'
+
   //Exporting this so it can be used in other components
   export default {
     extends: Line,
+    mixins: [mixins.reactiveData],
     data () {
       return {
-        datacollection: {
-          //Data to be represented on x-axis
-          labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-          datasets: [
-            {
-              label: 'Logged in Users',
-              backgroundColor: '#455A64',
-              pointBackgroundColor: 'white',
-              borderWidth: 1,
-              pointBorderColor: '#249EBF',
-              //Data to be represented on y-axis
-              data: [20, 50, 40, 25, 62, 81]
-            }
-          ]
-        },
+        linedata: {},
         //Chart.js options that controls the appearance of the chart
         options: {
           scales: {
@@ -44,11 +34,35 @@
           responsive: true,
           maintainAspectRatio: false
         }
-      }
+      };
     },
-    mounted () {
-      //renderChart function renders the chart with the datacollection and options object.
-      this.renderChart(this.datacollection, this.options)
+    created () {
+      axios.get(API_URL + "/api/admin/GetChart" ,{
+          params:{
+          chartName: 'AverageLoggedInUsersLineChart',
+        } ,
+        headers: {
+          token: this.userToken
+        }
+      }).then(response => {
+          this.linedata ={
+              //Data to be represented on x-axis
+              labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+              datasets: [
+                {
+                  label: 'Logged in Users',
+                  backgroundColor: '#455A64',
+                  pointBackgroundColor: 'white',
+                  borderWidth: 1,
+                  pointBorderColor: '#249EBF',
+                  //Data to be represented on y-axis
+                  data: response.data
+                }
+              ]
+            },
+            //console.log(this.linedata)
+            this.renderChart(this.linedata, this.options)
+      })
     }
   }
 </script>

@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
-
-
-
+using MongoDB.Driver;
+using System.Configuration;
 
 
 namespace CheckIt.DataAccessLayer
@@ -20,7 +19,6 @@ namespace CheckIt.DataAccessLayer
         public DbSet<ItemList> ItemLists { get; set; }
         public DbSet<Token> Tokens { get; set; }
 
-        //
         
         public DataBaseContext()
         {
@@ -36,6 +34,19 @@ namespace CheckIt.DataAccessLayer
             this.Database.Connection.ConnectionString = "Data Source="+hostname+";Initial Catalog=" + dbname+";User ID=" + uName+ ";Password="+password+";";
             
         }
+      
+    }
+    public class MongoContext
+    {
 
+        public IMongoDatabase database;
+
+        public MongoContext()
+        {
+            //string MongoAtlasConnection = ConfigurationManager.AppSettings["MongoAtlasConnection"];
+            var client = new MongoClient("mongodb+srv://Bryan:Boomer911;@checkit-zqlo7.mongodb.net/test?retryWrites=true");
+            //ConfigurationManager.AppSettings["MongoDataBaseName"]
+            database = client.GetDatabase("CheckIt");
+        }
     }
 }

@@ -27,6 +27,18 @@ namespace CheckIt.DataAccessLayer.Repositories
             Token token = db.Tokens.Where(t => t.jwt == jwt && t.userID == userID).FirstOrDefault();
             return token;
         }
+        
+        //TODO: Run tests for this method
+        /// <summary>
+        /// Gets all tokens from database for a user
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <returns>List of Tokens</returns>
+        public List<Token> GetAllTokens(Guid userID)
+        {
+            List<Token> tokens = db.Tokens.Where(t => t.userID == userID).ToList();
+            return tokens;
+        }
 
         /// <summary>
         /// Addes Token to the database

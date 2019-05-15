@@ -1,33 +1,3 @@
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.exe.config
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.exe
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.pdb
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.exe
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.dll
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Newtonsoft.Json.dll
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.exe
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\EntityFramework.dll
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.pdb
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.exe.config
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.pdb
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.exe.config
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.pdb
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.xml
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.xml
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Newtonsoft.Json.xml
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\EntityFramework.xml
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csprojAssemblyReference.cache
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CoreCompileInputs.cache
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CopyComplete
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.exe
-D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.pdb
 D:\School\Senior Project\SPY-CheckIt\Checkit\ManagerLayer\bin\Debug\ManagerLayer.exe.config
 D:\School\Senior Project\SPY-CheckIt\Checkit\ManagerLayer\bin\Debug\ManagerLayer.exe
 D:\School\Senior Project\SPY-CheckIt\Checkit\ManagerLayer\bin\Debug\ManagerLayer.pdb
@@ -56,51 +26,141 @@ D:\School\Senior Project\SPY-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer
 D:\School\Senior Project\SPY-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.csproj.CopyComplete
 D:\School\Senior Project\SPY-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.exe
 D:\School\Senior Project\SPY-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.exe.config
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.exe
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.exe
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\Newtonsoft.Json.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.exe
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IO.Compression.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\MimeKit.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\MailKit.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.exe.config
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.exe.config
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\Newtonsoft.Json.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\MimeKit.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\bin\Debug\MailKit.xml
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csprojAssemblyReference.cache
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CoreCompileInputs.cache
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CopyComplete
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.exe
-C:\Users\candap1\Documents\GitHub\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.exe.config
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\EntityFramework.dll
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.exe.config
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.pdb
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.exe.config
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\EntityFramework.xml
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csprojAssemblyReference.cache
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CoreCompileInputs.cache
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CopyComplete
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.exe
+D:\Checkit_src\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\ManagerLayer.exe.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\ManagerLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\ManagerLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\DataAccessLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\EntityFramework.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Newtonsoft.Json.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\ServiceLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\MimeKit.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\MailKit.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\BouncyCastle.Crypto.dll
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\DataAccessLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\DataAccessLayer.exe.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\ServiceLayer.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\ServiceLayer.exe.config
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\EntityFramework.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\Newtonsoft.Json.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\MimeKit.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\bin\Debug\MailKit.xml
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.csprojAssemblyReference.cache
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.csproj.CoreCompileInputs.cache
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.csproj.CopyComplete
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.exe
+D:\School\Senior Project\Aqualad11-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\ManagerLayer.exe.config
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\ManagerLayer.exe
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\ManagerLayer.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\DataAccessLayer.exe
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\EntityFramework.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\Newtonsoft.Json.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\ServiceLayer.exe
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\MimeKit.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\MailKit.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\BouncyCastle.Crypto.dll
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\DataAccessLayer.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\DataAccessLayer.exe.config
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\ServiceLayer.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\ServiceLayer.exe.config
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\EntityFramework.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\Newtonsoft.Json.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\MimeKit.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\bin\Debug\MailKit.xml
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.csprojAssemblyReference.cache
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.csproj.CoreCompileInputs.cache
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.csproj.CopyComplete
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.exe
+D:\School\Senior Project\Aqualad-CheckIt\Checkit\ManagerLayer\obj\Debug\ManagerLayer.pdb
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.exe.config
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.exe
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\ManagerLayer.pdb
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Data.Common.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Diagnostics.StackTrace.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Diagnostics.Tracing.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Globalization.Extensions.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IO.Compression.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Net.Http.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Net.Sockets.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Runtime.Serialization.Primitives.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Security.Cryptography.Algorithms.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Security.SecureString.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Threading.Overlapped.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Xml.XPath.XDocument.dll
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.exe
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\DnsClient.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\EntityFramework.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\EntityFramework.SqlServer.dll
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.dll
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\MongoDB.Bson.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\MongoDB.Driver.Core.dll
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\MongoDB.Driver.dll
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Newtonsoft.Json.dll
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.exe
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Buffers.dll
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IO.Compression.dll
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\MimeKit.dll
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\MailKit.dll
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\BouncyCastle.Crypto.dll
@@ -108,18 +168,26 @@ D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.pdb
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\DataAccessLayer.exe.config
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.pdb
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\ServiceLayer.exe.config
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\DnsClient.xml
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\EntityFramework.xml
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\EntityFramework.SqlServer.xml
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.pdb
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Logging.xml
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.pdb
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\MongoDB.Bson.xml
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\MongoDB.Driver.xml
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\MongoDB.Driver.Core.xml
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.Buffers.xml
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\MimeKit.xml
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\bin\Debug\MailKit.xml
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csprojAssemblyReference.cache
+D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.exe.config
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CoreCompileInputs.cache
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.csproj.CopyComplete
 D:\Documents\Github\CheckIt\CheckIt\ManagerLayer\obj\Debug\ManagerLayer.exe
