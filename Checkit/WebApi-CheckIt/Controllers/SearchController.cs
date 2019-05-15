@@ -46,9 +46,23 @@ namespace WebApi_CheckIt.Controllers
             var targetCollection = "";
             MongoContext _db = new MongoContext();
             SearchManager _sm = new SearchManager(_db);
-            string list = "Fuck";
+            //string list = "Fuck";
 
-
+			List<List<BsonDocument>> items = new List<List<BsonDocument>>();
+			List<BsonDocument> nullTest;
+			List<BsonDocument> list = new List<BsonDocument>();
+			if ((list = _sm.SearchAmazonQuery(searchQuery, _db)).Count() != 0)
+			{
+				items.Add(list);
+			}
+			if ((list = _sm.searchBestBuyQuery(searchQuery, _db)).Count() != 0)
+			{
+				items.Add(list);
+			}
+			if ((list = _sm.searchTargetQuery(searchQuery, _db)).Count() != 0)
+			{
+				items.Add(list);
+			}
             //List<string> returnResult = new List<string>();
             IEnumerable testList = _sm.SearchAmazonQuery(searchQuery, _db);
             //returnResult.Add(_sm.SearchAmazonQuery(rsearchQuery, _db));
@@ -56,7 +70,7 @@ namespace WebApi_CheckIt.Controllers
             ////list.Add(_sm.SearchTargetQuery(request.searchQuery, _db);
             //IEnumerable<string> testList = returnResult.AsEnumerable();
             //return Content((HttpStatusCode)200, testList);
-            response.Content = new StringContent(JsonConvert.SerializeObject(_sm.SearchAmazonQuery(searchQuery, _db)), System.Text.Encoding.UTF8, "application/json");
+            response.Content = new StringContent(JsonConvert.SerializeObject(items), System.Text.Encoding.UTF8, "application/json");
             response.StatusCode = HttpStatusCode.OK;
             return response;
         }

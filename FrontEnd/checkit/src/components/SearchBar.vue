@@ -78,8 +78,8 @@ const API_URL = 'http://localhost:58881';
         return {
       searchQuery: null,
       userToken: "yes",
-      amazonItems: null  
-    };
+      Items: null,
+    };  
     },
     methods: {
       clickMe () {
@@ -93,12 +93,12 @@ const API_URL = 'http://localhost:58881';
         }
         })
         .then(response => {
-            this.amazonItems = response.data;
-            console.log(this.amazonItems);
+            this.Items = response.data;
+            //console.log(this.Items[0][1][3].Value);
             this.$router.push({
               name: "ItemList",
               params: {
-                amazonItem : this.amazonItems
+                Item : this.Items
             }
             })
         })
@@ -106,6 +106,13 @@ const API_URL = 'http://localhost:58881';
             console.log(err)
         })
       }
+    },
+    watch: {
+      Items: function() {
+      return this.Items.filter(function(Item) {
+        return item !== null;
+      });
+    }
     }
   }
 </script>
