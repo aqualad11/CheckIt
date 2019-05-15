@@ -38,7 +38,7 @@
         },
         methods: {
             login() {
-               axios.post('http://localhost:60461/api/users/login',
+               axios.post('Backend',
                {
                     email: this.input.username,
                     password: this.input.password

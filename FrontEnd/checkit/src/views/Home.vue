@@ -88,13 +88,20 @@ export default {
     }
   },
   beforeMount(){
+    console.log("home token: " + this.token)
     if(this.token === undefined)
     {
-      this.token = localStorage.getItem("token")
+      var localToken = localStorage.getItem("token");
+      if(localToken !== null)
+      {
+        this.token = localToken
+      }
+      console.log("home token: " + this.token)
     }
 
-    if(this.token !== undefined)
+    if(this.token !== undefined && this.token !== null)
     {
+      console.log("in if")
       axios.get(API_URL + "/api/user/validatetoken", {
         params: {
           jwt: this.token
@@ -108,6 +115,7 @@ export default {
       .catch(err => {
         this.token = undefined,
         localStorage.removeItem("token")
+        console.log("catch err " + err)
       })
     }
   }
