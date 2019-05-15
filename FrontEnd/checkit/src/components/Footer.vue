@@ -31,6 +31,6 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 .footer {
   color: white;
-  background: linear-gradient(to right, #9D8C0E, #000);
+  background: linear-gradient(to right, #80d0c7, #13547a);
 }
 </style>
