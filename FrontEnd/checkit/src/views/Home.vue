@@ -16,16 +16,15 @@
             <div v-if="!User.token" style="margin: 4em 1em"> -->
             <div style="margin: 4em 1em">
               <br>
-              <v-btn href="https://kfc-sso.com/#/register" depressed>Register</v-btn>
-              or
-              <v-btn href="https://kfc-sso.com/#/login" depressed>Sign In</v-btn>
-                          
+              <v-btn href="https://kfc-sso.com/#/register" round >Register</v-btn>
+              
+              <v-btn href="https://kfc-sso.com/#/login" round>Sign In</v-btn>
             <v-divider></v-divider>
             </div>
 
             <!--TODO: SHOW THIS BUTTON AFTER LOG IN-->
-            <v-btn router to="/watchlist">View My Watchlist</v-btn>
-
+            <v-btn router to="/watchlist" round>View My Watchlist</v-btn>
+          <v-divider></v-divider>
 
           </v-layout>
        

@@ -1,24 +1,137 @@
 <template>
-  <div class="UserManagerTable">
-    <v-toolbar flat color="white">
+  <div class="usermanager">
+
+    <v-container class="my-4">
+
       <v-toolbar-title>User Manager</v-toolbar-title>
-      <v-divider class="mx-2" inset vertical></v-divider>
-      <v-spacer></v-spacer>
-      <v-dialog v-model="dialog" max-width="600px">
-        <template v-slot:activator="{on}">
 
-          <v-btn @click="refreshForm" small round color="primary" dark class="mb-2" v-on="on">New User</v-btn>
+
+<!--This dialog box is what pops up when clicked edit or delete-->
+<v-dialog v-model="newuserdialog" max-width="600px">
+
+      <!--Button to open up form-->
+       <template v-slot:activator="{on}">
+          <v-btn @click="refreshForm" round color="primary" dark class="mb-2" v-on="on">New User</v-btn>
         </template>
-        <v-card>
 
+        <v-card>
           <v-card-title>
-            <span class="headline">{{formTitle}}</span>
+            <span class="headline">New User</span>
+          </v-card-title>
+
+          <v-card-text>
+            <v-container grid-list-md>
+              <v-layout wrap>
+          <!--ID Input Text-->
+                <v-flex xs12 sm6 md4>
+                  <v-text-field
+                    v-model="userid"
+                    label="UserID"
+                    required
+                  ></v-text-field>
+                </v-flex>
+            <!--Email Input Text-->
+                <v-flex xs6 sm6 md4>
+                  <v-text-field
+                    v-model="email"
+                    label="Email"
+                    required
+                  ></v-text-field>
+                </v-flex>
+
+                <!--Account Type Selector-->
+                <v-select
+                  :items="accounttype"
+                  label="Account Type"
+                ></v-select>
+
+
+          <!--Telemetry Switch-->
+              <v-switch
+                v-model="telSwitch"
+                color="primary"
+                :label="`Telemetry: ${telSwitch.toString()}`"
+                ></v-switch>
+
+            <!--Status Switch-->
+              <v-switch
+                v-model="status"
+                color="primary"
+                :label="`Active: ${status.toString()}`"
+                ></v-switch>
+
+            <!--Feel free to add/delete text fields,switches, whatever is necessary-->
+
+
+              </v-layout>
+            </v-container>
+          </v-card-text>
+          <v-card-actions>
+            
+
+            <v-btn color="blue darken-1" flat click.native="dialog = false">Cancel</v-btn>
+            
+            <!--TODO: Make confirm method-->
+            <v-btn color="blue darken-1" flat @click="confirm">Confirm</v-btn>
+          
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+      <!--End dialog box-->
+      
+
+
+<!--USER MANAGER TABLE STARTS HERE-->
+
+      <v-card flat v-for="user in users" :key="user.uid">
+        
+        <v-layout row wrap :class="`pa-3 user ${user.status}`">
+
+          <v-flex xs2 sm2 md2>
+            <div class="caption grey--text">User ID</div>
+            <div>{{ user.uid }}</div>
+          </v-flex>
+
+          <v-flex xs4 sm4 md2>
+            <div class="caption grey--text">Email</div>
+            <div>{{ user.email }}</div>
+          </v-flex>
+
+          <v-flex xs2 sm2 md2>
+            <div class="caption grey--text">Telemetry</div>
+            <div>{{ user.dataCollection }}</div>
+          </v-flex>
+
+          <v-flex xs2 sm2 md2>
+            <div class="caption grey--text">Account Type</div>
+            <div>{{ user.accountType }}</div>
+          </v-flex>
+
+          <v-flex xs2 sm2 md2>
+            <div class="caption grey--text">Status</div>
+            <div>{{ user.status }}</div>
+          </v-flex>
+
+          <v-flex xs2 sm2 md1>
+            
+      <!--EDIT USER dialog box-->
+
+    <v-dialog v-model="edituserdialog" max-width="600px">
+      <!--Button to open up form-->
+       <template v-slot:activator="{on}">
+          <v-btn @click="refreshForm" small round color="primary" dark class="mb-2" v-on="on">Edit</v-btn>
+        </template>
+
+        <v-card>
+          <v-card-title>
+            <span class="headline">Edit User</span>
           </v-card-title>
 
           <v-card-text>
             <v-container grid-list-md>
               <v-layout wrap>
 
+          <!--ID Input Text-->
                 <v-flex xs12 sm6 md4>
                   <v-text-field
                     v-model="userid"
@@ -27,226 +140,134 @@
                   ></v-text-field>
                 </v-flex>
 
+            <!--Email Input Text-->
                 <v-flex xs12 sm6 md4>
                   <v-text-field
-                    v-model="username"
-                    label="Username"
+                    v-model="email"
+                    label="Email"
                     required
                   ></v-text-field>
                 </v-flex>
 
-                <v-flex xs12 sm6 md4>
-                  <v-text-field
-                    v-model="editedProduction.directorFirstName"
-                    label="Created"
-                    required
-                  ></v-text-field>
-                </v-flex>
+                <!--Account Type Selector-->
+                <v-select
+                  :items="accounttype"
+                  label="Account Type"
+                ></v-select>
+
+
+          <!--Telemetry Switch-->
+              <v-switch
+                v-model="telSwitch"
+                color="primary"
+                :label="`Telemetry: ${telSwitch.toString()}`"
+                ></v-switch>
+
+            <!--Status Switch-->
+              <v-switch
+                v-model="status"
+                color="primary"
+                :label="`Active: ${status.toString()}`"
+                ></v-switch>
+
+            <!--Feel free to add/delete text fields,switches, whatever is necessary-->
 
 
               </v-layout>
             </v-container>
           </v-card-text>
           <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn color="blue darken-1" flat @click="close, refreshForm">Cancel</v-btn>
+            
+
+            <v-btn color="blue darken-1" flat click.native="dialog = false">Cancel</v-btn>
+            
+            <!--TODO: Make confirm method-->
             <v-btn color="blue darken-1" flat @click="confirm">Confirm</v-btn>
+          
           </v-card-actions>
         </v-card>
       </v-dialog>
-    </v-toolbar>
+      <!--End edit dialog box-->
 
-    <v-data-table :headers="headers" :items="productions" class="elevation-1">
-      <template v-slot:items="props">
 
-          <a @click="editProduction(props.item), refreshForm">
-            <v-btn small round color="primary" dark alt="Edit">Edit</v-btn>
-          </a>
-        </td>
-        <td>
-          <a v-on:click="deleteProduction(props.item.ProductionID)">
-            <v-btn small round color="primary" dark alt="Delete">Delete</v-btn>
-          </a>
-        </td>
+      <!--Delete Button-->
+            <v-btn small round color="primary" @click="deleteUser">delete</v-btn>
+          </v-flex>
 
-      </template>
-    </v-data-table>
+        </v-layout>
+        <v-divider></v-divider>
+      </v-card>
+
+    </v-container>
+   
   </div>
 </template>
 
-
-
 <script>
-import axios from "axios";
+
+const API_URL = 'Backend';
+
 export default {
-  name: "UserManager",
   data() {
     return {
-      productions: [],
+      name: "usermanager",
       dialog: false,
-      file: "",
-      programID: 0,
-      states: [
-        "AL",
-
-      ],
-      editedItem: -1,
-      editedProduction: {
-        userID: "",
-        theaterID: 1,
-        directorFirstName: "",
-        directorLastName: "",
-        street: "",
-        city: "",
-        stateProvince: "",
-        zipcode: "",
-        country: "United States"
-      },
-      defaultProduction: {
-        productionName: "",
-        theaterID: 1,
-        directorFirstName: "",
-        directorLastName: "",
-        street: "",
-        city: "",
-        stateProvince: "",
-        zipcode: "",
-        country: "United States"
-      },
-      headers: [
-        {
-          text: "UserID",
-          align: "right",
-          value: "UserID"
-        },
-        {
-          text: "Username",
-          align: "left",
-          sortable: false,
-          value: "Username"
-        },
-        {
-          text: "Created",
-          align: "right",
-          value: "Created"
-        },
-        {
-          text: "Edit",
-          align: "right",
-          sortable: false
-        },
-        {
-          text: "Delete",
-          align: "right",
-          sortable: false
-        },
+      telSwitch: true,
+      status: true,
+      editedUser: -1,
+      accounttype: ['System Admin', 'Admin', 'User'],
+      users: [
+        { uid: '1111', email: 'user111@gmail.com', dataCollection: 'true', accountType: 'Admin', status: 'active'},
+        { uid: '1111', email: 'user111@gmail.com', dataCollection: 'true', accountType: 'Admin', status: 'inactive'},
+        { uid: '1111', email: 'user111@gmail.com', dataCollection: 'true', accountType: 'Admin', status: 'active'},
+        { uid: '1111', email: 'user111@gmail.com', dataCollection: 'true', accountType: 'User', status: 'active'},
       ]
-    };
-  },
-  computed: {
-    formTitle() {
-      return this.editedItem === -1 ? "New User" : "Edit User";
     }
   },
-  watched: {
-    dialog(val) {
-      val || this.close();
-    }
-  },
-  async mounted() {
-    var today = new Date();
-    this.getProductions(today);
-  },
-  methods: {
-    async deleteProduction(ProductionID) {
-      if (confirm("Are you sure you want to delete?")) {
+methods:{
+    refreshForm() {
+      this.$refs.form.resetValidation();
+      this.$refs.form.reset();
+    },
+    async deleteUser(  ) {
+      if (confirm("Are you sure you want to delete this user?")) {
         await axios
           .delete(
-            "https://api.broadwaybuilder.xyz/production/delete/" + ProductionID
+            "API_URL" + UserID
           )
           .then(alert("User Successfully Deleted"));
       }
     },
-    async uploadProgram(ProductionID) {
-      let formData = new FormData();
-      formData.append("file", this.file);
-      await axios
-        .put(
-          "https://api.broadwaybuilder.xyz/production/" +
-            ProductionID +
-            "/uploadProgram",
-          formData
-        )
-        .then(function() {
-          console.log("Success!");
-        })
-        .catch(function() {
-          console.log("Failure!");
-        });
-    },
-    async getProductions(today) {
-      await axios
-        .get("https://api.broadwaybuilder.xyz/production/getProductions", {
-          params: {
-            previousDate: today,
-            // theaterID: 2,
-            pageSize: 1000
-          }
-        })
-        .then(response => (this.productions = response.data));
-    },
-    async createProduction(createdProduction) {
-      await axios
-        .post(
-          "https://api.broadwaybuilder.xyz/production/create",
-          createdProduction
-        )
-        .then(function() {
-          console.log("New Production Created!");
-        })
-        .catch(function() {
-          console.log("Failure.");
-        });
-    },
-    onFileChange() {
-      this.file = this.$refs.file.files[0];
-    },
-    programIDSelect(id) {
-      this.programID = id;
+    editUser( ) {
+      alert("Clicked edit")
+      
     },
     close() {
-      this.dialog = false;
-      setTimeout(() => {
-        this.editedProduction = Object.assign({}, this.defaultProduction);
-        this.editedIndex = -1;
-      }, 300);
+ this.close();
     },
-    confirm() {
-      if (this.editedIndex > -1) {
-        Object.assign(
-          this.productions[this.editedIndex],
-          this.editedProduction
-        );
-      } else {
-        this.productions.push(this.editedProduction);
-      }
-      this.close();
-    },
-    editProduction(item) {
-      this.editedIndex = 0;
-      this.editedProduction = Object.assign({}, item);
-      this.dialog = true;
-    },
-    refreshForm() {
-      this.$refs.form.resetValidation();
-      this.$refs.form.reset();
+computed: {
+    formTitle() {
+      return this.editedItem === -1 ? "New User" : "Edit User";
     }
+  },
+  watch: {
+    dialog() {
+        this.$refs.form.reset()
+    }
+}
+
+
   }
 };
 </script>
 
-<style lang="sass" scoped>
-img
- width: 2em
- height: 2em
+
+
+<style>
+.user.active{
+  border-left: 4px solid #3CD1C2;
+}
+.user.inactive{
+  border-left: 4px solid tomato;
+}
 </style>
