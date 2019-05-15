@@ -7,7 +7,7 @@ import Login from "./views/Login.vue"
 import Register from "./views/Register.vue"
 import AdminAccount from "./views/AdminAccount.vue"
 import AccountSettings from "./views/AccountSettings.vue"
-import Watchlist from "./views/Watchlist.vue"
+import Watchlist from "./components/Watchlist.vue"
 import SignOut from "./views/SignOut.vue"
 import UserManual from "./views/UserManual.vue"
 import FAQ from "./views/FAQ.vue"
@@ -17,6 +17,7 @@ import UAD from "./views/UAD.vue"
 import Terms from "./views/Terms.vue"
 import ContactUs from "./views/ContactUs.vue"
 import UserAccount from "./views/UserAccount.vue"
+import Privacy from "./views/Privacy.vue"
 
 Vue.use(Router);
 
@@ -87,29 +88,9 @@ export default new Router({
       component: SignOut
     },
     {
-      path: "/admin/adduser",
-      name: "adduser",
-      component: AddUser,
-    },
-    {
       path: "/items",
       name: "items",
       component: ItemList
-    },
-    {
-      path: "/admin/uac/users",
-      name: "uacusers",
-      component: UACusers
-    },
-    {
-      path: "/admin/log/read",
-      name: "readlog",
-      component: LogRead
-    },
-    {
-      path: "/admin/log/delete'",
-      name: "deletelog",
-      component: LogDelete
     },
     {
       path: "/uad",
@@ -120,6 +101,8 @@ export default new Router({
       path: "/items",
       name: "ItemList",
       component: ItemList
+    },
+    {
       path: "/terms",
       name: "terms",
       component: Terms
@@ -133,6 +116,11 @@ export default new Router({
       path: "/user",
       name: "user",
       component: UserAccount
+    },
+    {
+      path: "/privacy",
+      name: "Privacy",
+      component: Privacy
     }
   ]
 });

@@ -308,6 +308,9 @@ D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\bin\Debug\System.Web.WebPag
 D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTests.csproj.CopyComplete
 D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 D:\Documents\Github\CheckIt\CheckIt\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\Bryan\source\repos\CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Bryan\source\repos\CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Bryan\source\repos\CheckIt\Checkit\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 C:\Users\Bryan\source\repos\CheckIt\Checkit\UnitTestProject1\bin\Debug\ApplicationInsights.config
 C:\Users\Bryan\source\repos\CheckIt\Checkit\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
 C:\Users\Bryan\source\repos\CheckIt\Checkit\UnitTestProject1\bin\Debug\UnitTestProject1.dll
