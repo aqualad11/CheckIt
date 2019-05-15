@@ -25,7 +25,7 @@ namespace CheckIt.ManagerLayer
 
         public List<BsonDocument> SearchAmazonQuery(string name, MongoContext _db)
         {
-            List<BsonDocument> amazonResult;
+            List<BsonDocument> amazonResult = null;
             try
             {
                 amazonResult = searchService.GetItem(name, _db, amazonCollection);
@@ -37,34 +37,34 @@ namespace CheckIt.ManagerLayer
             }
             return amazonResult;
         }
-        //	public BsonDocument SearchBestBuyQuery(string name, MongoContext _db)
-        //	{
-        //		BsonDocument bestBuyResult;
-        //		try
-        //		{
-        //			bestBuyResult = searchService.GetItem(name, _db, bestBuyCollection);
-        //		}
-        //		catch (Exception er)
-        //		//catch (ItemNotFoundError er)
-        //		{
-        //			bestBuyResult = null;
-        //		}
-        //		return bestBuyResult;
-        //	}
-        //	public BsonDocument SearchTargetQuery(string name, MongoContext _db)
-        //	{
-        //		BsonDocument targetResult;
-        //		try
-        //		{
-        //			targetResult = searchService.GetItem(name, _db, targetCollection);
-        //		}
-        //		catch (Exception er)
-        //		//catch (ItemNotFoundError er)
-        //		{
-        //			targetResult = null;
-        //		}
-        //		return targetResult;
-        //	}
+		public List<BsonDocument> searchBestBuyQuery(string name, MongoContext _db)
+		{
+			List<BsonDocument> bestbuyresult = null;
+			try
+			{
+				bestbuyresult = searchService.GetItem(name, _db, bestBuyCollection);
+			}
+			catch (Exception er)
+			//catch (itemnotfounderror er)
+			{
+				bestbuyresult = null;
+			}
+			return bestbuyresult;
+		}
+		public List<BsonDocument> searchTargetQuery(string name, MongoContext _db)
+		{
+			List<BsonDocument> targetresult = null;
+			try
+			{
+				targetresult = searchService.GetItem(name, _db, targetCollection);
+			}
+			catch (Exception er)
+			//catch (itemnotfounderror er)
+			{
+				targetresult = null;
+			}
+			return targetresult;
+		}
 
-    }
+	}
 }

@@ -18,8 +18,8 @@ export default {
       linkRoute: [
         { title: "Quick Start", link: "/usermanual" },
         { title: "FAQ", link: "/faq" },
-        { title: "Terms of Service", link: "/terms" },
-        { title: "Contact Us", link: "/contactus" }
+        { title: "Contact Us", link: "/contactus" },
+        { title: "Privacy" , link: "/privacy"}
       ]
     };
   }

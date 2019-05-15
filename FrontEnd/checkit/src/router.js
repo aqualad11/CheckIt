@@ -17,7 +17,7 @@ import UAD from "./views/UAD.vue"
 import Terms from "./views/Terms.vue"
 import ContactUs from "./views/ContactUs.vue"
 import UserAccount from "./views/UserAccount.vue"
-
+import Privacy from "./views/Privacy.vue"
 
 Vue.use(Router);
 
@@ -88,11 +88,6 @@ export default new Router({
       component: SignOut
     },
     {
-      path: "/usermanager",
-      name: "usermanager",
-      component: UserManager,
-    },
-    {
       path: "/items",
       name: "items",
       component: ItemList
@@ -101,6 +96,11 @@ export default new Router({
       path: "/uad",
       name: "uad",
       component: UAD
+    },
+    {
+      path: "/items",
+      name: "ItemList",
+      component: ItemList
     },
     {
       path: "/terms",
@@ -116,7 +116,11 @@ export default new Router({
       path: "/user",
       name: "user",
       component: UserAccount
+    },
+    {
+      path: "/privacy",
+      name: "Privacy",
+      component: Privacy
     }
-
   ]
 });
