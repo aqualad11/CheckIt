@@ -8,24 +8,24 @@
 
     <v-flex xs2 sm4 md8>
 
-      <v-card flat v-for="item in items" :key="item.name">
+      <v-card flat v-for="item in watchlist" :key="item.name">
         
         <v-layout row wrap :class="`pa-3 user`">
 
           <v-flex xs2 sm2 md6>
             <div class="caption grey--text">Item</div>
-            <div>{{ item.name }}</div>
+            <div>{{ item.ItemName }}</div>
           </v-flex>
 
           <v-flex xs4 sm4 md2>
             <div class="caption grey--text">Price</div>
-            <div>{{ item.price }}</div>
+            <div>${{ item.price }}</div>
           </v-flex>
 
          
   
             <!--Make Delete method-->
-            <v-btn fab dark small color="error">
+            <v-btn fab dark small color="error" @click="deleteItem(item)">
               <v-icon dark>remove</v-icon>
             </v-btn>
 
@@ -41,7 +41,7 @@
 
 <script>
 import axios from "axios";
-const API_URL = 'http://localhost:58881';
+const API_URL = 'Backend';
 
 export default {
   name: "watchlist",
@@ -90,8 +90,8 @@ export default {
         alert("Your session has expired you will be send to kft-sso.com to sign back in.")
         window.location.assign(err.response.data)
       }
-      console.log("error = " + err),
-      console.log("error content = " + err.response.data)
+      this.token = undefined,
+      localStorage.removeItem("token")
     })
   }
 }

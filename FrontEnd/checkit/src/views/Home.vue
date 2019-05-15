@@ -9,7 +9,7 @@
             <h4 class="subheading">Where you can keep track of your shopping prices!</h4>
            
            <!--Call search bar component-->
-            <SearchBar />
+            <SearchBar :token="token" />
 
 
             <!--Eventually use this div, this removes the buttons if user is logged in-->
@@ -41,14 +41,14 @@
 
 import SearchBar from "@/components/SearchBar.vue";
 import axios from "axios";
-const API_URL = 'http://localhost:58881';
+import { constants } from 'fs';
+const API_URL = 'Backend';
 
 export default {
   name: "home",
   props:['token'],
   data() {
     return {
-      //token: "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJhNGQ1ODVkMC05NTc0LWU5MTEtYWEwMy0wMjE1OThlOWVjOWUiLCJlbWFpbCI6ImpvbmF0aGFuYXNjZW5jaW8uamFAZ21haWwuY29tIiwiY2xpZW50IjoiIiwiaGVpZ2h0IjoiMiIsImV4cCI6MTU1NzkwMTkxMiwiaXNzIjoiQ2hlY2tJdC5ncSJ9.yqAfEwpjdXoec5E3n1X9vShmVp2ZgfQBQX7nkFxSD-Y",
       watchlist: []
     }
   },
@@ -88,15 +88,27 @@ export default {
     }
   },
   beforeMount(){
-    console.log("before if. token = " + this.token);
+    if(this.token === undefined)
+    {
+      this.token = localStorage.getItem("token")
+    }
+
     if(this.token !== undefined)
     {
-      var str = this.token.split('.');
-      console.log("in before mount. str = " + str);
-      if(str.length !== 3)
-      {
-        this.token = undefined;
-      }
+      axios.get(API_URL + "/api/user/validatetoken", {
+        params: {
+          jwt: this.token
+        }
+      })
+      .then(response => {
+        this.token = response.data,
+        localStorage.setItem("token", this.token),
+        console.log("response token = " + this.token)
+      })
+      .catch(err => {
+        this.token = undefined,
+        localStorage.removeItem("token")
+      })
     }
   }
 };

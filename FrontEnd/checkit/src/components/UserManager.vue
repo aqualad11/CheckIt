@@ -22,14 +22,6 @@
           <v-card-text>
             <v-container grid-list-md>
               <v-layout wrap>
-          <!--ID Input Text-->
-                <v-flex xs12 sm6 md4>
-                  <v-text-field
-                    v-model="userid"
-                    label="UserID"
-                    required
-                  ></v-text-field>
-                </v-flex>
             <!--Email Input Text-->
                 <v-flex xs6 sm6 md4>
                   <v-text-field
@@ -44,14 +36,6 @@
                   :items="accounttype"
                   label="Account Type"
                 ></v-select>
-
-
-          <!--Telemetry Switch-->
-              <v-switch
-                v-model="telSwitch"
-                color="primary"
-                :label="`Telemetry: ${telSwitch.toString()}`"
-                ></v-switch>
 
             <!--Status Switch-->
               <v-switch
@@ -72,7 +56,7 @@
             <v-btn color="blue darken-1" flat click.native="dialog = false">Cancel</v-btn>
             
             <!--TODO: Make confirm method-->
-            <v-btn color="blue darken-1" flat @click="confirm">Confirm</v-btn>
+            <v-btn color="blue darken-1" flat @click="confirmAddUser">Confirm</v-btn>
           
           </v-card-actions>
         </v-card>
@@ -216,12 +200,13 @@ export default {
       status: true,
       editedUser: -1,
       accounttype: ['System Admin', 'Admin', 'User'],
-      users: [
+      users: []
+        /*
         { uid: '1111', email: 'user111@gmail.com', dataCollection: 'true', accountType: 'Admin', status: 'active'},
         { uid: '1111', email: 'user111@gmail.com', dataCollection: 'true', accountType: 'Admin', status: 'inactive'},
         { uid: '1111', email: 'user111@gmail.com', dataCollection: 'true', accountType: 'Admin', status: 'active'},
         { uid: '1111', email: 'user111@gmail.com', dataCollection: 'true', accountType: 'User', status: 'active'},
-      ]
+        ]*/
     }
   },
 methods:{
@@ -241,6 +226,11 @@ methods:{
     editUser( ) {
       alert("Clicked edit")
       
+    },
+    confirmAddUser() {
+      console.log("email = "+ this.email),
+      console.log("accountType = "+this.accounttype),
+      console.log("active? = " + this.status)
     },
     close() {
  this.close();

@@ -115,6 +115,10 @@ namespace CheckIt.ServiceLayer
             {
                 //Console.WriteLine("File not does exist. " + e.Message);
             }
+            catch (Exception e)
+            {
+                return new List<int>();
+            }
 
             return chartList;
         }
@@ -147,6 +151,10 @@ namespace CheckIt.ServiceLayer
             catch (FileNotFoundException e)
             {
                 //Console.WriteLine("File not does exist. " + e.Message);
+            }
+            catch (Exception e)
+            {
+                return new List<int>();
             }
 
             return chartList;
@@ -203,6 +211,10 @@ namespace CheckIt.ServiceLayer
             {
                 //Console.WriteLine("File not does exist. " + e.Message);
             }
+            catch (Exception e)
+            {
+                return new List<int>();
+            }
 
             return chartList;
         }
@@ -240,6 +252,10 @@ namespace CheckIt.ServiceLayer
             catch (FileNotFoundException e)
             {
                 //Console.WriteLine("File not does exist. " + e.Message);
+            }
+            catch(Exception e)
+            {
+                return new List<int>();
             }
 
             return chartList;

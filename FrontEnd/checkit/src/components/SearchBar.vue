@@ -1,20 +1,4 @@
 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@bbare 
-3
-1 1 aqualad11/CheckIt
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
-CheckIt/FrontEnd/checkit/src/components/SearchBar.vue
-@Aphilay Aphilay Updated Front end
-57fe190 12 hours ago
-79 lines (59 sloc)  1.63 KB
-    
 <template>
 
     <v-container fill-height>
@@ -71,13 +55,14 @@ CheckIt/FrontEnd/checkit/src/components/SearchBar.vue
 <script>
 import axios from "axios";
 import Vue from "vue"; 
-const API_URL = 'http://localhost:58881';
+const API_URL = 'Backend';
 
   export default {
+    props:['token'],
     data()  {
         return {
       searchQuery: null,
-      userToken: "yes",
+      //token: this.$props.token,
       Items: null,
     };  
     },
@@ -86,22 +71,23 @@ const API_URL = 'http://localhost:58881';
           axios.get(API_URL + "/api/search" ,{
           params:{
           searchQuery: this.searchQuery,
-          userToken: this.userToken,
         } ,
         headers: {
           token: this.userToken
         }
         })
         .then(response => {
-            this.Items = response.data;
-            //console.log(this.Items[0][1][3].Value);
-            this.$router.push({
-              name: "ItemList",
-              params: {
-                Item : this.Items
-            }
-            })
-        })
+          console.log("the token = " + this.token);
+          this.Items = response.data;
+          //console.log(this.Items[0][1][3].Value);
+          this.$router.push({
+            name: "ItemList",
+            params: {
+              Item : this.Items,
+              token: this.token
+          }
+          })
+      })
         .catch(err => {
             console.log(err)
         })

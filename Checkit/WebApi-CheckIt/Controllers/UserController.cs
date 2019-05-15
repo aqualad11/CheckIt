@@ -100,9 +100,12 @@ namespace CheckIt.WebApi_CheckIt.Controllers
 
                     Guid userID = tokenManager.ExtractUserID(newJWT);
 
+                    //Fix double format
+                    item.price = item.price.Replace(@"$", "");
+
                     //Add item to list
                     ItemManager itemManager = new ItemManager(db);
-                    itemManager.AddItemToList(item.itemName, item.price, item.url, item.picKey, userID);
+                    itemManager.AddItemToList(item.itemName, Convert.ToDouble(item.price), item.url, item.picKey, userID);
 
                     //create and return response
                     response.Content = new StringContent(newJWT);
@@ -156,9 +159,13 @@ namespace CheckIt.WebApi_CheckIt.Controllers
 
                     Guid userID = tokenManager.ExtractUserID(newJWT);
 
+                    //Fix double format
+                    item.price = item.price.Replace(@"$", "");
+
+
                     //Remove item to list
                     ItemManager itemManager = new ItemManager(db);
-                    itemManager.RemoveItemFromList(item.itemName, item.price, item.url, item.picKey, userID);
+                    itemManager.RemoveItemFromList(item.itemName, Convert.ToDouble(item.price), item.url, item.picKey, userID);
 
                     //create and return response
                     response.Content = new StringContent(newJWT);
@@ -233,6 +240,38 @@ namespace CheckIt.WebApi_CheckIt.Controllers
                     response.StatusCode = HttpStatusCode.OK;
                     return response;
                 }catch(Exception e)
+                {
+                    response.Content = new StringContent(e.Message);
+                    response.StatusCode = HttpStatusCode.Conflict;
+                    return response;
+                }
+            }
+        }
+
+        [HttpGet]
+        [Route("api/user/validatetoken")]
+        public HttpResponseMessage ValidateToken(string jwt)
+        {
+            var response = new HttpResponseMessage();
+            using (var db = new DataBaseContext())
+            {
+                try
+                {
+                    TokenManager tokenManager = new TokenManager(db);
+                    jwt = tokenManager.ValidateToken(jwt);
+                    if(jwt == null)
+                    {
+                        response.Content = new StringContent("Invalid Token");
+                        response.StatusCode = HttpStatusCode.Unauthorized;
+                        return response;
+                    }
+
+                    response.Content = new StringContent(jwt);
+                    response.StatusCode = HttpStatusCode.OK;
+                    return response;
+
+                }
+                catch(Exception e)
                 {
                     response.Content = new StringContent(e.Message);
                     response.StatusCode = HttpStatusCode.Conflict;

@@ -24,7 +24,7 @@
             <v-btn icon @click="show = !show">
             <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
             </v-btn>
-          <v-btn flat color="blue"  @click="ItemAdd(item)">Add</v-btn>
+          <v-btn v-if="token !== undefined" flat color="blue"  @click="ItemAmazonItem(item)">Add</v-btn>
           <v-btn flat color="white" @click="goTo(item[3].Value)">Explore</v-btn>
         </v-card-actions>
             <v-slide-y-transition>
@@ -51,7 +51,7 @@
             <v-btn icon @click="show = !show">
             <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
             </v-btn>
-          <v-btn flat color="blue"  @click="ItemBestBuyItem(item)">Add</v-btn>
+          <v-btn v-if="token !== undefined" flat color="blue"  @click="ItemAdd(item)">Add</v-btn>
           <v-btn flat color="white"  @click="goTo(item[3].Value)">Explore</v-btn>
         </v-card-actions>
             <v-slide-y-transition>
@@ -78,7 +78,7 @@
             <v-btn icon @click="show = !show">
             <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
             </v-btn>
-          <v-btn flat color="blue"  @click="ItemAdd(item)">Add</v-btn>
+          <v-btn v-if="token !== undefined" flat color="blue"  @click="ItemAdd(item)">Add</v-btn>
           <v-btn flat color="white"  @click="goTo(item[3].Value)">Explore</v-btn>
         </v-card-actions>
             <v-slide-y-transition>
@@ -103,12 +103,12 @@ export default {
     return {
       show: false,
       Items: this.$route.params.Item,
-      token : "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIzMjNlNmFlNi00MDc0LWU5MTEtYWEwMy0wMjE1OThlOWVjOWUiLCJlbWFpbCI6ImJiYXJlOTFAeWFob28uY29tIiwiY2xpZW50IjoiIiwiaGVpZ2h0IjoiMiIsImV4cCI6MTU1NzYxNjY3MSwiaXNzIjoiQ2hlY2tJdC5ncSJ9.RECTQWuHmpwo8OxrvPF0XntnjD7208kcU_nK_FIbtrY"
+      token : this.$route.params.token
     };
   },
   methods: {
     ItemAdd(item) {
-       axios.post(API_URL + "api/user/additemtolist" ,{
+       axios.post(API_URL + "/api/user/additemtolist" ,{
           "itemName": item[1].Value,
           "price": item[2].Value,
           "url": item[3].Value,
@@ -116,6 +116,7 @@ export default {
           "jwt": this.token
       }).then(response => {
         this.token = response.data
+        console.log("added status = " + response.status)
       })
       .catch(err => {
         console.log("error = " + err)
@@ -125,10 +126,10 @@ export default {
     goTo(url){
       window.open(url);
     },
-     ItemBestBuyItem(item) {
-       axios.post(API_URL + "api/user/additemtolist" ,{
-          "itemName": item[1].Value,
-          "price": item[2].Value,
+     ItemAmazonItem(item) {
+       axios.post(API_URL + "/api/user/additemtolist" ,{
+          "itemName": item[2].Value,
+          "price": item[1].Value,
           "url": item[3].Value,
           "picKey": null,
           "jwt": this.token
@@ -138,6 +139,30 @@ export default {
       .catch(err => {
         console.log("error = " + err)
         console.log("error content = " + err.response.data)
+      })
+    }
+  },
+  beforeMount() {
+    if(this.token === undefined)
+    {
+      this.token = localStorage.getItem("token")
+    }
+
+    if(this.token !== undefined)
+    {
+      axios.get(API_URL + "/api/user/validatetoken", {
+        params: {
+          jwt: this.token
+        }
+      })
+      .then(response => {
+        this.token = response.data,
+        localStorage.setItem("token", this.token),
+        console.log("response token = " + this.token)
+      })
+      .catch(err => {
+        this.token = undefined,
+        localStorage.removeItem("token")
       })
     }
   }
