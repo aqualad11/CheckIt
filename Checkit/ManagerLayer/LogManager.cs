@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,12 +19,12 @@ namespace CheckIt.ManagerLayer
         private static int _errorCount = 0; 
         private static int _telemetryCount = 0; //store these static values in db or file, Rigiht now, may not be thread safe, will clash with instances
         private LogService logService;
-        private ServiceLayer.Config config;
+        private CheckIt.ServiceLayer.Config config;
         //private EmailService eService;
 
         public LogManager() {
             //eService = new EmailService();
-            config = new ServiceLayer.Config();
+            config = new CheckIt.ServiceLayer.Config();
             logService = new LogService();
  
         }

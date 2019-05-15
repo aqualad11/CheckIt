@@ -1,23 +1,20 @@
 <template>
   <div class="watchlist">
 
-    <v-container class="my-4">
-
-  
-
-
+    <v-container>
 
       <v-toolbar-title>My Watchlist</v-toolbar-title>
+      <br>
 
     <v-flex xs2 sm4 md8>
 
-      <v-card flat v-for="item in watchlist" :key="item.name">
+      <v-card flat v-for="item in items" :key="item.name">
         
-        <v-layout row wrap :class="`pa-3 user ${item.status}`">
+        <v-layout row wrap :class="`pa-3 user`">
 
           <v-flex xs2 sm2 md6>
             <div class="caption grey--text">Item</div>
-            <div>{{ item.ItemName }}</div>
+            <div>{{ item.name }}</div>
           </v-flex>
 
           <v-flex xs4 sm4 md2>
@@ -26,10 +23,11 @@
           </v-flex>
 
          
-          <v-flex xs2 sm2 md1>
+  
             <!--Make Delete method-->
-            <v-btn small round color="red" @click="deleteItem(item)">delete</v-btn>
-          </v-flex>
+            <v-btn fab dark small color="error">
+              <v-icon dark>remove</v-icon>
+            </v-btn>
 
         </v-layout>
         <v-divider></v-divider>

@@ -18,8 +18,8 @@ export default {
       linkRoute: [
         { title: "Quick Start", link: "/usermanual" },
         { title: "FAQ", link: "/faq" },
-        { title: "Terms of Service", link: "/terms" },
-        { title: "Contact Us", link: "/contactus" }
+        { title: "Contact Us", link: "/contactus" },
+        { title: "Privacy" , link: "/privacy"}
       ]
     };
   }
@@ -31,6 +31,6 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 .footer {
   color: white;
-  background: linear-gradient(to right, #9D8C0E, #000);
+  background: linear-gradient(to right, #80d0c7, #13547a);
 }
 </style>

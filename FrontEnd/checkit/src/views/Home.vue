@@ -30,7 +30,6 @@
               
             </div>
 
-
           </v-layout>
        
       </v-containerfluid>

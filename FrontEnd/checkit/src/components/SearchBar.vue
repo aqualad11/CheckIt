@@ -1,3 +1,20 @@
+
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@bbare 
+3
+1 1 aqualad11/CheckIt
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+CheckIt/FrontEnd/checkit/src/components/SearchBar.vue
+@Aphilay Aphilay Updated Front end
+57fe190 12 hours ago
+79 lines (59 sloc)  1.63 KB
+    
 <template>
 
     <v-container fill-height>
@@ -9,9 +26,9 @@
         
         <v-text-field
             class="input is-medium is-rounded"
-            v-model="message"
+            v-model="searchQuery"
             outline
-            dark="true"
+            dark= true
             clearable
             label="Search for your item..."
             type="text"
@@ -40,7 +57,7 @@
 
 
             <template v-slot:append-outer>
-              <v-btn depressed @click="clickMe">Search</v-btn>
+              <v-btn depressed @click="clickMe" small round>Search</v-btn>
             </template>
 
 
@@ -49,31 +66,53 @@
 
         </v-flex>
       </v-layout>
-    </v-container>
-  
-  
-
-
-  
+    </v-container> 
 </template>
-
-
-
-
-
 <script>
-  export default {
-    data: () => ({
-      loading: false
-    }),
+import axios from "axios";
+import Vue from "vue"; 
+const API_URL = 'http://localhost:58881';
 
+  export default {
+    data()  {
+        return {
+      searchQuery: null,
+      userToken: "yes",
+      Items: null,
+    };  
+    },
     methods: {
       clickMe () {
-        this.loading = true
-        setTimeout(() => {
-          this.loading = false
-        }, 2000)
+          axios.get(API_URL + "/api/search" ,{
+          params:{
+          searchQuery: this.searchQuery,
+          userToken: this.userToken,
+        } ,
+        headers: {
+          token: this.userToken
+        }
+        })
+        .then(response => {
+            this.Items = response.data;
+            //console.log(this.Items[0][1][3].Value);
+            this.$router.push({
+              name: "ItemList",
+              params: {
+                Item : this.Items
+            }
+            })
+        })
+        .catch(err => {
+            console.log(err)
+        })
       }
+    },
+    watch: {
+      Items: function() {
+      return this.Items.filter(function(Item) {
+        return item !== null;
+      });
+    }
     }
   }
 </script>

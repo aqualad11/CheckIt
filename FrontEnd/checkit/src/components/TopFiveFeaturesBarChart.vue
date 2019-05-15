@@ -2,7 +2,7 @@
   //Importing Bar class from the vue-chartjs wrapper
   import { Bar, mixins } from 'vue-chartjs'
   import axios from 'axios'
-  const API_URL = 'http://localhost:58881'
+  const API_URL = 'Backend'
 
   //Exporting this so it can be used in other components
   export default {

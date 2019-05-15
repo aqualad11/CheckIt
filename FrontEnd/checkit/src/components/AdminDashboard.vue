@@ -1,8 +1,13 @@
 <template>
-  <v-navigation-drawer :mini-variant.sync="mini" stateless value="true" absolute floating style="height: auto; top: 81px; background-color: #fafafa;">
+
+
+  <v-navigation-drawer app v-model="drawer" :mini-variant.sync="mini" floating
+        permanent
+        stateless value="true" absolute style="height: auto; top: 81px; background-color: #fafafa;">
     <v-list>
       <v-list-tile>
         <v-list-tile-action>
+        
           <v-btn icon @click.stop="miniMode">
             <v-icon>dashboard</v-icon>
           </v-btn>
@@ -19,11 +24,11 @@
             <v-list-tile-title>User Management</v-list-tile-title>
           </v-list-tile>
         </template>
-
-        <v-list-tile v-for="(crudItem, i) in cruds" :key="i" to="/usermanager">
-          <v-list-tile-title v-text="crudItem[0]"></v-list-tile-title>
+                      <!--for later use, router :to="crudItem.route" -->
+        <v-list-tile v-for="crudItem in cruds" :key="crudItem.title" @click="$emit(crudItem.route)">
+          <v-list-tile-title v-text="crudItem.title"></v-list-tile-title>
             <v-list-tile-action>
-              <v-icon v-text="crudItem[1]"></v-icon>
+              <v-icon v-text="crudItem.icon"></v-icon>
             </v-list-tile-action>
         </v-list-tile>
       </v-list-group>
@@ -37,29 +42,28 @@
           </v-list-tile>
         </template>
 
-        <v-list-tile v-for="(analyticItem, i) in analytics" :key="i" @click="$emit(analyticItem[2])">
-          <v-list-tile-title v-text="analyticItem[0]"></v-list-tile-title>
+        <v-list-tile v-for="analyticItem in analytics" :key="analyticItem.title" @click="$emit(analyticItem.route)">
+          <v-list-tile-title v-text="analyticItem.title"></v-list-tile-title>
             <v-list-tile-action>
-              <v-icon v-text="analyticItem[1]"></v-icon>
+              <v-icon v-text="analyticItem.icon"></v-icon>
             </v-list-tile-action>
         </v-list-tile>
       </v-list-group>
     </v-list>
-
-
-
     
   </v-navigation-drawer>
+
 </template>
 
 <script>
 export default {
   data: () => ({
+    drawer: true,
     cruds: [
-        ['CRUDS', 'add', '/usermanager'],
+        {title: 'CRUD', icon: 'person', route: 'usermanager'},
     ],
     analytics: [
-        ['UAD', 'info', 'analytics'],
+        {title: 'UAD', icon: 'info', route: 'uad'},
     ],
 
     mini: false,

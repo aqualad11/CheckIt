@@ -5,21 +5,19 @@ import Home from "./views/Home.vue"
 import NotFound from "./views/NotFound.vue"
 import Login from "./views/Login.vue"
 import Register from "./views/Register.vue"
-import AdminDashboard from "./components/AdminDashboard.vue"
+import AdminAccount from "./views/AdminAccount.vue"
 import AccountSettings from "./views/AccountSettings.vue"
 import Watchlist from "./components/Watchlist.vue"
 import SignOut from "./views/SignOut.vue"
 import UserManual from "./views/UserManual.vue"
 import FAQ from "./views/FAQ.vue"
 import UserManager from "./components/UserManager.vue"
-import Users from "./components/Users.vue"
-import UpdateUser from "./components/UpdateUser.vue"
-import DeleteUser from "./components/DeleteUser.vue"
 import ItemList from "./views/ItemList.vue"
 import UAD from "./views/UAD.vue"
 import Terms from "./views/Terms.vue"
 import ContactUs from "./views/ContactUs.vue"
-
+import UserAccount from "./views/UserAccount.vue"
+import Privacy from "./views/Privacy.vue"
 
 Vue.use(Router);
 
@@ -68,7 +66,7 @@ export default new Router({
     {
       path: "/admin",
       name: "admin",
-      component: AdminDashboard
+      component: AdminAccount
     },
     {
       path: "/settings",
@@ -96,26 +94,6 @@ export default new Router({
       component: SignOut
     },
     {
-      path: "/usermanager",
-      name: "usermanager",
-      component: UserManager,
-    },
-    {
-      path: "/users",
-      name: "users",
-      component: Users
-    },
-    {
-      path: "/updateuser",
-      name: "updateuser",
-      component: UpdateUser
-    },
-    {
-      path: "/deleteuser",
-      name: "deleteuser",
-      component: DeleteUser
-    },
-    {
       path: "/items",
       name: "items",
       component: ItemList
@@ -126,6 +104,11 @@ export default new Router({
       component: UAD
     },
     {
+      path: "/items",
+      name: "ItemList",
+      component: ItemList
+    },
+    {
       path: "/terms",
       name: "terms",
       component: Terms
@@ -134,7 +117,16 @@ export default new Router({
       path: "/contactus",
       name: "contactus",
       component: ContactUs
+    },
+    {
+      path: "/user",
+      name: "user",
+      component: UserAccount
+    },
+    {
+      path: "/privacy",
+      name: "Privacy",
+      component: Privacy
     }
-
   ]
 });
