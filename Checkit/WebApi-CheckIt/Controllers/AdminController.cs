@@ -217,7 +217,7 @@ namespace CheckIt.WebApi_CheckIt.Controllers
             var list = new List<int>();
             UADManager uADManager = new UADManager();
             list = uADManager.GetChartStats(chartName);
-            //var jwt = Request.Headers.GetValues("token").FirstOrDefault();
+            var jwt = Request.Headers.GetValues("token").FirstOrDefault();
 
             return Ok(list);
         }
