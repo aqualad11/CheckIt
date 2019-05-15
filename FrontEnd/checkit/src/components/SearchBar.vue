@@ -57,7 +57,7 @@ CheckIt/FrontEnd/checkit/src/components/SearchBar.vue
 
 
             <template v-slot:append-outer>
-              <v-btn depressed @click="clickMe">Search</v-btn>
+              <v-btn depressed @click="clickMe" small round>Search</v-btn>
             </template>
 
 

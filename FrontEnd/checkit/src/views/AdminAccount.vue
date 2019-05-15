@@ -2,13 +2,13 @@
   <div id="admin-account">
     <v-container text-xs-center fluid>
       <v-layout row wrap>
-        <v-flex xs3>
+        <v-flex xs3 md4>
           <AdminDashboard 
           @usermanager="viewUserManager = true; viewAnalytics = false;" 
-          @analytics="viewUserManager = false; viewAnalytics = true;"/>
+          @uad="viewUserManager = false; viewAnalytics = true;"/>
         </v-flex>
-        <v-flex xs9>
-          <UserManager v-if="viewCreate" />
+        <v-flex xs9 md6>
+          <UserManager v-if="viewUserManager" />
           <UAD v-if="viewAnalytics" />
         </v-flex>
       </v-layout>
@@ -35,6 +35,8 @@ export default {
   },
   mounted() {},
   methods: {
+
+    
 
   }
 };

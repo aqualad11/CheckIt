@@ -5,22 +5,18 @@ import Home from "./views/Home.vue"
 import NotFound from "./views/NotFound.vue"
 import Login from "./views/Login.vue"
 import Register from "./views/Register.vue"
-import AdminDashboard from "./views/AdminDashboard.vue"
+import AdminAccount from "./views/AdminAccount.vue"
 import AccountSettings from "./views/AccountSettings.vue"
 import Watchlist from "./views/Watchlist.vue"
 import SignOut from "./views/SignOut.vue"
 import UserManual from "./views/UserManual.vue"
 import FAQ from "./views/FAQ.vue"
-import AddUser from "./components/AddUser.vue"
-import Users from "./components/Users.vue"
-import UpdateUser from "./components/UpdateUser.vue"
-import DeleteUser from "./components/DeleteUser.vue"
-import UACadmin from "./components/UACadmin.vue"
-import UACusers from "./components/UACusers.vue"
-import LogRead from "./components/LogRead.vue"
-import LogDelete from "./components/LogDelete.vue"
-import UAD from "./views/UAD.vue"
+import UserManager from "./components/UserManager.vue"
 import ItemList from "./views/ItemList.vue"
+import UAD from "./views/UAD.vue"
+import Terms from "./views/Terms.vue"
+import ContactUs from "./views/ContactUs.vue"
+import UserAccount from "./views/UserAccount.vue"
 
 Vue.use(Router);
 
@@ -63,7 +59,7 @@ export default new Router({
     {
       path: "/admin",
       name: "admin",
-      component: AdminDashboard
+      component: AdminAccount
     },
     {
       path: "/settings",
@@ -96,24 +92,9 @@ export default new Router({
       component: AddUser,
     },
     {
-      path: "/admin/users",
-      name: "users",
-      component: Users
-    },
-    {
-      path: "/admin/updateuser",
-      name: "updateuser",
-      component: UpdateUser
-    },
-    {
-      path: "/admin/deleteuser",
-      name: "deleteuser",
-      component: DeleteUser
-    },
-    {
-      path: "/admin/uac/admin",
-      name: "uacadmin",
-      component: UACadmin
+      path: "/items",
+      name: "items",
+      component: ItemList
     },
     {
       path: "/admin/uac/users",
@@ -139,6 +120,19 @@ export default new Router({
       path: "/items",
       name: "ItemList",
       component: ItemList
+      path: "/terms",
+      name: "terms",
+      component: Terms
+    },
+    {
+      path: "/contactus",
+      name: "contactus",
+      component: ContactUs
+    },
+    {
+      path: "/user",
+      name: "user",
+      component: UserAccount
     }
   ]
 });

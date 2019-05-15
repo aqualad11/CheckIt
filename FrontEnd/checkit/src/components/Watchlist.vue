@@ -1,105 +1,57 @@
 <template>
-  <v-layout row>
-    <v-flex xs12 sm6 offset-sm3>
-      <v-card>
-        <v-toolbar color="black" dark>
-          <v-toolbar-side-icon></v-toolbar-side-icon>
+  <div class="watchlist">
 
-          <v-toolbar-title>My Watchlist</v-toolbar-title>
+    <v-container>
 
-          <v-spacer></v-spacer>
+      <v-toolbar-title>My Watchlist</v-toolbar-title>
+      <br>
 
+    <v-flex xs2 sm4 md8>
 
-        </v-toolbar>
+      <v-card flat v-for="item in items" :key="item.name">
+        
+        <v-layout row wrap :class="`pa-3 user`">
 
-        <v-list>
-          <v-list-group
-            v-for="item in items"
-            :key="item.title"
-            v-model="item.active"
-            :prepend-icon="item.action"
-            no-action
-          >
+          <v-flex xs2 sm2 md6>
+            <div class="caption grey--text">Item</div>
+            <div>{{ item.name }}</div>
+          </v-flex>
 
-          
-            <template v-slot:activator>
-              
-              <v-list-tile>
-                
-                <v-list-tile-content>
-                  <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
-            </template>
+          <v-flex xs4 sm4 md2>
+            <div class="caption grey--text">Price</div>
+            <div>{{ item.price }}</div>
+          </v-flex>
 
-            <v-list-tile
-              v-for="subItem in item.items"
-              :key="subItem.title"
-              
-            >
-              <v-list-tile-content>
-                <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
-              </v-list-tile-content>
+         
+  
+            <!--Make Delete method-->
+            <v-btn fab dark small color="error">
+              <v-icon dark>remove</v-icon>
+            </v-btn>
 
-              <!--Trigger price input box-->
-          <v-flex xs5 sm4 md3>
-            <v-text-field
-               label="price"
-                outline
-                value="$"
-            ></v-text-field>
-           </v-flex>
-
-        <!--Set button-->
-           <v-btn small round color="primary" dark>Set</v-btn>
-
-              <v-list-tile-action>
-                <v-icon>{{ subItem.action }}</v-icon>
-              </v-list-tile-action>
-            </v-list-tile>
-          </v-list-group>
-        </v-list>
+        </v-layout>
+        <v-divider></v-divider>
       </v-card>
     </v-flex>
-  </v-layout>
+
+    </v-container>
+   
+  </div>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        items: [
-          {
-            action: 'remove',
-            title: 'Item 1',
-            items: [
-              { title: 'Trigger Price' }
-            ]
-          },
-          {
-            action: 'local_activity',
-            title: 'Item 2',
-            items: [
-              { title: 'Trigger Price' }
-            ]
-          },
-          {
-            action: 'local_activity',
-            title: 'Item 3',
-            items: [
-              { title: 'Trigger Price' }
-            ]
-          },
-          {
-            action: 'local_activity',
-            title: 'Item 4',
-            items: [
-              { title: 'Trigger Price' }
-            ]
-          }
 
-        ]
-      }
+export default {
+  data() {
+    return {
+      items: [
+        { name: 'Computer', price: '499.99'},
+        { name: 'TV', price: '299.99'},
+        { name: 'Shoes', price: '99.99'},
+        { name: 'Sunglgasses', price: '39.99'},
+      ]
     }
   }
+}
 </script>
+
